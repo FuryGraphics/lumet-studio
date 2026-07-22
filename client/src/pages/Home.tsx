@@ -1,25 +1,35 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Services from "@/components/Services";
+import Process from "@/components/Process";
+import Work from "@/components/Work";
+import Stats from "@/components/Stats";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * Home — Lumet Studios marketing page.
+ * Single-page layout with sections:
+ * Hero → Services → Process (dark) → Work → Stats (dark) → About → Contact → Footer
+ *
+ * Design: Editorial Mono — Swiss editorial style with strict grid,
+ * generous whitespace, monospace labels, and deliberate dark/light rhythm.
  */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-[#FAFAF9]">
+      <Header />
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <Hero />
+        <Services />
+        <Process />
+        <Work />
+        <Stats />
+        <About />
+        <Contact />
       </main>
+      <Footer />
     </div>
   );
 }

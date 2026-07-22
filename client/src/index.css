@@ -42,75 +42,91 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+/* ============================================================
+   LUMET STUDIOS — Editorial Mono Design System
+   Light-dominant with dark rhythm sections.
+   Accent: Electric Blue #1D4ED8
+   ============================================================ */
+
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
+  /* Accent — Electric Blue */
+  --primary: oklch(0.45 0.21 259);
+  --primary-foreground: oklch(0.98 0 0);
+  --sidebar-primary: oklch(0.45 0.21 259);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --chart-1: oklch(0.45 0.21 259);
+  --chart-2: oklch(0.55 0.18 259);
+  --chart-3: oklch(0.65 0.15 259);
+  --chart-4: oklch(0.35 0.18 259);
+  --chart-5: oklch(0.25 0.12 259);
+  --radius: 0.25rem;
+
+  /* Light theme — warm paper */
+  --background: oklch(0.985 0.002 80);
+  --foreground: oklch(0.18 0.005 65);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
+  --card-foreground: oklch(0.18 0.005 65);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
+  --popover-foreground: oklch(0.18 0.005 65);
+  --secondary: oklch(0.96 0.002 80);
+  --secondary-foreground: oklch(0.4 0.005 65);
+  --muted: oklch(0.94 0.002 80);
+  --muted-foreground: oklch(0.52 0.008 65);
+  --accent: oklch(0.94 0.002 80);
+  --accent-foreground: oklch(0.18 0.005 65);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --border: oklch(0.9 0.002 80);
+  --input: oklch(0.9 0.002 80);
+  --ring: oklch(0.45 0.21 259);
+  --sidebar: oklch(0.985 0.002 80);
+  --sidebar-foreground: oklch(0.18 0.005 65);
+  --sidebar-accent: oklch(0.94 0.002 80);
+  --sidebar-accent-foreground: oklch(0.18 0.005 65);
+  --sidebar-border: oklch(0.9 0.002 80);
+  --sidebar-ring: oklch(0.45 0.21 259);
+
+  /* Custom Lumet tokens */
+  --lumet-dark: oklch(0.07 0.005 65);
+  --lumet-dark-foreground: oklch(0.92 0.005 65);
+  --lumet-dark-muted: oklch(0.55 0.008 65);
+  --lumet-dark-border: oklch(0.16 0.005 65);
+  --lumet-accent: oklch(0.45 0.21 259);
+  --lumet-accent-hover: oklch(0.40 0.20 259);
+  --lumet-hairline: oklch(0.9 0.002 80);
+  --lumet-hairline-dark: oklch(0.16 0.005 65);
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
+  --primary: oklch(0.55 0.20 259);
+  --primary-foreground: oklch(0.98 0 0);
+  --sidebar-primary: oklch(0.55 0.20 259);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  --background: oklch(0.07 0.005 65);
+  --foreground: oklch(0.92 0.005 65);
+  --card: oklch(0.10 0.005 65);
+  --card-foreground: oklch(0.92 0.005 65);
+  --popover: oklch(0.10 0.005 65);
+  --popover-foreground: oklch(0.92 0.005 65);
+  --secondary: oklch(0.14 0.005 65);
+  --secondary-foreground: oklch(0.75 0.005 65);
+  --muted: oklch(0.14 0.005 65);
+  --muted-foreground: oklch(0.6 0.008 65);
+  --accent: oklch(0.14 0.005 65);
+  --accent-foreground: oklch(0.92 0.005 65);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  --border: oklch(0.16 0.005 65);
+  --input: oklch(0.16 0.005 65);
+  --ring: oklch(0.55 0.20 259);
+  --sidebar: oklch(0.10 0.005 65);
+  --sidebar-foreground: oklch(0.92 0.005 65);
+  --sidebar-accent: oklch(0.14 0.005 65);
+  --sidebar-accent-foreground: oklch(0.92 0.005 65);
+  --sidebar-border: oklch(0.16 0.005 65);
+  --sidebar-ring: oklch(0.55 0.20 259);
 }
 
 @layer base {
@@ -119,6 +135,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -134,25 +154,12 @@
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
-    padding-right: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .flex {
@@ -162,16 +169,133 @@
 
   @media (min-width: 640px) {
     .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
-      padding-right: 1.5rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
   }
 
   @media (min-width: 1024px) {
     .container {
-      padding-left: 2rem; /* 32px - desktop padding */
-      padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
+      padding-left: 3rem;
+      padding-right: 3rem;
+      max-width: 1320px;
     }
   }
+
+  /* Lumet-specific utilities */
+  .font-mono-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .lumet-dark-section {
+    background-color: var(--lumet-dark);
+    color: var(--lumet-dark-foreground);
+  }
+
+  .lumet-hairline {
+    border-color: var(--lumet-hairline);
+  }
+
+  .lumet-hairline-dark {
+    border-color: var(--lumet-hairline-dark);
+  }
+
+  .lumet-spotlight {
+    background: radial-gradient(ellipse 60% 80% at 50% 0%, rgba(255,255,255,0.06) 0%, transparent 70%);
+  }
+
+  .lumet-accent-text {
+    color: var(--lumet-accent);
+  }
+
+  .lumet-accent-bg {
+    background-color: var(--lumet-accent);
+  }
+
+  .lumet-display {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 0.98;
+  }
+
+  .lumet-body {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  /* Scroll reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1), transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* Magnetic button effect */
+  .lumet-cta {
+    transition: transform 0.16s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .lumet-cta:active {
+    transform: scale(0.97);
+  }
+
+  /* Link underline reveal */
+  .lumet-link {
+    position: relative;
+    display: inline-block;
+  }
+
+  .lumet-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .lumet-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Selection color */
+::selection {
+  background-color: oklch(0.45 0.21 259 / 0.2);
+  color: inherit;
 }

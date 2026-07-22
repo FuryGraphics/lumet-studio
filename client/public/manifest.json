@@ -1,0 +1,16 @@
+{
+  "name": "Lumet Studios — White-Label Fulfillment for Marketing Agencies",
+  "short_name": "Lumet Studios",
+  "description": "The studio behind the studios. White-label GHL buildouts, web design, Google review funnels, and backend operations for marketing agencies.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAF9",
+  "theme_color": "#0D0D0D",
+  "icons": [
+    {
+      "src": "/manus-storage/lumet-logo_4d193c9b.jpg",
+      "sizes": "any",
+      "type": "image/jpeg"
+    }
+  ]
+}
