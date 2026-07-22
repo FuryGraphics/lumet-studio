@@ -8,21 +8,21 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
  */
 const projects = [
   {
-    image: "/manus-storage/lumet-project-1_dad3802a.png",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663703679771/xWQwffbdKbSOZYBf.png",
     category: "WEB DESIGN & DEVELOPMENT",
     title: "Law Firm Website Build",
     meta: "GHL · CONVERSION FOCUSED · 5-DAY TURNAROUND",
     desc: "Full website build for an attorney niche client. Designed, developed, and deployed within a GoHighLevel funnel framework.",
   },
   {
-    image: "/manus-storage/lumet-project-2_ec4e4cac.png",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663703679771/xavzNwXDjFAzpZRO.png",
     category: "WEB DESIGN + REVIEW FUNNEL",
     title: "Accountants Full Setup",
     meta: "GHL · REVIEW FUNNEL · CLIENT ONBOARDING AUTOMATION",
     desc: "Website redesign paired with a five-star Google review funnel and automated client onboarding and tax-season follow-up sequences.",
   },
   {
-    image: "/manus-storage/lumet-project-3_23282dd6.png",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663703679771/LaIDtHwnmudyWupT.png",
     category: "GHL BUILDOUT",
     title: "Agency Snapshot & Automation",
     meta: "GHL · SNAPSHOTS · WORKFLOWS · PIPELINES",
