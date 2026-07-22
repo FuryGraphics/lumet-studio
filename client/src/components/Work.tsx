@@ -8,18 +8,18 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
  */
 const projects = [
   {
-    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663703679771/xWQwffbdKbSOZYBf.png",
-    category: "WEB DESIGN & DEVELOPMENT",
-    title: "Law Firm Website Build",
-    meta: "GHL · CONVERSION FOCUSED · 5-DAY TURNAROUND",
-    desc: "Full website build for an attorney niche client. Designed, developed, and deployed within a GoHighLevel funnel framework.",
+    image: "/manus-storage/lumet-project-contractors_9a3af073.webp",
+    category: "WEB DESIGN & MARKETING SYSTEMS",
+    title: "Website Design & Marketing Systems For Contractors",
+    meta: "GHL · REVIEW FUNNEL · MISSED CALL TEXT BACK · SMS CAMPAIGNS",
+    desc: "Full done-for-you marketing system for home service contractors — conversion-focused website, automated review funnel, missed call text back, and one-click SMS campaigns.",
   },
   {
-    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663703679771/xavzNwXDjFAzpZRO.png",
-    category: "WEB DESIGN + REVIEW FUNNEL",
-    title: "Accountants Full Setup",
-    meta: "GHL · REVIEW FUNNEL · CLIENT ONBOARDING AUTOMATION",
-    desc: "Website redesign paired with a five-star Google review funnel and automated client onboarding and tax-season follow-up sequences.",
+    image: "/manus-storage/lumet-project-roofing_92f1eafe.webp",
+    category: "ROOFING CLIENT FULL SETUP",
+    title: "Roofing Client Full Setup",
+    meta: "GHL · WEBSITE · REVIEW FUNNEL · LOCAL SEO · INSPECTION BOOKING",
+    desc: "Complete digital setup for a Tampa Bay roofing restoration company — website build, Google review funnel, free inspection booking automation, and local SEO foundation.",
   },
   {
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663703679771/LaIDtHwnmudyWupT.png",
