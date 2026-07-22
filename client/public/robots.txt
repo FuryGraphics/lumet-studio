@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lumetstudios.com/sitemap.xml
+Sitemap: https://lumetstudio.online/sitemap.xml

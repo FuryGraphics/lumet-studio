@@ -90,10 +90,10 @@ export default function Footer() {
           <div className="col-span-12 md:col-span-2">
             <p className="font-mono-label text-[#525252] mb-4 md:mb-5">CONTACT</p>
             <a
-              href="mailto:hello@lumetstudios.com"
+              href="mailto:hello@lumetstudio.online"
               className="lumet-link block text-sm text-[#A3A3A3] hover:text-white transition-colors mb-3"
             >
-              hello@lumetstudios.com
+              hello@lumetstudio.online
             </a>
             <p className="font-mono-label text-[#525252]">
               REMOTE · GLOBAL

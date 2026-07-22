@@ -102,10 +102,10 @@ export default function Contact() {
 
             <div className="mt-8 md:mt-10 space-y-3">
               <a
-                href="mailto:hello@lumetstudios.com"
+                href="mailto:hello@lumetstudio.online"
                 className="lumet-link block text-base font-medium text-[#0D0D0D]"
               >
-                hello@lumetstudios.com
+                hello@lumetstudio.online
               </a>
               <p className="font-mono-label text-[#A3A3A3]">
                 RESPONSE WITHIN 24H · MON–FRI
