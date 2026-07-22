@@ -4,6 +4,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
  * Process — dark section with a strong statement and 3-step workflow.
  * Spotlight motif at top, near-black background.
  * Editorial grid with left rail indices.
+ * Responsive: fluid font sizing, mobile-optimized spacing.
  */
 const steps = [
   {
@@ -29,9 +30,9 @@ export default function Process() {
   return (
     <section
       id="process"
-      className="relative py-20 md:py-32 bg-[#0D0D0D] text-white overflow-hidden"
+      className="relative py-16 md:py-32 bg-[#0D0D0D] text-white overflow-hidden"
     >
-      {/* Spotlight beam — stronger, more ownable */}
+      {/* Spotlight beam */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
@@ -39,7 +40,7 @@ export default function Process() {
             "radial-gradient(ellipse 35% 55% at 50% -5%, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 40%, transparent 70%)",
         }}
       />
-      {/* Subtle vertical grid lines for editorial consistency */}
+      {/* Subtle vertical grid lines */}
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
@@ -51,7 +52,7 @@ export default function Process() {
 
       <div ref={ref} className={`container relative ${isVisible ? "is-visible" : ""}`}>
         {/* Section header — left rail */}
-        <div className="grid grid-cols-12 gap-4 mb-12 md:mb-16">
+        <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2 flex items-center gap-3">
             <span className="font-mono-label text-[#525252]">02 / PROCESS</span>
           </div>
@@ -61,15 +62,18 @@ export default function Process() {
         </div>
 
         {/* Statement — offset on grid */}
-        <div className="grid grid-cols-12 gap-4 mb-16 md:mb-24">
+        <div className="grid grid-cols-12 gap-4 mb-12 md:mb-24">
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-9">
-            <h2 className="lumet-display text-3xl md:text-5xl lg:text-6xl text-white">
+            <h2
+              className="lumet-display text-white"
+              style={{ fontSize: "clamp(1.75rem, 5vw, 3.75rem)" }}
+            >
               We're the team
               <br />
               behind your team.
             </h2>
-            <p className="lumet-body mt-8 text-lg md:text-xl text-[#A3A3A3] max-w-2xl">
+            <p className="lumet-body mt-6 md:mt-8 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
               White-label, reliable, senior-level execution. Your clients never
               see us — they only see the quality of your work going up.
             </p>
@@ -84,16 +88,16 @@ export default function Process() {
               {steps.map((step) => (
                 <div
                   key={step.num}
-                  className="bg-[#0D0D0D] p-8 md:p-10 lg:p-12 group hover:bg-[#111111] transition-colors"
+                  className="bg-[#0D0D0D] p-6 md:p-10 lg:p-12 group hover:bg-[#111111] transition-colors"
                 >
-                  <div className="flex items-baseline gap-4 mb-6">
+                  <div className="flex items-baseline gap-4 mb-4 md:mb-6">
                     <span className="font-mono-label text-[#1D4ED8]">{step.num}</span>
                     <span className="h-px flex-1 bg-[#262626] group-hover:bg-[#1D4ED8]/30 transition-colors" />
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4">
+                  <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-3 md:mb-4">
                     {step.title}
                   </h3>
-                  <p className="lumet-body text-base text-[#A3A3A3]">
+                  <p className="lumet-body text-sm md:text-base text-[#A3A3A3]">
                     {step.desc}
                   </p>
                 </div>

@@ -4,6 +4,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
  * Hero — bold, tight display headline with positioning statement.
  * Light background, accent used once in the wordmark dot.
  * Mono tags below the headline.
+ * Responsive: fluid font sizing, mobile-optimized spacing.
  */
 const tags = [
   "GOHIGHLEVEL",
@@ -18,7 +19,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative pt-32 md:pt-40 pb-20 md:pb-32 bg-[#FAFAF9] overflow-hidden"
+      className="relative pt-28 md:pt-40 pb-16 md:pb-32 bg-[#FAFAF9] overflow-hidden"
     >
       {/* Subtle grid texture */}
       <div
@@ -32,13 +33,16 @@ export default function Hero() {
 
       <div ref={ref} className={`container relative ${isVisible ? "is-visible" : ""}`}>
         {/* Section index */}
-        <div className="flex items-center gap-3 mb-8 md:mb-12">
+        <div className="flex items-center gap-3 mb-6 md:mb-12">
           <span className="font-mono-label text-[#A3A3A3]">00 / INTRO</span>
-          <span className="h-px w-12 bg-[#E5E5E5]" />
+          <span className="h-px w-8 md:w-12 bg-[#E5E5E5]" />
         </div>
 
-        {/* Headline */}
-        <h1 className="lumet-display text-[2.75rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[6rem] text-[#0D0D0D] max-w-5xl">
+        {/* Headline — fluid sizing with clamp for smooth scaling */}
+        <h1
+          className="lumet-display text-[#0D0D0D] max-w-5xl"
+          style={{ fontSize: "clamp(2.25rem, 8vw, 6rem)" }}
+        >
           You sell it.
           <br />
           <span className="text-[#0D0D0D]">We build it,</span>
@@ -50,7 +54,7 @@ export default function Hero() {
         </h1>
 
         {/* Subhead */}
-        <p className="lumet-body mt-8 md:mt-10 text-lg md:text-xl text-[#525252] max-w-2xl">
+        <p className="lumet-body mt-6 md:mt-10 text-base md:text-xl text-[#525252] max-w-2xl">
           Lumet Studios is the invisible fulfillment partner behind marketing
           agencies and niche-service businesses. We handle GoHighLevel buildouts,
           website design, Google review funnels, and backend operations — so you
@@ -58,10 +62,10 @@ export default function Hero() {
         </p>
 
         {/* CTA */}
-        <div className="mt-10 md:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <a
             href="#contact"
-            className="lumet-cta inline-flex items-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm"
+            className="lumet-cta inline-flex items-center gap-2 px-6 md:px-7 py-3 md:py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm w-full sm:w-auto justify-center sm:justify-start"
           >
             Book a call
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -76,10 +80,10 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Mono tags */}
-        <div className="mt-16 md:mt-20 flex flex-wrap items-center gap-x-6 gap-y-3">
+        {/* Mono tags — wrap nicely on mobile */}
+        <div className="mt-12 md:mt-20 flex flex-wrap items-center gap-x-4 gap-y-2 md:gap-x-6 md:gap-y-3">
           {tags.map((tag, i) => (
-            <div key={tag} className="flex items-center gap-6">
+            <div key={tag} className="flex items-center gap-4 md:gap-6">
               {i > 0 && <span className="text-[#D4D4D4] text-xs">·</span>}
               <span className="font-mono-label text-[#737373]">{tag}</span>
             </div>

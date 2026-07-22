@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 /**
  * Header — minimal fixed navigation for Lumet Studios.
  * Transparent over hero, transitions to opaque white on scroll.
- * Mobile menu via sheet toggle.
+ * Mobile menu via overlay with body scroll lock.
  */
 const navLinks = [
   { label: "Work", href: "#work" },
@@ -23,6 +23,18 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
   return (
     <>
       <header
@@ -36,7 +48,7 @@ export default function Header() {
           {/* Logo */}
           <a
             href="#top"
-            className={`font-bold text-lg tracking-tight transition-colors ${
+            className={`font-bold text-lg md:text-xl tracking-tight transition-colors ${
               scrolled ? "text-[#0D0D0D]" : "text-[#0D0D0D]"
             }`}
             aria-label="Lumet Studios home"
@@ -45,7 +57,7 @@ export default function Header() {
           </a>
 
           {/* Desktop nav */}
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden md:flex items-center gap-6 lg:gap-8">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
@@ -58,7 +70,7 @@ export default function Header() {
             ))}
           </ul>
 
-          {/* CTA */}
+          {/* CTA — desktop */}
           <div className="hidden md:block">
             <a
               href="#contact"
@@ -73,7 +85,7 @@ export default function Header() {
 
           {/* Mobile menu toggle */}
           <button
-            className="md:hidden flex flex-col gap-1.5 p-2"
+            className="md:hidden flex flex-col gap-1.5 p-2 -mr-2"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
@@ -85,11 +97,11 @@ export default function Header() {
         </nav>
       </header>
 
-      {/* Mobile menu */}
+      {/* Mobile menu overlay */}
       {menuOpen && (
         <div className="fixed inset-0 z-40 md:hidden">
           <div className="absolute inset-0 bg-[#FAFAF9]" onClick={() => setMenuOpen(false)} />
-          <div className="relative flex flex-col items-start gap-6 pt-24 px-8">
+          <div className="relative flex flex-col items-start gap-6 pt-24 px-6 pb-8 h-full overflow-y-auto">
             {navLinks.map((link) => (
               <a
                 key={link.href}

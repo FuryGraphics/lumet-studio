@@ -3,6 +3,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 /**
  * Services — five core capabilities in an editorial list layout.
  * Left rail index, offset heading, hairline-separated rows.
+ * Responsive: stacks to single column on mobile, adjusts spacing.
  */
 const services = [
   {
@@ -36,10 +37,10 @@ export default function Services() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
 
   return (
-    <section id="services" className="py-20 md:py-32 bg-[#FAFAF9] border-t border-[#E5E5E5]">
+    <section id="services" className="py-16 md:py-32 bg-[#FAFAF9] border-t border-[#E5E5E5]">
       <div ref={ref} className={`container ${isVisible ? "is-visible" : ""}`}>
         {/* Section header — left rail */}
-        <div className="grid grid-cols-12 gap-4 mb-12 md:mb-16">
+        <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2 flex items-center gap-3">
             <span className="font-mono-label text-[#A3A3A3]">01 / SERVICES</span>
           </div>
@@ -49,17 +50,17 @@ export default function Services() {
         </div>
 
         {/* Heading + intro — offset */}
-        <div className="grid grid-cols-12 gap-4 mb-12 md:mb-16">
+        <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-6">
-            <h2 className="lumet-display text-3xl md:text-4xl lg:text-5xl text-[#0D0D0D]">
+            <h2 className="lumet-display text-2xl md:text-4xl lg:text-5xl text-[#0D0D0D]">
               What we
               <br />
               handle.
             </h2>
           </div>
           <div className="col-span-12 md:col-span-4 md:pt-2">
-            <p className="lumet-body text-base text-[#525252]">
+            <p className="lumet-body text-sm md:text-base text-[#525252]">
               Five core capabilities. One team behind your team. Everything
               delivered white-label, on spec, and on time.
             </p>
@@ -74,7 +75,7 @@ export default function Services() {
               {services.map((service) => (
                 <div
                   key={service.num}
-                  className="group grid grid-cols-12 gap-4 py-6 md:py-8 border-b border-[#E5E5E5] hover:bg-white/50 transition-colors px-2 md:px-4 -mx-2 md:-mx-4"
+                  className="group grid grid-cols-12 gap-2 md:gap-4 py-5 md:py-8 border-b border-[#E5E5E5] hover:bg-white/50 transition-colors px-2 md:px-4 -mx-2 md:-mx-4"
                 >
                   <div className="col-span-2 md:col-span-1">
                     <span className="font-mono-label text-[#A3A3A3] group-hover:text-[#1D4ED8] transition-colors">
@@ -82,7 +83,7 @@ export default function Services() {
                     </span>
                   </div>
                   <div className="col-span-10 md:col-span-4">
-                    <h3 className="text-lg md:text-xl font-semibold text-[#0D0D0D] group-hover:text-[#1D4ED8] transition-colors">
+                    <h3 className="text-base md:text-xl font-semibold text-[#0D0D0D] group-hover:text-[#1D4ED8] transition-colors">
                       {service.title}
                     </h3>
                   </div>
