@@ -7,7 +7,7 @@ import { defineConfig, type Plugin, type ViteDevServer } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
 // =============================================================================
-// Manus Debug Collector - Vite Plugin
+// Manus Debug Collector - Vite Plugin (dev only)
 // Writes browser logs directly to files, trimmed when exceeding size limit
 // =============================================================================
 
@@ -69,7 +69,7 @@ function writeToLogFile(source: LogSource, entries: unknown[]) {
 }
 
 /**
- * Vite plugin to collect browser debug logs
+ * Vite plugin to collect browser debug logs (dev only)
  * - POST /__manus__/logs: Browser sends logs, written directly to files
  * - Files: browserConsole.log, networkRequests.log, sessionReplay.log
  * - Auto-trimmed when exceeding 1MB (keeps newest entries)
@@ -203,7 +203,14 @@ function vitePluginStorageProxy(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
+// Only include Manus-specific plugins in dev mode (not in Vercel production builds)
+const isDev = process.env.NODE_ENV !== "production";
+
+const devPlugins: Plugin[] = isDev
+  ? [vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()]
+  : [];
+
+const plugins = [react(), tailwindcss(), jsxLocPlugin(), ...devPlugins];
 
 export default defineConfig({
   plugins,
