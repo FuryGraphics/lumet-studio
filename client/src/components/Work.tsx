@@ -8,14 +8,14 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
  */
 const projects = [
   {
-    image: "/manus-storage/lumet-project-contractors_9a3af073.webp",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663703679771/NyefuEzvnVyhKVRq.webp",
     category: "WEB DESIGN & MARKETING SYSTEMS",
     title: "Website Design & Marketing Systems For Contractors",
     meta: "GHL · REVIEW FUNNEL · MISSED CALL TEXT BACK · SMS CAMPAIGNS",
     desc: "Full done-for-you marketing system for home service contractors — conversion-focused website, automated review funnel, missed call text back, and one-click SMS campaigns.",
   },
   {
-    image: "/manus-storage/lumet-project-roofing_92f1eafe.webp",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663703679771/jMTwORqcjhZQwhZQ.webp",
     category: "ROOFING CLIENT FULL SETUP",
     title: "Roofing Client Full Setup",
     meta: "GHL · WEBSITE · REVIEW FUNNEL · LOCAL SEO · INSPECTION BOOKING",
