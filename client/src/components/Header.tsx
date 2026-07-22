@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 /**
- * Header — minimal fixed navigation for Lumet Studios.
+ * Header - minimal fixed navigation for Lumet Studios.
  * Transparent over hero, transitions to opaque white on scroll.
  * Mobile menu via overlay with body scroll lock.
  */
@@ -70,7 +70,7 @@ export default function Header() {
             ))}
           </ul>
 
-          {/* CTA — desktop */}
+          {/* CTA - desktop */}
           <div className="hidden md:block">
             <a
               href="#contact"

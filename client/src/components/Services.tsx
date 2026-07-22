@@ -1,7 +1,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 /**
- * Services — five core capabilities in an editorial list layout.
+ * Services - five core capabilities in an editorial list layout.
  * Left rail index, offset heading, hairline-separated rows.
  * Responsive: stacks to single column on mobile, adjusts spacing.
  */
@@ -9,7 +9,7 @@ const services = [
   {
     num: "01",
     title: "GHL Buildouts & Completion",
-    desc: "Funnels, automations, pipelines, snapshots, workflows. We finish and maintain GoHighLevel setups end to end — so your clients never see a half-built system.",
+    desc: "Funnels, automations, pipelines, snapshots, workflows. We finish and maintain GoHighLevel setups end to end - so your clients never see a half-built system.",
   },
   {
     num: "02",
@@ -24,7 +24,7 @@ const services = [
   {
     num: "04",
     title: "Client Request & Backend Management",
-    desc: "We act as your invisible fulfillment arm. Managing incoming requests, handling internal operations, and keeping everything moving — so you stay client-facing.",
+    desc: "We act as your invisible fulfillment arm. Managing incoming requests, handling internal operations, and keeping everything moving - so you stay client-facing.",
   },
   {
     num: "05",
@@ -39,7 +39,7 @@ export default function Services() {
   return (
     <section id="services" className="py-16 md:py-32 bg-[#FAFAF9] border-t border-[#E5E5E5]">
       <div ref={ref} className={`container ${isVisible ? "is-visible" : ""}`}>
-        {/* Section header — left rail */}
+        {/* Section header - left rail */}
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2 flex items-center gap-3">
             <span className="font-mono-label text-[#A3A3A3]">01 / SERVICES</span>
@@ -49,7 +49,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Heading + intro — offset */}
+        {/* Heading + intro - offset */}
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-6">
@@ -67,7 +67,7 @@ export default function Services() {
           </div>
         </div>
 
-        {/* Service rows — grid aligned */}
+        {/* Service rows - grid aligned */}
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-10">

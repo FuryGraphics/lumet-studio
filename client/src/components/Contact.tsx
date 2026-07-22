@@ -4,7 +4,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { toast } from "sonner";
 
 /**
- * Contact — editorial form wired to Formspree (endpoint: mqerlrjr).
+ * Contact - editorial form wired to Formspree (endpoint: mqerlrjr).
  * Hairline fields, mono labels, no boxed card.
  * Responsive: fluid font sizing, mobile-optimized form layout.
  */
@@ -16,7 +16,7 @@ export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", agency: "", message: "" });
 
   if (state.succeeded) {
-    toast.success("Thanks — we'll be in touch within 24 hours.");
+    toast.success("Thanks - we'll be in touch within 24 hours.");
   }
 
   const handleChange = (field: keyof typeof form) => (
@@ -72,7 +72,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-16 md:py-32 bg-[#FAFAF9] border-t border-[#E5E5E5]">
       <div ref={ref} className={`container ${isVisible ? "is-visible" : ""}`}>
-        {/* Section header — left rail */}
+        {/* Section header - left rail */}
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2 flex items-center gap-3">
             <span className="font-mono-label text-[#A3A3A3]">06 / CONTACT</span>
@@ -83,7 +83,7 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-12 gap-4 lg:gap-12">
-          {/* Left — headline */}
+          {/* Left - headline */}
           <div className="col-span-12 md:col-span-2 lg:col-span-4 mb-6 md:mb-0">
             <h2
               className="lumet-display text-[#0D0D0D]"
@@ -113,7 +113,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right — form, editorial style */}
+          {/* Right - form, editorial style */}
           <div className="col-span-12 md:col-span-10 lg:col-span-7 lg:col-start-6">
             <form onSubmit={handleSubmit} className="space-y-0">
               {/* Name + Email row */}

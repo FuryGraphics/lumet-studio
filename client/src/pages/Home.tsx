@@ -9,11 +9,11 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 /**
- * Home — Lumet Studios marketing page.
+ * Home - Lumet Studios marketing page.
  * Single-page layout with sections:
  * Hero → Services → Process (dark) → Work → Stats (dark) → About → Contact → Footer
  *
- * Design: Editorial Mono — Swiss editorial style with strict grid,
+ * Design: Editorial Mono - Swiss editorial style with strict grid,
  * generous whitespace, monospace labels, and deliberate dark/light rhythm.
  */
 export default function Home() {

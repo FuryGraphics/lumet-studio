@@ -1,7 +1,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 /**
- * Work — showcase cards with mono captions for project meta.
+ * Work - showcase cards with mono captions for project meta.
  * Editorial case-study layout: cropped images, typographic captions,
  * hairline borders, strict grid alignment.
  * Responsive: 1 col mobile, 2 col tablet (sm), 3 col desktop (md+).
@@ -13,7 +13,7 @@ const projects = [
     category: "WEB DESIGN & MARKETING SYSTEMS",
     title: "Website Design & Marketing Systems For Contractors",
     meta: "GHL · REVIEW FUNNEL · MISSED CALL TEXT BACK · SMS CAMPAIGNS",
-    desc: "Full done-for-you marketing system for home service contractors — conversion-focused website, automated review funnel, missed call text back, and one-click SMS campaigns.",
+    desc: "Full done-for-you marketing system for home service contractors - conversion-focused website, automated review funnel, missed call text back, and one-click SMS campaigns.",
     link: "https://www.estimate-engine.com/",
   },
   {
@@ -21,7 +21,7 @@ const projects = [
     category: "ROOFING CLIENT FULL SETUP",
     title: "Roofing Client Full Setup",
     meta: "GHL · WEBSITE · REVIEW FUNNEL · LOCAL SEO · INSPECTION BOOKING",
-    desc: "Complete digital setup for a Tampa Bay roofing restoration company — website build, Google review funnel, free inspection booking automation, and local SEO foundation.",
+    desc: "Complete digital setup for a Tampa Bay roofing restoration company - website build, Google review funnel, free inspection booking automation, and local SEO foundation.",
     link: "https://www.foreverhomesroofrestoration.com/",
   },
   {
@@ -40,7 +40,7 @@ export default function Work() {
   return (
     <section id="work" className="py-16 md:py-32 bg-[#FAFAF9] border-t border-[#E5E5E5]">
       <div ref={ref} className={`container ${isVisible ? "is-visible" : ""}`}>
-        {/* Section header — left rail */}
+        {/* Section header - left rail */}
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2 flex items-center gap-3">
             <span className="font-mono-label text-[#A3A3A3]">03 / WORK</span>
@@ -58,7 +58,7 @@ export default function Work() {
           </div>
         </div>
 
-        {/* Heading — offset on grid */}
+        {/* Heading - offset on grid */}
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-9">
@@ -70,7 +70,7 @@ export default function Work() {
           </div>
         </div>
 
-        {/* Project cards — responsive grid: 1 col mobile, 2 col sm, 3 col md+ */}
+        {/* Project cards - responsive grid: 1 col mobile, 2 col sm, 3 col md+ */}
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-10">
@@ -78,7 +78,7 @@ export default function Work() {
               {projects.map((project) => {
                 const CardInner = (
                   <>
-                    {/* Image — cropped, editorial */}
+                    {/* Image - cropped, editorial */}
                     <div className="relative aspect-[4/3] overflow-hidden bg-[#F5F5F5] border border-[#E5E5E5] mb-4 md:mb-5">
                       <img
                         src={project.image}
@@ -100,7 +100,7 @@ export default function Work() {
                       )}
                     </div>
 
-                    {/* Caption — typographic, editorial */}
+                    {/* Caption - typographic, editorial */}
                     <div className="space-y-2 md:space-y-3">
                       <h3 className="text-lg md:text-xl font-semibold text-[#0D0D0D] group-hover:text-[#1D4ED8] transition-colors">
                         {project.title}

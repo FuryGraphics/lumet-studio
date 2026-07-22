@@ -1,14 +1,14 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 /**
- * Stats — dark proof band with key metrics.
+ * Stats - dark proof band with key metrics.
  * Near-black background, large numbers, mono labels.
  * Responsive: 2 col mobile, 4 col desktop, fluid font sizing.
  */
 const stats = [
   { value: "48h", label: "Average turnaround on standard client requests" },
   { value: "200+", label: "GoHighLevel buildouts completed" },
-  { value: "100%", label: "White-label — your clients never see us" },
+  { value: "100%", label: "White-label - your clients never see us" },
   { value: "5★", label: "Review funnels deployed across niches" },
 ];
 
@@ -26,7 +26,7 @@ export default function Stats() {
         }}
       />
       <div ref={ref} className={`container relative ${isVisible ? "is-visible" : ""}`}>
-        {/* Section header — left rail */}
+        {/* Section header - left rail */}
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-14">
           <div className="col-span-12 md:col-span-2 flex items-center gap-3">
             <span className="font-mono-label text-[#525252]">04 / PROOF</span>
@@ -36,7 +36,7 @@ export default function Stats() {
           </div>
         </div>
 
-        {/* Stats grid — offset */}
+        {/* Stats grid - offset */}
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-10">

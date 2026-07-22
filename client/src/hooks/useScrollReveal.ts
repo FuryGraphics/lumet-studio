@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 /**
- * useScrollReveal — observes an element and adds `is-visible` class when it enters the viewport.
+ * useScrollReveal - observes an element and adds `is-visible` class when it enters the viewport.
  * Returns a ref to attach to the target element and a boolean for conditional rendering.
  */
 export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(
@@ -36,7 +36,7 @@ export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(
 }
 
 /**
- * useStaggeredReveal — returns an array of refs for staggered child reveals.
+ * useStaggeredReveal - returns an array of refs for staggered child reveals.
  * Each child animates with a delay based on its index.
  */
 export function useStaggeredReveal<T extends HTMLElement = HTMLDivElement>(

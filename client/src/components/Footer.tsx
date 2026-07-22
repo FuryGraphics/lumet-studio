@@ -1,5 +1,5 @@
 /**
- * Footer — dark, editorial, with brand tagline and structured links.
+ * Footer - dark, editorial, with brand tagline and structured links.
  * Grid-aligned columns with mono labels.
  * Responsive: stacks on mobile, 2-col on tablet, full grid on desktop.
  */
@@ -32,7 +32,7 @@ export default function Footer() {
       />
 
       <div className="container relative">
-        {/* Top — logo + links in responsive grid */}
+        {/* Top - logo + links in responsive grid */}
         <div className="grid grid-cols-12 gap-6 md:gap-4 pb-10 md:pb-16 border-b border-[#1A1A1A]">
           {/* Logo + tagline */}
           <div className="col-span-12 md:col-span-5">
@@ -101,11 +101,11 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom — copyright + back to top */}
+        {/* Bottom - copyright + back to top */}
         <div className="grid grid-cols-12 gap-4 pt-6 md:pt-8">
           <div className="col-span-12 md:col-span-6">
             <p className="font-mono-label text-[#525252] text-xs md:text-sm">
-              © {new Date().getFullYear()} LUMET STUDIOS — ALL RIGHTS RESERVED
+              © {new Date().getFullYear()} LUMET STUDIOS - ALL RIGHTS RESERVED
             </p>
           </div>
           <div className="col-span-12 md:col-span-6 flex md:justify-end">

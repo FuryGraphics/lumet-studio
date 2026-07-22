@@ -43,13 +43,13 @@
 }
 
 /* ============================================================
-   LUMET STUDIOS — Editorial Mono Design System
+   LUMET STUDIOS - Editorial Mono Design System
    Light-dominant with dark rhythm sections.
    Accent: Electric Blue #1D4ED8
    ============================================================ */
 
 :root {
-  /* Accent — Electric Blue */
+  /* Accent - Electric Blue */
   --primary: oklch(0.45 0.21 259);
   --primary-foreground: oklch(0.98 0 0);
   --sidebar-primary: oklch(0.45 0.21 259);
@@ -61,7 +61,7 @@
   --chart-5: oklch(0.25 0.12 259);
   --radius: 0.25rem;
 
-  /* Light theme — warm paper */
+  /* Light theme - warm paper */
   --background: oklch(0.985 0.002 80);
   --foreground: oklch(0.18 0.005 65);
   --card: oklch(1 0 0);

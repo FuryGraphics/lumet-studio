@@ -1,7 +1,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 /**
- * Hero — bold, tight display headline with positioning statement.
+ * Hero - bold, tight display headline with positioning statement.
  * Light background, accent used once in the wordmark dot.
  * Mono tags below the headline.
  * Responsive: fluid font sizing, mobile-optimized spacing.
@@ -38,7 +38,7 @@ export default function Hero() {
           <span className="h-px w-8 md:w-12 bg-[#E5E5E5]" />
         </div>
 
-        {/* Headline — fluid sizing with clamp for smooth scaling */}
+        {/* Headline - fluid sizing with clamp for smooth scaling */}
         <h1
           className="lumet-display text-[#0D0D0D] max-w-5xl"
           style={{ fontSize: "clamp(2.25rem, 8vw, 6rem)" }}
@@ -60,7 +60,7 @@ export default function Hero() {
         <p className="lumet-body mt-6 md:mt-10 text-base md:text-xl text-[#525252] max-w-2xl">
           Lumet Studios is the invisible fulfillment partner behind marketing
           agencies and niche-service businesses. We handle GoHighLevel buildouts,
-          website design, Google review funnels, and backend operations — so you
+          website design, Google review funnels, and backend operations - so you
           can scale and stay client-facing.
         </p>
 
@@ -83,7 +83,7 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Mono tags — wrap nicely on mobile */}
+        {/* Mono tags - wrap nicely on mobile */}
         <div className="mt-12 md:mt-20 flex flex-wrap items-center gap-x-4 gap-y-2 md:gap-x-6 md:gap-y-3">
           {tags.map((tag, i) => (
             <div key={tag} className="flex items-center gap-4 md:gap-6">

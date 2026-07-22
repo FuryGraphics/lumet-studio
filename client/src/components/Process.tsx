@@ -1,7 +1,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 /**
- * Process — dark section with a strong statement and 3-step workflow.
+ * Process - dark section with a strong statement and 3-step workflow.
  * Spotlight motif at top, near-black background.
  * Editorial grid with left rail indices.
  * Responsive: fluid font sizing, mobile-optimized spacing.
@@ -15,12 +15,12 @@ const steps = [
   {
     num: "02",
     title: "Build",
-    desc: "Whether it's a GHL snapshot, a full website, or a review funnel — we execute to a senior standard. You review, approve, and deliver to your client under your brand.",
+    desc: "Whether it's a GHL snapshot, a full website, or a review funnel - we execute to a senior standard. You review, approve, and deliver to your client under your brand.",
   },
   {
     num: "03",
     title: "Handle requests",
-    desc: "Ongoing client requests flow to us. Edits, fixes, new builds, automations — we manage the backend while you focus on growth and relationships.",
+    desc: "Ongoing client requests flow to us. Edits, fixes, new builds, automations - we manage the backend while you focus on growth and relationships.",
   },
 ];
 
@@ -51,7 +51,7 @@ export default function Process() {
       />
 
       <div ref={ref} className={`container relative ${isVisible ? "is-visible" : ""}`}>
-        {/* Section header — left rail */}
+        {/* Section header - left rail */}
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2 flex items-center gap-3">
             <span className="font-mono-label text-[#525252]">02 / PROCESS</span>
@@ -61,7 +61,7 @@ export default function Process() {
           </div>
         </div>
 
-        {/* Statement — offset on grid */}
+        {/* Statement - offset on grid */}
         <div className="grid grid-cols-12 gap-4 mb-12 md:mb-24">
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-9">
@@ -75,12 +75,12 @@ export default function Process() {
             </h2>
             <p className="lumet-body mt-6 md:mt-8 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
               White-label, reliable, senior-level execution. Your clients never
-              see us — they only see the quality of your work going up.
+              see us - they only see the quality of your work going up.
             </p>
           </div>
         </div>
 
-        {/* 3-step process — grid aligned */}
+        {/* 3-step process - grid aligned */}
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-10">

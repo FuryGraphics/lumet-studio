@@ -1,7 +1,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 /**
- * About — studio ethos section with principles.
+ * About - studio ethos section with principles.
  * Editorial two-column split with left rail index.
  * Responsive: fluid font sizing, mobile-optimized spacing.
  */
@@ -26,7 +26,7 @@ export default function About() {
   return (
     <section id="about" className="py-16 md:py-32 bg-[#FAFAF9] border-t border-[#E5E5E5]">
       <div ref={ref} className={`container ${isVisible ? "is-visible" : ""}`}>
-        {/* Section header — left rail */}
+        {/* Section header - left rail */}
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2 flex items-center gap-3">
             <span className="font-mono-label text-[#A3A3A3]">05 / ABOUT</span>
@@ -36,7 +36,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Ethos statement — offset */}
+        {/* Ethos statement - offset */}
         <div className="grid grid-cols-12 gap-4 mb-12 md:mb-24">
           <div className="col-span-12 md:col-span-2 mb-2 md:mb-0">
             <span className="font-mono-label text-[#737373]">STUDIO ETHOS</span>
@@ -51,14 +51,14 @@ export default function About() {
               managing.{" "}
               <span className="text-[#A3A3A3] font-normal">
                 No hand-holding, no missed deadlines, no quality drift. Just
-                senior-level execution that shows up every time — quietly,
+                senior-level execution that shows up every time - quietly,
                 reliably, under your brand.
               </span>
             </p>
           </div>
         </div>
 
-        {/* Principles — grid aligned */}
+        {/* Principles - grid aligned */}
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-10">
