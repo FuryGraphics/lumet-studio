@@ -5,6 +5,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
  * Editorial case-study layout: cropped images, typographic captions,
  * hairline borders, strict grid alignment.
  * Responsive: 1 col mobile, 2 col tablet (sm), 3 col desktop (md+).
+ * Each card links to the live project website.
  */
 const projects = [
   {
@@ -13,6 +14,7 @@ const projects = [
     title: "Website Design & Marketing Systems For Contractors",
     meta: "GHL · REVIEW FUNNEL · MISSED CALL TEXT BACK · SMS CAMPAIGNS",
     desc: "Full done-for-you marketing system for home service contractors — conversion-focused website, automated review funnel, missed call text back, and one-click SMS campaigns.",
+    link: "https://www.estimate-engine.com/",
   },
   {
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663703679771/jMTwORqcjhZQwhZQ.webp",
@@ -20,6 +22,7 @@ const projects = [
     title: "Roofing Client Full Setup",
     meta: "GHL · WEBSITE · REVIEW FUNNEL · LOCAL SEO · INSPECTION BOOKING",
     desc: "Complete digital setup for a Tampa Bay roofing restoration company — website build, Google review funnel, free inspection booking automation, and local SEO foundation.",
+    link: "https://www.foreverhomesroofrestoration.com/",
   },
   {
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663703679771/LaIDtHwnmudyWupT.png",
@@ -27,6 +30,7 @@ const projects = [
     title: "Agency Snapshot & Automation",
     meta: "GHL · SNAPSHOTS · WORKFLOWS · PIPELINES",
     desc: "Complete GoHighLevel snapshot build with custom automations, pipeline setup, and workflow sequences for a niche marketing agency.",
+    link: null,
   },
 ];
 
@@ -71,42 +75,72 @@ export default function Work() {
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-10">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-              {projects.map((project) => (
-                <article
-                  key={project.title}
-                  className="group cursor-pointer"
-                  onClick={() => (window.location.hash = "#contact")}
-                >
-                  {/* Image — cropped, editorial */}
-                  <div className="relative aspect-[4/3] overflow-hidden bg-[#F5F5F5] border border-[#E5E5E5] mb-4 md:mb-5">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                      loading="lazy"
-                    />
-                    {/* Mono index overlay */}
-                    <span className="absolute top-3 left-3 font-mono-label text-white/80 bg-black/40 px-2 py-1 text-[0.625rem] md:text-xs">
-                      {project.category}
-                    </span>
-                  </div>
-
-                  {/* Caption — typographic, editorial */}
-                  <div className="space-y-2 md:space-y-3">
-                    <h3 className="text-lg md:text-xl font-semibold text-[#0D0D0D] group-hover:text-[#1D4ED8] transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="lumet-body text-sm text-[#525252]">
-                      {project.desc}
-                    </p>
-                    <div className="pt-3 border-t border-[#E5E5E5]">
-                      <p className="font-mono-label text-[#A3A3A3] text-[0.625rem] md:text-xs">
-                        {project.meta}
-                      </p>
+              {projects.map((project) => {
+                const CardInner = (
+                  <>
+                    {/* Image — cropped, editorial */}
+                    <div className="relative aspect-[4/3] overflow-hidden bg-[#F5F5F5] border border-[#E5E5E5] mb-4 md:mb-5">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        loading="lazy"
+                      />
+                      {/* Mono index overlay */}
+                      <span className="absolute top-3 left-3 font-mono-label text-white/80 bg-black/40 px-2 py-1 text-[0.625rem] md:text-xs">
+                        {project.category}
+                      </span>
+                      {/* Visit link overlay on hover */}
+                      {project.link && (
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-mono-label text-white text-xs md:text-sm bg-[#1D4ED8] px-4 py-2">
+                            VIEW LIVE SITE →
+                          </span>
+                        </div>
+                      )}
                     </div>
-                  </div>
-                </article>
-              ))}
+
+                    {/* Caption — typographic, editorial */}
+                    <div className="space-y-2 md:space-y-3">
+                      <h3 className="text-lg md:text-xl font-semibold text-[#0D0D0D] group-hover:text-[#1D4ED8] transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="lumet-body text-sm text-[#525252]">
+                        {project.desc}
+                      </p>
+                      <div className="pt-3 border-t border-[#E5E5E5]">
+                        <p className="font-mono-label text-[#A3A3A3] text-[0.625rem] md:text-xs">
+                          {project.meta}
+                        </p>
+                      </div>
+                    </div>
+                  </>
+                );
+
+                if (project.link) {
+                  return (
+                    <a
+                      key={project.title}
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group block"
+                    >
+                      {CardInner}
+                    </a>
+                  );
+                }
+
+                return (
+                  <article
+                    key={project.title}
+                    className="group cursor-pointer"
+                    onClick={() => (window.location.hash = "#contact")}
+                  >
+                    {CardInner}
+                  </article>
+                );
+              })}
             </div>
           </div>
         </div>
