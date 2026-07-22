@@ -16,9 +16,9 @@ const projects = [
   {
     image: "/manus-storage/lumet-project-2_ec4e4cac.png",
     category: "WEB DESIGN + REVIEW FUNNEL",
-    title: "Dental Clinic Full Setup",
-    meta: "GHL · REVIEW FUNNEL · APPOINTMENT AUTOMATION",
-    desc: "Website redesign paired with a five-star Google review funnel and automated appointment follow-up sequences.",
+    title: "Accountants Full Setup",
+    meta: "GHL · REVIEW FUNNEL · CLIENT ONBOARDING AUTOMATION",
+    desc: "Website redesign paired with a five-star Google review funnel and automated client onboarding and tax-season follow-up sequences.",
   },
   {
     image: "/manus-storage/lumet-project-3_23282dd6.png",
