@@ -43,14 +43,10 @@ export default function Hero() {
           className="lumet-display text-[#0D0D0D] max-w-5xl"
           style={{ fontSize: "clamp(2.25rem, 8vw, 6rem)" }}
         >
-          You sell it.
-          <br />
-          <span className="text-[#0D0D0D]">We build it,</span>
+          You sell it. We build it,
           <br />
           <span className="text-[#1D4ED8]">run it,</span>{" "}
-          <span className="text-[#0D0D0D]">and keep</span>
-          <br />
-          <span className="text-[#0D0D0D]">your clients happy.</span>
+          <span className="text-[#0D0D0D]">and keep your clients happy.</span>
         </h1>
 
         {/* Subhead */}
