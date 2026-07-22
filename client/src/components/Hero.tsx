@@ -43,11 +43,18 @@ export default function Hero() {
           className="lumet-display text-[#0D0D0D] max-w-5xl"
           style={{ fontSize: "clamp(2.25rem, 8vw, 6rem)" }}
         >
-          You sell it. We build it,
+          You sell it.
           <br />
-          <span className="text-[#1D4ED8]">run it,</span>{" "}
-          <span className="text-[#0D0D0D]">and keep your clients happy.</span>
+          We build it.
         </h1>
+
+        {/* Secondary headline */}
+        <p
+          className="lumet-display mt-3 md:mt-4 text-[#525252]"
+          style={{ fontSize: "clamp(1.5rem, 4vw, 2.5rem)" }}
+        >
+          We <span className="text-[#1D4ED8]">run it,</span> and keep your clients happy.
+        </p>
 
         {/* Subhead */}
         <p className="lumet-body mt-6 md:mt-10 text-base md:text-xl text-[#525252] max-w-2xl">
