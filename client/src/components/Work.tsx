@@ -6,19 +6,8 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
  * hairline borders, strict grid alignment.
  * Responsive: 1 col mobile, 2 col tablet (sm), 3 col desktop (md+).
  * Each card links to the live project website.
- *
- * A project without a screenshot renders a dark typographic tile instead,
- * so a new build can go on the page before its capture exists.
  */
 const projects = [
-  {
-    image: null,
-    category: "LAW FIRM",
-    title: "Lawson Personal Injury Attorneys",
-    meta: "WEBSITE · LOCAL SEO · PRACTICE AREA PAGES · CONSULTATION BOOKING",
-    desc: "Full site build for a personal injury firm in Lawrenceville, Georgia. Practice area pages, city pages, attorney profiles, and a consultation funnel built to rank locally and convert.",
-    link: "https://www.lawsonfirm.com/",
-  },
   {
     image:
       "https://files.manuscdn.com/user_upload_by_module/session_file/310519663703679771/NyefuEzvnVyhKVRq.webp",
@@ -82,7 +71,13 @@ export default function Work() {
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+            <div
+              className={`grid grid-cols-1 gap-6 md:gap-8 ${
+                projects.length >= 3
+                  ? "sm:grid-cols-2 md:grid-cols-3"
+                  : "sm:grid-cols-2"
+              }`}
+            >
               {projects.map(project => (
                 <a
                   key={project.title}
@@ -91,29 +86,14 @@ export default function Work() {
                   rel="noopener noreferrer"
                   className="group block"
                 >
-                  {/* Visual - screenshot, or a typographic tile when none exists */}
+                  {/* Image - cropped, editorial */}
                   <div className="relative aspect-[4/3] overflow-hidden bg-[#F5F5F5] border border-[#E5E5E5] mb-4 md:mb-5">
-                    {project.image ? (
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                        loading="lazy"
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-[#0D0D0D] flex items-end p-5 md:p-6 transition-transform duration-500 group-hover:scale-[1.03]">
-                        <div
-                          className="absolute inset-0 pointer-events-none"
-                          style={{
-                            background:
-                              "radial-gradient(ellipse 60% 60% at 50% 0%, rgba(255,255,255,0.08) 0%, transparent 70%)",
-                          }}
-                        />
-                        <span className="lumet-display relative text-white text-xl md:text-2xl leading-tight">
-                          {project.title}
-                        </span>
-                      </div>
-                    )}
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                      loading="lazy"
+                    />
                     {/* Mono index overlay */}
                     <span className="absolute top-3 left-3 font-mono-label text-white/80 bg-black/40 px-2 py-1 text-[0.625rem] md:text-xs">
                       {project.category}

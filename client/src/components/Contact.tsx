@@ -221,7 +221,7 @@ export default function Contact() {
                   value={form.message}
                   onChange={handleChange("message")}
                   className="w-full bg-transparent text-base md:text-lg text-[#0D0D0D] focus:outline-none placeholder:text-[#D4D4D4] resize-none"
-                  placeholder="Personal injury and workers comp, Atlanta metro. Most cases come from referrals right now..."
+                  placeholder="Family law and estate planning, Dallas. Most cases come from referrals right now..."
                 />
                 <ValidationError
                   field="message"
