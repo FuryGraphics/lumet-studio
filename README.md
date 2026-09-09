@@ -25,6 +25,35 @@ Copy that states the offer lives in the section components under
 move together: `Pricing.tsx`, `Stats.tsx`, and the `Service` JSON-LD block in
 `client/index.html`.
 
+## Photography (Unsplash)
+
+Work-card images come from Unsplash. The site is a static build with no server,
+so an access key compiled into the frontend would ship inside the JS bundle and
+be readable by every visitor. Instead the key stays on your machine and only the
+resulting URLs and credits are committed:
+
+```bash
+UNSPLASH_ACCESS_KEY=xxx pnpm fetch:unsplash
+```
+
+That writes `client/src/data/unsplash-photos.ts`. Commit the result; never
+commit the key. The script also triggers Unsplash's download endpoint, which
+their API guidelines require whenever a photo is actually used.
+
+Which photos get fetched is set by `SLOTS` in `scripts/fetch-unsplash.mjs`. A
+slot is either a search query or a pinned `{ id }`. Search returns whatever is
+trending for that query that day, so once a photo looks right, replace the query
+with its id from the output to freeze it.
+
+Attribution is not optional and is not manual: `Work.tsx` renders
+"Photo by <photographer> on Unsplash" with both links UTM-tagged, built by
+`client/src/lib/unsplash.ts`. Set `UNSPLASH_APP_NAME` there to match the app
+name registered at https://unsplash.com/oauth/applications.
+
+Until the script has been run the generated data is empty, and each card falls
+back to its existing screenshot with no credit shown, so the site renders
+correctly either way.
+
 ## Tech Stack
 
 - React 19 + TypeScript
