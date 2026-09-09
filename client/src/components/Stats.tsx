@@ -1,15 +1,18 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 /**
- * Stats - dark proof band with key metrics.
+ * Stats - dark proof band with the offer's headline numbers.
  * Near-black background, large numbers, mono labels.
  * Responsive: 2 col mobile, 4 col desktop, fluid font sizing.
  */
 const stats = [
-  { value: "48h", label: "Average turnaround on standard client requests" },
-  { value: "200+", label: "GoHighLevel buildouts completed" },
-  { value: "100%", label: "White-label - your clients never see us" },
-  { value: "5★", label: "Review funnels deployed across niches" },
+  { value: "7 days", label: "From kickoff to a live, SEO-ready website" },
+  {
+    value: "24/7",
+    label: "AI answers and qualifies while your office is closed",
+  },
+  { value: "$297", label: "Flat monthly fee. No setup cost, no contract" },
+  { value: "5★", label: "Review funnel built to compound your Google rating" },
 ];
 
 export default function Stats() {
@@ -25,7 +28,10 @@ export default function Stats() {
             "radial-gradient(ellipse 30% 40% at 50% 0%, rgba(255,255,255,0.04) 0%, transparent 70%)",
         }}
       />
-      <div ref={ref} className={`container relative ${isVisible ? "is-visible" : ""}`}>
+      <div
+        ref={ref}
+        className={`container relative ${isVisible ? "is-visible" : ""}`}
+      >
         {/* Section header - left rail */}
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-14">
           <div className="col-span-12 md:col-span-2 flex items-center gap-3">
@@ -41,8 +47,11 @@ export default function Stats() {
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-10">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#1A1A1A]">
-              {stats.map((stat) => (
-                <div key={stat.label} className="bg-[#0D0D0D] p-5 md:p-8 lg:p-10">
+              {stats.map(stat => (
+                <div
+                  key={stat.label}
+                  className="bg-[#0D0D0D] p-5 md:p-8 lg:p-10"
+                >
                   <div
                     className="lumet-display text-white mb-2 md:mb-3"
                     style={{ fontSize: "clamp(2rem, 6vw, 3.75rem)" }}

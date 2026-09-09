@@ -4,17 +4,18 @@
  * Responsive: stacks on mobile, 2-col on tablet, full grid on desktop.
  */
 const footerLinks = {
-  Services: [
-    { label: "GHL Buildouts", href: "#services" },
-    { label: "Web Design & Dev", href: "#services" },
-    { label: "Review Funnels", href: "#services" },
-    { label: "Backend Management", href: "#services" },
-    { label: "Design Services", href: "#services" },
+  System: [
+    { label: "Professional Website", href: "#system" },
+    { label: "Google Review Funnel", href: "#system" },
+    { label: "AI Missed-Chat Bot", href: "#system" },
+    { label: "Local SEO", href: "#system" },
+    { label: "Analytics Dashboard", href: "#system" },
   ],
   Studio: [
-    { label: "Work", href: "#work" },
     { label: "How it works", href: "#process" },
+    { label: "Work", href: "#work" },
     { label: "About", href: "#about" },
+    { label: "Pricing", href: "#pricing" },
     { label: "Contact", href: "#contact" },
   ],
 };
@@ -44,19 +45,22 @@ export default function Footer() {
               Lumet<span className="text-[#1D4ED8]">.</span>
             </a>
             <p className="lumet-body mt-4 md:mt-6 text-sm md:text-base text-[#A3A3A3] max-w-sm">
-              The studio behind the studios. White-label fulfillment for
-              marketing agencies and niche-service businesses.
+              The complete client-getting system for law firms. Website, Google
+              review funnel, and AI missed-chat bot, live in under 7 days for
+              $297 a month.
             </p>
             <p className="font-mono-label text-[#525252] mt-4 md:mt-6">
-              YOU SELL IT. WE BUILD IT.
+              YOU PRACTICE LAW. WE BRING THE CLIENTS.
             </p>
           </div>
 
-          {/* Services links */}
+          {/* System links */}
           <div className="col-span-6 md:col-span-3 md:col-start-7">
-            <p className="font-mono-label text-[#525252] mb-4 md:mb-5">SERVICES</p>
+            <p className="font-mono-label text-[#525252] mb-4 md:mb-5">
+              THE SYSTEM
+            </p>
             <ul className="space-y-2 md:space-y-3">
-              {footerLinks.Services.map((link) => (
+              {footerLinks.System.map(link => (
                 <li key={link.label}>
                   <a
                     href={link.href}
@@ -71,9 +75,11 @@ export default function Footer() {
 
           {/* Studio links */}
           <div className="col-span-6 md:col-span-2">
-            <p className="font-mono-label text-[#525252] mb-4 md:mb-5">STUDIO</p>
+            <p className="font-mono-label text-[#525252] mb-4 md:mb-5">
+              STUDIO
+            </p>
             <ul className="space-y-2 md:space-y-3">
-              {footerLinks.Studio.map((link) => (
+              {footerLinks.Studio.map(link => (
                 <li key={link.label}>
                   <a
                     href={link.href}
@@ -88,16 +94,16 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="col-span-12 md:col-span-2">
-            <p className="font-mono-label text-[#525252] mb-4 md:mb-5">CONTACT</p>
+            <p className="font-mono-label text-[#525252] mb-4 md:mb-5">
+              CONTACT
+            </p>
             <a
               href="mailto:hello@lumetstudio.online"
               className="lumet-link block text-sm text-[#A3A3A3] hover:text-white transition-colors mb-3"
             >
               hello@lumetstudio.online
             </a>
-            <p className="font-mono-label text-[#525252]">
-              REMOTE · GLOBAL
-            </p>
+            <p className="font-mono-label text-[#525252]">REMOTE · GLOBAL</p>
           </div>
         </div>
 
@@ -115,7 +121,12 @@ export default function Footer() {
             >
               Back to top
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <path d="M6 10V2M6 2L2 6M6 2L10 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" />
+                <path
+                  d="M6 10V2M6 2L2 6M6 2L10 6"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="square"
+                />
               </svg>
             </a>
           </div>

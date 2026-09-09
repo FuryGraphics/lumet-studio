@@ -4,34 +4,41 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { toast } from "sonner";
 
 /**
- * Contact - editorial form wired to Formspree (endpoint: mqerlrjr).
+ * Contact - editorial intake form wired to Formspree (endpoint: mqerlrjr).
  * Hairline fields, mono labels, no boxed card.
+ * Fields map to what a build needs to start: who you are, how to reach you,
+ * the firm, and the practice areas the system will be built around.
  * Responsive: fluid font sizing, mobile-optimized form layout.
  */
 const FORMSPREE_ID = "mqerlrjr";
 
+const EMPTY_FORM = { name: "", email: "", phone: "", firm: "", message: "" };
+
 export default function Contact() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
   const [state, handleSubmit] = useForm(FORMSPREE_ID);
-  const [form, setForm] = useState({ name: "", email: "", agency: "", message: "" });
+  const [form, setForm] = useState(EMPTY_FORM);
 
   if (state.succeeded) {
     toast.success("Thanks - we'll be in touch within 24 hours.");
   }
 
-  const handleChange = (field: keyof typeof form) => (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setForm({ ...form, [field]: e.target.value });
-  };
+  const handleChange =
+    (field: keyof typeof form) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      setForm({ ...form, [field]: e.target.value });
+    };
 
   if (state.succeeded) {
     return (
-      <section id="contact" className="py-16 md:py-32 bg-[#FAFAF9] border-t border-[#E5E5E5]">
+      <section
+        id="contact"
+        className="py-16 md:py-32 bg-[#FAFAF9] border-t border-[#E5E5E5]"
+      >
         <div ref={ref} className={`container ${isVisible ? "is-visible" : ""}`}>
           <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
             <div className="col-span-12 md:col-span-2 flex items-center gap-3">
-              <span className="font-mono-label text-[#A3A3A3]">06 / CONTACT</span>
+              <span className="font-mono-label text-[#A3A3A3]">07 / START</span>
             </div>
             <div className="hidden md:block col-span-10">
               <span className="block h-px w-full bg-[#E5E5E5]" />
@@ -49,12 +56,12 @@ export default function Contact() {
                 received.
               </h2>
               <p className="lumet-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
-                Thanks for reaching out. We'll review your message and get back
-                to you within 24 hours.
+                Thanks for reaching out. We'll review what you sent and get back
+                to you within 24 hours with your build plan.
               </p>
               <button
                 onClick={() => {
-                  setForm({ name: "", email: "", agency: "", message: "" });
+                  setForm(EMPTY_FORM);
                   window.location.hash = "contact";
                   window.location.reload();
                 }}
@@ -70,12 +77,15 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-16 md:py-32 bg-[#FAFAF9] border-t border-[#E5E5E5]">
+    <section
+      id="contact"
+      className="py-16 md:py-32 bg-[#FAFAF9] border-t border-[#E5E5E5]"
+    >
       <div ref={ref} className={`container ${isVisible ? "is-visible" : ""}`}>
         {/* Section header - left rail */}
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2 flex items-center gap-3">
-            <span className="font-mono-label text-[#A3A3A3]">06 / CONTACT</span>
+            <span className="font-mono-label text-[#A3A3A3]">07 / START</span>
           </div>
           <div className="hidden md:block col-span-10">
             <span className="block h-px w-full bg-[#E5E5E5]" />
@@ -89,15 +99,16 @@ export default function Contact() {
               className="lumet-display text-[#0D0D0D]"
               style={{ fontSize: "clamp(1.75rem, 5vw, 3.75rem)" }}
             >
-              Let's talk
+              Tell us about
               <br />
-              about your
+              your
               <br />
-              <span className="text-[#1D4ED8]">workload.</span>
+              <span className="text-[#1D4ED8]">practice.</span>
             </h2>
             <p className="lumet-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
-              Tell us what you're handling in-house and what's slowing you down.
-              We'll show you exactly how we'd take it off your plate.
+              Where your firm is, what you handle, and where your cases come
+              from today. We'll come back with your build plan, and the system
+              goes live in under 7 days.
             </p>
 
             <div className="mt-8 md:mt-10 space-y-3">
@@ -108,7 +119,7 @@ export default function Contact() {
                 hello@lumetstudio.online
               </a>
               <p className="font-mono-label text-[#A3A3A3]">
-                RESPONSE WITHIN 24H · MON–FRI
+                RESPONSE WITHIN 24H · NO CREDIT CARD REQUIRED
               </p>
             </div>
           </div>
@@ -148,7 +159,7 @@ export default function Contact() {
                     value={form.email}
                     onChange={handleChange("email")}
                     className="w-full bg-transparent text-base md:text-lg text-[#0D0D0D] focus:outline-none placeholder:text-[#D4D4D4]"
-                    placeholder="jane@agency.com"
+                    placeholder="jane@lawfirm.com"
                   />
                   <ValidationError
                     field="email"
@@ -158,30 +169,50 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Agency */}
-              <div className="border-b border-[#E5E5E5] p-4 md:p-6">
-                <label className="font-mono-label text-[#737373] block mb-2 md:mb-3">
-                  AGENCY / COMPANY
-                </label>
-                <input
-                  type="text"
-                  name="agency"
-                  value={form.agency}
-                  onChange={handleChange("agency")}
-                  className="w-full bg-transparent text-base md:text-lg text-[#0D0D0D] focus:outline-none placeholder:text-[#D4D4D4]"
-                  placeholder="Your agency name"
-                />
-                <ValidationError
-                  field="agency"
-                  errors={state.errors}
-                  className="mt-2 text-sm text-red-600"
-                />
+              {/* Phone + Firm row */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
+                <div className="border-b border-[#E5E5E5] sm:border-r sm:border-[#E5E5E5] p-4 md:p-6">
+                  <label className="font-mono-label text-[#737373] block mb-2 md:mb-3">
+                    PHONE
+                  </label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    value={form.phone}
+                    onChange={handleChange("phone")}
+                    className="w-full bg-transparent text-base md:text-lg text-[#0D0D0D] focus:outline-none placeholder:text-[#D4D4D4]"
+                    placeholder="(555) 123-4567"
+                  />
+                  <ValidationError
+                    field="phone"
+                    errors={state.errors}
+                    className="mt-2 text-sm text-red-600"
+                  />
+                </div>
+                <div className="border-b border-[#E5E5E5] p-4 md:p-6">
+                  <label className="font-mono-label text-[#737373] block mb-2 md:mb-3">
+                    FIRM NAME
+                  </label>
+                  <input
+                    type="text"
+                    name="firm"
+                    value={form.firm}
+                    onChange={handleChange("firm")}
+                    className="w-full bg-transparent text-base md:text-lg text-[#0D0D0D] focus:outline-none placeholder:text-[#D4D4D4]"
+                    placeholder="Doe & Associates"
+                  />
+                  <ValidationError
+                    field="firm"
+                    errors={state.errors}
+                    className="mt-2 text-sm text-red-600"
+                  />
+                </div>
               </div>
 
               {/* Message */}
               <div className="border-b border-[#E5E5E5] p-4 md:p-6">
                 <label className="font-mono-label text-[#737373] block mb-2 md:mb-3">
-                  WHAT DO YOU NEED HELP WITH?
+                  PRACTICE AREAS AND CITY
                 </label>
                 <textarea
                   required
@@ -190,7 +221,7 @@ export default function Contact() {
                   value={form.message}
                   onChange={handleChange("message")}
                   className="w-full bg-transparent text-base md:text-lg text-[#0D0D0D] focus:outline-none placeholder:text-[#D4D4D4] resize-none"
-                  placeholder="GHL buildouts, website design, review funnels, ongoing backend support..."
+                  placeholder="Personal injury and workers comp, Atlanta metro. Most cases come from referrals right now..."
                 />
                 <ValidationError
                   field="message"
@@ -206,14 +237,22 @@ export default function Contact() {
                   disabled={state.submitting}
                   className="lumet-cta inline-flex items-center gap-2 px-6 md:px-8 py-3.5 md:py-4 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto justify-center sm:justify-start"
                 >
-                  {state.submitting ? "Sending..." : "Send message"}
+                  {state.submitting ? "Sending..." : "Get started today"}
                   {!state.submitting && (
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                      <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" />
+                      <path
+                        d="M3 8H13M13 8L8 3M13 8L8 13"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="square"
+                      />
                     </svg>
                   )}
                 </button>
-                <ValidationError errors={state.errors} className="mt-4 block text-sm text-red-600" />
+                <ValidationError
+                  errors={state.errors}
+                  className="mt-4 block text-sm text-red-600"
+                />
               </div>
             </form>
           </div>

@@ -1,7 +1,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 /**
- * Process - dark section with a strong statement and 3-step workflow.
+ * Process - dark section with the 7-day promise and 3-step workflow.
  * Spotlight motif at top, near-black background.
  * Editorial grid with left rail indices.
  * Responsive: fluid font sizing, mobile-optimized spacing.
@@ -9,18 +9,18 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const steps = [
   {
     num: "01",
-    title: "Onboard",
-    desc: "We integrate into your workflow in days, not weeks. You introduce us to your systems, we learn your standards, and we're ready to receive work.",
+    title: "We build everything",
+    desc: "Tell us about your practice and we build your entire system: website, review funnel, and AI text-back, customized for your firm. Live in under 7 days.",
   },
   {
     num: "02",
-    title: "Build",
-    desc: "Whether it's a GHL snapshot, a full website, or a review funnel - we execute to a senior standard. You review, approve, and deliver to your client under your brand.",
+    title: "Clients start finding you",
+    desc: "Your SEO-optimized site starts ranking locally. Your Google reviews grow automatically. Missed calls get instant follow-up. The system works 24/7.",
   },
   {
     num: "03",
-    title: "Handle requests",
-    desc: "Ongoing client requests flow to us. Edits, fixes, new builds, automations - we manage the backend while you focus on growth and relationships.",
+    title: "You sign more retainers",
+    desc: "More consultations booked. More 5-star reviews. More cases on your desk. You focus on practicing law, we handle the rest.",
   },
 ];
 
@@ -50,11 +50,16 @@ export default function Process() {
         }}
       />
 
-      <div ref={ref} className={`container relative ${isVisible ? "is-visible" : ""}`}>
+      <div
+        ref={ref}
+        className={`container relative ${isVisible ? "is-visible" : ""}`}
+      >
         {/* Section header - left rail */}
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2 flex items-center gap-3">
-            <span className="font-mono-label text-[#525252]">02 / PROCESS</span>
+            <span className="font-mono-label text-[#525252]">
+              02 / HOW IT WORKS
+            </span>
           </div>
           <div className="hidden md:block col-span-10">
             <span className="block h-px w-full bg-[#262626]" />
@@ -69,13 +74,14 @@ export default function Process() {
               className="lumet-display text-white"
               style={{ fontSize: "clamp(1.75rem, 5vw, 3.75rem)" }}
             >
-              We're the team
+              Up and running
               <br />
-              behind your team.
+              in under 7 days.
             </h2>
             <p className="lumet-body mt-6 md:mt-8 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
-              White-label, reliable, senior-level execution. Your clients never
-              see us - they only see the quality of your work going up.
+              No project meetings, no design committees, no six-week build
+              cycle. You answer a few questions about your firm and we handle
+              every piece of it from there.
             </p>
           </div>
         </div>
@@ -85,13 +91,15 @@ export default function Process() {
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-10">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#262626]">
-              {steps.map((step) => (
+              {steps.map(step => (
                 <div
                   key={step.num}
                   className="bg-[#0D0D0D] p-6 md:p-10 lg:p-12 group hover:bg-[#111111] transition-colors"
                 >
                   <div className="flex items-baseline gap-4 mb-4 md:mb-6">
-                    <span className="font-mono-label text-[#1D4ED8]">{step.num}</span>
+                    <span className="font-mono-label text-[#1D4ED8]">
+                      {step.num}
+                    </span>
                     <span className="h-px flex-1 bg-[#262626] group-hover:bg-[#1D4ED8]/30 transition-colors" />
                   </div>
                   <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-3 md:mb-4">

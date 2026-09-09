@@ -7,10 +7,10 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
  * Responsive: fluid font sizing, mobile-optimized spacing.
  */
 const tags = [
-  "GOHIGHLEVEL",
-  "WEB DESIGN",
-  "REVIEW FUNNELS",
-  "WHITE-LABEL OPS",
+  "SEO WEBSITE",
+  "GOOGLE REVIEW FUNNEL",
+  "AI MISSED-CHAT BOT",
+  "LIVE IN 7 DAYS",
 ];
 
 export default function Hero() {
@@ -31,7 +31,10 @@ export default function Hero() {
         }}
       />
 
-      <div ref={ref} className={`container relative ${isVisible ? "is-visible" : ""}`}>
+      <div
+        ref={ref}
+        className={`container relative ${isVisible ? "is-visible" : ""}`}
+      >
         {/* Section index */}
         <div className="flex items-center gap-3 mb-6 md:mb-12">
           <span className="font-mono-label text-[#A3A3A3]">00 / INTRO</span>
@@ -43,9 +46,9 @@ export default function Hero() {
           className="lumet-display text-[#0D0D0D] max-w-5xl"
           style={{ fontSize: "clamp(2.25rem, 8vw, 6rem)" }}
         >
-          You sell it.
+          You practice law.
           <br />
-          We build it.
+          We bring the clients.
         </h1>
 
         {/* Secondary headline */}
@@ -53,33 +56,39 @@ export default function Hero() {
           className="lumet-display mt-3 md:mt-4 text-[#525252]"
           style={{ fontSize: "clamp(1.5rem, 4vw, 2.5rem)" }}
         >
-          We <span className="text-[#1D4ED8]">run it,</span> and keep your clients happy.
+          Up and running in{" "}
+          <span className="text-[#1D4ED8]">under 7 days.</span>
         </p>
 
         {/* Subhead */}
         <p className="lumet-body mt-6 md:mt-10 text-base md:text-xl text-[#525252] max-w-2xl">
-          Lumet Studios is the invisible fulfillment partner behind marketing
-          agencies and niche-service businesses. We handle GoHighLevel buildouts,
-          website design, Google review funnels, and backend operations - so you
-          can scale and stay client-facing.
+          Lumet builds and runs the entire client-getting system for your firm.
+          An SEO-optimized website, an automated Google review funnel, and an AI
+          bot that texts back every missed call. One flat monthly fee. No
+          contracts.
         </p>
 
         {/* CTA */}
         <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <a
-            href="#contact"
+            href="#pricing"
             className="lumet-cta inline-flex items-center gap-2 px-6 md:px-7 py-3 md:py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm w-full sm:w-auto justify-center sm:justify-start"
           >
-            Book a call
+            Get started
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" />
+              <path
+                d="M3 8H13M13 8L8 3M13 8L8 13"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="square"
+              />
             </svg>
           </a>
           <a
-            href="#work"
+            href="#system"
             className="lumet-link text-base font-medium text-[#404040] hover:text-[#0D0D0D] transition-colors"
           >
-            See our work
+            See what's included
           </a>
         </div>
 

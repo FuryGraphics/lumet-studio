@@ -1,8 +1,29 @@
 # Lumet Studios
 
-White-label fulfillment partner for marketing agencies and niche-service businesses.
+The complete client-getting system for law firms.
 
-**You sell it. We build it, run it, and keep your clients happy.**
+**You practice law. We bring the clients.**
+
+One plan at $297/mo, live in under 7 days, no contracts. Every firm gets the
+same three pieces, built together so they feed each other:
+
+| Pillar | Promise |
+| --- | --- |
+| Professional website | SEO-optimized and built to convert |
+| Google review funnel | 5-star reputation on autopilot |
+| AI missed-chat bot | Never lose a lead again |
+
+## Page structure
+
+Single-page marketing site, sections in order:
+
+`Hero` → `System` → `Process` (dark) → `Work` → `Stats` (dark) → `About` →
+`Pricing` → `Contact` → `Footer`
+
+Copy that states the offer lives in the section components under
+`client/src/components/`. The price appears in three places and all three must
+move together: `Pricing.tsx`, `Stats.tsx`, and the `Service` JSON-LD block in
+`client/index.html`.
 
 ## Tech Stack
 

@@ -49,12 +49,17 @@
 - **Mono:** JetBrains Mono, weight 400–500, 0.75rem–0.875rem, uppercase for labels, tracking 0.05em.
 - **Headings:** Never centered except hero. Left-aligned with grid discipline.
 
-**Brand Essence:** The studio behind the studios — white-label fulfillment for agencies that demand senior-level execution. Personality: precise, reliable, quietly excellent.
+**Brand Essence:** The complete client-getting system for law firms, built and run for one flat fee. Personality: precise, reliable, quietly excellent. We sell certainty, not creativity.
 
-**Brand Voice:** Short, confident sentences. No hype. Sound like a studio that does the work, not talks about it.
-- Headline: "You sell it. We build it."
-- CTA: "Book a call"
-- Ban: "Welcome to our website", "Get started today", "Unlock your potential"
+**Brand Voice:** Short, confident sentences. No hype. Sound like a studio that does the work, not talks about it. Speak to a working attorney: their time is the scarce thing, so lead with what gets taken off their plate.
+- Headline: "You practice law. We bring the clients."
+- Primary CTA: "Get started" / "Get started today"
+- Say the number. $297/mo, 7 days, no contracts. Vagueness reads as a sales trap in this market.
+- Ban: "Welcome to our website", "Unlock your potential", "Take your practice to the next level", "In today's digital landscape"
+- Never promise case outcomes, verdicts, settlement figures, or ranking positions. Attorneys are bound by bar advertising rules and a claim we cannot keep is a liability for both sides.
+- No em dashes anywhere on the site (see commit "Remove all em dashes from the entire website"). Use commas, colons, or a full stop.
+
+**Positioning shift (superseded):** Lumet launched as a white-label fulfillment partner for marketing agencies ("You sell it. We build it."). That framing is retired. The site now sells direct to law firms. Prior contractor and roofing builds stay on the page as proof that the same three-part system already runs in the field.
 
 **Wordmark & Logo:** "Lumet." wordmark with spotlight beam — provided by client. White version for dark backgrounds, black version for light.
 

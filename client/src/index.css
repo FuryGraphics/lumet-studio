@@ -92,23 +92,23 @@
   --lumet-dark-muted: oklch(0.55 0.008 65);
   --lumet-dark-border: oklch(0.16 0.005 65);
   --lumet-accent: oklch(0.45 0.21 259);
-  --lumet-accent-hover: oklch(0.40 0.20 259);
+  --lumet-accent-hover: oklch(0.4 0.2 259);
   --lumet-hairline: oklch(0.9 0.002 80);
   --lumet-hairline-dark: oklch(0.16 0.005 65);
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Menlo, monospace;
 }
 
 .dark {
-  --primary: oklch(0.55 0.20 259);
+  --primary: oklch(0.55 0.2 259);
   --primary-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.55 0.20 259);
+  --sidebar-primary: oklch(0.55 0.2 259);
   --sidebar-primary-foreground: oklch(0.98 0 0);
   --background: oklch(0.07 0.005 65);
   --foreground: oklch(0.92 0.005 65);
-  --card: oklch(0.10 0.005 65);
+  --card: oklch(0.1 0.005 65);
   --card-foreground: oklch(0.92 0.005 65);
-  --popover: oklch(0.10 0.005 65);
+  --popover: oklch(0.1 0.005 65);
   --popover-foreground: oklch(0.92 0.005 65);
   --secondary: oklch(0.14 0.005 65);
   --secondary-foreground: oklch(0.75 0.005 65);
@@ -120,13 +120,13 @@
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(0.16 0.005 65);
   --input: oklch(0.16 0.005 65);
-  --ring: oklch(0.55 0.20 259);
-  --sidebar: oklch(0.10 0.005 65);
+  --ring: oklch(0.55 0.2 259);
+  --sidebar: oklch(0.1 0.005 65);
   --sidebar-foreground: oklch(0.92 0.005 65);
   --sidebar-accent: oklch(0.14 0.005 65);
   --sidebar-accent-foreground: oklch(0.92 0.005 65);
   --sidebar-border: oklch(0.16 0.005 65);
-  --sidebar-ring: oklch(0.55 0.20 259);
+  --sidebar-ring: oklch(0.55 0.2 259);
 }
 
 @layer base {
@@ -138,7 +138,7 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -205,7 +205,11 @@
   }
 
   .lumet-spotlight {
-    background: radial-gradient(ellipse 60% 80% at 50% 0%, rgba(255,255,255,0.06) 0%, transparent 70%);
+    background: radial-gradient(
+      ellipse 60% 80% at 50% 0%,
+      rgba(255, 255, 255, 0.06) 0%,
+      transparent 70%
+    );
   }
 
   .lumet-accent-text {
@@ -233,7 +237,9 @@
   .reveal {
     opacity: 0;
     transform: translateY(16px);
-    transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1), transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transition:
+      opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+      transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   .reveal.is-visible {
@@ -251,7 +257,10 @@
 
   /* Magnetic button effect */
   .lumet-cta {
-    transition: transform 0.16s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.2s ease, color 0.2s ease;
+    transition:
+      transform 0.16s cubic-bezier(0.23, 1, 0.32, 1),
+      background-color 0.2s ease,
+      color 0.2s ease;
   }
 
   .lumet-cta:active {
@@ -265,7 +274,7 @@
   }
 
   .lumet-link::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: -2px;
@@ -283,9 +292,17 @@
   }
 }
 
-/* Smooth scroll */
+/* Smooth scroll. scroll-padding-top clears the fixed header (h-16 / md:h-20)
+   so an anchored section lands below it instead of under it. */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 6rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

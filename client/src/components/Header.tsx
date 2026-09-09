@@ -6,10 +6,10 @@ import { useEffect, useState } from "react";
  * Mobile menu via overlay with body scroll lock.
  */
 const navLinks = [
-  { label: "Work", href: "#work" },
-  { label: "Services", href: "#services" },
+  { label: "What you get", href: "#system" },
   { label: "How it works", href: "#process" },
-  { label: "About", href: "#about" },
+  { label: "Work", href: "#work" },
+  { label: "Pricing", href: "#pricing" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -58,7 +58,7 @@ export default function Header() {
 
           {/* Desktop nav */}
           <ul className="hidden md:flex items-center gap-6 lg:gap-8">
-            {navLinks.map((link) => (
+            {navLinks.map(link => (
               <li key={link.href}>
                 <a
                   href={link.href}
@@ -73,12 +73,23 @@ export default function Header() {
           {/* CTA - desktop */}
           <div className="hidden md:block">
             <a
-              href="#contact"
+              href="#pricing"
               className="lumet-cta inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm"
             >
-              Book a call
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="inline-block">
-                <path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" />
+              Get started
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                className="inline-block"
+              >
+                <path
+                  d="M3 7H11M11 7L7 3M11 7L7 11"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="square"
+                />
               </svg>
             </a>
           </div>
@@ -90,9 +101,15 @@ export default function Header() {
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
           >
-            <span className={`block w-6 h-0.5 bg-[#0D0D0D] transition-transform duration-200 ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-            <span className={`block w-6 h-0.5 bg-[#0D0D0D] transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`} />
-            <span className={`block w-6 h-0.5 bg-[#0D0D0D] transition-transform duration-200 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+            <span
+              className={`block w-6 h-0.5 bg-[#0D0D0D] transition-transform duration-200 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+            />
+            <span
+              className={`block w-6 h-0.5 bg-[#0D0D0D] transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`block w-6 h-0.5 bg-[#0D0D0D] transition-transform duration-200 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+            />
           </button>
         </nav>
       </header>
@@ -100,9 +117,12 @@ export default function Header() {
       {/* Mobile menu overlay */}
       {menuOpen && (
         <div className="fixed inset-0 z-40 md:hidden">
-          <div className="absolute inset-0 bg-[#FAFAF9]" onClick={() => setMenuOpen(false)} />
+          <div
+            className="absolute inset-0 bg-[#FAFAF9]"
+            onClick={() => setMenuOpen(false)}
+          />
           <div className="relative flex flex-col items-start gap-6 pt-24 px-6 pb-8 h-full overflow-y-auto">
-            {navLinks.map((link) => (
+            {navLinks.map(link => (
               <a
                 key={link.href}
                 href={link.href}
@@ -113,13 +133,18 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="#pricing"
               className="mt-4 inline-flex items-center gap-2 px-6 py-3 text-base font-semibold text-white bg-[#1D4ED8] rounded-sm"
               onClick={() => setMenuOpen(false)}
             >
-              Book a call
+              Get started
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <path d="M3 7H11M11 7L7 3M11 7L7 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square" />
+                <path
+                  d="M3 7H11M11 7L7 3M11 7L7 11"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="square"
+                />
               </svg>
             </a>
           </div>
