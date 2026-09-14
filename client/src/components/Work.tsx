@@ -19,8 +19,7 @@ import { photographerUrl, unsplashUrl } from "@/lib/unsplash";
 const projects = [
   {
     photoSlot: "work-contractors",
-    image:
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663703679771/NyefuEzvnVyhKVRq.webp",
+    image: "/images/work-contractors.webp",
     category: "HOME SERVICES",
     title: "Website & Marketing System For Contractors",
     meta: "WEBSITE · REVIEW FUNNEL · MISSED CALL TEXT BACK · SMS CAMPAIGNS",
@@ -29,8 +28,7 @@ const projects = [
   },
   {
     photoSlot: "work-roofing",
-    image:
-      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663703679771/jMTwORqcjhZQwhZQ.webp",
+    image: "/images/work-roofing.webp",
     category: "ROOFING",
     title: "Forever Homes Roof Restoration",
     meta: "WEBSITE · GOOGLE REVIEW FUNNEL · LOCAL SEO · INSPECTION BOOKING",
