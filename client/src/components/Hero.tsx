@@ -43,12 +43,13 @@ export default function Hero() {
 
         {/* Headline - fluid sizing with clamp for smooth scaling */}
         <h1
-          className="lumet-display text-[#0D0D0D] max-w-5xl"
-          style={{ fontSize: "clamp(2.25rem, 8vw, 6rem)" }}
+          className="lumet-display text-[#0D0D0D] max-w-6xl"
+          style={{ fontSize: "clamp(2rem, 6.2vw, 5.25rem)" }}
         >
-          You practice law.
+          Turn Missed Calls Into
           <br />
-          We bring the clients.
+          Signed Cases for{" "}
+          <span className="text-[#1D4ED8] whitespace-nowrap">$297/mo</span>
         </h1>
 
         {/* Secondary headline */}
@@ -100,6 +101,19 @@ export default function Hero() {
               <span className="font-mono-label text-[#737373]">{tag}</span>
             </div>
           ))}
+        </div>
+
+        {/* Hero image - wide, cropped band beneath the copy */}
+        <div className="mt-10 md:mt-16 relative aspect-[4/3] sm:aspect-[21/9] overflow-hidden border border-[#E5E5E5] bg-[#F5F5F5]">
+          <img
+            src="/images/hero.webp"
+            alt="A quiet law office at golden hour with a phone lit up on the desk"
+            className="w-full h-full object-cover"
+            fetchPriority="high"
+          />
+          <span className="absolute bottom-3 left-3 font-mono-label text-white/90 bg-black/40 px-2 py-1 text-[0.625rem] md:text-xs">
+            EVERY MISSED CALL, ANSWERED
+          </span>
         </div>
       </div>
     </section>

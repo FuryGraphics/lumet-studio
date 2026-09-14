@@ -2,7 +2,7 @@
 
 The complete client-getting system for law firms.
 
-**You practice law. We bring the clients.**
+**Turn Missed Calls Into Signed Cases for $297/mo.**
 
 One plan at $297/mo, live in under 7 days, no contracts. Every firm gets the
 same three pieces, built together so they feed each other:
