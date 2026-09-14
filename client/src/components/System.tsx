@@ -11,6 +11,8 @@ const pillars = [
     title: "Professional Website",
     tagline: "SEO-Optimized & Built to Convert",
     desc: "A custom site built for your practice areas and your city. Fast, mobile-first, and structured so Google understands who you are and who you serve. Every page is written to turn a visitor into a booked consultation.",
+    image: "/images/system-website.webp",
+    alt: "A laptop on a bright office desk showing a clean law firm website",
     points: [
       "Local SEO foundation",
       "Practice area pages",
@@ -22,6 +24,8 @@ const pillars = [
     title: "Google Review Funnel",
     tagline: "5-Star Reputation on Autopilot",
     desc: "Every closed case triggers a review request by text and email. Happy clients are routed straight to your Google profile. Your rating climbs on its own, and prospects see it before they ever call.",
+    image: "/images/system-reviews.webp",
+    alt: "A client holding a phone showing a five-star review",
     points: [
       "Automated request sequences",
       "Direct-to-Google routing",
@@ -33,6 +37,8 @@ const pillars = [
     title: "AI Missed-Chat Bot",
     tagline: "Never Lose a Lead Again",
     desc: "When a call goes unanswered, the caller gets a text within seconds. The AI answers common questions, qualifies the case, and books the consultation while you are in court, in a deposition, or asleep.",
+    image: "/images/system-textback.webp",
+    alt: "A phone lighting up with a text on a courthouse bench as a lawyer walks away",
     points: [
       "Instant missed-call text back",
       "Case qualification",
@@ -102,6 +108,14 @@ export default function System() {
                     <p className="lumet-body mt-1.5 text-sm md:text-base text-[#1D4ED8]">
                       {pillar.tagline}
                     </p>
+                    <div className="mt-4 md:mt-6 aspect-[4/3] overflow-hidden border border-[#E5E5E5] bg-[#F5F5F5] md:mr-6">
+                      <img
+                        src={pillar.image}
+                        alt={pillar.alt}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        loading="lazy"
+                      />
+                    </div>
                   </div>
                   <div className="col-span-12 md:col-span-7 mt-3 md:mt-0">
                     <p className="lumet-body text-sm md:text-base text-[#525252]">

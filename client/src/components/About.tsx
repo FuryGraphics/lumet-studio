@@ -62,6 +62,21 @@ export default function About() {
           </div>
         </div>
 
+        {/* Team image - offset to the content column */}
+        <div className="grid grid-cols-12 gap-4 mb-12 md:mb-24">
+          <div className="col-span-12 md:col-span-2" />
+          <div className="col-span-12 md:col-span-10">
+            <div className="aspect-[3/2] md:aspect-[21/9] overflow-hidden border border-[#E5E5E5] bg-[#F5F5F5]">
+              <img
+                src="/images/about-team.webp"
+                alt="A small law firm team reviewing results together in a conference room"
+                className="w-full h-full object-cover object-[center_35%]"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Principles - grid aligned */}
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 md:col-span-2" />
