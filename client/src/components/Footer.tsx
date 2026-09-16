@@ -1,3 +1,5 @@
+import { services } from "@/data/services";
+
 /**
  * Footer - dark, editorial, with brand tagline and structured links.
  * Grid-aligned columns with mono labels.
@@ -5,18 +7,15 @@
  */
 const footerLinks = {
   System: [
-    { label: "Professional Website", href: "#system" },
-    { label: "Google Review Funnel", href: "#system" },
-    { label: "AI Missed-Chat Bot", href: "#system" },
-    { label: "Local SEO", href: "#system" },
-    { label: "Analytics Dashboard", href: "#system" },
+    ...services.map(s => ({ label: s.title, href: `/services/${s.slug}` })),
+    { label: "All services", href: "/services" },
   ],
   Studio: [
-    { label: "How it works", href: "#process" },
-    { label: "Work", href: "#work" },
-    { label: "About", href: "#about" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "Contact", href: "#contact" },
+    { label: "Industries", href: "/industries" },
+    { label: "How it works", href: "/#process" },
+    { label: "Work", href: "/#work" },
+    { label: "Pricing", href: "/#pricing" },
+    { label: "Contact", href: "/#contact" },
   ],
 };
 
@@ -38,19 +37,19 @@ export default function Footer() {
           {/* Logo + tagline */}
           <div className="col-span-12 md:col-span-5">
             <a
-              href="#top"
+              href="/"
               className="lumet-logo text-2xl md:text-4xl"
               aria-label="Lumet Studios home"
             >
               Lumet<span className="text-[#1D4ED8]">.</span>
             </a>
             <p className="lumet-body mt-4 md:mt-6 text-sm md:text-base text-[#A3A3A3] max-w-sm">
-              The complete client-getting system for law firms. Website, Google
-              review funnel, and AI missed-chat bot, live in under 7 days for
-              $297 a month.
+              The complete customer-getting system for local businesses.
+              Website, local SEO, Google review funnel, and AI missed-call text
+              back, live in under 7 days for $297 a month.
             </p>
             <p className="font-mono-label text-[#525252] mt-4 md:mt-6">
-              YOU PRACTICE LAW. WE BRING THE CLIENTS.
+              YOU RUN THE BUSINESS. WE BRING THE CUSTOMERS.
             </p>
           </div>
 
@@ -116,7 +115,7 @@ export default function Footer() {
           </div>
           <div className="col-span-12 md:col-span-6 flex md:justify-end">
             <a
-              href="#top"
+              href="/"
               className="lumet-link flex items-center gap-2 text-sm text-[#A3A3A3] hover:text-white transition-colors"
             >
               Back to top

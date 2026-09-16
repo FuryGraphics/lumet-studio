@@ -51,12 +51,12 @@ export default function About() {
               className="lumet-display text-[#0D0D0D] leading-snug max-w-4xl"
               style={{ fontSize: "clamp(1.25rem, 3.5vw, 2.25rem)" }}
             >
-              Most firms get sold three separate things: a web designer, a
-              reputation tool, and a chat widget.{" "}
+              Most small businesses get sold four separate things: a web
+              designer, an SEO agency, a reputation tool, and a chat widget.{" "}
               <span className="text-[#A3A3A3] font-normal">
-                Three invoices, three logins, and nothing that talks to each
-                other. We built Lumet so a firm gets one system, one fee, and
-                one team that keeps it running long after launch day.
+                Four invoices, four logins, and nothing that talks to each
+                other. We built Lumet so a business gets one system, one fee,
+                and one team that keeps it running long after launch day.
               </span>
             </p>
           </div>
@@ -69,7 +69,7 @@ export default function About() {
             <div className="aspect-[3/2] md:aspect-[21/9] overflow-hidden border border-[#E5E5E5] bg-[#F5F5F5]">
               <img
                 src="/images/about-team.webp"
-                alt="A small law firm team reviewing results together in a conference room"
+                alt="A small business team reviewing results together in a conference room"
                 className="w-full h-full object-cover object-[center_35%]"
                 loading="lazy"
               />

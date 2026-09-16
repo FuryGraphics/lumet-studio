@@ -8,7 +8,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
  */
 const features = [
   "Custom-built professional website",
-  "Local SEO optimization",
+  "Local SEO & Google Business Profile setup",
   "Google review automation funnel",
   "AI missed-call text-back system",
   "Mobile-responsive design",
@@ -130,7 +130,7 @@ export default function Pricing() {
                   <span className="font-mono-label text-[#A3A3A3]">/MO</span>
                 </div>
                 <p className="lumet-body mt-3 text-base text-[#A3A3A3]">
-                  Everything your practice needs to grow online.
+                  Everything your business needs to grow online.
                 </p>
 
                 {/* Features */}

@@ -10,17 +10,17 @@ const steps = [
   {
     num: "01",
     title: "We build everything",
-    desc: "Tell us about your practice and we build your entire system: website, review funnel, and AI text-back, customized for your firm. Live in under 7 days.",
+    desc: "Tell us about your business and we build your entire system: website, local SEO, review funnel, and AI text-back, customized for what you do. Live in under 7 days.",
   },
   {
     num: "02",
-    title: "Clients start finding you",
+    title: "Customers start finding you",
     desc: "Your SEO-optimized site starts ranking locally. Your Google reviews grow automatically. Missed calls get instant follow-up. The system works 24/7.",
   },
   {
     num: "03",
-    title: "You sign more retainers",
-    desc: "More consultations booked. More 5-star reviews. More cases on your desk. You focus on practicing law, we handle the rest.",
+    title: "You win more jobs",
+    desc: "More calls answered. More appointments booked. More 5-star reviews. You focus on running your business, we handle the rest.",
   },
 ];
 
@@ -80,8 +80,8 @@ export default function Process() {
             </h2>
             <p className="lumet-body mt-6 md:mt-8 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
               No project meetings, no design committees, no six-week build
-              cycle. You answer a few questions about your firm and we handle
-              every piece of it from there.
+              cycle. You answer a few questions about your business and we
+              handle every piece of it from there.
             </p>
           </div>
         </div>

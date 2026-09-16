@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "wouter";
 
 /**
  * Header - minimal fixed navigation for Lumet Studios.
@@ -6,12 +7,36 @@ import { useEffect, useState } from "react";
  * Mobile menu via overlay with body scroll lock.
  */
 const navLinks = [
-  { label: "What you get", href: "#system" },
-  { label: "How it works", href: "#process" },
-  { label: "Work", href: "#work" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/services" },
+  { label: "Industries", href: "/industries" },
+  { label: "How it works", href: "/#process" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Contact", href: "/#contact" },
 ];
+
+/** Routes go through wouter; home-page anchors stay plain links so the
+ *  browser handles the hash (Home scrolls to it after a cross-page load). */
+function NavLink({
+  href,
+  className,
+  onClick,
+  children,
+}: {
+  href: string;
+  className: string;
+  onClick?: () => void;
+  children: React.ReactNode;
+}) {
+  return href.includes("#") ? (
+    <a href={href} className={className} onClick={onClick}>
+      {children}
+    </a>
+  ) : (
+    <Link href={href} className={className} onClick={onClick}>
+      {children}
+    </Link>
+  );
+}
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -46,26 +71,26 @@ export default function Header() {
       >
         <nav className="container flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a
-            href="#top"
+          <Link
+            href="/"
             className={`font-bold text-lg md:text-xl tracking-tight transition-colors ${
               scrolled ? "text-[#0D0D0D]" : "text-[#0D0D0D]"
             }`}
             aria-label="Lumet Studios home"
           >
             Lumet<span className="text-[#1D4ED8]">.</span>
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <ul className="hidden md:flex items-center gap-6 lg:gap-8">
             {navLinks.map(link => (
               <li key={link.href}>
-                <a
+                <NavLink
                   href={link.href}
                   className="lumet-link text-sm font-medium text-[#404040] hover:text-[#0D0D0D] transition-colors"
                 >
                   {link.label}
-                </a>
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -73,7 +98,7 @@ export default function Header() {
           {/* CTA - desktop */}
           <div className="hidden md:block">
             <a
-              href="#pricing"
+              href="/#pricing"
               className="lumet-cta inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm"
             >
               Get started
@@ -123,17 +148,17 @@ export default function Header() {
           />
           <div className="relative flex flex-col items-start gap-6 pt-24 px-6 pb-8 h-full overflow-y-auto">
             {navLinks.map(link => (
-              <a
+              <NavLink
                 key={link.href}
                 href={link.href}
                 className="text-2xl font-semibold text-[#0D0D0D] lumet-link"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
-              </a>
+              </NavLink>
             ))}
             <a
-              href="#pricing"
+              href="/#pricing"
               className="mt-4 inline-flex items-center gap-2 px-6 py-3 text-base font-semibold text-white bg-[#1D4ED8] rounded-sm"
               onClick={() => setMenuOpen(false)}
             >

@@ -7,12 +7,18 @@ import { toast } from "sonner";
  * Contact - editorial intake form wired to Formspree (endpoint: mqerlrjr).
  * Hairline fields, mono labels, no boxed card.
  * Fields map to what a build needs to start: who you are, how to reach you,
- * the firm, and the practice areas the system will be built around.
+ * the business, and the services and area the system will be built around.
  * Responsive: fluid font sizing, mobile-optimized form layout.
  */
 const FORMSPREE_ID = "mqerlrjr";
 
-const EMPTY_FORM = { name: "", email: "", phone: "", firm: "", message: "" };
+const EMPTY_FORM = {
+  name: "",
+  email: "",
+  phone: "",
+  business: "",
+  message: "",
+};
 
 export default function Contact() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
@@ -103,11 +109,11 @@ export default function Contact() {
               <br />
               your
               <br />
-              <span className="text-[#1D4ED8]">practice.</span>
+              <span className="text-[#1D4ED8]">business.</span>
             </h2>
             <p className="lumet-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
-              Where your firm is, what you handle, and where your cases come
-              from today. We'll come back with your build plan, and the system
+              What you do, where you do it, and where your customers come from
+              today. We'll come back with your build plan, and the system
               goes live in under 7 days.
             </p>
 
@@ -159,7 +165,7 @@ export default function Contact() {
                     value={form.email}
                     onChange={handleChange("email")}
                     className="w-full bg-transparent text-base md:text-lg text-[#0D0D0D] focus:outline-none placeholder:text-[#D4D4D4]"
-                    placeholder="jane@lawfirm.com"
+                    placeholder="jane@yourbusiness.com"
                   />
                   <ValidationError
                     field="email"
@@ -169,7 +175,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Phone + Firm row */}
+              {/* Phone + Business row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
                 <div className="border-b border-[#E5E5E5] sm:border-r sm:border-[#E5E5E5] p-4 md:p-6">
                   <label className="font-mono-label text-[#737373] block mb-2 md:mb-3">
@@ -191,18 +197,18 @@ export default function Contact() {
                 </div>
                 <div className="border-b border-[#E5E5E5] p-4 md:p-6">
                   <label className="font-mono-label text-[#737373] block mb-2 md:mb-3">
-                    FIRM NAME
+                    BUSINESS NAME
                   </label>
                   <input
                     type="text"
-                    name="firm"
-                    value={form.firm}
-                    onChange={handleChange("firm")}
+                    name="business"
+                    value={form.business}
+                    onChange={handleChange("business")}
                     className="w-full bg-transparent text-base md:text-lg text-[#0D0D0D] focus:outline-none placeholder:text-[#D4D4D4]"
-                    placeholder="Doe & Associates"
+                    placeholder="Doe Plumbing Co."
                   />
                   <ValidationError
-                    field="firm"
+                    field="business"
                     errors={state.errors}
                     className="mt-2 text-sm text-red-600"
                   />
@@ -212,7 +218,7 @@ export default function Contact() {
               {/* Message */}
               <div className="border-b border-[#E5E5E5] p-4 md:p-6">
                 <label className="font-mono-label text-[#737373] block mb-2 md:mb-3">
-                  PRACTICE AREAS AND CITY
+                  WHAT YOU DO AND WHERE
                 </label>
                 <textarea
                   required
@@ -221,7 +227,7 @@ export default function Contact() {
                   value={form.message}
                   onChange={handleChange("message")}
                   className="w-full bg-transparent text-base md:text-lg text-[#0D0D0D] focus:outline-none placeholder:text-[#D4D4D4] resize-none"
-                  placeholder="Family law and estate planning, Dallas. Most cases come from referrals right now..."
+                  placeholder="Residential plumbing and water heaters, Dallas. Most jobs come from referrals right now..."
                 />
                 <ValidationError
                   field="message"

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import System from "@/components/System";
@@ -8,16 +9,41 @@ import About from "@/components/About";
 import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 /**
  * Home - Lumet Studios marketing page.
  * Single-page layout with sections:
  * Hero → System → Process (dark) → Work → Stats (dark) → About → Pricing → Contact → Footer
+ * The four services and the industries list also have their own pages.
  *
  * Design: Editorial Mono - Swiss editorial style with strict grid,
  * generous whitespace, monospace labels, and deliberate dark/light rhythm.
  */
 export default function Home() {
+  usePageMeta(
+    "Websites, Local SEO, Reviews & AI Text Back for Local Businesses | Lumet Studios",
+    "Lumet builds and runs your whole customer-getting system: a custom website, local SEO, an automated Google review funnel, and AI missed-call text back. Live in under 7 days for $297/mo. No contracts.",
+    "/"
+  );
+
+  // Arriving from another page at /#section: the browser tried to jump before
+  // React rendered the section, so scroll once it exists. Instant, because the
+  // global smooth scroll gets cut short while the page is still laying out,
+  // and again after load in case images above the section shifted it.
+  useEffect(() => {
+    const id = window.location.hash.slice(1);
+    if (!id) return;
+    const jump = () =>
+      document.getElementById(id)?.scrollIntoView({ behavior: "instant" });
+    const frame = requestAnimationFrame(jump);
+    window.addEventListener("load", jump, { once: true });
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("load", jump);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#FAFAF9]">
       <Header />

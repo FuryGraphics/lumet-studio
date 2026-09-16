@@ -1,29 +1,42 @@
 # Lumet Studios
 
-The complete client-getting system for law firms.
+The complete customer-getting system for local businesses.
 
-**Turn Missed Calls Into Signed Cases for $297/mo.**
+**Turn Missed Calls Into Customers for $297/mo.**
 
-One plan at $297/mo, live in under 7 days, no contracts. Every firm gets the
-same three pieces, built together so they feed each other:
+One plan at $297/mo, live in under 7 days, no contracts. Every business gets the
+same four pieces, built together so they feed each other:
 
-| Pillar | Promise |
+| Service | Promise |
 | --- | --- |
-| Professional website | SEO-optimized and built to convert |
+| Professional website | Built to convert visitors into customers |
+| Local SEO | Show up when customers search nearby |
 | Google review funnel | 5-star reputation on autopilot |
-| AI missed-chat bot | Never lose a lead again |
+| AI missed-call text back | Never lose a lead again |
 
-## Page structure
+## Pages
 
-Single-page marketing site, sections in order:
+| Route | File |
+| --- | --- |
+| `/` | `client/src/pages/Home.tsx` |
+| `/services` | `client/src/pages/Services.tsx` |
+| `/services/:slug` | `client/src/pages/ServicePage.tsx` |
+| `/industries` | `client/src/pages/Industries.tsx` |
 
-`Hero` → `System` → `Process` (dark) → `Work` → `Stats` (dark) → `About` →
-`Pricing` → `Contact` → `Footer`
+The home page runs `Hero` → `System` → `Process` (dark) → `Work` → `Stats`
+(dark) → `About` → `Pricing` → `Contact` → `Footer`.
 
-Copy that states the offer lives in the section components under
-`client/src/components/`. The price appears in three places and all three must
-move together: `Pricing.tsx`, `Stats.tsx`, and the `Service` JSON-LD block in
-`client/index.html`.
+Service copy lives once in `client/src/data/services.ts`: the home page System
+section and every `/services/*` page render from it. Industries live in
+`client/src/data/industries.ts`. Add a route to `client/public/sitemap.xml`
+whenever you add a page.
+
+The price appears in `Pricing.tsx`, the `CtaBand` in `PageShell.tsx`, the hero,
+and the `Service` JSON-LD block in `client/index.html`; move them together.
+
+`Stats.tsx` shows published industry research, each figure linked to its
+source. They are not Lumet client results, and the section says so. Keep it
+that way: only add a figure you can link to.
 
 ## Photography (Unsplash)
 

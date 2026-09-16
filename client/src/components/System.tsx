@@ -1,52 +1,13 @@
+import { Link } from "wouter";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { services as pillars } from "@/data/services";
 
 /**
- * System - the three pillars included in every build.
- * Left rail index, offset heading, hairline-separated rows.
+ * System - the four parts included in every build, from data/services.
+ * Left rail index, offset heading, hairline-separated rows. Each row links to
+ * that service's own page.
  * Responsive: stacks to single column on mobile, adjusts spacing.
  */
-const pillars = [
-  {
-    num: "01",
-    title: "Professional Website",
-    tagline: "SEO-Optimized & Built to Convert",
-    desc: "A custom site built for your practice areas and your city. Fast, mobile-first, and structured so Google understands who you are and who you serve. Every page is written to turn a visitor into a booked consultation.",
-    image: "/images/system-website.webp",
-    alt: "A laptop on a bright office desk showing a clean law firm website",
-    points: [
-      "Local SEO foundation",
-      "Practice area pages",
-      "Consultation booking",
-    ],
-  },
-  {
-    num: "02",
-    title: "Google Review Funnel",
-    tagline: "5-Star Reputation on Autopilot",
-    desc: "Every closed case triggers a review request by text and email. Happy clients are routed straight to your Google profile. Your rating climbs on its own, and prospects see it before they ever call.",
-    image: "/images/system-reviews.webp",
-    alt: "A client holding a phone showing a five-star review",
-    points: [
-      "Automated request sequences",
-      "Direct-to-Google routing",
-      "Reputation dashboard",
-    ],
-  },
-  {
-    num: "03",
-    title: "AI Missed-Chat Bot",
-    tagline: "Never Lose a Lead Again",
-    desc: "When a call goes unanswered, the caller gets a text within seconds. The AI answers common questions, qualifies the case, and books the consultation while you are in court, in a deposition, or asleep.",
-    image: "/images/system-textback.webp",
-    alt: "A phone lighting up with a text on a courthouse bench as a lawyer walks away",
-    points: [
-      "Instant missed-call text back",
-      "Case qualification",
-      "24/7 response",
-    ],
-  },
-];
-
 export default function System() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
 
@@ -73,15 +34,15 @@ export default function System() {
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-6">
             <h2 className="lumet-display text-2xl md:text-4xl lg:text-5xl text-[#0D0D0D]">
-              Three parts.
+              Four parts.
               <br />
               One system.
             </h2>
           </div>
           <div className="col-span-12 md:col-span-4 md:pt-2">
             <p className="lumet-body text-sm md:text-base text-[#525252]">
-              Get found, get trusted, get hired. Every firm we work with gets
-              all three, built together so they feed each other.
+              Get found, get trusted, get hired. Every business we work with
+              gets all four, built together so they feed each other.
             </p>
           </div>
         </div>
@@ -92,8 +53,9 @@ export default function System() {
           <div className="col-span-12 md:col-span-10">
             <div className="border-t border-[#E5E5E5]">
               {pillars.map(pillar => (
-                <div
+                <Link
                   key={pillar.num}
+                  href={`/services/${pillar.slug}`}
                   className="group grid grid-cols-12 gap-2 md:gap-4 py-6 md:py-10 border-b border-[#E5E5E5] hover:bg-white/50 transition-colors px-2 md:px-4 -mx-2 md:-mx-4"
                 >
                   <div className="col-span-2 md:col-span-1">
@@ -119,7 +81,7 @@ export default function System() {
                   </div>
                   <div className="col-span-12 md:col-span-7 mt-3 md:mt-0">
                     <p className="lumet-body text-sm md:text-base text-[#525252]">
-                      {pillar.desc}
+                      {pillar.summary}
                     </p>
                     <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 md:gap-x-6">
                       {pillar.points.map(point => (
@@ -131,8 +93,11 @@ export default function System() {
                         </span>
                       ))}
                     </div>
+                    <span className="lumet-link mt-5 inline-block text-sm font-medium text-[#0D0D0D] group-hover:text-[#1D4ED8]">
+                      Learn more →
+                    </span>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

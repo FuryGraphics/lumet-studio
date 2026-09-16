@@ -7,9 +7,10 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
  * Responsive: fluid font sizing, mobile-optimized spacing.
  */
 const tags = [
-  "SEO WEBSITE",
+  "CUSTOM WEBSITE",
+  "LOCAL SEO",
   "GOOGLE REVIEW FUNNEL",
-  "AI MISSED-CHAT BOT",
+  "AI MISSED-CALL TEXT BACK",
   "LIVE IN 7 DAYS",
 ];
 
@@ -48,7 +49,7 @@ export default function Hero() {
         >
           Turn Missed Calls Into
           <br />
-          Signed Cases for{" "}
+          Customers for{" "}
           <span className="text-[#1D4ED8] whitespace-nowrap">$297/mo</span>
         </h1>
 
@@ -63,10 +64,10 @@ export default function Hero() {
 
         {/* Subhead */}
         <p className="lumet-body mt-6 md:mt-10 text-base md:text-xl text-[#525252] max-w-2xl">
-          Lumet builds and runs the entire client-getting system for your firm.
-          An SEO-optimized website, an automated Google review funnel, and an AI
-          bot that texts back every missed call. One flat monthly fee. No
-          contracts.
+          Lumet builds and runs the entire customer-getting system for your
+          business. A custom website, local SEO, an automated Google review
+          funnel, and an AI assistant that texts back every missed call. One
+          flat monthly fee. No contracts.
         </p>
 
         {/* CTA */}
@@ -107,7 +108,7 @@ export default function Hero() {
         <div className="mt-10 md:mt-16 relative aspect-[4/3] sm:aspect-[21/9] overflow-hidden border border-[#E5E5E5] bg-[#F5F5F5]">
           <img
             src="/images/hero.webp"
-            alt="A quiet law office at golden hour with a phone lit up on the desk"
+            alt="The front counter of a local business at golden hour with a phone lit up on it"
             className="w-full h-full object-cover"
             fetchPriority="high"
           />
