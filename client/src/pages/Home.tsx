@@ -5,6 +5,7 @@ import System from "@/components/System";
 import Process from "@/components/Process";
 import Work from "@/components/Work";
 import Stats from "@/components/Stats";
+import ResultsBand from "@/components/ResultsBand";
 import About from "@/components/About";
 import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
@@ -53,6 +54,7 @@ export default function Home() {
         <Process />
         <Work />
         <Stats />
+        <ResultsBand />
         <About />
         <Pricing />
         <Contact />

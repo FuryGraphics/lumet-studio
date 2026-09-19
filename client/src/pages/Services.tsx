@@ -55,6 +55,11 @@ export default function Services() {
                 <p className="lumet-body mt-1.5 text-sm md:text-base text-[#1D4ED8]">
                   {s.tagline}
                 </p>
+                {s.price && (
+                  <p className="font-mono-label text-[#737373] mt-3">
+                    ${s.price}/MO STANDALONE
+                  </p>
+                )}
                 <p className="lumet-body mt-4 text-sm md:text-base text-[#525252] max-w-2xl">
                   {s.summary}
                 </p>

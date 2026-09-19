@@ -32,7 +32,7 @@ export default function About() {
         {/* Section header - left rail */}
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2 flex items-center gap-3">
-            <span className="font-mono-label text-[#A3A3A3]">05 / ABOUT</span>
+            <span className="font-mono-label text-[#A3A3A3]">06 / ABOUT</span>
           </div>
           <div className="hidden md:block col-span-10">
             <span className="block h-px w-full bg-[#E5E5E5]" />

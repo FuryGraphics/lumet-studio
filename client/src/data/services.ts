@@ -13,6 +13,8 @@ export type Service = {
   image: string;
   alt: string;
   points: string[];
+  /** Monthly price when the service is sold on its own. */
+  price?: number;
   /** Page-only content below. */
   metaTitle: string;
   metaDescription: string;
@@ -21,6 +23,10 @@ export type Service = {
   features: { title: string; body: string }[];
   steps: { title: string; body: string }[];
   faqs: { q: string; a: string }[];
+  /** Page extras: the ranking animation, the results slider, the calculator. */
+  animation?: { src: string; alt: string; caption: string };
+  showResults?: boolean;
+  showRoi?: boolean;
 };
 
 export const services: Service[] = [
@@ -99,82 +105,102 @@ export const services: Service[] = [
     ],
   },
   {
-    slug: "local-seo",
+    slug: "local-seo-pack",
     num: "02",
-    title: "Local SEO",
-    tagline: "Show Up When Customers Search Nearby",
+    title: "Local SEO Pack",
+    tagline: "Own the Map When Customers Search Nearby",
     summary:
-      "The groundwork that helps you appear when people nearby search for what you do. Your Google Business Profile, site structure, local pages, and business listings, set up properly and kept consistent.",
+      "Deep Google Business Profile optimization, plus your business details pushed to 100+ platforms and kept current every week. Built to move you up the map results where the calls come from.",
     image: "/images/service-local-seo.webp",
     alt: "A person on a city sidewalk looking at local search results on a phone map",
     points: [
       "Google Business Profile",
-      "Local service pages",
-      "Listing consistency",
+      "100+ platform listings",
+      "Weekly updates",
     ],
-    metaTitle: "Local SEO for Small Businesses | Lumet Studios",
+    price: 569,
+    metaTitle: "Local SEO Pack: Google Business Profile Optimization | Lumet Studios",
     metaDescription:
-      "Local SEO for service businesses: Google Business Profile optimization, local service pages, on-page SEO, and consistent listings. Included in the $297/mo Lumet system.",
+      "Google Business Profile optimization for local businesses: competitor and keyword research, listings on 100+ platforms, weekly updates, and monthly ranking scans. $569/mo, month to month.",
     intro:
-      "When someone nearby searches for what you do, the businesses at the top of Google get the calls. Local SEO is the work that puts you in that list and keeps you there.",
+      "The businesses at the top of Google Maps get the calls. The Local SEO Pack is the ongoing work that moves you up there: your profile optimized around what customers actually search, and your business details kept accurate everywhere they look.",
     problem: {
-      heading: "If they can't find you, they call someone else.",
-      body: "An incomplete Google Business Profile, inconsistent business details across the web, and a site Google can't read are the most common reasons good local businesses stay invisible.",
+      heading: "A profile you set up once quietly decays.",
+      body: "Platforms favour businesses that stay active, and they change how they want business data formatted. Details that are stale or inconsistent across the web push you down the results, below competitors who keep theirs current.",
     },
     features: [
       {
-        title: "Google Business Profile optimization",
-        body: "Categories, services, hours, photos, and description set up completely and accurately.",
+        title: "Competitor and keyword research",
+        body: "We find the searches that bring you customers, and what the businesses above you are doing to win them.",
       },
       {
-        title: "Local service pages",
-        body: "Pages for your services and the areas you cover, so you're relevant to what people actually search.",
+        title: "Full profile optimization",
+        body: "Categories, services, attributes, description, photos, and Q&A rebuilt around those keywords.",
       },
       {
-        title: "On-page SEO",
-        body: "Titles, headings, structured data, and internal links done properly on every page of your site.",
+        title: "Listings on 100+ platforms",
+        body: "One master profile, pushed out to Google, Apple Maps, Bing, Yelp, Facebook, Waze, voice assistants, and in-car GPS systems.",
       },
       {
-        title: "Consistent business listings",
-        body: "Your name, address, and phone number kept identical across the directories that matter.",
+        title: "Weekly updates",
+        body: "Your details are re-sent and refreshed every week, so platforms see an active business and your data stays consistent.",
       },
       {
-        title: "Reviews that feed rankings",
-        body: "Fresh Google reviews from the review funnel are a local ranking signal, and they work together.",
+        title: "Posts and fresh content",
+        body: "Regular Google Business Profile posts and articles that reference your business, so the profile keeps producing signals.",
       },
       {
-        title: "Plain-English reporting",
-        body: "See calls, visits, and how customers find you, without the jargon.",
+        title: "Monthly ranking scans",
+        body: "A map of where you rank across your service area for your key searches, so progress is something you can see.",
       },
     ],
     steps: [
       {
-        title: "Audit where you stand",
-        body: "Your profile, your listings, and what shows up when customers search.",
+        title: "Ten minutes of questions",
+        body: "We learn your services, service area, and what matters to you. That is the only part that needs your time.",
       },
       {
-        title: "Fix the foundation",
-        body: "Profile, site structure, service pages, and listing details, done right.",
+        title: "Research and rebuild",
+        body: "Competitor and keyword research, then your profile and listings are built out properly.",
       },
       {
-        title: "Keep it working",
-        body: "Ongoing updates and new reviews keep your presence active and accurate.",
+        title: "Weekly upkeep, monthly scans",
+        body: "Updates go out every week, and each month you see your ranking map.",
       },
     ],
     faqs: [
       {
-        q: "How long does local SEO take to work?",
-        a: "Foundational fixes take effect as Google recrawls, which often takes weeks. Competitive markets take longer. Anyone promising the #1 spot by a date is guessing.",
+        q: "Why is there a monthly fee if the profiles are set up once?",
+        a: "Because the upkeep is the work. Your details are re-sent to the platforms weekly, posts and content keep going out, and the formats platforms want change over time. Profiles left alone go stale and slide down the results.",
       },
       {
-        q: "Do you guarantee rankings?",
-        a: "No. Nobody controls Google's results. We do the work that consistently improves local visibility and show you what changes.",
+        q: "Can I not just do this myself?",
+        a: "Some of it, yes, if you have time every week. But a few platforms, in-car GPS systems among them, have no way for a business owner to submit or update a listing directly, and inconsistent details across sites are what drags rankings down in the first place.",
       },
       {
-        q: "Do I need a physical location?",
-        a: "No. Service-area businesses that travel to customers can rank locally too. The setup is slightly different, and we handle it.",
+        q: "I only care about Google. Does the rest matter?",
+        a: "It does, because Google cross-checks your business details against other sources. Consistent information across the web makes your Google profile look more trustworthy, which is what gets it shown more often.",
+      },
+      {
+        q: "How long before I see movement?",
+        a: "It depends on your market and how competitive your keywords are. The scans above show businesses moving over one to six months. Nobody can promise a position or a date, and we do not.",
+      },
+      {
+        q: "Do you guarantee I will rank number one?",
+        a: "No. Anyone guaranteeing a Google position is guessing. We do the work that improves local visibility and show you the ranking map each month so you can judge it yourself.",
+      },
+      {
+        q: "What happens if I cancel?",
+        a: "Nothing is locked in, it is month to month. The weekly updates stop, so over time the profile drifts back toward where it started, but the optimization work stays on your profile and it is yours.",
       },
     ],
+    animation: {
+      src: "/images/ranking-improvement.webp",
+      alt: "An animated map grid where a business's Google Maps rankings improve from scattered numbers to green number ones",
+      caption: "ONE BUSINESS'S MAP RANKINGS, SCAN AFTER SCAN",
+    },
+    showResults: true,
+    showRoi: true,
   },
   {
     slug: "review-funnel",

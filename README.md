@@ -10,7 +10,7 @@ same four pieces, built together so they feed each other:
 | Service | Promise |
 | --- | --- |
 | Professional website | Built to convert visitors into customers |
-| Local SEO | Show up when customers search nearby |
+| Local SEO Pack | Google Business Profile optimization, $569/mo standalone |
 | Google review funnel | 5-star reputation on autopilot |
 | AI missed-call text back | Never lose a lead again |
 
@@ -31,8 +31,23 @@ section and every `/services/*` page render from it. Industries live in
 `client/src/data/industries.ts`. Add a route to `client/public/sitemap.xml`
 whenever you add a page.
 
-The price appears in `Pricing.tsx`, the `CtaBand` in `PageShell.tsx`, the hero,
-and the `Service` JSON-LD block in `client/index.html`; move them together.
+Prices live in `client/src/data/pricing.ts` (`SYSTEM_PRICE`, `LOCAL_SEO_PRICE`)
+and are used by the pricing cards, the ROI calculator, and the service pages.
+The hero and the JSON-LD offers in `client/index.html` still spell them out, so
+change those by hand at the same time.
+
+## Ranking proof and the calculator
+
+`ResultsSlider.tsx` shows before/after Google Maps geogrid scans from
+`client/public/images/results/`, and `ResultsBand.tsx` puts it on the home page
+with the ranking animation. Those scans come from the Google Business Profile
+platform the Local SEO Pack runs on, **not** from Lumet clients, and
+`RESULTS_DISCLOSURE` in `client/src/data/results.ts` says so wherever they
+appear. Do not remove that line or relabel the scans as our own client results.
+
+`RoiCalculator.tsx` multiplies the visitor's own numbers (customers × increase
+× value, minus the fee). It is an estimate, not a projection of what the
+service will deliver, and the footnote says that.
 
 `Stats.tsx` shows published industry research, each figure linked to its
 source. They are not Lumet client results, and the section says so. Keep it
