@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
-import { Link } from "wouter";
+import { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "wouter";
+import { services } from "@/data/services";
 
 /**
  * Header - minimal fixed navigation for Lumet Studios.
@@ -7,7 +8,7 @@ import { Link } from "wouter";
  * Mobile menu via overlay with body scroll lock.
  */
 const navLinks = [
-  { label: "Services", href: "/services" },
+  { label: "Services", href: "/services", menu: true },
   { label: "Industries", href: "/industries" },
   { label: "How it works", href: "/#process" },
   { label: "Pricing", href: "/#pricing" },
@@ -35,6 +36,126 @@ function NavLink({
     <Link href={href} className={className} onClick={onClick}>
       {children}
     </Link>
+  );
+}
+
+/** ServicesMenu - the Services item on desktop: a link to /services that also
+ *  opens a panel of the individual service pages. Opens on hover and on
+ *  focus, closes on Escape, outside click, or a route change, so it never
+ *  hangs open after navigating. */
+function ServicesMenu() {
+  const [open, setOpen] = useState(false);
+  const [location] = useLocation();
+  const wrap = useRef<HTMLLIElement>(null);
+  const closeTimer = useRef<number | undefined>(undefined);
+
+  useEffect(() => setOpen(false), [location]);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    const onClick = (e: MouseEvent) => {
+      if (!wrap.current?.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    document.addEventListener("mousedown", onClick);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.removeEventListener("mousedown", onClick);
+    };
+  }, [open]);
+
+  // A small delay on leave, so the diagonal trip to the panel does not close it
+  const hold = () => {
+    window.clearTimeout(closeTimer.current);
+    setOpen(true);
+  };
+  const release = () => {
+    closeTimer.current = window.setTimeout(() => setOpen(false), 120);
+  };
+
+  return (
+    <li
+      ref={wrap}
+      className="relative"
+      onMouseEnter={hold}
+      onMouseLeave={release}
+      onFocus={hold}
+      onBlur={e => {
+        if (!wrap.current?.contains(e.relatedTarget as Node)) setOpen(false);
+      }}
+    >
+      <span className="flex items-center gap-1.5">
+        <Link
+          href="/services"
+          className="lumet-link text-sm font-medium text-[#404040] hover:text-[#0D0D0D] transition-colors"
+        >
+          Services
+        </Link>
+        <button
+          type="button"
+          aria-label="Show services"
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}
+          className="p-1 -m-1 text-[#737373] hover:text-[#0D0D0D] transition-colors"
+        >
+          <svg
+            width="10"
+            height="10"
+            viewBox="0 0 10 10"
+            fill="none"
+            className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+            aria-hidden="true"
+          >
+            <path
+              d="M1 3L5 7L9 3"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="square"
+            />
+          </svg>
+        </button>
+      </span>
+
+      {open && (
+        <div className="absolute left-0 top-full pt-4 z-50">
+          <div className="w-[22rem] bg-[#FAFAF9] border border-[#E5E5E5] shadow-[0_12px_40px_rgba(13,13,13,0.08)]">
+            {services.map(s => (
+              <Link
+                key={s.slug}
+                href={`/services/${s.slug}`}
+                onClick={() => setOpen(false)}
+                className="group flex items-baseline gap-3 p-4 border-b border-[#E5E5E5] last:border-b-0 hover:bg-white transition-colors"
+              >
+                <span className="font-mono-label text-[#A3A3A3] group-hover:text-[#1D4ED8] transition-colors">
+                  {s.num}
+                </span>
+                <span className="min-w-0">
+                  <span className="block text-sm font-semibold text-[#0D0D0D] group-hover:text-[#1D4ED8] transition-colors">
+                    {s.title}
+                    {s.price ? (
+                      <span className="font-mono-label text-[#737373] ml-2">
+                        ${s.price}/MO
+                      </span>
+                    ) : null}
+                  </span>
+                  <span className="lumet-body block text-xs text-[#737373] mt-0.5">
+                    {s.tagline}
+                  </span>
+                </span>
+              </Link>
+            ))}
+            <Link
+              href="/services"
+              onClick={() => setOpen(false)}
+              className="block p-4 bg-[#0D0D0D] text-white text-sm font-semibold hover:bg-[#1D4ED8] transition-colors"
+            >
+              All services and pricing →
+            </Link>
+          </div>
+        </div>
+      )}
+    </li>
   );
 }
 
@@ -83,7 +204,10 @@ export default function Header() {
 
           {/* Desktop nav */}
           <ul className="hidden md:flex items-center gap-6 lg:gap-8">
-            {navLinks.map(link => (
+            {navLinks.map(link =>
+              link.menu ? (
+                <ServicesMenu key={link.href} />
+              ) : (
               <li key={link.href}>
                 <NavLink
                   href={link.href}
@@ -92,7 +216,8 @@ export default function Header() {
                   {link.label}
                 </NavLink>
               </li>
-            ))}
+              )
+            )}
           </ul>
 
           {/* CTA - desktop */}
@@ -148,14 +273,35 @@ export default function Header() {
           />
           <div className="relative flex flex-col items-start gap-6 pt-24 px-6 pb-8 h-full overflow-y-auto">
             {navLinks.map(link => (
-              <NavLink
-                key={link.href}
-                href={link.href}
-                className="text-2xl font-semibold text-[#0D0D0D] lumet-link"
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.label}
-              </NavLink>
+              <div key={link.href} className="w-full">
+                <NavLink
+                  href={link.href}
+                  className="text-2xl font-semibold text-[#0D0D0D] lumet-link"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </NavLink>
+                {link.menu && (
+                  <ul className="mt-4 pl-4 border-l border-[#E5E5E5] space-y-3">
+                    {services.map(s => (
+                      <li key={s.slug}>
+                        <Link
+                          href={`/services/${s.slug}`}
+                          onClick={() => setMenuOpen(false)}
+                          className="block text-base font-medium text-[#404040]"
+                        >
+                          {s.title}
+                          {s.price ? (
+                            <span className="font-mono-label text-[#A3A3A3] ml-2">
+                              ${s.price}/MO
+                            </span>
+                          ) : null}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             ))}
             <a
               href="/#pricing"

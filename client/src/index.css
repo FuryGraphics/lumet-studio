@@ -316,3 +316,86 @@ html {
   background-color: oklch(0.45 0.21 259 / 0.2);
   color: inherit;
 }
+
+/* Range sliders (ROI calculator). Hairline track, square thumb, so they sit
+   with the editorial grid rather than looking like stock browser controls.
+   The number field keeps its own value; the spinner arrows are hidden since
+   the slider does that job. */
+.lumet-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 24px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.lumet-range::-webkit-slider-runnable-track {
+  height: 2px;
+  background: var(--lumet-hairline, #e5e5e5);
+}
+
+.lumet-range::-moz-range-track {
+  height: 2px;
+  background: var(--lumet-hairline, #e5e5e5);
+}
+
+.lumet-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  margin-top: -6px;
+  background: var(--lumet-accent, #1d4ed8);
+  border: 0;
+  border-radius: 0;
+  transition: transform 0.15s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.lumet-range::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: var(--lumet-accent, #1d4ed8);
+  border: 0;
+  border-radius: 0;
+  transition: transform 0.15s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.lumet-range:hover::-webkit-slider-thumb,
+.lumet-range:active::-webkit-slider-thumb {
+  transform: scale(1.25);
+}
+
+.lumet-range:hover::-moz-range-thumb,
+.lumet-range:active::-moz-range-thumb {
+  transform: scale(1.25);
+}
+
+.lumet-range:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid var(--lumet-accent, #1d4ed8);
+  outline-offset: 3px;
+}
+
+.lumet-range:focus-visible::-moz-range-thumb {
+  outline: 2px solid var(--lumet-accent, #1d4ed8);
+  outline-offset: 3px;
+}
+
+/* Number fields in the calculator: no spinner arrows, the slider replaces them */
+.lumet-number::-webkit-outer-spin-button,
+.lumet-number::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.lumet-number {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lumet-range::-webkit-slider-thumb,
+  .lumet-range::-moz-range-thumb {
+    transition: none;
+  }
+}

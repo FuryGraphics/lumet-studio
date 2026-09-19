@@ -19,7 +19,8 @@ const fields = [
     hint: "How many you win now",
     prefix: "",
     min: 0,
-    max: 1000,
+    max: 200,
+    step: 1,
   },
   {
     key: "value",
@@ -27,7 +28,8 @@ const fields = [
     hint: "What one is worth to you",
     prefix: "$",
     min: 0,
-    max: 100000,
+    max: 5000,
+    step: 25,
   },
   {
     key: "lift",
@@ -36,7 +38,8 @@ const fields = [
     prefix: "",
     suffix: "%",
     min: 0,
-    max: 300,
+    max: 100,
+    step: 5,
   },
   {
     key: "cost",
@@ -44,7 +47,8 @@ const fields = [
     hint: "What you pay us",
     prefix: "$",
     min: 0,
-    max: 100000,
+    max: 2000,
+    step: 1,
   },
 ] as const;
 
@@ -60,6 +64,15 @@ export default function RoiCalculator({ dark = false }: { dark?: boolean }) {
     lift: 25,
     cost: LOCAL_SEO_PRICE,
   });
+
+  const set = (key: Key, raw: string) => {
+    const f = fields.find(x => x.key === key)!;
+    const n = Number(raw);
+    setV(prev => ({
+      ...prev,
+      [key]: Number.isFinite(n) ? Math.min(Math.max(n, f.min), f.max) : 0,
+    }));
+  };
 
   const extraCustomers = (v.customers * v.lift) / 100;
   const extraRevenue = extraCustomers * v.value;
@@ -79,6 +92,7 @@ export default function RoiCalculator({ dark = false }: { dark?: boolean }) {
         {fields.map(f => (
           <div key={f.key} className={`border-b ${border} p-4 md:p-6`}>
             <label
+              id={`roi-label-${f.key}`}
               htmlFor={`roi-${f.key}`}
               className={`font-mono-label block mb-2 ${label}`}
             >
@@ -97,16 +111,8 @@ export default function RoiCalculator({ dark = false }: { dark?: boolean }) {
                 min={f.min}
                 max={f.max}
                 value={v[f.key]}
-                onChange={e => {
-                  const n = Number(e.target.value);
-                  setV({
-                    ...v,
-                    [f.key]: Number.isFinite(n)
-                      ? Math.min(Math.max(n, f.min), f.max)
-                      : 0,
-                  });
-                }}
-                className={`w-full bg-transparent text-xl md:text-2xl font-semibold ${input} focus:outline-none focus:text-[#1D4ED8]`}
+                onChange={e => set(f.key, e.target.value)}
+                className={`lumet-number w-full bg-transparent text-xl md:text-2xl font-semibold ${input} focus:outline-none focus:text-[#1D4ED8]`}
               />
               {"suffix" in f && f.suffix && (
                 <span className={`text-xl md:text-2xl ${muted}`}>
@@ -114,7 +120,24 @@ export default function RoiCalculator({ dark = false }: { dark?: boolean }) {
                 </span>
               )}
             </div>
-            <p className={`lumet-body mt-1 text-xs ${faint}`}>{f.hint}</p>
+            <input
+              type="range"
+              min={f.min}
+              max={f.max}
+              step={f.step}
+              value={Math.min(v[f.key], f.max)}
+              onChange={e => set(f.key, e.target.value)}
+              aria-labelledby={`roi-label-${f.key}`}
+              className="lumet-range mt-3"
+            />
+            <div className="flex items-baseline justify-between gap-4">
+              <p className={`lumet-body text-xs ${faint}`}>{f.hint}</p>
+              <span className={`font-mono-label text-[0.625rem] ${faint}`}>
+                {f.prefix}
+                {f.max.toLocaleString("en-US")}
+                {"suffix" in f && f.suffix ? f.suffix : ""}
+              </span>
+            </div>
           </div>
         ))}
       </div>

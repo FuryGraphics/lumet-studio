@@ -31,7 +31,8 @@ section and every `/services/*` page render from it. Industries live in
 `client/src/data/industries.ts`. Add a route to `client/public/sitemap.xml`
 whenever you add a page.
 
-Prices live in `client/src/data/pricing.ts` (`SYSTEM_PRICE`, `LOCAL_SEO_PRICE`)
+Prices live in `client/src/data/pricing.ts` (`SYSTEM_PRICE` $297,
+`LOCAL_SEO_PRICE` $569, `COMPLETE_PRICE` $797 for both together)
 and are used by the pricing cards, the ROI calculator, and the service pages.
 The hero and the JSON-LD offers in `client/index.html` still spell them out, so
 change those by hand at the same time.

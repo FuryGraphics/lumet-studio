@@ -5,3 +5,7 @@
  */
 export const SYSTEM_PRICE = 297;
 export const LOCAL_SEO_PRICE = 569;
+export const COMPLETE_PRICE = 797;
+
+/** What the bundle saves against buying both plans separately. */
+export const COMPLETE_SAVING = SYSTEM_PRICE + LOCAL_SEO_PRICE - COMPLETE_PRICE;

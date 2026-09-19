@@ -1,17 +1,23 @@
 import { Link } from "wouter";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { LOCAL_SEO_PRICE, SYSTEM_PRICE } from "@/data/pricing";
+import {
+  COMPLETE_PRICE,
+  COMPLETE_SAVING,
+  LOCAL_SEO_PRICE,
+  SYSTEM_PRICE,
+} from "@/data/pricing";
 
 /**
- * Pricing - two plans on warm paper: the monthly system, and the Local SEO
- * Pack sold on its own. Both cards are dark so neither reads as the runner-up;
- * the system carries the MOST POPULAR badge.
- * Responsive: cards stack under the heading on mobile.
+ * Pricing - three plans on warm paper: the monthly system, the Local SEO Pack
+ * on its own, and the everything bundle between them. The bundle is the
+ * featured card: centred, badged, and lifted, since it is the one we steer to.
+ * Responsive: cards stack under the heading on mobile, three across on large
+ * screens with the featured card first on mobile.
  */
 const plans = [
   {
     name: "Growth System",
-    badge: "MOST POPULAR",
+    badge: "THE FOUNDATION",
     price: SYSTEM_PRICE,
     blurb: "Everything your business needs to get found and get hired online.",
     href: "/services",
@@ -22,13 +28,33 @@ const plans = [
       "AI missed-call text-back system",
       "Mobile-responsive design",
       "Ongoing updates & support",
-      "Analytics dashboard",
       "No contracts, cancel anytime",
     ],
   },
   {
+    name: "Complete Pack",
+    badge: "BEST VALUE",
+    featured: true,
+    price: COMPLETE_PRICE,
+    blurb:
+      "Both plans together: the whole website system and the full Google Business Profile programme.",
+    href: "/services",
+    features: [
+      "Everything in the Growth System",
+      "Everything in the Local SEO Pack",
+      "Custom website, built and maintained",
+      "Full Google Business Profile optimization",
+      "Listings on 100+ platforms, kept in sync",
+      "Review funnel and AI missed-call text back",
+      "Monthly ranking scans of your area",
+      "One invoice, one team, no contracts",
+    ],
+    order: "lg:order-2",
+  },
+  {
     name: "Local SEO Pack",
     badge: "RANK ON THE MAP",
+    order: "lg:order-3",
     price: LOCAL_SEO_PRICE,
     blurb:
       "Deep Google Business Profile optimization for businesses that live on map results.",
@@ -37,7 +63,7 @@ const plans = [
       "Competitor and keyword research",
       "Full Google Business Profile optimization",
       "Listings pushed to 100+ platforms",
-      "Weekly listing updates",
+      "Monthly content calendar",
       "Profile posts and fresh content",
       "Monthly ranking scans of your area",
       "Review tool included",
@@ -106,8 +132,9 @@ export default function Pricing() {
               included.
             </h2>
             <p className="lumet-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
-              No hidden fees. No upsells. No long-term contracts. Take one or
-              both, and we keep running it for as long as you want it.
+              No hidden fees. No upsells. No long-term contracts. Take one
+              piece or the lot, and we keep running it for as long as you want
+              it.
             </p>
           </div>
           <div className="col-span-12 md:col-span-10 lg:col-span-4 lg:col-start-8">
@@ -130,11 +157,15 @@ export default function Pricing() {
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 lg:items-start">
               {plans.map(plan => (
                 <div
                   key={plan.name}
-                  className="relative bg-[#0D0D0D] text-white overflow-hidden flex flex-col"
+                  className={`relative bg-[#0D0D0D] text-white overflow-hidden flex flex-col ${plan.order ?? "lg:order-1"} ${
+                    plan.featured
+                      ? "ring-2 ring-[#1D4ED8] lg:-mt-6 lg:mb-[-1.5rem]"
+                      : ""
+                  }`}
                 >
                   <div
                     className="absolute inset-0 pointer-events-none"
@@ -171,6 +202,11 @@ export default function Pricing() {
                     <p className="lumet-body mt-3 text-base text-[#A3A3A3]">
                       {plan.blurb}
                     </p>
+                    {plan.featured && (
+                      <p className="font-mono-label text-[#1D4ED8] mt-4">
+                        SAVE ${COMPLETE_SAVING}/MO VS BOTH SEPARATELY
+                      </p>
+                    )}
 
                     {/* Features */}
                     <ul className="mt-8 space-y-3 border-t border-[#262626] pt-8">

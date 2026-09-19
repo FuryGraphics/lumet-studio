@@ -110,18 +110,18 @@ export const services: Service[] = [
     title: "Local SEO Pack",
     tagline: "Own the Map When Customers Search Nearby",
     summary:
-      "Deep Google Business Profile optimization, plus your business details pushed to 100+ platforms and kept current every week. Built to move you up the map results where the calls come from.",
+      "Deep Google Business Profile optimization, plus your business details pushed to 100+ platforms and a monthly calendar of posts and content. Built to move you up the map results where the calls come from.",
     image: "/images/service-local-seo.webp",
     alt: "A person on a city sidewalk looking at local search results on a phone map",
     points: [
       "Google Business Profile",
       "100+ platform listings",
-      "Weekly updates",
+      "Monthly content calendar",
     ],
     price: 569,
     metaTitle: "Local SEO Pack: Google Business Profile Optimization | Lumet Studios",
     metaDescription:
-      "Google Business Profile optimization for local businesses: competitor and keyword research, listings on 100+ platforms, weekly updates, and monthly ranking scans. $569/mo, month to month.",
+      "Google Business Profile optimization for local businesses: competitor and keyword research, listings on 100+ platforms, a monthly content calendar, and monthly ranking scans. $569/mo, month to month.",
     intro:
       "The businesses at the top of Google Maps get the calls. The Local SEO Pack is the ongoing work that moves you up there: your profile optimized around what customers actually search, and your business details kept accurate everywhere they look.",
     problem: {
@@ -142,12 +142,12 @@ export const services: Service[] = [
         body: "One master profile, pushed out to Google, Apple Maps, Bing, Yelp, Facebook, Waze, voice assistants, and in-car GPS systems.",
       },
       {
-        title: "Weekly updates",
-        body: "Your details are re-sent and refreshed every week, so platforms see an active business and your data stays consistent.",
+        title: "Monthly content calendar",
+        body: "A planned month of Google Business Profile posts and articles that reference your business, so the profile keeps producing fresh signals.",
       },
       {
-        title: "Posts and fresh content",
-        body: "Regular Google Business Profile posts and articles that reference your business, so the profile keeps producing signals.",
+        title: "Listings kept in sync",
+        body: "Your details are re-sent and refreshed on an ongoing basis, so platforms see an active business and your data stays consistent.",
       },
       {
         title: "Monthly ranking scans",
@@ -164,18 +164,18 @@ export const services: Service[] = [
         body: "Competitor and keyword research, then your profile and listings are built out properly.",
       },
       {
-        title: "Weekly upkeep, monthly scans",
-        body: "Updates go out every week, and each month you see your ranking map.",
+        title: "Ongoing upkeep, monthly scans",
+        body: "Content and listing updates keep going out, and each month you see your ranking map.",
       },
     ],
     faqs: [
       {
         q: "Why is there a monthly fee if the profiles are set up once?",
-        a: "Because the upkeep is the work. Your details are re-sent to the platforms weekly, posts and content keep going out, and the formats platforms want change over time. Profiles left alone go stale and slide down the results.",
+        a: "Because the upkeep is the work. Your details are re-sent to the platforms, a fresh month of posts and content goes out, and the formats platforms want change over time. Profiles left alone go stale and slide down the results.",
       },
       {
         q: "Can I not just do this myself?",
-        a: "Some of it, yes, if you have time every week. But a few platforms, in-car GPS systems among them, have no way for a business owner to submit or update a listing directly, and inconsistent details across sites are what drags rankings down in the first place.",
+        a: "Some of it, yes, if you have the time each month. But a few platforms, in-car GPS systems among them, have no way for a business owner to submit or update a listing directly, and inconsistent details across sites are what drags rankings down in the first place.",
       },
       {
         q: "I only care about Google. Does the rest matter?",
@@ -191,7 +191,7 @@ export const services: Service[] = [
       },
       {
         q: "What happens if I cancel?",
-        a: "Nothing is locked in, it is month to month. The weekly updates stop, so over time the profile drifts back toward where it started, but the optimization work stays on your profile and it is yours.",
+        a: "Nothing is locked in, it is month to month. The posts and updates stop, so over time the profile drifts back toward where it started, but the optimization work stays on your profile and it is yours.",
       },
     ],
     animation: {
