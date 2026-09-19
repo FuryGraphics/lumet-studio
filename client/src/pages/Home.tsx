@@ -10,6 +10,7 @@ import About from "@/components/About";
 import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
 /**
@@ -60,6 +61,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <ChatWidget />
     </div>
   );
 }

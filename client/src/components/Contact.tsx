@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { toast } from "sonner";
+import { CONTACT_EMAIL, FORMSPREE_ID } from "@/data/contact";
 
 /**
  * Contact - editorial intake form wired to Formspree (endpoint: mqerlrjr).
@@ -10,7 +11,6 @@ import { toast } from "sonner";
  * the business, and the services and area the system will be built around.
  * Responsive: fluid font sizing, mobile-optimized form layout.
  */
-const FORMSPREE_ID = "mqerlrjr";
 
 const EMPTY_FORM = {
   name: "",
@@ -259,6 +259,18 @@ export default function Contact() {
                   errors={state.errors}
                   className="mt-4 block text-sm text-red-600"
                 />
+                {state.errors && (
+                  <p className="lumet-body mt-3 text-sm text-[#525252]">
+                    If that keeps failing, email us at{" "}
+                    <a
+                      href={`mailto:${CONTACT_EMAIL}`}
+                      className="lumet-link font-medium text-[#1D4ED8]"
+                    >
+                      {CONTACT_EMAIL}
+                    </a>
+                    .
+                  </p>
+                )}
               </div>
             </form>
           </div>

@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 
 /**
  * PageShell - header, footer, and the shared page-top block for every route
@@ -71,6 +72,7 @@ export default function PageShell({
         {children}
       </main>
       <Footer />
+      <ChatWidget />
     </div>
   );
 }

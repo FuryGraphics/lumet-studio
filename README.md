@@ -37,6 +37,19 @@ and are used by the pricing cards, the ROI calculator, and the service pages.
 The hero and the JSON-LD offers in `client/index.html` still spell them out, so
 change those by hand at the same time.
 
+## Contact
+
+The contact section and the chat widget both post to the Formspree form named
+by `FORMSPREE_ID` in `client/src/data/contact.ts`, and both ask the questions
+listed there, so the two stay in step. The chat widget sends `source: "Chat
+widget"` so the emails are tellable apart, and if a post fails it offers a
+mailto carrying the answers rather than losing the enquiry.
+
+**The current form id returns 404 FORM_NOT_FOUND** (checked 2026-09-20), so
+nothing submitted through the site reaches anyone. Put a live form id from the
+Formspree account that owns the domain into `contact.ts`, then send one real
+submission through the site to confirm the email lands.
+
 ## Ranking proof and the calculator
 
 `ResultsSlider.tsx` shows before/after Google Maps geogrid scans from
