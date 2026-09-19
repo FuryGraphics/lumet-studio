@@ -28,8 +28,12 @@ The home page runs `Hero` → `System` → `Process` (dark) → `Work` → `Stat
 
 Service copy lives once in `client/src/data/services.ts`: the home page System
 section and every `/services/*` page render from it. Industries live in
-`client/src/data/industries.ts`. Add a route to `client/public/sitemap.xml`
-whenever you add a page.
+`client/src/data/industries.ts`.
+
+`client/public/sitemap.xml` is generated, not hand-edited: `pnpm build` runs
+`scripts/build-sitemap.mjs` first, which reads the service slugs out of
+`data/services.ts` and writes every route with today's date. Add a static
+route to the `paths` array in that script; new services need nothing.
 
 Prices live in `client/src/data/pricing.ts` (`SYSTEM_PRICE` $297,
 `LOCAL_SEO_PRICE` $569, `COMPLETE_PRICE` $797 for both together)
