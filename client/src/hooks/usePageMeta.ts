@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const SITE = "https://lumetstudio.online";
+const SITE = "https://risewithlocal.com";
 
 /**
  * usePageMeta - sets the title, description, and canonical URL for a route.

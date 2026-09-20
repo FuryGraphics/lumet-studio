@@ -2,7 +2,7 @@
  * Ranking results - before/after Google Maps grids for the Local SEO Pack.
  *
  * These come from the Google Business Profile platform this service runs on,
- * not from Lumet's own client list. Every surface that renders them says so
+ * not from Rise with Local's own client list. Every surface that renders them says so
  * (see RESULTS_DISCLOSURE), and that line is not optional: presenting another
  * company's client results as our own would be a false claim.
  *
@@ -18,7 +18,7 @@ export type RankingResult = {
 };
 
 export const RESULTS_DISCLOSURE =
-  "Ranking scans from businesses using the same Google Business Profile platform we run this service on, not Lumet clients. Results vary by market, competition, and starting point.";
+  "Ranking scans from businesses using the same Google Business Profile platform we run this service on, not Rise with Local clients. Results vary by market, competition, and starting point.";
 
 export const results: RankingResult[] = [
   { id: "contractor", industry: "Contractor", keyword: "water damage repair", months: 1 },

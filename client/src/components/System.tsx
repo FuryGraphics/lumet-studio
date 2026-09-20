@@ -33,14 +33,14 @@ export default function System() {
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-6">
-            <h2 className="lumet-display text-2xl md:text-4xl lg:text-5xl text-[#0D0D0D]">
+            <h2 className="rwl-display text-2xl md:text-4xl lg:text-5xl text-[#0D0D0D]">
               Four parts.
               <br />
               One system.
             </h2>
           </div>
           <div className="col-span-12 md:col-span-4 md:pt-2">
-            <p className="lumet-body text-sm md:text-base text-[#525252]">
+            <p className="rwl-body text-sm md:text-base text-[#525252]">
               Get found, get trusted, get hired. Every business we work with
               gets all four, built together so they feed each other.
             </p>
@@ -67,7 +67,7 @@ export default function System() {
                     <h3 className="text-lg md:text-2xl font-semibold text-[#0D0D0D] group-hover:text-[#1D4ED8] transition-colors">
                       {pillar.title}
                     </h3>
-                    <p className="lumet-body mt-1.5 text-sm md:text-base text-[#1D4ED8]">
+                    <p className="rwl-body mt-1.5 text-sm md:text-base text-[#1D4ED8]">
                       {pillar.tagline}
                     </p>
                     <div className="mt-4 md:mt-6 aspect-[4/3] overflow-hidden border border-[#E5E5E5] bg-[#F5F5F5] md:mr-6">
@@ -80,7 +80,7 @@ export default function System() {
                     </div>
                   </div>
                   <div className="col-span-12 md:col-span-7 mt-3 md:mt-0">
-                    <p className="lumet-body text-sm md:text-base text-[#525252]">
+                    <p className="rwl-body text-sm md:text-base text-[#525252]">
                       {pillar.summary}
                     </p>
                     <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 md:gap-x-6">
@@ -93,7 +93,7 @@ export default function System() {
                         </span>
                       ))}
                     </div>
-                    <span className="lumet-link mt-5 inline-block text-sm font-medium text-[#0D0D0D] group-hover:text-[#1D4ED8]">
+                    <span className="rwl-link mt-5 inline-block text-sm font-medium text-[#0D0D0D] group-hover:text-[#1D4ED8]">
                       Learn more →
                     </span>
                   </div>

@@ -40,9 +40,9 @@ export const services: Service[] = [
     image: "/images/system-website.webp",
     alt: "A laptop on a bright office desk showing a clean business website",
     points: ["Custom design", "Service pages", "Online booking"],
-    metaTitle: "Websites for Local Businesses | Lumet Studios",
+    metaTitle: "Websites for Local Businesses | Rise with Local",
     metaDescription:
-      "A custom, fast, mobile-first website built to turn visitors into calls and bookings. Designed, written, hosted, and maintained for you. Part of the $297/mo Lumet system.",
+      "A custom, fast, mobile-first website built to turn visitors into calls and bookings. Designed, written, hosted, and maintained for you. Part of the $297/mo Rise with Local system.",
     intro:
       "Most small business websites look fine and do nothing. Yours is built around one job: getting the person who lands on it to call, book, or ask for a quote.",
     problem: {
@@ -119,7 +119,7 @@ export const services: Service[] = [
       "Monthly content calendar",
     ],
     price: 569,
-    metaTitle: "Local SEO Pack: Google Business Profile Optimization | Lumet Studios",
+    metaTitle: "Local SEO Pack: Google Business Profile Optimization | Rise with Local",
     metaDescription:
       "Google Business Profile optimization for local businesses: competitor and keyword research, listings on 100+ platforms, a monthly content calendar, and monthly ranking scans. $569/mo, month to month.",
     intro:
@@ -216,9 +216,9 @@ export const services: Service[] = [
       "Direct-to-Google routing",
       "Reputation dashboard",
     ],
-    metaTitle: "Google Review Funnel for Local Businesses | Lumet Studios",
+    metaTitle: "Google Review Funnel for Local Businesses | Rise with Local",
     metaDescription:
-      "Automatically ask every customer for a Google review by text and email, and send them straight to your profile. Part of the $297/mo Lumet system.",
+      "Automatically ask every customer for a Google review by text and email, and send them straight to your profile. Part of the $297/mo Rise with Local system.",
     intro:
       "Most happy customers would leave a review. They just never get asked at the right moment. The review funnel asks every one of them, automatically.",
     problem: {
@@ -294,9 +294,9 @@ export const services: Service[] = [
       "Lead qualification",
       "24/7 response",
     ],
-    metaTitle: "AI Missed-Call Text Back for Small Businesses | Lumet Studios",
+    metaTitle: "AI Missed-Call Text Back for Small Businesses | Rise with Local",
     metaDescription:
-      "Every missed call gets an instant text. An AI assistant answers questions, qualifies the lead, and books the appointment 24/7. Part of the $297/mo Lumet system.",
+      "Every missed call gets an instant text. An AI assistant answers questions, qualifies the lead, and books the appointment 24/7. Part of the $297/mo Rise with Local system.",
     intro:
       "You can't answer every call when you're working. The people calling don't wait. The text-back makes sure a missed call is never a lost customer.",
     problem: {

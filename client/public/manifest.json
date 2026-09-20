@@ -1,16 +1,14 @@
 {
-  "name": "Lumet Studios - Websites, Review Funnels & AI Text-Back for Law Firms",
-  "short_name": "Lumet Studios",
-  "description": "The complete client-getting system for law firms: an SEO-optimized website, an automated Google review funnel, and an AI missed-chat bot. Live in under 7 days.",
+  "name": "Rise with Local - Websites, Local SEO, Reviews & AI Text Back",
+  "short_name": "Rise with Local",
+  "description": "The complete customer-getting system for local businesses: a custom website, local SEO, an automated Google review funnel, and AI missed-call text back. Live in under 7 days.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FAFAF9",
   "theme_color": "#0D0D0D",
   "icons": [
-    {
-      "src": "/manus-storage/lumet-logo_4d193c9b.jpg",
-      "sizes": "any",
-      "type": "image/jpeg"
-    }
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }

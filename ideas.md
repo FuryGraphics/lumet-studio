@@ -1,4 +1,4 @@
-# Lumet Studios — Design Brainstorm
+# Rise with Local — Design Brainstorm
 
 ## Three Stylistic Approaches
 
@@ -7,7 +7,7 @@
 **Probability:** 0.07
 
 ### 2. Spotlight Noir
-**Very Brief Intro:** Dark-dominant with the Lumet spotlight motif carried throughout — light beams, high-contrast white text, amber accent for CTAs. Cinematic and premium.
+**Very Brief Intro:** Dark-dominant with the Rise with Local spotlight motif carried throughout — light beams, high-contrast white text, amber accent for CTAs. Cinematic and premium.
 **Probability:** 0.04
 
 ### 3. Architectural Light
@@ -36,7 +36,7 @@
 
 **Signature Elements:**
 1. **Monospace section indices** — `01 / SERVICES` style labels in JetBrains Mono.
-2. **Spotlight motif** — a subtle light-beam gradient at the top of dark sections, echoing the Lumet logo.
+2. **Spotlight motif** — a subtle light-beam gradient at the top of dark sections, echoing the Rise with Local logo.
 3. **Hairline dividers** — thin horizontal rules between content blocks, not boxes or cards with shadows.
 
 **Interaction Philosophy:** Quiet confidence. Hover states are minimal — underline reveals, slight color shifts. No bouncing, no flashy transitions. The site feels like it was built by people who pay attention to details.
@@ -59,8 +59,8 @@
 - Never promise case outcomes, verdicts, settlement figures, or ranking positions. Attorneys are bound by bar advertising rules and a claim we cannot keep is a liability for both sides.
 - No em dashes anywhere on the site (see commit "Remove all em dashes from the entire website"). Use commas, colons, or a full stop.
 
-**Positioning shift (superseded):** Lumet launched as a white-label fulfillment partner for marketing agencies ("You sell it. We build it."). That framing is retired. The site now sells direct to law firms. Prior contractor and roofing builds stay on the page as proof that the same three-part system already runs in the field.
+**Positioning shift (superseded):** Rise with Local launched as a white-label fulfillment partner for marketing agencies ("You sell it. We build it."). That framing is retired. The site now sells direct to law firms. Prior contractor and roofing builds stay on the page as proof that the same three-part system already runs in the field.
 
-**Wordmark & Logo:** "Lumet." wordmark with spotlight beam — provided by client. White version for dark backgrounds, black version for light.
+**Wordmark & Logo:** "Rise with Local." wordmark with spotlight beam — provided by client. White version for dark backgrounds, black version for light.
 
 **Signature Brand Color:** Electric blue `#1D4ED8` — ownable, technical, trustworthy.

@@ -14,7 +14,7 @@ import ChatWidget from "@/components/ChatWidget";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
 /**
- * Home - Lumet Studios marketing page.
+ * Home - Rise with Local marketing page.
  * Single-page layout with sections:
  * Hero → System → Process (dark) → Work → Stats (dark) → About → Pricing → Contact → Footer
  * The four services and the industries list also have their own pages.
@@ -24,8 +24,8 @@ import { usePageMeta } from "@/hooks/usePageMeta";
  */
 export default function Home() {
   usePageMeta(
-    "Websites, Local SEO, Reviews & AI Text Back for Local Businesses | Lumet Studios",
-    "Lumet builds and runs your whole customer-getting system: a custom website, local SEO, an automated Google review funnel, and AI missed-call text back. Live in under 7 days for $297/mo. No contracts.",
+    "Websites, Local SEO, Reviews & AI Text Back for Local Businesses | Rise with Local",
+    "Rise with Local builds and runs your whole customer-getting system: a custom website, local SEO, an automated Google review funnel, and AI missed-call text back. Live in under 7 days for $297/mo. No contracts.",
     "/"
   );
 

@@ -3,7 +3,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 /**
  * Stats - dark band of animated counters built on published research, each
- * credited to its source. These are industry figures, not Lumet results, and
+ * credited to its source. These are industry figures, not Rise with Local results, and
  * the copy says so: the section frames the problem the system solves.
  * Responsive: 1 col on small phones, 2 col mobile, 4 col desktop.
  */
@@ -79,7 +79,7 @@ function Counter({
   return (
     <div className="bg-[#0D0D0D] p-5 md:p-8 lg:p-10 flex flex-col">
       <div
-        className="lumet-display text-white mb-2 md:mb-3 tabular-nums"
+        className="rwl-display text-white mb-2 md:mb-3 tabular-nums"
         style={{ fontSize: "clamp(2.5rem, 6vw, 4.25rem)" }}
         aria-label={`${stat.value}${stat.suffix}`}
       >
@@ -88,7 +88,7 @@ function Counter({
           <span className="text-[#1D4ED8]">{stat.suffix}</span>
         </span>
       </div>
-      <p className="lumet-body text-xs md:text-sm text-[#A3A3A3] max-w-[240px]">
+      <p className="rwl-body text-xs md:text-sm text-[#A3A3A3] max-w-[240px]">
         {stat.label}
       </p>
       <a
@@ -134,7 +134,7 @@ export default function Stats({ index = "04 / THE NUMBERS" }: { index?: string }
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-9">
             <h2
-              className="lumet-display text-white"
+              className="rwl-display text-white"
               style={{ fontSize: "clamp(1.75rem, 4.5vw, 3.25rem)" }}
             >
               Speed and reviews

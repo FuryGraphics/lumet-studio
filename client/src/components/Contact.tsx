@@ -54,14 +54,14 @@ export default function Contact() {
           <div className="grid grid-cols-12 gap-4 lg:gap-12">
             <div className="col-span-12 md:col-span-2 lg:col-span-4">
               <h2
-                className="lumet-display text-[#0D0D0D]"
+                className="rwl-display text-[#0D0D0D]"
                 style={{ fontSize: "clamp(1.75rem, 5vw, 3.75rem)" }}
               >
                 Message
                 <br />
                 received.
               </h2>
-              <p className="lumet-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
+              <p className="rwl-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
                 Thanks for reaching out. We'll review what you sent and get back
                 to you within 24 hours with your build plan.
               </p>
@@ -71,7 +71,7 @@ export default function Contact() {
                   window.location.hash = "contact";
                   window.location.reload();
                 }}
-                className="lumet-cta mt-6 md:mt-8 inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-[#1D4ED8] border border-[#1D4ED8] hover:bg-[#1D4ED8] hover:text-white rounded-sm"
+                className="rwl-cta mt-6 md:mt-8 inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-[#1D4ED8] border border-[#1D4ED8] hover:bg-[#1D4ED8] hover:text-white rounded-sm"
               >
                 Send another message
               </button>
@@ -102,7 +102,7 @@ export default function Contact() {
           {/* Left - headline */}
           <div className="col-span-12 md:col-span-2 lg:col-span-4 mb-6 md:mb-0">
             <h2
-              className="lumet-display text-[#0D0D0D]"
+              className="rwl-display text-[#0D0D0D]"
               style={{ fontSize: "clamp(1.75rem, 5vw, 3.75rem)" }}
             >
               Tell us about
@@ -111,7 +111,7 @@ export default function Contact() {
               <br />
               <span className="text-[#1D4ED8]">business.</span>
             </h2>
-            <p className="lumet-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
+            <p className="rwl-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
               What you do, where you do it, and where your customers come from
               today. We'll come back with your build plan, and the system
               goes live in under 7 days.
@@ -119,10 +119,10 @@ export default function Contact() {
 
             <div className="mt-8 md:mt-10 space-y-3">
               <a
-                href="mailto:hello@lumetstudio.online"
-                className="lumet-link block text-base font-medium text-[#0D0D0D]"
+                href="mailto:hello@risewithlocal.com"
+                className="rwl-link block text-base font-medium text-[#0D0D0D]"
               >
-                hello@lumetstudio.online
+                hello@risewithlocal.com
               </a>
               <p className="font-mono-label text-[#A3A3A3]">
                 RESPONSE WITHIN 24H · NO CREDIT CARD REQUIRED
@@ -241,7 +241,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={state.submitting}
-                  className="lumet-cta inline-flex items-center gap-2 px-6 md:px-8 py-3.5 md:py-4 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto justify-center sm:justify-start"
+                  className="rwl-cta inline-flex items-center gap-2 px-6 md:px-8 py-3.5 md:py-4 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto justify-center sm:justify-start"
                 >
                   {state.submitting ? "Sending..." : "Get started today"}
                   {!state.submitting && (
@@ -260,11 +260,11 @@ export default function Contact() {
                   className="mt-4 block text-sm text-red-600"
                 />
                 {state.errors && (
-                  <p className="lumet-body mt-3 text-sm text-[#525252]">
+                  <p className="rwl-body mt-3 text-sm text-[#525252]">
                     If that keeps failing, email us at{" "}
                     <a
                       href={`mailto:${CONTACT_EMAIL}`}
-                      className="lumet-link font-medium text-[#1D4ED8]"
+                      className="rwl-link font-medium text-[#1D4ED8]"
                     >
                       {CONTACT_EMAIL}
                     </a>

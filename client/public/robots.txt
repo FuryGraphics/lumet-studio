@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lumetstudio.online/sitemap.xml
+Sitemap: https://risewithlocal.com/sitemap.xml

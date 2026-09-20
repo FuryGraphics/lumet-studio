@@ -8,7 +8,7 @@
  *
  * Checked 2026-09-20: posting to the id below returns 404 FORM_NOT_FOUND, so
  * submissions are not reaching anyone. Replace it with a live form id from the
- * Formspree account that owns lumetstudio.online, then submit once through the
+ * Formspree account that owns risewithlocal.com, then submit once through the
  * site to confirm the email arrives.
  */
 export const FORMSPREE_ID = "mqerlrjr";
@@ -17,7 +17,7 @@ export const FORMSPREE_ENDPOINT = `https://formspree.io/f/${FORMSPREE_ID}`;
 
 /** Where enquiries go if a submission fails, so a lead is never lost in a
  *  toast message. */
-export const CONTACT_EMAIL = "hello@lumetstudio.online";
+export const CONTACT_EMAIL = "hello@risewithlocal.com";
 
 /** The questions, asked identically by the form and the chat widget. The
  *  `name` values are the field names that arrive in the email. */

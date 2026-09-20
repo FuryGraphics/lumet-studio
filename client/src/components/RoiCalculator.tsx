@@ -119,7 +119,7 @@ export default function RoiCalculator({
                 max={f.max}
                 value={v[f.key]}
                 onChange={e => set(f.key, e.target.value)}
-                className={`lumet-number w-full bg-transparent text-xl md:text-2xl font-semibold ${input} focus:outline-none focus:text-[#1D4ED8]`}
+                className={`rwl-number w-full bg-transparent text-xl md:text-2xl font-semibold ${input} focus:outline-none focus:text-[#1D4ED8]`}
               />
               {"suffix" in f && f.suffix && (
                 <span className={`text-xl md:text-2xl ${muted}`}>
@@ -135,10 +135,10 @@ export default function RoiCalculator({
               value={Math.min(v[f.key], f.max)}
               onChange={e => set(f.key, e.target.value)}
               aria-labelledby={`roi-label-${f.key}`}
-              className="lumet-range mt-3"
+              className="rwl-range mt-3"
             />
             <div className="flex items-baseline justify-between gap-4">
-              <p className={`lumet-body text-xs ${faint}`}>{f.hint}</p>
+              <p className={`rwl-body text-xs ${faint}`}>{f.hint}</p>
               <span className={`font-mono-label text-[0.625rem] ${faint}`}>
                 {f.prefix}
                 {f.max.toLocaleString("en-US")}
@@ -163,14 +163,14 @@ export default function RoiCalculator({
             ESTIMATED MONTHLY RETURN
           </span>
           <div
-            className="lumet-display mt-3 tabular-nums"
+            className="rwl-display mt-3 tabular-nums"
             style={{ fontSize: "clamp(2.5rem, 7vw, 4.5rem)" }}
           >
             <span className={net >= 0 ? "text-white" : "text-[#F87171]"}>
               {net >= 0 ? money(net) : "-" + money(Math.abs(net))}
             </span>
           </div>
-          <p className="lumet-body mt-2 text-sm text-[#A3A3A3]">
+          <p className="rwl-body mt-2 text-sm text-[#A3A3A3]">
             after the {money(v.cost)} monthly fee
           </p>
 
@@ -195,7 +195,7 @@ export default function RoiCalculator({
                 key={k}
                 className="flex items-baseline justify-between gap-4 py-3 border-b border-[#262626]"
               >
-                <dt className="lumet-body text-sm text-[#A3A3A3]">{k}</dt>
+                <dt className="rwl-body text-sm text-[#A3A3A3]">{k}</dt>
                 <dd className="text-base md:text-lg font-semibold tabular-nums">
                   {val}
                 </dd>
@@ -203,7 +203,7 @@ export default function RoiCalculator({
             ))}
           </dl>
 
-          <p className="lumet-body mt-6 text-xs text-[#525252]">
+          <p className="rwl-body mt-6 text-xs text-[#525252]">
             Your numbers, multiplied out: customers × increase × value, minus
             the fee. An estimate to think with, not a promise of results.
           </p>

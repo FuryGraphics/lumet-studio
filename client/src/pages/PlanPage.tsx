@@ -40,7 +40,7 @@ function PlanContent({ slug }: { slug: string }) {
           <div className="flex flex-wrap items-end gap-x-8 gap-y-5">
             <div className="flex items-baseline gap-2">
               <span
-                className="lumet-display text-[#0D0D0D]"
+                className="rwl-display text-[#0D0D0D]"
                 style={{ fontSize: "clamp(3rem, 8vw, 5.5rem)" }}
               >
                 ${plan.price}
@@ -50,7 +50,7 @@ function PlanContent({ slug }: { slug: string }) {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <a
                 href="/#contact"
-                className="lumet-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm"
+                className="rwl-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm"
               >
                 Get started
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -78,7 +78,7 @@ function PlanContent({ slug }: { slug: string }) {
               <span className="font-mono-label text-[#1D4ED8] block mb-3">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <p className="lumet-body text-sm md:text-base text-[#404040]">
+              <p className="rwl-body text-sm md:text-base text-[#404040]">
                 {line}
               </p>
             </div>
@@ -112,7 +112,7 @@ function PlanContent({ slug }: { slug: string }) {
                         strokeLinecap="square"
                       />
                     </svg>
-                    <span className="lumet-body text-sm text-[#E5E5E5]">
+                    <span className="rwl-body text-sm text-[#E5E5E5]">
                       {item}
                     </span>
                   </li>
@@ -135,7 +135,7 @@ function PlanContent({ slug }: { slug: string }) {
                 <Link
                   key={s}
                   href={`/services/${s}`}
-                  className="lumet-cta inline-flex items-center gap-2 border border-[#262626] px-4 py-2.5 text-sm font-medium text-[#A3A3A3] hover:border-[#1D4ED8] hover:text-white transition-colors"
+                  className="rwl-cta inline-flex items-center gap-2 border border-[#262626] px-4 py-2.5 text-sm font-medium text-[#A3A3A3] hover:border-[#1D4ED8] hover:text-white transition-colors"
                 >
                   {service.title} →
                 </Link>
@@ -157,14 +157,14 @@ function PlanContent({ slug }: { slug: string }) {
                   >
                     ×
                   </span>
-                  <span className="lumet-body text-sm md:text-base text-[#A3A3A3]">
+                  <span className="rwl-body text-sm md:text-base text-[#A3A3A3]">
                     {item.text}
                     {item.upgradeTo && (
                       <>
                         {" · "}
                         <Link
                           href={`/plans/${item.upgradeTo}`}
-                          className="lumet-link font-medium text-[#1D4ED8]"
+                          className="rwl-link font-medium text-[#1D4ED8]"
                         >
                           See the {getPlan(item.upgradeTo)?.name}
                         </Link>
@@ -189,7 +189,7 @@ function PlanContent({ slug }: { slug: string }) {
               <h3 className="text-lg md:text-xl font-semibold text-[#0D0D0D]">
                 {step.title}
               </h3>
-              <p className="lumet-body mt-2 text-sm md:text-base text-[#525252]">
+              <p className="rwl-body mt-2 text-sm md:text-base text-[#525252]">
                 {step.body}
               </p>
             </div>
@@ -203,7 +203,7 @@ function PlanContent({ slug }: { slug: string }) {
 
       <Section label="WHAT IT IS WORTH">
         <h2
-          className="lumet-display text-[#0D0D0D] mb-6 md:mb-10"
+          className="rwl-display text-[#0D0D0D] mb-6 md:mb-10"
           style={{ fontSize: "clamp(1.5rem, 3.2vw, 2.5rem)" }}
         >
           Do the math on your own numbers.
@@ -218,20 +218,20 @@ function PlanContent({ slug }: { slug: string }) {
       {/* Closing CTA, this plan's price */}
       <Section label="GET STARTED" dark>
         <h2
-          className="lumet-display text-white"
+          className="rwl-display text-white"
           style={{ fontSize: "clamp(1.75rem, 5vw, 3.75rem)" }}
         >
           {plan.name}.
           <br />
           <span className="text-[#1D4ED8]">${plan.price}</span> a month.
         </h2>
-        <p className="lumet-body mt-6 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
+        <p className="rwl-body mt-6 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
           {plan.blurb} No setup fee, no contract, cancel any time.
         </p>
         <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <a
             href="/#contact"
-            className="lumet-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm w-full sm:w-auto"
+            className="rwl-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm w-full sm:w-auto"
           >
             Get started
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -245,7 +245,7 @@ function PlanContent({ slug }: { slug: string }) {
           </a>
           <a
             href="/#pricing"
-            className="lumet-link text-base font-medium text-[#A3A3A3] hover:text-white"
+            className="rwl-link text-base font-medium text-[#A3A3A3] hover:text-white"
           >
             All plans
           </a>
@@ -313,7 +313,7 @@ export function PlanTable({ current }: { current?: string }) {
             <tr key={row.label} className="border-b border-[#E5E5E5]">
               <th
                 scope="row"
-                className="py-3.5 pr-4 lumet-body text-sm font-normal text-[#404040]"
+                className="py-3.5 pr-4 rwl-body text-sm font-normal text-[#404040]"
               >
                 {row.label}
               </th>

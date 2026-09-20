@@ -59,12 +59,12 @@ export default function PageShell({
               {label}
             </span>
             <h1
-              className="lumet-display text-[#0D0D0D] max-w-5xl"
+              className="rwl-display text-[#0D0D0D] max-w-5xl"
               style={{ fontSize: "clamp(2.25rem, 6vw, 4.75rem)" }}
             >
               {title}
             </h1>
-            <p className="lumet-body mt-6 md:mt-10 text-base md:text-xl text-[#525252] max-w-2xl">
+            <p className="rwl-body mt-6 md:mt-10 text-base md:text-xl text-[#525252] max-w-2xl">
               {intro}
             </p>
           </div>
@@ -124,28 +124,28 @@ export function CtaBand() {
   return (
     <Section label="GET STARTED" dark>
       <h2
-        className="lumet-display text-white"
+        className="rwl-display text-white"
         style={{ fontSize: "clamp(1.75rem, 5vw, 3.75rem)" }}
       >
         The whole system.
         <br />
         <span className="text-[#1D4ED8]">$297</span> a month.
       </h2>
-      <p className="lumet-body mt-6 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
+      <p className="rwl-body mt-6 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
         Website, local SEO, review funnel, and AI text-back, built for your
         business and live in under 7 days. No setup fees, no contracts.
       </p>
       <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
         <a
           href="/#contact"
-          className="lumet-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm w-full sm:w-auto"
+          className="rwl-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm w-full sm:w-auto"
         >
           Get started
           <Arrow />
         </a>
         <a
           href="/#pricing"
-          className="lumet-link text-base font-medium text-[#A3A3A3] hover:text-white"
+          className="rwl-link text-base font-medium text-[#A3A3A3] hover:text-white"
         >
           See what's included
         </a>
@@ -179,7 +179,7 @@ export function Faq({ items }: { items: { q: string; a: string }[] }) {
               +
             </span>
           </summary>
-          <p className="lumet-body pb-6 text-sm md:text-base text-[#525252] max-w-3xl">
+          <p className="rwl-body pb-6 text-sm md:text-base text-[#525252] max-w-3xl">
             {item.a}
           </p>
         </details>

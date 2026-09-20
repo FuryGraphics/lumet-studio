@@ -71,14 +71,14 @@ export default function Process() {
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-9">
             <h2
-              className="lumet-display text-white"
+              className="rwl-display text-white"
               style={{ fontSize: "clamp(1.75rem, 5vw, 3.75rem)" }}
             >
               Up and running
               <br />
               in under 7 days.
             </h2>
-            <p className="lumet-body mt-6 md:mt-8 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
+            <p className="rwl-body mt-6 md:mt-8 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
               No project meetings, no design committees, no six-week build
               cycle. You answer a few questions about your business and we
               handle every piece of it from there.
@@ -105,7 +105,7 @@ export default function Process() {
                   <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-3 md:mb-4">
                     {step.title}
                   </h3>
-                  <p className="lumet-body text-sm md:text-base text-[#A3A3A3]">
+                  <p className="rwl-body text-sm md:text-base text-[#A3A3A3]">
                     {step.desc}
                   </p>
                 </div>

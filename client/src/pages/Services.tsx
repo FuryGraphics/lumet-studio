@@ -9,7 +9,7 @@ import { usePageMeta } from "@/hooks/usePageMeta";
  */
 export default function Services() {
   usePageMeta(
-    "Services: Websites, Local SEO, Reviews & AI Text Back | Lumet Studios",
+    "Services: Websites, Local SEO, Reviews & AI Text Back | Rise with Local",
     "Everything a local business needs to get found and get hired: a custom website, local SEO, an automated Google review funnel, and AI missed-call text back. $297/mo.",
     "/services"
   );
@@ -52,7 +52,7 @@ export default function Services() {
                 <h2 className="mt-2 text-2xl md:text-4xl font-semibold text-[#0D0D0D] group-hover:text-[#1D4ED8] transition-colors">
                   {s.title}
                 </h2>
-                <p className="lumet-body mt-1.5 text-sm md:text-base text-[#1D4ED8]">
+                <p className="rwl-body mt-1.5 text-sm md:text-base text-[#1D4ED8]">
                   {s.tagline}
                 </p>
                 {s.price && (
@@ -60,10 +60,10 @@ export default function Services() {
                     ${s.price}/MO STANDALONE
                   </p>
                 )}
-                <p className="lumet-body mt-4 text-sm md:text-base text-[#525252] max-w-2xl">
+                <p className="rwl-body mt-4 text-sm md:text-base text-[#525252] max-w-2xl">
                   {s.summary}
                 </p>
-                <span className="lumet-link mt-5 inline-block text-sm font-medium text-[#0D0D0D]">
+                <span className="rwl-link mt-5 inline-block text-sm font-medium text-[#0D0D0D]">
                   Learn more →
                 </span>
               </div>

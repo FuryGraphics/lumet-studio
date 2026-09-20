@@ -57,7 +57,7 @@ export default function Work() {
           <div className="col-span-12 md:col-span-3 flex md:justify-end">
             <a
               href="#pricing"
-              className="lumet-link text-sm font-medium text-[#404040] hover:text-[#0D0D0D]"
+              className="rwl-link text-sm font-medium text-[#404040] hover:text-[#0D0D0D]"
             >
               See pricing →
             </a>
@@ -68,7 +68,7 @@ export default function Work() {
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-9">
-            <h2 className="lumet-display text-2xl md:text-4xl lg:text-5xl text-[#0D0D0D]">
+            <h2 className="rwl-display text-2xl md:text-4xl lg:text-5xl text-[#0D0D0D]">
               Systems we have
               <br />
               already built.
@@ -162,7 +162,7 @@ export default function Work() {
                           {project.title}
                         </a>
                       </h3>
-                      <p className="lumet-body text-sm text-[#525252]">
+                      <p className="rwl-body text-sm text-[#525252]">
                         {project.desc}
                       </p>
                       <div className="pt-3 border-t border-[#E5E5E5]">
