@@ -14,15 +14,24 @@ import { fileURLToPath } from "node:url";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://lumetstudio.online";
 
-const services = [
-  ...readFileSync(resolve(root, "client/src/data/services.ts"), "utf8").matchAll(
-    /^\s{4}slug:\s*"([^"]+)"/gm
-  ),
-].map(m => m[1]);
+const slugsIn = file =>
+  [
+    ...readFileSync(resolve(root, file), "utf8").matchAll(
+      /^\s{4}slug:\s*"([^"]+)"/gm
+    ),
+  ].map(m => m[1]);
 
-if (services.length === 0) {
-  console.error("build-sitemap: no service slugs found in data/services.ts");
-  process.exit(1);
+const services = slugsIn("client/src/data/services.ts");
+const plans = slugsIn("client/src/data/plans.ts");
+
+for (const [what, list] of [
+  ["service", services],
+  ["plan", plans],
+]) {
+  if (list.length === 0) {
+    console.error(`build-sitemap: no ${what} slugs found`);
+    process.exit(1);
+  }
 }
 
 /** Static routes, in the order they matter. `priority` and `changefreq` are
@@ -31,6 +40,7 @@ const paths = [
   "/",
   "/services",
   ...services.map(slug => `/services/${slug}`),
+  ...plans.map(slug => `/plans/${slug}`),
   "/industries",
 ];
 

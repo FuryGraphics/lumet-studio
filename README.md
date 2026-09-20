@@ -21,10 +21,15 @@ same four pieces, built together so they feed each other:
 | `/` | `client/src/pages/Home.tsx` |
 | `/services` | `client/src/pages/Services.tsx` |
 | `/services/:slug` | `client/src/pages/ServicePage.tsx` |
+| `/plans/:slug` | `client/src/pages/PlanPage.tsx` |
 | `/industries` | `client/src/pages/Industries.tsx` |
 
 The home page runs `Hero` → `System` → `Process` (dark) → `Work` → `Stats`
 (dark) → `About` → `Pricing` → `Contact` → `Footer`.
+
+`data/services.ts` describes the work; `data/plans.ts` describes what can be
+bought, listing the service slugs each plan contains, so the pricing cards and
+the plan pages read from one place and the plan page links through for detail.
 
 Service copy lives once in `client/src/data/services.ts`: the home page System
 section and every `/services/*` page render from it. Industries live in

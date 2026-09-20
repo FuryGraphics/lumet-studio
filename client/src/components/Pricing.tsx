@@ -1,11 +1,7 @@
 import { Link } from "wouter";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import {
-  COMPLETE_PRICE,
-  COMPLETE_SAVING,
-  LOCAL_SEO_PRICE,
-  SYSTEM_PRICE,
-} from "@/data/pricing";
+import { COMPLETE_SAVING } from "@/data/pricing";
+import { plans as planData } from "@/data/plans";
 
 /**
  * Pricing - three plans on warm paper: the monthly system, the Local SEO Pack
@@ -14,13 +10,11 @@ import {
  * Responsive: cards stack under the heading on mobile, three across on large
  * screens with the featured card first on mobile.
  */
-const plans = [
+/** Card copy per plan: the feature bullets are the card's own summary, and
+ *  everything else (name, badge, price, blurb, link) comes from data/plans. */
+const cards = [
   {
-    name: "Growth System",
-    badge: "THE FOUNDATION",
-    price: SYSTEM_PRICE,
-    blurb: "Everything your business needs to get found and get hired online.",
-    href: "/services",
+    slug: "growth-system",
     features: [
       "Custom-built professional website",
       "On-page local SEO and site structure",
@@ -32,13 +26,7 @@ const plans = [
     ],
   },
   {
-    name: "Complete Pack",
-    badge: "BEST VALUE",
-    featured: true,
-    price: COMPLETE_PRICE,
-    blurb:
-      "Both plans together: the whole website system and the full Google Business Profile programme.",
-    href: "/services",
+    slug: "complete-pack",
     features: [
       "Everything in the Growth System",
       "Everything in the Local SEO Pack",
@@ -52,13 +40,8 @@ const plans = [
     order: "lg:order-2",
   },
   {
-    name: "Local SEO Pack",
-    badge: "RANK ON THE MAP",
+    slug: "local-seo-pack",
     order: "lg:order-3",
-    price: LOCAL_SEO_PRICE,
-    blurb:
-      "Deep Google Business Profile optimization for businesses that live on map results.",
-    href: "/services/local-seo-pack",
     features: [
       "Competitor and keyword research",
       "Full Google Business Profile optimization",
@@ -70,7 +53,12 @@ const plans = [
       "No contracts, cancel anytime",
     ],
   },
-];
+].map(card => {
+  const plan = planData.find(p => p.slug === card.slug)!;
+  return { ...card, ...plan, features: card.features, order: card.order };
+});
+
+const plans = cards;
 
 const assurances = [
   { label: "NO SETUP FEES", text: "The monthly price is the whole price." },
@@ -242,7 +230,7 @@ export default function Pricing() {
                         </svg>
                       </a>
                       <Link
-                        href={plan.href}
+                        href={`/plans/${plan.slug}`}
                         className="lumet-link block text-center text-sm font-medium text-[#A3A3A3] hover:text-white mt-4"
                       >
                         See what's included →

@@ -57,12 +57,19 @@ type Key = (typeof fields)[number]["key"];
 const money = (n: number) =>
   "$" + Math.round(n).toLocaleString("en-US");
 
-export default function RoiCalculator({ dark = false }: { dark?: boolean }) {
+export default function RoiCalculator({
+  dark = false,
+  defaultCost = LOCAL_SEO_PRICE,
+}: {
+  dark?: boolean;
+  /** The plan the visitor is looking at, so the sum starts from its fee. */
+  defaultCost?: number;
+}) {
   const [v, setV] = useState<Record<Key, number>>({
     customers: 20,
     value: 400,
     lift: 25,
-    cost: LOCAL_SEO_PRICE,
+    cost: defaultCost,
   });
 
   const set = (key: Key, raw: string) => {

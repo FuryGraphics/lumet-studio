@@ -1,3 +1,4 @@
+import { plans } from "@/data/plans";
 import { services } from "@/data/services";
 
 /**
@@ -9,6 +10,13 @@ const footerLinks = {
   System: [
     ...services.map(s => ({ label: s.title, href: `/services/${s.slug}` })),
     { label: "All services", href: "/services" },
+  ],
+  Plans: [
+    ...plans.map(p => ({
+      label: `${p.name} · $${p.price}/mo`,
+      href: `/plans/${p.slug}`,
+    })),
+    { label: "Compare plans", href: "/#pricing" },
   ],
   Studio: [
     { label: "Industries", href: "/industries" },
