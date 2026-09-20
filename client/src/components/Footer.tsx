@@ -55,7 +55,7 @@ export default function Footer() {
                 alt=""
                 className="h-8 w-8 md:h-10 md:w-10 shrink-0"
               />
-              Local Cascade<span className="text-[#004AAD]">.</span>
+              Local Cascade
             </a>
             <p className="lc-body mt-4 md:mt-6 text-sm md:text-base text-[#A3A3A3] max-w-sm">
               The complete customer-getting system for local businesses.

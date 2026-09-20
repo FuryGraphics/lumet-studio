@@ -166,7 +166,7 @@ export default function ChatWidget() {
             <div className="flex items-center justify-between gap-3">
               <span className="flex items-center gap-2 font-bold text-lg tracking-tight">
                 <img src="/logo-mark.svg" alt="" className="h-5 w-5 shrink-0" />
-                Local Cascade<span className="text-[#004AAD]">.</span>
+                Local Cascade
               </span>
               <span className="font-mono-label text-[#525252]">
                 REPLIES WITHIN 24H

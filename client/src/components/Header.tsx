@@ -204,7 +204,7 @@ export default function Header() {
               alt=""
               className="h-6 w-6 md:h-7 md:w-7 shrink-0"
             />
-            Local Cascade<span className="text-[#004AAD]">.</span>
+            Local Cascade
           </Link>
 
           {/* Desktop nav */}
