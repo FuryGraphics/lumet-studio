@@ -43,7 +43,7 @@ function ServiceContent({ slug }: { slug: string }) {
         <section className="pb-10 md:pb-14 bg-[#FAFAF9]">
           <div className="container flex flex-wrap items-baseline gap-x-4 gap-y-2">
             <span
-              className="rwl-display text-[#0D0D0D]"
+              className="lc-display text-[#0D0D0D]"
               style={{ fontSize: "clamp(2rem, 4.5vw, 3rem)" }}
             >
               ${service.price}
@@ -75,12 +75,12 @@ function ServiceContent({ slug }: { slug: string }) {
                 THE PROBLEM
               </span>
               <h2
-                className="rwl-display text-[#0D0D0D]"
+                className="lc-display text-[#0D0D0D]"
                 style={{ fontSize: "clamp(1.5rem, 3.2vw, 2.5rem)" }}
               >
                 {service.problem.heading}
               </h2>
-              <p className="rwl-body mt-5 text-base md:text-lg text-[#525252]">
+              <p className="lc-body mt-5 text-base md:text-lg text-[#525252]">
                 {service.problem.body}
               </p>
             </div>
@@ -98,7 +98,7 @@ function ServiceContent({ slug }: { slug: string }) {
               <h3 className="text-lg md:text-xl font-semibold text-[#0D0D0D]">
                 {f.title}
               </h3>
-              <p className="rwl-body mt-2 text-sm md:text-base text-[#525252]">
+              <p className="lc-body mt-2 text-sm md:text-base text-[#525252]">
                 {f.body}
               </p>
             </div>
@@ -119,7 +119,7 @@ function ServiceContent({ slug }: { slug: string }) {
               <h3 className="text-xl md:text-2xl font-semibold text-white mb-3">
                 {step.title}
               </h3>
-              <p className="rwl-body text-sm md:text-base text-[#A3A3A3]">
+              <p className="lc-body text-sm md:text-base text-[#A3A3A3]">
                 {step.body}
               </p>
             </div>
@@ -145,14 +145,14 @@ function ServiceContent({ slug }: { slug: string }) {
             </div>
             <div className="col-span-12 lg:col-span-6">
               <h2
-                className="rwl-display text-white"
+                className="lc-display text-white"
                 style={{ fontSize: "clamp(1.5rem, 3.2vw, 2.5rem)" }}
               >
                 Every square is a customer
                 <br />
                 standing somewhere in your city.
               </h2>
-              <p className="rwl-body mt-5 text-base md:text-lg text-[#A3A3A3]">
+              <p className="lc-body mt-5 text-base md:text-lg text-[#A3A3A3]">
                 A ranking scan searches your keyword from points all over your
                 service area and records where you land. Red means a customer
                 on that street corner does not find you. The work moves those
@@ -173,7 +173,7 @@ function ServiceContent({ slug }: { slug: string }) {
       {service.showRoi && (
         <Section label="WHAT IT IS WORTH">
           <h2
-            className="rwl-display text-[#0D0D0D] mb-6 md:mb-10"
+            className="lc-display text-[#0D0D0D] mb-6 md:mb-10"
             style={{ fontSize: "clamp(1.5rem, 3.2vw, 2.5rem)" }}
           >
             Do the math on your own numbers.
@@ -187,7 +187,7 @@ function ServiceContent({ slug }: { slug: string }) {
       </Section>
 
       <Section label="THE REST OF THE SYSTEM">
-        <p className="rwl-body mb-8 text-base md:text-lg text-[#525252] max-w-2xl">
+        <p className="lc-body mb-8 text-base md:text-lg text-[#525252] max-w-2xl">
           {service.price
             ? `${service.title} is sold on its own, and it works hardest next to the rest of the system.`
             : `${service.title} is one part of the Growth System. Every plan includes all of it, built to work together.`}

@@ -10,7 +10,7 @@
  * https://unsplash.com/oauth/applications, otherwise the referral traffic is
  * not attributed to this app.
  */
-export const UNSPLASH_APP_NAME = "rwl-studio";
+export const UNSPLASH_APP_NAME = "lc-studio";
 
 const UTM = `utm_source=${UNSPLASH_APP_NAME}&utm_medium=referral`;
 

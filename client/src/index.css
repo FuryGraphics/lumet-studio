@@ -43,7 +43,7 @@
 }
 
 /* ============================================================
-   RISE WITH LOCAL - Editorial Mono Design System
+   LOCAL CASCADE - Editorial Mono Design System
    Light-dominant with dark rhythm sections.
    Accent: Electric Blue #1D4ED8
    ============================================================ */
@@ -86,15 +86,15 @@
   --sidebar-border: oklch(0.9 0.002 80);
   --sidebar-ring: oklch(0.45 0.21 259);
 
-  /* Custom Rise with Local tokens */
-  --rwl-dark: oklch(0.07 0.005 65);
-  --rwl-dark-foreground: oklch(0.92 0.005 65);
-  --rwl-dark-muted: oklch(0.55 0.008 65);
-  --rwl-dark-border: oklch(0.16 0.005 65);
-  --rwl-accent: oklch(0.45 0.21 259);
-  --rwl-accent-hover: oklch(0.4 0.2 259);
-  --rwl-hairline: oklch(0.9 0.002 80);
-  --rwl-hairline-dark: oklch(0.16 0.005 65);
+  /* Custom Local Cascade tokens */
+  --lc-dark: oklch(0.07 0.005 65);
+  --lc-dark-foreground: oklch(0.92 0.005 65);
+  --lc-dark-muted: oklch(0.55 0.008 65);
+  --lc-dark-border: oklch(0.16 0.005 65);
+  --lc-accent: oklch(0.45 0.21 259);
+  --lc-accent-hover: oklch(0.4 0.2 259);
+  --lc-hairline: oklch(0.9 0.002 80);
+  --lc-hairline-dark: oklch(0.16 0.005 65);
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", "SF Mono", Menlo, monospace;
 }
@@ -182,7 +182,7 @@
     }
   }
 
-  /* Rise with Local-specific utilities */
+  /* Local Cascade-specific utilities */
   .font-mono-label {
     font-family: var(--font-mono);
     font-size: 0.75rem;
@@ -191,20 +191,20 @@
     text-transform: uppercase;
   }
 
-  .rwl-dark-section {
-    background-color: var(--rwl-dark);
-    color: var(--rwl-dark-foreground);
+  .lc-dark-section {
+    background-color: var(--lc-dark);
+    color: var(--lc-dark-foreground);
   }
 
-  .rwl-hairline {
-    border-color: var(--rwl-hairline);
+  .lc-hairline {
+    border-color: var(--lc-hairline);
   }
 
-  .rwl-hairline-dark {
-    border-color: var(--rwl-hairline-dark);
+  .lc-hairline-dark {
+    border-color: var(--lc-hairline-dark);
   }
 
-  .rwl-spotlight {
+  .lc-spotlight {
     background: radial-gradient(
       ellipse 60% 80% at 50% 0%,
       rgba(255, 255, 255, 0.06) 0%,
@@ -212,22 +212,22 @@
     );
   }
 
-  .rwl-accent-text {
-    color: var(--rwl-accent);
+  .lc-accent-text {
+    color: var(--lc-accent);
   }
 
-  .rwl-accent-bg {
-    background-color: var(--rwl-accent);
+  .lc-accent-bg {
+    background-color: var(--lc-accent);
   }
 
-  .rwl-display {
+  .lc-display {
     font-family: var(--font-sans);
     font-weight: 700;
     letter-spacing: -0.035em;
     line-height: 0.98;
   }
 
-  .rwl-body {
+  .lc-body {
     font-family: var(--font-sans);
     font-weight: 400;
     line-height: 1.7;
@@ -256,24 +256,24 @@
   }
 
   /* Magnetic button effect */
-  .rwl-cta {
+  .lc-cta {
     transition:
       transform 0.16s cubic-bezier(0.23, 1, 0.32, 1),
       background-color 0.2s ease,
       color 0.2s ease;
   }
 
-  .rwl-cta:active {
+  .lc-cta:active {
     transform: scale(0.97);
   }
 
   /* Link underline reveal */
-  .rwl-link {
+  .lc-link {
     position: relative;
     display: inline-block;
   }
 
-  .rwl-link::after {
+  .lc-link::after {
     content: "";
     position: absolute;
     left: 0;
@@ -286,7 +286,7 @@
     transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
-  .rwl-link:hover::after {
+  .lc-link:hover::after {
     transform: scaleX(1);
     transform-origin: left;
   }
@@ -321,7 +321,7 @@ html {
    with the editorial grid rather than looking like stock browser controls.
    The number field keeps its own value; the spinner arrows are hidden since
    the slider does that job. */
-.rwl-range {
+.lc-range {
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
@@ -330,72 +330,72 @@ html {
   cursor: pointer;
 }
 
-.rwl-range::-webkit-slider-runnable-track {
+.lc-range::-webkit-slider-runnable-track {
   height: 2px;
-  background: var(--rwl-hairline, #e5e5e5);
+  background: var(--lc-hairline, #e5e5e5);
 }
 
-.rwl-range::-moz-range-track {
+.lc-range::-moz-range-track {
   height: 2px;
-  background: var(--rwl-hairline, #e5e5e5);
+  background: var(--lc-hairline, #e5e5e5);
 }
 
-.rwl-range::-webkit-slider-thumb {
+.lc-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 14px;
   height: 14px;
   margin-top: -6px;
-  background: var(--rwl-accent, #1d4ed8);
+  background: var(--lc-accent, #1d4ed8);
   border: 0;
   border-radius: 0;
   transition: transform 0.15s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.rwl-range::-moz-range-thumb {
+.lc-range::-moz-range-thumb {
   width: 14px;
   height: 14px;
-  background: var(--rwl-accent, #1d4ed8);
+  background: var(--lc-accent, #1d4ed8);
   border: 0;
   border-radius: 0;
   transition: transform 0.15s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.rwl-range:hover::-webkit-slider-thumb,
-.rwl-range:active::-webkit-slider-thumb {
+.lc-range:hover::-webkit-slider-thumb,
+.lc-range:active::-webkit-slider-thumb {
   transform: scale(1.25);
 }
 
-.rwl-range:hover::-moz-range-thumb,
-.rwl-range:active::-moz-range-thumb {
+.lc-range:hover::-moz-range-thumb,
+.lc-range:active::-moz-range-thumb {
   transform: scale(1.25);
 }
 
-.rwl-range:focus-visible::-webkit-slider-thumb {
-  outline: 2px solid var(--rwl-accent, #1d4ed8);
+.lc-range:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid var(--lc-accent, #1d4ed8);
   outline-offset: 3px;
 }
 
-.rwl-range:focus-visible::-moz-range-thumb {
-  outline: 2px solid var(--rwl-accent, #1d4ed8);
+.lc-range:focus-visible::-moz-range-thumb {
+  outline: 2px solid var(--lc-accent, #1d4ed8);
   outline-offset: 3px;
 }
 
 /* Number fields in the calculator: no spinner arrows, the slider replaces them */
-.rwl-number::-webkit-outer-spin-button,
-.rwl-number::-webkit-inner-spin-button {
+.lc-number::-webkit-outer-spin-button,
+.lc-number::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.rwl-number {
+.lc-number {
   -moz-appearance: textfield;
   appearance: textfield;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .rwl-range::-webkit-slider-thumb,
-  .rwl-range::-moz-range-thumb {
+  .lc-range::-webkit-slider-thumb,
+  .lc-range::-moz-range-thumb {
     transition: none;
   }
 }

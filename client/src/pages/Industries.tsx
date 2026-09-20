@@ -7,7 +7,7 @@ import { usePageMeta } from "@/hooks/usePageMeta";
  */
 export default function Industries() {
   usePageMeta(
-    "Industries We Serve | Rise with Local",
+    "Industries We Serve | Local Cascade",
     "Websites, local SEO, review funnels, and AI text back for home services, contractors, medical and dental, legal, beauty, auto, cleaning, fitness, and more.",
     "/industries"
   );
@@ -38,15 +38,15 @@ export default function Industries() {
               <p className="font-mono-label text-[#A3A3A3] mt-2 text-[0.625rem] md:text-xs">
                 {ind.examples.toUpperCase()}
               </p>
-              <p className="rwl-body mt-4 text-sm md:text-base text-[#525252]">
+              <p className="lc-body mt-4 text-sm md:text-base text-[#525252]">
                 {ind.body}
               </p>
             </div>
           ))}
         </div>
-        <p className="rwl-body mt-8 text-base text-[#525252]">
+        <p className="lc-body mt-8 text-base text-[#525252]">
           Don't see your industry?{" "}
-          <a href="/#contact" className="rwl-link font-medium text-[#1D4ED8]">
+          <a href="/#contact" className="lc-link font-medium text-[#1D4ED8]">
             Tell us what you do
           </a>
           . If you get customers from local search and phone calls, it works.

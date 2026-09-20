@@ -48,14 +48,14 @@ export default function About() {
           </div>
           <div className="col-span-12 md:col-span-9">
             <p
-              className="rwl-display text-[#0D0D0D] leading-snug max-w-4xl"
+              className="lc-display text-[#0D0D0D] leading-snug max-w-4xl"
               style={{ fontSize: "clamp(1.25rem, 3.5vw, 2.25rem)" }}
             >
               Most small businesses get sold four separate things: a web
               designer, an SEO agency, a reputation tool, and a chat widget.{" "}
               <span className="text-[#A3A3A3] font-normal">
                 Four invoices, four logins, and nothing that talks to each
-                other. We built Rise with Local so a business gets one system, one fee,
+                other. We built Local Cascade so a business gets one system, one fee,
                 and one team that keeps it running long after launch day.
               </span>
             </p>
@@ -87,7 +87,7 @@ export default function About() {
                   <span className="font-mono-label text-[#1D4ED8] block mb-3 md:mb-4">
                     {p.num}
                   </span>
-                  <p className="rwl-body text-sm md:text-base text-[#404040]">
+                  <p className="lc-body text-sm md:text-base text-[#404040]">
                     {p.text}
                   </p>
                 </div>

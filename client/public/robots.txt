@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://risewithlocal.com/sitemap.xml
+Sitemap: https://localcascade.com/sitemap.xml

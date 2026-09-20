@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { services } from "@/data/services";
 
 /**
- * Header - minimal fixed navigation for Rise with Local.
+ * Header - minimal fixed navigation for Local Cascade.
  * Transparent over hero, transitions to opaque white on scroll.
  * Mobile menu via overlay with body scroll lock.
  */
@@ -88,7 +88,7 @@ function ServicesMenu() {
       <span className="flex items-center gap-1.5">
         <Link
           href="/services"
-          className="rwl-link text-sm font-medium text-[#404040] hover:text-[#0D0D0D] transition-colors"
+          className="lc-link text-sm font-medium text-[#404040] hover:text-[#0D0D0D] transition-colors"
         >
           Services
         </Link>
@@ -139,7 +139,7 @@ function ServicesMenu() {
                       </span>
                     ) : null}
                   </span>
-                  <span className="rwl-body block text-xs text-[#737373] mt-0.5">
+                  <span className="lc-body block text-xs text-[#737373] mt-0.5">
                     {s.tagline}
                   </span>
                 </span>
@@ -197,9 +197,9 @@ export default function Header() {
             className={`font-bold text-lg md:text-xl tracking-tight transition-colors ${
               scrolled ? "text-[#0D0D0D]" : "text-[#0D0D0D]"
             }`}
-            aria-label="Rise with Local home"
+            aria-label="Local Cascade home"
           >
-            Rise with Local<span className="text-[#1D4ED8]">.</span>
+            Local Cascade<span className="text-[#1D4ED8]">.</span>
           </Link>
 
           {/* Desktop nav */}
@@ -211,7 +211,7 @@ export default function Header() {
               <li key={link.href}>
                 <NavLink
                   href={link.href}
-                  className="rwl-link text-sm font-medium text-[#404040] hover:text-[#0D0D0D] transition-colors"
+                  className="lc-link text-sm font-medium text-[#404040] hover:text-[#0D0D0D] transition-colors"
                 >
                   {link.label}
                 </NavLink>
@@ -224,7 +224,7 @@ export default function Header() {
           <div className="hidden md:block">
             <a
               href="/#pricing"
-              className="rwl-cta inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm"
+              className="lc-cta inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm"
             >
               Get started
               <svg
@@ -276,7 +276,7 @@ export default function Header() {
               <div key={link.href} className="w-full">
                 <NavLink
                   href={link.href}
-                  className="text-2xl font-semibold text-[#0D0D0D] rwl-link"
+                  className="text-2xl font-semibold text-[#0D0D0D] lc-link"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.label}

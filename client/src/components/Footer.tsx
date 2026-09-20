@@ -46,12 +46,12 @@ export default function Footer() {
           <div className="col-span-12 md:col-span-5">
             <a
               href="/"
-              className="rwl-logo text-2xl md:text-4xl"
-              aria-label="Rise with Local home"
+              className="lc-logo text-2xl md:text-4xl"
+              aria-label="Local Cascade home"
             >
-              Rise with Local<span className="text-[#1D4ED8]">.</span>
+              Local Cascade<span className="text-[#1D4ED8]">.</span>
             </a>
-            <p className="rwl-body mt-4 md:mt-6 text-sm md:text-base text-[#A3A3A3] max-w-sm">
+            <p className="lc-body mt-4 md:mt-6 text-sm md:text-base text-[#A3A3A3] max-w-sm">
               The complete customer-getting system for local businesses.
               Website, local SEO, Google review funnel, and AI missed-call text
               back, live in under 7 days for $297 a month.
@@ -71,7 +71,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="rwl-link text-sm text-[#A3A3A3] hover:text-white transition-colors"
+                    className="lc-link text-sm text-[#A3A3A3] hover:text-white transition-colors"
                   >
                     {link.label}
                   </a>
@@ -90,7 +90,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="rwl-link text-sm text-[#A3A3A3] hover:text-white transition-colors"
+                    className="lc-link text-sm text-[#A3A3A3] hover:text-white transition-colors"
                   >
                     {link.label}
                   </a>
@@ -105,10 +105,10 @@ export default function Footer() {
               CONTACT
             </p>
             <a
-              href="mailto:hello@risewithlocal.com"
-              className="rwl-link block text-sm text-[#A3A3A3] hover:text-white transition-colors mb-3"
+              href="mailto:hello@localcascade.com"
+              className="lc-link block text-sm text-[#A3A3A3] hover:text-white transition-colors mb-3"
             >
-              hello@risewithlocal.com
+              hello@localcascade.com
             </a>
             <p className="font-mono-label text-[#525252]">REMOTE · GLOBAL</p>
           </div>
@@ -118,13 +118,13 @@ export default function Footer() {
         <div className="grid grid-cols-12 gap-4 pt-6 md:pt-8">
           <div className="col-span-12 md:col-span-6">
             <p className="font-mono-label text-[#525252] text-xs md:text-sm">
-              © {new Date().getFullYear()} RISE WITH LOCAL - ALL RIGHTS RESERVED
+              © {new Date().getFullYear()} LOCAL CASCADE - ALL RIGHTS RESERVED
             </p>
           </div>
           <div className="col-span-12 md:col-span-6 flex md:justify-end">
             <a
               href="/"
-              className="rwl-link flex items-center gap-2 text-sm text-[#A3A3A3] hover:text-white transition-colors"
+              className="lc-link flex items-center gap-2 text-sm text-[#A3A3A3] hover:text-white transition-colors"
             >
               Back to top
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none">

@@ -110,7 +110,7 @@ export default function Pricing() {
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 md:col-span-5">
             <h2
-              className="rwl-display text-[#0D0D0D]"
+              className="lc-display text-[#0D0D0D]"
               style={{ fontSize: "clamp(1.75rem, 5vw, 3.75rem)" }}
             >
               Pick a plan.
@@ -119,7 +119,7 @@ export default function Pricing() {
               <br />
               included.
             </h2>
-            <p className="rwl-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
+            <p className="lc-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
               No hidden fees. No upsells. No long-term contracts. Take one
               piece or the lot, and we keep running it for as long as you want
               it.
@@ -132,7 +132,7 @@ export default function Pricing() {
                   <span className="font-mono-label text-[#1D4ED8] block mb-1.5">
                     {item.label}
                   </span>
-                  <p className="rwl-body text-sm text-[#525252]">
+                  <p className="lc-body text-sm text-[#525252]">
                     {item.text}
                   </p>
                 </div>
@@ -178,7 +178,7 @@ export default function Pricing() {
                     {/* Price */}
                     <div className="flex items-baseline gap-2 mt-3">
                       <span
-                        className="rwl-display text-white"
+                        className="lc-display text-white"
                         style={{ fontSize: "clamp(2.75rem, 7vw, 4.5rem)" }}
                       >
                         ${plan.price}
@@ -187,7 +187,7 @@ export default function Pricing() {
                         /MO
                       </span>
                     </div>
-                    <p className="rwl-body mt-3 text-base text-[#A3A3A3]">
+                    <p className="lc-body mt-3 text-base text-[#A3A3A3]">
                       {plan.blurb}
                     </p>
                     {plan.featured && (
@@ -201,7 +201,7 @@ export default function Pricing() {
                       {plan.features.map(feature => (
                         <li key={feature} className="flex items-start gap-3">
                           <Check />
-                          <span className="rwl-body text-sm md:text-base text-[#E5E5E5]">
+                          <span className="lc-body text-sm md:text-base text-[#E5E5E5]">
                             {feature}
                           </span>
                         </li>
@@ -212,7 +212,7 @@ export default function Pricing() {
                     <div className="mt-auto pt-8 md:pt-10">
                       <a
                         href="#contact"
-                        className="rwl-cta inline-flex items-center justify-center gap-2 w-full px-6 py-4 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm"
+                        className="lc-cta inline-flex items-center justify-center gap-2 w-full px-6 py-4 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm"
                       >
                         Get started
                         <svg
@@ -231,7 +231,7 @@ export default function Pricing() {
                       </a>
                       <Link
                         href={`/plans/${plan.slug}`}
-                        className="rwl-link block text-center text-sm font-medium text-[#A3A3A3] hover:text-white mt-4"
+                        className="lc-link block text-center text-sm font-medium text-[#A3A3A3] hover:text-white mt-4"
                       >
                         See what's included →
                       </Link>

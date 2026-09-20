@@ -128,8 +128,8 @@ export default function ChatWidget() {
         type="button"
         onClick={() => setOpen(o => !o)}
         aria-expanded={open}
-        aria-controls="rwl-chat"
-        className="rwl-cta fixed bottom-5 right-5 z-[60] flex items-center gap-2 pl-4 pr-5 py-3 text-sm font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] shadow-[0_10px_30px_rgba(29,78,216,0.35)] rounded-sm"
+        aria-controls="lc-chat"
+        className="lc-cta fixed bottom-5 right-5 z-[60] flex items-center gap-2 pl-4 pr-5 py-3 text-sm font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] shadow-[0_10px_30px_rgba(29,78,216,0.35)] rounded-sm"
       >
         {open ? (
           <>
@@ -156,16 +156,16 @@ export default function ChatWidget() {
       {/* Panel */}
       {open && (
         <div
-          id="rwl-chat"
+          id="lc-chat"
           role="dialog"
-          aria-label="Chat with Rise with Local"
+          aria-label="Chat with Local Cascade"
           className="fixed bottom-20 right-5 z-[60] w-[calc(100vw-2.5rem)] sm:w-[23rem] max-h-[min(32rem,calc(100vh-7rem))] flex flex-col bg-[#FAFAF9] border border-[#E5E5E5] shadow-[0_20px_60px_rgba(13,13,13,0.18)]"
         >
           {/* Head */}
           <div className="bg-[#0D0D0D] text-white p-4">
             <div className="flex items-center justify-between gap-3">
               <span className="font-bold text-lg tracking-tight">
-                Rise with Local<span className="text-[#1D4ED8]">.</span>
+                Local Cascade<span className="text-[#1D4ED8]">.</span>
               </span>
               <span className="font-mono-label text-[#525252]">
                 REPLIES WITHIN 24H
@@ -191,7 +191,7 @@ export default function ChatWidget() {
                 className={`flex ${m.from === "user" ? "justify-end" : "justify-start"}`}
               >
                 <p
-                  className={`rwl-body text-sm max-w-[85%] px-3 py-2 ${
+                  className={`lc-body text-sm max-w-[85%] px-3 py-2 ${
                     m.from === "user"
                       ? "bg-[#1D4ED8] text-white"
                       : "bg-white border border-[#E5E5E5] text-[#404040]"
@@ -205,7 +205,7 @@ export default function ChatWidget() {
             {status === "failed" && (
               <a
                 href={mailto()}
-                className="rwl-cta block text-center text-sm font-semibold text-white bg-[#0D0D0D] hover:bg-[#1D4ED8] px-4 py-3"
+                className="lc-cta block text-center text-sm font-semibold text-white bg-[#0D0D0D] hover:bg-[#1D4ED8] px-4 py-3"
               >
                 Email it to us instead →
               </a>
@@ -222,14 +222,14 @@ export default function ChatWidget() {
               className="border-t border-[#E5E5E5] p-3"
             >
               {error && (
-                <p className="rwl-body text-xs text-red-600 mb-2">{error}</p>
+                <p className="lc-body text-xs text-red-600 mb-2">{error}</p>
               )}
               <div className="flex items-end gap-2">
-                <label htmlFor="rwl-chat-input" className="sr-only">
+                <label htmlFor="lc-chat-input" className="sr-only">
                   {current.label}
                 </label>
                 <input
-                  id="rwl-chat-input"
+                  id="lc-chat-input"
                   ref={field}
                   type={current.type === "textarea" ? "text" : current.type}
                   inputMode={current.type === "tel" ? "tel" : undefined}
@@ -242,7 +242,7 @@ export default function ChatWidget() {
                 <button
                   type="submit"
                   disabled={status === "sending"}
-                  className="rwl-cta shrink-0 px-4 py-2.5 text-sm font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] disabled:opacity-50"
+                  className="lc-cta shrink-0 px-4 py-2.5 text-sm font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] disabled:opacity-50"
                 >
                   {status === "sending" ? "..." : "Send"}
                 </button>
@@ -251,7 +251,7 @@ export default function ChatWidget() {
                 <button
                   type="button"
                   onClick={() => answer("")}
-                  className="rwl-link mt-2 text-xs text-[#737373]"
+                  className="lc-link mt-2 text-xs text-[#737373]"
                 >
                   Skip this
                 </button>
@@ -261,7 +261,7 @@ export default function ChatWidget() {
             <div className="border-t border-[#E5E5E5] p-3">
               <a
                 href={`mailto:${CONTACT_EMAIL}`}
-                className="rwl-link text-xs text-[#737373]"
+                className="lc-link text-xs text-[#737373]"
               >
                 {CONTACT_EMAIL}
               </a>

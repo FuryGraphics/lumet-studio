@@ -122,7 +122,7 @@ export const plans: Plan[] = [
       },
       ...BILLING_FAQS,
     ],
-    metaTitle: "Growth System, $297/mo: Website, Reviews & AI Text Back | Rise with Local",
+    metaTitle: "Growth System, $297/mo: Website, Reviews & AI Text Back | Local Cascade",
     metaDescription:
       "$297/mo for a custom website built to convert, an automated Google review funnel, and AI missed-call text back. Built and running in under 7 days. No setup fee, no contract.",
   },
@@ -197,9 +197,9 @@ export const plans: Plan[] = [
       },
       ...BILLING_FAQS,
     ],
-    metaTitle: "Complete Pack, $797/mo: Website, Local SEO, Reviews & AI | Rise with Local",
+    metaTitle: "Complete Pack, $797/mo: Website, Local SEO, Reviews & AI | Local Cascade",
     metaDescription:
-      "Everything Rise with Local does for $797/mo: a custom website, deep Google Business Profile optimization, listings on 100+ platforms, a review funnel, and AI missed-call text back. Save $69/mo against both plans separately.",
+      "Everything Local Cascade does for $797/mo: a custom website, deep Google Business Profile optimization, listings on 100+ platforms, a review funnel, and AI missed-call text back. Save $69/mo against both plans separately.",
   },
   {
     slug: "local-seo-pack",
@@ -277,7 +277,7 @@ export const plans: Plan[] = [
       },
       ...BILLING_FAQS,
     ],
-    metaTitle: "Local SEO Pack, $569/mo: Google Business Profile Optimization | Rise with Local",
+    metaTitle: "Local SEO Pack, $569/mo: Google Business Profile Optimization | Local Cascade",
     metaDescription:
       "$569/mo for Google Business Profile optimization: competitor and keyword research, listings on 100+ platforms, a monthly content calendar, and monthly ranking scans of your service area.",
   },

@@ -1,4 +1,4 @@
-# Rise with Local
+# Local Cascade
 
 The complete customer-getting system for local businesses.
 
@@ -64,7 +64,7 @@ submission through the site to confirm the email lands.
 `ResultsSlider.tsx` shows before/after Google Maps geogrid scans from
 `client/public/images/results/`, and `ResultsBand.tsx` puts it on the home page
 with the ranking animation. Those scans come from the Google Business Profile
-platform the Local SEO Pack runs on, **not** from Rise with Local clients, and
+platform the Local SEO Pack runs on, **not** from Local Cascade clients, and
 `RESULTS_DISCLOSURE` in `client/src/data/results.ts` says so wherever they
 appear. Do not remove that line or relabel the scans as our own client results.
 
@@ -73,7 +73,7 @@ appear. Do not remove that line or relabel the scans as our own client results.
 service will deliver, and the footnote says that.
 
 `Stats.tsx` shows published industry research, each figure linked to its
-source. They are not Rise with Local client results, and the section says so. Keep it
+source. They are not Local Cascade client results, and the section says so. Keep it
 that way: only add a figure you can link to.
 
 ## Photography (Unsplash)

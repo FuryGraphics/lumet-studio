@@ -12,7 +12,7 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const SITE = "https://risewithlocal.com";
+const SITE = "https://localcascade.com";
 
 const slugsIn = file =>
   [

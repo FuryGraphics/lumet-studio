@@ -33,12 +33,12 @@ export default function ResultsBand() {
         <div className="grid grid-cols-12 gap-6 lg:gap-12 mb-12 md:mb-20 items-center">
           <div className="col-span-12 md:col-span-2" />
           <div className="col-span-12 lg:col-span-5">
-            <h2 className="rwl-display text-2xl md:text-4xl lg:text-5xl text-[#0D0D0D]">
+            <h2 className="lc-display text-2xl md:text-4xl lg:text-5xl text-[#0D0D0D]">
               Red means nobody
               <br />
               finds you there.
             </h2>
-            <p className="rwl-body mt-6 text-base md:text-lg text-[#525252] max-w-xl">
+            <p className="lc-body mt-6 text-base md:text-lg text-[#525252] max-w-xl">
               A ranking scan searches your keyword from points across your
               service area and records where your business lands. Green is the
               top of the map, red is out of sight. The Local SEO Pack is the
@@ -47,7 +47,7 @@ export default function ResultsBand() {
             <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <Link
                 href="/services/local-seo-pack"
-                className="rwl-cta inline-flex items-center gap-2 px-6 py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm"
+                className="lc-cta inline-flex items-center gap-2 px-6 py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm"
               >
                 See the Local SEO Pack
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

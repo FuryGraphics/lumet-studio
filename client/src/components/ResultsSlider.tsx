@@ -31,7 +31,7 @@ export default function ResultsSlider({ dark = false }: { dark?: boolean }) {
           <h3 className={`text-xl md:text-3xl font-semibold ${heading}`}>
             {item.industry}
           </h3>
-          <p className={`rwl-body mt-1 text-sm md:text-base ${muted}`}>
+          <p className={`lc-body mt-1 text-sm md:text-base ${muted}`}>
             Ranking for &ldquo;{item.keyword}&rdquo; ·{" "}
             {item.months === 1 ? "1 month" : `${item.months} months`} later
           </p>
@@ -43,7 +43,7 @@ export default function ResultsSlider({ dark = false }: { dark?: boolean }) {
             type="button"
             onClick={() => go(i - 1)}
             aria-label="Previous result"
-            className={`rwl-cta w-11 h-11 flex items-center justify-center border ${border} ${heading} hover:border-[#1D4ED8] hover:text-[#1D4ED8] transition-colors`}
+            className={`lc-cta w-11 h-11 flex items-center justify-center border ${border} ${heading} hover:border-[#1D4ED8] hover:text-[#1D4ED8] transition-colors`}
           >
             ←
           </button>
@@ -51,7 +51,7 @@ export default function ResultsSlider({ dark = false }: { dark?: boolean }) {
             type="button"
             onClick={() => go(i + 1)}
             aria-label="Next result"
-            className={`rwl-cta w-11 h-11 flex items-center justify-center border ${border} ${heading} hover:border-[#1D4ED8] hover:text-[#1D4ED8] transition-colors`}
+            className={`lc-cta w-11 h-11 flex items-center justify-center border ${border} ${heading} hover:border-[#1D4ED8] hover:text-[#1D4ED8] transition-colors`}
           >
             →
           </button>
@@ -102,7 +102,7 @@ export default function ResultsSlider({ dark = false }: { dark?: boolean }) {
         ))}
       </div>
 
-      <p className={`rwl-body mt-6 text-xs md:text-sm ${faint} max-w-3xl`}>
+      <p className={`lc-body mt-6 text-xs md:text-sm ${faint} max-w-3xl`}>
         Each square is one point in the business&rsquo;s service area, numbered
         by its Google Maps position for that search. Green is the top of the
         results, red is buried. {RESULTS_DISCLOSURE}

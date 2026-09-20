@@ -44,7 +44,7 @@ export default function Hero() {
 
         {/* Headline - fluid sizing with clamp for smooth scaling */}
         <h1
-          className="rwl-display text-[#0D0D0D] max-w-6xl"
+          className="lc-display text-[#0D0D0D] max-w-6xl"
           style={{ fontSize: "clamp(2rem, 6.2vw, 5.25rem)" }}
         >
           Turn Missed Calls Into
@@ -55,7 +55,7 @@ export default function Hero() {
 
         {/* Secondary headline */}
         <p
-          className="rwl-display mt-3 md:mt-4 text-[#525252]"
+          className="lc-display mt-3 md:mt-4 text-[#525252]"
           style={{ fontSize: "clamp(1.5rem, 4vw, 2.5rem)" }}
         >
           Up and running in{" "}
@@ -63,8 +63,8 @@ export default function Hero() {
         </p>
 
         {/* Subhead */}
-        <p className="rwl-body mt-6 md:mt-10 text-base md:text-xl text-[#525252] max-w-2xl">
-          Rise with Local builds and runs the entire customer-getting system for your
+        <p className="lc-body mt-6 md:mt-10 text-base md:text-xl text-[#525252] max-w-2xl">
+          Local Cascade builds and runs the entire customer-getting system for your
           business. A custom website, local SEO, an automated Google review
           funnel, and an AI assistant that texts back every missed call. One
           flat monthly fee. No contracts.
@@ -74,7 +74,7 @@ export default function Hero() {
         <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <a
             href="#pricing"
-            className="rwl-cta inline-flex items-center gap-2 px-6 md:px-7 py-3 md:py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm w-full sm:w-auto justify-center sm:justify-start"
+            className="lc-cta inline-flex items-center gap-2 px-6 md:px-7 py-3 md:py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm w-full sm:w-auto justify-center sm:justify-start"
           >
             Get started
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -88,7 +88,7 @@ export default function Hero() {
           </a>
           <a
             href="#system"
-            className="rwl-link text-base font-medium text-[#404040] hover:text-[#0D0D0D] transition-colors"
+            className="lc-link text-base font-medium text-[#404040] hover:text-[#0D0D0D] transition-colors"
           >
             See what's included
           </a>
