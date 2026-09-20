@@ -119,10 +119,10 @@ export default function Contact() {
 
             <div className="mt-8 md:mt-10 space-y-3">
               <a
-                href="mailto:hello@localcascade.com"
+                href={`mailto:${CONTACT_EMAIL}`}
                 className="lc-link block text-base font-medium text-[#0D0D0D]"
               >
-                hello@localcascade.com
+                {CONTACT_EMAIL}
               </a>
               <p className="font-mono-label text-[#A3A3A3]">
                 RESPONSE WITHIN 24H · NO CREDIT CARD REQUIRED

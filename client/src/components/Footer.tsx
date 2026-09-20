@@ -1,3 +1,4 @@
+import { CONTACT_EMAIL } from "@/data/contact";
 import { plans } from "@/data/plans";
 import { services } from "@/data/services";
 
@@ -105,10 +106,10 @@ export default function Footer() {
               CONTACT
             </p>
             <a
-              href="mailto:hello@localcascade.com"
+              href={`mailto:${CONTACT_EMAIL}`}
               className="lc-link block text-sm text-[#A3A3A3] hover:text-white transition-colors mb-3"
             >
-              hello@localcascade.com
+              {CONTACT_EMAIL}
             </a>
             <p className="font-mono-label text-[#525252]">REMOTE · GLOBAL</p>
           </div>
