@@ -1,0 +1,27 @@
+/**
+ * PayPal subscriptions.
+ *
+ * The client id is a public value: it identifies the merchant to the browser
+ * SDK and is safe in the bundle. The secret lives only in the PayPal
+ * dashboard and must never appear here.
+ *
+ * Plan ids come from PayPal (Subscriptions -> Plans). A plan without an id
+ * here falls back to the contact form, so adding one is all it takes to make
+ * that plan payable.
+ */
+export const PAYPAL_CLIENT_ID =
+  "BAAzjjHEJDUoNCi9K5FN_j_vmMSOBcNWNTNK8wmkWHJJN2wnLR_Z8ZBLA5x01hwH-Niu0MMb_GCqCe_Y1M";
+
+/** Keyed by plan slug (see data/plans.ts). */
+export const PAYPAL_PLAN_IDS: Record<string, string> = {
+  "growth-system": "P-44534110N1616763BNKX4ESY",
+};
+
+export function paypalPlanId(slug: string) {
+  return PAYPAL_PLAN_IDS[slug];
+}
+
+/** One SDK load for the whole page, whatever renders a button. */
+export const PAYPAL_SDK_SRC =
+  `https://www.paypal.com/sdk/js?client-id=${PAYPAL_CLIENT_ID}` +
+  `&vault=true&intent=subscription`;

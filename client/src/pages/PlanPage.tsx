@@ -1,8 +1,10 @@
 import { Link, useParams } from "wouter";
 import PageShell, { Faq, Section } from "@/components/PageShell";
+import PayPalSubscribe from "@/components/PayPalSubscribe";
 import RoiCalculator from "@/components/RoiCalculator";
 import NotFound from "@/pages/NotFound";
 import { getPlan, plans } from "@/data/plans";
+import { paypalPlanId } from "@/data/paypal";
 import { getService } from "@/data/services";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
@@ -37,34 +39,51 @@ function PlanContent({ slug }: { slug: string }) {
       {/* Price + CTA */}
       <section className="pb-14 md:pb-20 bg-[#FAFAF9]">
         <div className="container">
-          <div className="flex flex-wrap items-end gap-x-8 gap-y-5">
-            <div className="flex items-baseline gap-2">
-              <span
-                className="lc-display text-[#0D0D0D]"
-                style={{ fontSize: "clamp(3rem, 8vw, 5.5rem)" }}
-              >
-                ${plan.price}
-              </span>
-              <span className="font-mono-label text-[#A3A3A3]">/MO</span>
-            </div>
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-              <a
-                href="/#contact"
-                className="lc-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm"
-              >
-                Get started
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path
-                    d="M3 8H13M13 8L8 3M13 8L8 13"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="square"
-                  />
-                </svg>
-              </a>
-              <span className="font-mono-label text-[#737373] self-center">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-end">
+            <div className="md:col-span-4">
+              <div className="flex items-baseline gap-2">
+                <span
+                  className="lc-display text-[#0D0D0D]"
+                  style={{ fontSize: "clamp(3rem, 8vw, 5.5rem)" }}
+                >
+                  ${plan.price}
+                </span>
+                <span className="font-mono-label text-[#A3A3A3]">/MO</span>
+              </div>
+              <span className="font-mono-label text-[#737373] block mt-2">
                 NO SETUP FEE · CANCEL ANY TIME
               </span>
+            </div>
+
+            <div className="md:col-span-8">
+              {paypalPlanId(plan.slug) ? (
+                <PayPalSubscribe
+                  planSlug={plan.slug}
+                  planName={plan.name}
+                  price={plan.price}
+                />
+              ) : (
+                <a
+                  href="/#contact"
+                  className="lc-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm"
+                >
+                  Get started
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M3 8H13M13 8L8 3M13 8L8 13"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="square"
+                    />
+                  </svg>
+                </a>
+              )}
+              <a
+                href="/#contact"
+                className="lc-link inline-block mt-4 text-sm font-medium text-[#404040] hover:text-[#0D0D0D]"
+              >
+                Questions first? Talk to us →
+              </a>
             </div>
           </div>
         </div>
