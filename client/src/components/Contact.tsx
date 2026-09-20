@@ -71,7 +71,7 @@ export default function Contact() {
                   window.location.hash = "contact";
                   window.location.reload();
                 }}
-                className="lc-cta mt-6 md:mt-8 inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-[#1D4ED8] border border-[#1D4ED8] hover:bg-[#1D4ED8] hover:text-white rounded-sm"
+                className="lc-cta mt-6 md:mt-8 inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-[#004AAD] border border-[#004AAD] hover:bg-[#004AAD] hover:text-white rounded-sm"
               >
                 Send another message
               </button>
@@ -109,7 +109,7 @@ export default function Contact() {
               <br />
               your
               <br />
-              <span className="text-[#1D4ED8]">business.</span>
+              <span className="text-[#004AAD]">business.</span>
             </h2>
             <p className="lc-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
               What you do, where you do it, and where your customers come from
@@ -241,7 +241,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={state.submitting}
-                  className="lc-cta inline-flex items-center gap-2 px-6 md:px-8 py-3.5 md:py-4 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto justify-center sm:justify-start"
+                  className="lc-cta inline-flex items-center gap-2 px-6 md:px-8 py-3.5 md:py-4 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto justify-center sm:justify-start"
                 >
                   {state.submitting ? "Sending..." : "Get started today"}
                   {!state.submitting && (
@@ -264,7 +264,7 @@ export default function Contact() {
                     If that keeps failing, email us at{" "}
                     <a
                       href={`mailto:${CONTACT_EMAIL}`}
-                      className="lc-link font-medium text-[#1D4ED8]"
+                      className="lc-link font-medium text-[#004AAD]"
                     >
                       {CONTACT_EMAIL}
                     </a>

@@ -85,7 +85,7 @@ function Counter({
       >
         <span aria-hidden="true">
           {n}
-          <span className="text-[#1D4ED8]">{stat.suffix}</span>
+          <span className="text-[#004AAD]">{stat.suffix}</span>
         </span>
       </div>
       <p className="lc-body text-xs md:text-sm text-[#A3A3A3] max-w-[240px]">

@@ -50,7 +50,7 @@ function PlanContent({ slug }: { slug: string }) {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
               <a
                 href="/#contact"
-                className="lc-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm"
+                className="lc-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm"
               >
                 Get started
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -75,7 +75,7 @@ function PlanContent({ slug }: { slug: string }) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#E5E5E5] border border-[#E5E5E5]">
           {plan.forWho.map((line, i) => (
             <div key={line} className="bg-[#FAFAF9] p-6 md:p-8">
-              <span className="font-mono-label text-[#1D4ED8] block mb-3">
+              <span className="font-mono-label text-[#004AAD] block mb-3">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <p className="lc-body text-sm md:text-base text-[#404040]">
@@ -107,7 +107,7 @@ function PlanContent({ slug }: { slug: string }) {
                     >
                       <path
                         d="M3 8.5L6.5 12L13 4"
-                        stroke="#1D4ED8"
+                        stroke="#004AAD"
                         strokeWidth="1.75"
                         strokeLinecap="square"
                       />
@@ -135,7 +135,7 @@ function PlanContent({ slug }: { slug: string }) {
                 <Link
                   key={s}
                   href={`/services/${s}`}
-                  className="lc-cta inline-flex items-center gap-2 border border-[#262626] px-4 py-2.5 text-sm font-medium text-[#A3A3A3] hover:border-[#1D4ED8] hover:text-white transition-colors"
+                  className="lc-cta inline-flex items-center gap-2 border border-[#262626] px-4 py-2.5 text-sm font-medium text-[#A3A3A3] hover:border-[#004AAD] hover:text-white transition-colors"
                 >
                   {service.title} →
                 </Link>
@@ -164,7 +164,7 @@ function PlanContent({ slug }: { slug: string }) {
                         {" · "}
                         <Link
                           href={`/plans/${item.upgradeTo}`}
-                          className="lc-link font-medium text-[#1D4ED8]"
+                          className="lc-link font-medium text-[#004AAD]"
                         >
                           See the {getPlan(item.upgradeTo)?.name}
                         </Link>
@@ -183,7 +183,7 @@ function PlanContent({ slug }: { slug: string }) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#E5E5E5] border border-[#E5E5E5]">
           {plan.steps.map((step, i) => (
             <div key={step.title} className="bg-[#FAFAF9] p-6 md:p-8">
-              <span className="font-mono-label text-[#1D4ED8] block mb-3">
+              <span className="font-mono-label text-[#004AAD] block mb-3">
                 STEP {String(i + 1).padStart(2, "0")}
               </span>
               <h3 className="text-lg md:text-xl font-semibold text-[#0D0D0D]">
@@ -223,7 +223,7 @@ function PlanContent({ slug }: { slug: string }) {
         >
           {plan.name}.
           <br />
-          <span className="text-[#1D4ED8]">${plan.price}</span> a month.
+          <span className="text-[#004AAD]">${plan.price}</span> a month.
         </h2>
         <p className="lc-body mt-6 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
           {plan.blurb} No setup fee, no contract, cancel any time.
@@ -231,7 +231,7 @@ function PlanContent({ slug }: { slug: string }) {
         <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <a
             href="/#contact"
-            className="lc-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm w-full sm:w-auto"
+            className="lc-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm w-full sm:w-auto"
           >
             Get started
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -289,14 +289,14 @@ export function PlanTable({ current }: { current?: string }) {
               <th
                 key={p.slug}
                 className={`py-4 px-3 align-bottom ${
-                  p.slug === current ? "bg-[#1D4ED8]/5" : ""
+                  p.slug === current ? "bg-[#004AAD]/5" : ""
                 }`}
               >
                 <Link href={`/plans/${p.slug}`} className="group block">
                   <span
                     className={`block text-sm md:text-base font-semibold ${
-                      p.slug === current ? "text-[#1D4ED8]" : "text-[#0D0D0D]"
-                    } group-hover:text-[#1D4ED8] transition-colors`}
+                      p.slug === current ? "text-[#004AAD]" : "text-[#0D0D0D]"
+                    } group-hover:text-[#004AAD] transition-colors`}
                   >
                     {p.name}
                   </span>
@@ -321,11 +321,11 @@ export function PlanTable({ current }: { current?: string }) {
                 <td
                   key={p.slug}
                   className={`py-3.5 px-3 text-center ${
-                    p.slug === current ? "bg-[#1D4ED8]/5" : ""
+                    p.slug === current ? "bg-[#004AAD]/5" : ""
                   }`}
                 >
                   {row.in.includes(p.slug) ? (
-                    <span className="text-[#1D4ED8]" aria-label="Included">
+                    <span className="text-[#004AAD]" aria-label="Included">
                       ✓
                     </span>
                   ) : (

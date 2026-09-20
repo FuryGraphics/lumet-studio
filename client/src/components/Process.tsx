@@ -97,10 +97,10 @@ export default function Process() {
                   className="bg-[#0D0D0D] p-6 md:p-10 lg:p-12 group hover:bg-[#111111] transition-colors"
                 >
                   <div className="flex items-baseline gap-4 mb-4 md:mb-6">
-                    <span className="font-mono-label text-[#1D4ED8]">
+                    <span className="font-mono-label text-[#004AAD]">
                       {step.num}
                     </span>
-                    <span className="h-px flex-1 bg-[#262626] group-hover:bg-[#1D4ED8]/30 transition-colors" />
+                    <span className="h-px flex-1 bg-[#262626] group-hover:bg-[#004AAD]/30 transition-colors" />
                   </div>
                   <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white mb-3 md:mb-4">
                     {step.title}

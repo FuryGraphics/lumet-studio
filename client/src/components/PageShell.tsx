@@ -55,7 +55,7 @@ export default function PageShell({
                 </span>
               ))}
             </nav>
-            <span className="font-mono-label text-[#1D4ED8] block mb-4">
+            <span className="font-mono-label text-[#004AAD] block mb-4">
               {label}
             </span>
             <h1
@@ -129,7 +129,7 @@ export function CtaBand() {
       >
         The whole system.
         <br />
-        <span className="text-[#1D4ED8]">$297</span> a month.
+        <span className="text-[#004AAD]">$297</span> a month.
       </h2>
       <p className="lc-body mt-6 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
         Website, local SEO, review funnel, and AI text-back, built for your
@@ -138,7 +138,7 @@ export function CtaBand() {
       <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
         <a
           href="/#contact"
-          className="lc-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm w-full sm:w-auto"
+          className="lc-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm w-full sm:w-auto"
         >
           Get started
           <Arrow />
@@ -175,7 +175,7 @@ export function Faq({ items }: { items: { q: string; a: string }[] }) {
         <details key={item.q} className="group border-b border-[#E5E5E5]">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 md:py-6 text-base md:text-xl font-semibold text-[#0D0D0D] [&::-webkit-details-marker]:hidden">
             {item.q}
-            <span className="font-mono-label text-[#1D4ED8] transition-transform group-open:rotate-45 text-xl">
+            <span className="font-mono-label text-[#004AAD] transition-transform group-open:rotate-45 text-xl">
               +
             </span>
           </summary>

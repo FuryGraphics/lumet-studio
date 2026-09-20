@@ -25,7 +25,7 @@ export default function ResultsSlider({ dark = false }: { dark?: boolean }) {
         className={`flex flex-wrap items-end justify-between gap-4 pb-5 border-b ${border}`}
       >
         <div>
-          <span className="font-mono-label text-[#1D4ED8] block mb-2">
+          <span className="font-mono-label text-[#004AAD] block mb-2">
             {String(i + 1).padStart(2, "0")} / {results.length}
           </span>
           <h3 className={`text-xl md:text-3xl font-semibold ${heading}`}>
@@ -43,7 +43,7 @@ export default function ResultsSlider({ dark = false }: { dark?: boolean }) {
             type="button"
             onClick={() => go(i - 1)}
             aria-label="Previous result"
-            className={`lc-cta w-11 h-11 flex items-center justify-center border ${border} ${heading} hover:border-[#1D4ED8] hover:text-[#1D4ED8] transition-colors`}
+            className={`lc-cta w-11 h-11 flex items-center justify-center border ${border} ${heading} hover:border-[#004AAD] hover:text-[#004AAD] transition-colors`}
           >
             ←
           </button>
@@ -51,7 +51,7 @@ export default function ResultsSlider({ dark = false }: { dark?: boolean }) {
             type="button"
             onClick={() => go(i + 1)}
             aria-label="Next result"
-            className={`lc-cta w-11 h-11 flex items-center justify-center border ${border} ${heading} hover:border-[#1D4ED8] hover:text-[#1D4ED8] transition-colors`}
+            className={`lc-cta w-11 h-11 flex items-center justify-center border ${border} ${heading} hover:border-[#004AAD] hover:text-[#004AAD] transition-colors`}
           >
             →
           </button>
@@ -74,7 +74,7 @@ export default function ResultsSlider({ dark = false }: { dark?: boolean }) {
               />
               <span
                 className={`absolute top-3 left-3 font-mono-label px-2 py-1 text-[0.625rem] md:text-xs text-white ${
-                  phase === "before" ? "bg-black/50" : "bg-[#1D4ED8]"
+                  phase === "before" ? "bg-black/50" : "bg-[#004AAD]"
                 }`}
               >
                 {phase === "before" ? "BEFORE" : "AFTER"}
@@ -95,7 +95,7 @@ export default function ResultsSlider({ dark = false }: { dark?: boolean }) {
             aria-current={n === i}
             className={`h-1.5 transition-all ${
               n === i
-                ? "w-8 bg-[#1D4ED8]"
+                ? "w-8 bg-[#004AAD]"
                 : `w-4 ${dark ? "bg-[#262626] hover:bg-[#525252]" : "bg-[#E5E5E5] hover:bg-[#A3A3A3]"}`
             }`}
           />

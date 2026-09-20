@@ -46,13 +46,13 @@ export default function Services() {
                 </div>
               </div>
               <div className="col-span-12 md:col-span-8">
-                <span className="font-mono-label text-[#A3A3A3] group-hover:text-[#1D4ED8] transition-colors">
+                <span className="font-mono-label text-[#A3A3A3] group-hover:text-[#004AAD] transition-colors">
                   {s.num}
                 </span>
-                <h2 className="mt-2 text-2xl md:text-4xl font-semibold text-[#0D0D0D] group-hover:text-[#1D4ED8] transition-colors">
+                <h2 className="mt-2 text-2xl md:text-4xl font-semibold text-[#0D0D0D] group-hover:text-[#004AAD] transition-colors">
                   {s.title}
                 </h2>
-                <p className="lc-body mt-1.5 text-sm md:text-base text-[#1D4ED8]">
+                <p className="lc-body mt-1.5 text-sm md:text-base text-[#004AAD]">
                   {s.tagline}
                 </p>
                 {s.price && (

@@ -127,11 +127,11 @@ function ServicesMenu() {
                 onClick={() => setOpen(false)}
                 className="group flex items-baseline gap-3 p-4 border-b border-[#E5E5E5] last:border-b-0 hover:bg-white transition-colors"
               >
-                <span className="font-mono-label text-[#A3A3A3] group-hover:text-[#1D4ED8] transition-colors">
+                <span className="font-mono-label text-[#A3A3A3] group-hover:text-[#004AAD] transition-colors">
                   {s.num}
                 </span>
                 <span className="min-w-0">
-                  <span className="block text-sm font-semibold text-[#0D0D0D] group-hover:text-[#1D4ED8] transition-colors">
+                  <span className="block text-sm font-semibold text-[#0D0D0D] group-hover:text-[#004AAD] transition-colors">
                     {s.title}
                     {s.price ? (
                       <span className="font-mono-label text-[#737373] ml-2">
@@ -148,7 +148,7 @@ function ServicesMenu() {
             <Link
               href="/services"
               onClick={() => setOpen(false)}
-              className="block p-4 bg-[#0D0D0D] text-white text-sm font-semibold hover:bg-[#1D4ED8] transition-colors"
+              className="block p-4 bg-[#0D0D0D] text-white text-sm font-semibold hover:bg-[#004AAD] transition-colors"
             >
               All services and pricing →
             </Link>
@@ -194,12 +194,17 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className={`font-bold text-lg md:text-xl tracking-tight transition-colors ${
+            className={`flex items-center gap-2.5 font-bold text-lg md:text-xl tracking-tight transition-colors ${
               scrolled ? "text-[#0D0D0D]" : "text-[#0D0D0D]"
             }`}
             aria-label="Local Cascade home"
           >
-            Local Cascade<span className="text-[#1D4ED8]">.</span>
+            <img
+              src="/logo-mark.svg"
+              alt=""
+              className="h-6 w-6 md:h-7 md:w-7 shrink-0"
+            />
+            Local Cascade<span className="text-[#004AAD]">.</span>
           </Link>
 
           {/* Desktop nav */}
@@ -224,7 +229,7 @@ export default function Header() {
           <div className="hidden md:block">
             <a
               href="/#pricing"
-              className="lc-cta inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm"
+              className="lc-cta inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm"
             >
               Get started
               <svg
@@ -305,7 +310,7 @@ export default function Header() {
             ))}
             <a
               href="/#pricing"
-              className="mt-4 inline-flex items-center gap-2 px-6 py-3 text-base font-semibold text-white bg-[#1D4ED8] rounded-sm"
+              className="mt-4 inline-flex items-center gap-2 px-6 py-3 text-base font-semibold text-white bg-[#004AAD] rounded-sm"
               onClick={() => setMenuOpen(false)}
             >
               Get started

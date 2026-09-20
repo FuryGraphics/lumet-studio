@@ -78,7 +78,7 @@ function Check() {
     >
       <path
         d="M3 8.5L6.5 12L13 4"
-        stroke="#1D4ED8"
+        stroke="#004AAD"
         strokeWidth="1.75"
         strokeLinecap="square"
       />
@@ -115,7 +115,7 @@ export default function Pricing() {
             >
               Pick a plan.
               <br />
-              <span className="text-[#1D4ED8]">Everything</span>
+              <span className="text-[#004AAD]">Everything</span>
               <br />
               included.
             </h2>
@@ -129,7 +129,7 @@ export default function Pricing() {
             <div className="border-t border-[#E5E5E5]">
               {assurances.map(item => (
                 <div key={item.label} className="py-4 border-b border-[#E5E5E5]">
-                  <span className="font-mono-label text-[#1D4ED8] block mb-1.5">
+                  <span className="font-mono-label text-[#004AAD] block mb-1.5">
                     {item.label}
                   </span>
                   <p className="lc-body text-sm text-[#525252]">
@@ -151,7 +151,7 @@ export default function Pricing() {
                   key={plan.name}
                   className={`relative bg-[#0D0D0D] text-white overflow-hidden flex flex-col ${plan.order ?? "lg:order-1"} ${
                     plan.featured
-                      ? "ring-2 ring-[#1D4ED8] lg:-mt-6 lg:mb-[-1.5rem]"
+                      ? "ring-2 ring-[#004AAD] lg:-mt-6 lg:mb-[-1.5rem]"
                       : ""
                   }`}
                 >
@@ -165,7 +165,7 @@ export default function Pricing() {
                   <div className="relative p-6 md:p-10 flex flex-col h-full">
                     {/* Badge */}
                     <div className="flex items-center gap-3 mb-6 md:mb-8">
-                      <span className="font-mono-label bg-[#1D4ED8] text-white px-2.5 py-1">
+                      <span className="font-mono-label bg-[#004AAD] text-white px-2.5 py-1">
                         {plan.badge}
                       </span>
                       <span className="h-px flex-1 bg-[#262626]" />
@@ -191,7 +191,7 @@ export default function Pricing() {
                       {plan.blurb}
                     </p>
                     {plan.featured && (
-                      <p className="font-mono-label text-[#1D4ED8] mt-4">
+                      <p className="font-mono-label text-[#004AAD] mt-4">
                         SAVE ${COMPLETE_SAVING}/MO VS BOTH SEPARATELY
                       </p>
                     )}
@@ -212,7 +212,7 @@ export default function Pricing() {
                     <div className="mt-auto pt-8 md:pt-10">
                       <a
                         href="#contact"
-                        className="lc-cta inline-flex items-center justify-center gap-2 w-full px-6 py-4 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm"
+                        className="lc-cta inline-flex items-center justify-center gap-2 w-full px-6 py-4 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm"
                       >
                         Get started
                         <svg

@@ -119,7 +119,7 @@ export default function RoiCalculator({
                 max={f.max}
                 value={v[f.key]}
                 onChange={e => set(f.key, e.target.value)}
-                className={`lc-number w-full bg-transparent text-xl md:text-2xl font-semibold ${input} focus:outline-none focus:text-[#1D4ED8]`}
+                className={`lc-number w-full bg-transparent text-xl md:text-2xl font-semibold ${input} focus:outline-none focus:text-[#004AAD]`}
               />
               {"suffix" in f && f.suffix && (
                 <span className={`text-xl md:text-2xl ${muted}`}>

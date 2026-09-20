@@ -84,7 +84,7 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#E5E5E5]">
               {principles.map(p => (
                 <div key={p.num} className="bg-[#FAFAF9] p-5 md:p-8">
-                  <span className="font-mono-label text-[#1D4ED8] block mb-3 md:mb-4">
+                  <span className="font-mono-label text-[#004AAD] block mb-3 md:mb-4">
                     {p.num}
                   </span>
                   <p className="lc-body text-sm md:text-base text-[#404040]">

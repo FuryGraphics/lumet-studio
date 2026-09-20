@@ -50,7 +50,7 @@ export default function Hero() {
           Turn Missed Calls Into
           <br />
           Customers for{" "}
-          <span className="text-[#1D4ED8] whitespace-nowrap">$297/mo</span>
+          <span className="text-[#004AAD] whitespace-nowrap">$297/mo</span>
         </h1>
 
         {/* Secondary headline */}
@@ -59,7 +59,7 @@ export default function Hero() {
           style={{ fontSize: "clamp(1.5rem, 4vw, 2.5rem)" }}
         >
           Up and running in{" "}
-          <span className="text-[#1D4ED8]">under 7 days.</span>
+          <span className="text-[#004AAD]">under 7 days.</span>
         </p>
 
         {/* Subhead */}
@@ -74,7 +74,7 @@ export default function Hero() {
         <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <a
             href="#pricing"
-            className="lc-cta inline-flex items-center gap-2 px-6 md:px-7 py-3 md:py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm w-full sm:w-auto justify-center sm:justify-start"
+            className="lc-cta inline-flex items-center gap-2 px-6 md:px-7 py-3 md:py-3.5 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm w-full sm:w-auto justify-center sm:justify-start"
           >
             Get started
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -108,12 +108,12 @@ export default function Hero() {
         <div className="mt-10 md:mt-16 relative aspect-[4/3] sm:aspect-[21/9] overflow-hidden border border-[#E5E5E5] bg-[#F5F5F5]">
           <img
             src="/images/hero.webp"
-            alt="The front counter of a local business at golden hour with a phone lit up on it"
+            alt="A desk with a laptop showing a local business website, a phone showing map search results, and a phone showing five-star reviews"
             className="w-full h-full object-cover"
             fetchPriority="high"
           />
           <span className="absolute bottom-3 left-3 font-mono-label text-white/90 bg-black/40 px-2 py-1 text-[0.625rem] md:text-xs">
-            EVERY MISSED CALL, ANSWERED
+            THE WEBSITE, THE MAP, THE REVIEWS - ONE SYSTEM
           </span>
         </div>
       </div>

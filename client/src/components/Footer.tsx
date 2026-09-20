@@ -47,10 +47,15 @@ export default function Footer() {
           <div className="col-span-12 md:col-span-5">
             <a
               href="/"
-              className="lc-logo text-2xl md:text-4xl"
+              className="lc-logo flex items-center gap-3 text-2xl md:text-4xl"
               aria-label="Local Cascade home"
             >
-              Local Cascade<span className="text-[#1D4ED8]">.</span>
+              <img
+                src="/logo-mark.svg"
+                alt=""
+                className="h-8 w-8 md:h-10 md:w-10 shrink-0"
+              />
+              Local Cascade<span className="text-[#004AAD]">.</span>
             </a>
             <p className="lc-body mt-4 md:mt-6 text-sm md:text-base text-[#A3A3A3] max-w-sm">
               The complete customer-getting system for local businesses.

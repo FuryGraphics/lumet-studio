@@ -119,7 +119,7 @@ export default function Work() {
                         </span>
                         {/* Visit link overlay on hover */}
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-mono-label text-white text-xs md:text-sm bg-[#1D4ED8] px-4 py-2">
+                          <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-mono-label text-white text-xs md:text-sm bg-[#004AAD] px-4 py-2">
                             VIEW LIVE SITE →
                           </span>
                         </div>
@@ -157,7 +157,7 @@ export default function Work() {
                           href={project.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="group-hover:text-[#1D4ED8] transition-colors"
+                          className="group-hover:text-[#004AAD] transition-colors"
                         >
                           {project.title}
                         </a>

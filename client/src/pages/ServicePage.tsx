@@ -92,7 +92,7 @@ function ServiceContent({ slug }: { slug: string }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E5E5E5] border border-[#E5E5E5]">
           {service.features.map((f, i) => (
             <div key={f.title} className="bg-[#FAFAF9] p-6 md:p-8">
-              <span className="font-mono-label text-[#1D4ED8] block mb-3">
+              <span className="font-mono-label text-[#004AAD] block mb-3">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h3 className="text-lg md:text-xl font-semibold text-[#0D0D0D]">
@@ -111,7 +111,7 @@ function ServiceContent({ slug }: { slug: string }) {
           {service.steps.map((step, i) => (
             <div key={step.title} className="bg-[#0D0D0D] p-6 md:p-10">
               <div className="flex items-baseline gap-4 mb-4 md:mb-6">
-                <span className="font-mono-label text-[#1D4ED8]">
+                <span className="font-mono-label text-[#004AAD]">
                   STEP {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="h-px flex-1 bg-[#262626]" />
@@ -206,7 +206,7 @@ function ServiceContent({ slug }: { slug: string }) {
               <span className="font-mono-label text-[#A3A3A3] block mt-4">
                 {o.num}
               </span>
-              <h3 className="mt-1 text-lg font-semibold text-[#0D0D0D] group-hover:text-[#1D4ED8] transition-colors">
+              <h3 className="mt-1 text-lg font-semibold text-[#0D0D0D] group-hover:text-[#004AAD] transition-colors">
                 {o.title} →
               </h3>
             </Link>

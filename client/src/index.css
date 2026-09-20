@@ -45,7 +45,7 @@
 /* ============================================================
    LOCAL CASCADE - Editorial Mono Design System
    Light-dominant with dark rhythm sections.
-   Accent: Electric Blue #1D4ED8
+   Accent: Electric Blue #004AAD
    ============================================================ */
 
 :root {
@@ -91,8 +91,8 @@
   --lc-dark-foreground: oklch(0.92 0.005 65);
   --lc-dark-muted: oklch(0.55 0.008 65);
   --lc-dark-border: oklch(0.16 0.005 65);
-  --lc-accent: oklch(0.45 0.21 259);
-  --lc-accent-hover: oklch(0.4 0.2 259);
+  --lc-accent: oklch(0.42 0.18 259);
+  --lc-accent-hover: oklch(0.36 0.17 259);
   --lc-hairline: oklch(0.9 0.002 80);
   --lc-hairline-dark: oklch(0.16 0.005 65);
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;

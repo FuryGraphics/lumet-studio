@@ -29,7 +29,7 @@ export default function Industries() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-[#E5E5E5] border border-[#E5E5E5]">
           {industries.map((ind, i) => (
             <div key={ind.name} className="bg-[#FAFAF9] p-6 md:p-10">
-              <span className="font-mono-label text-[#1D4ED8] block mb-3">
+              <span className="font-mono-label text-[#004AAD] block mb-3">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <h2 className="text-xl md:text-2xl font-semibold text-[#0D0D0D]">
@@ -46,7 +46,7 @@ export default function Industries() {
         </div>
         <p className="lc-body mt-8 text-base text-[#525252]">
           Don't see your industry?{" "}
-          <a href="/#contact" className="lc-link font-medium text-[#1D4ED8]">
+          <a href="/#contact" className="lc-link font-medium text-[#004AAD]">
             Tell us what you do
           </a>
           . If you get customers from local search and phone calls, it works.

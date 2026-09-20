@@ -59,15 +59,15 @@ export default function System() {
                   className="group grid grid-cols-12 gap-2 md:gap-4 py-6 md:py-10 border-b border-[#E5E5E5] hover:bg-white/50 transition-colors px-2 md:px-4 -mx-2 md:-mx-4"
                 >
                   <div className="col-span-2 md:col-span-1">
-                    <span className="font-mono-label text-[#A3A3A3] group-hover:text-[#1D4ED8] transition-colors">
+                    <span className="font-mono-label text-[#A3A3A3] group-hover:text-[#004AAD] transition-colors">
                       {pillar.num}
                     </span>
                   </div>
                   <div className="col-span-10 md:col-span-4">
-                    <h3 className="text-lg md:text-2xl font-semibold text-[#0D0D0D] group-hover:text-[#1D4ED8] transition-colors">
+                    <h3 className="text-lg md:text-2xl font-semibold text-[#0D0D0D] group-hover:text-[#004AAD] transition-colors">
                       {pillar.title}
                     </h3>
-                    <p className="lc-body mt-1.5 text-sm md:text-base text-[#1D4ED8]">
+                    <p className="lc-body mt-1.5 text-sm md:text-base text-[#004AAD]">
                       {pillar.tagline}
                     </p>
                     <div className="mt-4 md:mt-6 aspect-[4/3] overflow-hidden border border-[#E5E5E5] bg-[#F5F5F5] md:mr-6">
@@ -93,7 +93,7 @@ export default function System() {
                         </span>
                       ))}
                     </div>
-                    <span className="lc-link mt-5 inline-block text-sm font-medium text-[#0D0D0D] group-hover:text-[#1D4ED8]">
+                    <span className="lc-link mt-5 inline-block text-sm font-medium text-[#0D0D0D] group-hover:text-[#004AAD]">
                       Learn more →
                     </span>
                   </div>

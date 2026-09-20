@@ -47,7 +47,7 @@ export default function ResultsBand() {
             <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <Link
                 href="/services/local-seo-pack"
-                className="lc-cta inline-flex items-center gap-2 px-6 py-3.5 text-base font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] rounded-sm"
+                className="lc-cta inline-flex items-center gap-2 px-6 py-3.5 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm"
               >
                 See the Local SEO Pack
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

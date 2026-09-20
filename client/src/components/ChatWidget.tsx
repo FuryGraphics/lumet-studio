@@ -129,7 +129,7 @@ export default function ChatWidget() {
         onClick={() => setOpen(o => !o)}
         aria-expanded={open}
         aria-controls="lc-chat"
-        className="lc-cta fixed bottom-5 right-5 z-[60] flex items-center gap-2 pl-4 pr-5 py-3 text-sm font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] shadow-[0_10px_30px_rgba(29,78,216,0.35)] rounded-sm"
+        className="lc-cta fixed bottom-5 right-5 z-[60] flex items-center gap-2 pl-4 pr-5 py-3 text-sm font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] shadow-[0_10px_30px_rgba(29,78,216,0.35)] rounded-sm"
       >
         {open ? (
           <>
@@ -164,8 +164,9 @@ export default function ChatWidget() {
           {/* Head */}
           <div className="bg-[#0D0D0D] text-white p-4">
             <div className="flex items-center justify-between gap-3">
-              <span className="font-bold text-lg tracking-tight">
-                Local Cascade<span className="text-[#1D4ED8]">.</span>
+              <span className="flex items-center gap-2 font-bold text-lg tracking-tight">
+                <img src="/logo-mark.svg" alt="" className="h-5 w-5 shrink-0" />
+                Local Cascade<span className="text-[#004AAD]">.</span>
               </span>
               <span className="font-mono-label text-[#525252]">
                 REPLIES WITHIN 24H
@@ -173,7 +174,7 @@ export default function ChatWidget() {
             </div>
             <div className="mt-3 h-px w-full bg-[#262626]">
               <div
-                className="h-px bg-[#1D4ED8] transition-all duration-300"
+                className="h-px bg-[#004AAD] transition-all duration-300"
                 style={{ width: `${status === "sent" ? 100 : progress}%` }}
               />
             </div>
@@ -193,7 +194,7 @@ export default function ChatWidget() {
                 <p
                   className={`lc-body text-sm max-w-[85%] px-3 py-2 ${
                     m.from === "user"
-                      ? "bg-[#1D4ED8] text-white"
+                      ? "bg-[#004AAD] text-white"
                       : "bg-white border border-[#E5E5E5] text-[#404040]"
                   }`}
                 >
@@ -205,7 +206,7 @@ export default function ChatWidget() {
             {status === "failed" && (
               <a
                 href={mailto()}
-                className="lc-cta block text-center text-sm font-semibold text-white bg-[#0D0D0D] hover:bg-[#1D4ED8] px-4 py-3"
+                className="lc-cta block text-center text-sm font-semibold text-white bg-[#0D0D0D] hover:bg-[#004AAD] px-4 py-3"
               >
                 Email it to us instead →
               </a>
@@ -237,12 +238,12 @@ export default function ChatWidget() {
                   disabled={status === "sending"}
                   onChange={e => setDraft(e.target.value)}
                   placeholder={current.placeholder}
-                  className="flex-1 min-w-0 bg-white border border-[#E5E5E5] px-3 py-2.5 text-sm text-[#0D0D0D] placeholder:text-[#D4D4D4] focus:outline-none focus:border-[#1D4ED8]"
+                  className="flex-1 min-w-0 bg-white border border-[#E5E5E5] px-3 py-2.5 text-sm text-[#0D0D0D] placeholder:text-[#D4D4D4] focus:outline-none focus:border-[#004AAD]"
                 />
                 <button
                   type="submit"
                   disabled={status === "sending"}
-                  className="lc-cta shrink-0 px-4 py-2.5 text-sm font-semibold text-white bg-[#1D4ED8] hover:bg-[#1741B0] disabled:opacity-50"
+                  className="lc-cta shrink-0 px-4 py-2.5 text-sm font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] disabled:opacity-50"
                 >
                   {status === "sending" ? "..." : "Send"}
                 </button>
