@@ -15,6 +15,7 @@ export const PAYPAL_CLIENT_ID =
 /** Keyed by plan slug (see data/plans.ts). */
 export const PAYPAL_PLAN_IDS: Record<string, string> = {
   "growth-system": "P-44534110N1616763BNKX4ESY",
+  "local-seo-pack": "P-9UU777672C4630350NKX4G4I",
 };
 
 export function paypalPlanId(slug: string) {
