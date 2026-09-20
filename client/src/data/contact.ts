@@ -4,14 +4,14 @@
  *
  * FORMSPREE_ID is the hashid from the form's endpoint in the Formspree
  * dashboard (https://formspree.io/f/<id>). Change it here and both surfaces
- * follow.
+ * follow: the contact section passes it to useForm(), the widget posts JSON to
+ * FORMSPREE_ENDPOINT.
  *
- * Checked 2026-09-20: posting to the id below returns 404 FORM_NOT_FOUND, so
- * submissions are not reaching anyone. Replace it with a live form id from the
- * Formspree account that owns localcascade.com, then submit once through the
- * site to confirm the email arrives.
+ * Verified 2026-09-20: a submission to this id returns 200 and arrives by
+ * email. If that ever changes, both surfaces fall back to CONTACT_EMAIL rather
+ * than losing the enquiry.
  */
-export const FORMSPREE_ID = "mqerlrjr";
+export const FORMSPREE_ID = "xjyvbngq";
 
 export const FORMSPREE_ENDPOINT = `https://formspree.io/f/${FORMSPREE_ID}`;
 
