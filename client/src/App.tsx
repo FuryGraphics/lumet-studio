@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import Book from "./pages/Book";
 import Home from "./pages/Home";
 import Industries from "./pages/Industries";
 import PlanPage from "./pages/PlanPage";
@@ -28,6 +29,8 @@ function Router() {
       <Route path={"/services/:slug"} component={ServicePage} />
       <Route path={"/plans/:slug"} component={PlanPage} />
       <Route path={"/industries"} component={Industries} />
+      {/* Unlisted: linked from outreach only, noindex, not in the sitemap */}
+      <Route path={"/book"} component={Book} />
       <Route path={"/404"} component={NotFound} />
       <Route component={NotFound} />
     </Switch>
