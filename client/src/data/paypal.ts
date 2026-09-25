@@ -15,8 +15,16 @@ export const PAYPAL_CLIENT_ID =
 /** Keyed by plan slug (see data/plans.ts). */
 export const PAYPAL_PLAN_IDS: Record<string, string> = {
   "growth-system": "P-44534110N1616763BNKX4ESY",
-  "complete-pack": "P-1C1138413L386393VNKX4H6I",
-  "local-seo-pack": "P-9UU777672C4630350NKX4G4I",
+
+  // Held back on purpose (2026-09-26). These two PayPal plans were created at
+  // the old prices, $797 and $569, and a PayPal plan's price is fixed when the
+  // plan is made. The site now advertises $597 and $497, so wiring these up
+  // would charge a customer more than the page quotes. Both plans fall back to
+  // the contact form until new PayPal plans exist at the current prices; paste
+  // the new ids here and the buttons return.
+  //
+  // "complete-pack": "P-1C1138413L386393VNKX4H6I",   // $797 plan
+  // "local-seo-pack": "P-9UU777672C4630350NKX4G4I",  // $569 plan
 };
 
 export function paypalPlanId(slug: string) {

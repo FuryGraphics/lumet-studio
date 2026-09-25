@@ -118,10 +118,10 @@ export const services: Service[] = [
       "100+ platform listings",
       "Monthly content calendar",
     ],
-    price: 569,
+    price: 497,
     metaTitle: "Local SEO Pack: Google Business Profile Optimization | Local Cascade",
     metaDescription:
-      "Google Business Profile optimization for local businesses: competitor and keyword research, listings on 100+ platforms, a monthly content calendar, and monthly ranking scans. $569/mo, month to month.",
+      "Google Business Profile optimization for local businesses: competitor and keyword research, listings on 100+ platforms, a monthly content calendar, and monthly ranking scans. $497/mo, month to month.",
     intro:
       "The businesses at the top of Google Maps get the calls. The Local SEO Pack is the ongoing work that moves you up there: your profile optimized around what customers actually search, and your business details kept accurate everywhere they look.",
     problem: {
