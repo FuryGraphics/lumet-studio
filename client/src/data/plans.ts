@@ -197,9 +197,9 @@ export const plans: Plan[] = [
       },
       ...BILLING_FAQS,
     ],
-    metaTitle: "Complete Pack, $597/mo: Website, Local SEO, Reviews & AI | Local Cascade",
+    metaTitle: "Complete Pack, $797/mo: Website, Local SEO, Reviews & AI | Local Cascade",
     metaDescription:
-      "Everything Local Cascade does for $597/mo: a custom website, deep Google Business Profile optimization, listings on 100+ platforms, a review funnel, and AI missed-call text back. Save $197/mo against both plans separately.",
+      "Everything Local Cascade does for $797/mo: a custom website, deep Google Business Profile optimization, listings on 100+ platforms, a review funnel, and AI missed-call text back. Save $69/mo against both plans separately.",
   },
   {
     slug: "local-seo-pack",
@@ -277,9 +277,9 @@ export const plans: Plan[] = [
       },
       ...BILLING_FAQS,
     ],
-    metaTitle: "Local SEO Pack, $497/mo: Google Business Profile Optimization | Local Cascade",
+    metaTitle: "Local SEO Pack, $569/mo: Google Business Profile Optimization | Local Cascade",
     metaDescription:
-      "$497/mo for Google Business Profile optimization: competitor and keyword research, listings on 100+ platforms, a monthly content calendar, and monthly ranking scans of your service area.",
+      "$569/mo for Google Business Profile optimization: competitor and keyword research, listings on 100+ platforms, a monthly content calendar, and monthly ranking scans of your service area.",
   },
 ];
 

@@ -10,7 +10,7 @@ same four pieces, built together so they feed each other:
 | Service | Promise |
 | --- | --- |
 | Professional website | Built to convert visitors into customers |
-| Local SEO Pack | Google Business Profile optimization, $497/mo standalone |
+| Local SEO Pack | Google Business Profile optimization, $569/mo standalone |
 | Google review funnel | 5-star reputation on autopilot |
 | AI missed-call text back | Never lose a lead again |
 
@@ -41,7 +41,7 @@ section and every `/services/*` page render from it. Industries live in
 route to the `paths` array in that script; new services need nothing.
 
 Prices live in `client/src/data/pricing.ts` (`SYSTEM_PRICE` $297,
-`LOCAL_SEO_PRICE` $497, `COMPLETE_PRICE` $597 for both together)
+`LOCAL_SEO_PRICE` $569, `COMPLETE_PRICE` $797 for both together)
 and are used by the pricing cards, the ROI calculator, and the service pages.
 The hero and the JSON-LD offers in `client/index.html` still spell them out, so
 change those by hand at the same time.
