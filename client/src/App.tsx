@@ -8,6 +8,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Book from "./pages/Book";
 import Home from "./pages/Home";
 import Industries from "./pages/Industries";
+import { Privacy, Terms } from "./pages/Legal";
 import PlanPage from "./pages/PlanPage";
 import ServicePage from "./pages/ServicePage";
 import Services from "./pages/Services";
@@ -29,6 +30,8 @@ function Router() {
       <Route path={"/services/:slug"} component={ServicePage} />
       <Route path={"/plans/:slug"} component={PlanPage} />
       <Route path={"/industries"} component={Industries} />
+      <Route path={"/privacy"} component={Privacy} />
+      <Route path={"/terms"} component={Terms} />
       {/* Unlisted: linked from outreach only, noindex, not in the sitemap */}
       <Route path={"/book"} component={Book} />
       <Route path={"/404"} component={NotFound} />

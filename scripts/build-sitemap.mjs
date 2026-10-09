@@ -42,6 +42,8 @@ const paths = [
   ...services.map(slug => `/services/${slug}`),
   ...plans.map(slug => `/plans/${slug}`),
   "/industries",
+  "/privacy",
+  "/terms",
 ];
 
 const today = new Date().toISOString().slice(0, 10);

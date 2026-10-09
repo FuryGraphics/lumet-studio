@@ -21,6 +21,8 @@ const footerLinks = {
   ],
   Studio: [
     { label: "Industries", href: "/industries" },
+    { label: "Privacy", href: "/privacy" },
+    { label: "Terms", href: "/terms" },
     { label: "How it works", href: "/#process" },
     { label: "Work", href: "/#work" },
     { label: "Pricing", href: "/#pricing" },
