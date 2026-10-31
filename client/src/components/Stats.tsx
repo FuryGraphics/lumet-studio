@@ -103,7 +103,7 @@ function Counter({
   );
 }
 
-export default function Stats({ index = "04 / THE NUMBERS" }: { index?: string }) {
+export default function Stats({ index = "03 / THE NUMBERS" }: { index?: string }) {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
 
   return (

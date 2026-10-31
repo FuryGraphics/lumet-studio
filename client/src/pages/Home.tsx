@@ -3,7 +3,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import System from "@/components/System";
 import Process from "@/components/Process";
-import Work from "@/components/Work";
 import Stats from "@/components/Stats";
 import ResultsBand from "@/components/ResultsBand";
 import About from "@/components/About";
@@ -16,7 +15,8 @@ import { usePageMeta } from "@/hooks/usePageMeta";
 /**
  * Home - Local Cascade marketing page.
  * Single-page layout with sections:
- * Hero → System → Process (dark) → Work → Stats (dark) → About → Pricing → Contact → Footer
+ * Hero → System → Process (dark) → Stats (dark) → ResultsBand → About → Pricing → Contact → Footer
+ * The Work section is hidden for now; components/Work.tsx is still there.
  * The four services and the industries list also have their own pages.
  *
  * Design: Editorial Mono - Swiss editorial style with strict grid,
@@ -53,7 +53,6 @@ export default function Home() {
         <Hero />
         <System />
         <Process />
-        <Work />
         <Stats />
         <ResultsBand />
         <About />

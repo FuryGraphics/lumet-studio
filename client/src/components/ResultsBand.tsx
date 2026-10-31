@@ -21,7 +21,7 @@ export default function ResultsBand() {
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2 flex items-center gap-3">
             <span className="font-mono-label text-[#A3A3A3]">
-              05 / ON THE MAP
+              04 / ON THE MAP
             </span>
           </div>
           <div className="hidden md:block col-span-10">

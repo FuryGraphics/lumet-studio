@@ -24,7 +24,6 @@ const footerLinks = {
     { label: "Privacy", href: "/privacy" },
     { label: "Terms", href: "/terms" },
     { label: "How it works", href: "/#process" },
-    { label: "Work", href: "/#work" },
     { label: "Pricing", href: "/#pricing" },
     { label: "Contact", href: "/#contact" },
   ],
