@@ -7,22 +7,24 @@ The complete customer-getting system for local businesses.
 One plan at $297/mo, live in under 7 days, no contracts. Every business gets the
 same four pieces, built together so they feed each other:
 
-| Service | Promise |
-| --- | --- |
-| Professional website | Built to convert visitors into customers |
-| Local SEO Pack | Google Business Profile optimization, $569/mo standalone |
-| Google review funnel | 5-star reputation on autopilot |
-| AI missed-call text back | Never lose a lead again |
+| Service                  | Promise                                                  |
+| ------------------------ | -------------------------------------------------------- |
+| Professional website     | Built to convert visitors into customers                 |
+| Local SEO Pack           | Google Business Profile optimization, $569/mo standalone |
+| Google review funnel     | 5-star reputation on autopilot                           |
+| AI missed-call text back | Never lose a lead again                                  |
 
 ## Pages
 
-| Route | File |
-| --- | --- |
-| `/` | `client/src/pages/Home.tsx` |
-| `/services` | `client/src/pages/Services.tsx` |
+| Route             | File                               |
+| ----------------- | ---------------------------------- |
+| `/`               | `client/src/pages/Home.tsx`        |
+| `/services`       | `client/src/pages/Services.tsx`    |
 | `/services/:slug` | `client/src/pages/ServicePage.tsx` |
-| `/plans/:slug` | `client/src/pages/PlanPage.tsx` |
-| `/industries` | `client/src/pages/Industries.tsx` |
+| `/plans/:slug`    | `client/src/pages/PlanPage.tsx`    |
+| `/industries`     | `client/src/pages/Industries.tsx`  |
+| `/blog`           | `client/src/pages/BlogIndex.tsx`   |
+| `/blog/:slug`     | `client/src/pages/BlogPost.tsx`    |
 
 The home page runs `Hero` → `System` → `Process` (dark) → `Work` → `Stats`
 (dark) → `About` → `Pricing` → `Contact` → `Footer`.
@@ -35,10 +37,28 @@ Service copy lives once in `client/src/data/services.ts`: the home page System
 section and every `/services/*` page render from it. Industries live in
 `client/src/data/industries.ts`.
 
-`client/public/sitemap.xml` is generated, not hand-edited: `pnpm build` runs
-`scripts/build-sitemap.mjs` first, which reads the service slugs out of
-`data/services.ts` and writes every route with today's date. Add a static
-route to the `paths` array in that script; new services need nothing.
+`client/public/sitemap.xml` is generated, not hand-edited. `pnpm build` and
+the Vite build both run `scripts/lib/sitemap.mjs`, which reads the service
+slugs out of `data/services.ts` and writes every route. Vercel runs
+`vite build`, so a production deploy regenerates the sitemap on its own.
+Add a static route in `scripts/lib/sitemap.mjs`. New services need nothing.
+`/blog` is always listed. A post is listed only when its publish date is on
+or before the build's New York calendar date. See `docs/BLOG-RUNBOOK.md`.
+
+## Blog
+
+Posts are markdown files in `content/blog/`. `/blog` is the index. `/blog/:slug`
+is one post. The index is a finished page when nothing is live yet.
+
+A post dated in the future is committed safely and stays hidden: it is not on
+the index, its URL is the site 404, and it is left out of the sitemap, the
+RSS feed, and the client bundle. A production redeploy on or after that date
+is what publishes it. The browser does not check the clock. Publish days are
+not set; the owner will choose them later.
+
+Writing a post: follow `docs/BLOG-RUNBOOK.md` (also linked from `CLAUDE.md`).
+`pnpm blog:check` validates the files and the public artifacts. `pnpm test`
+runs the gate tests.
 
 Prices live in `client/src/data/pricing.ts` (`SYSTEM_PRICE` $297,
 `LOCAL_SEO_PRICE` $569, `COMPLETE_PRICE` $797 for both together)
@@ -153,6 +173,7 @@ The contact form is wired to Formspree (endpoint: `mqerlrjr`). Submissions are s
 - Open Graph + Twitter Card tags
 - JSON-LD structured data (Organization + ProfessionalService)
 - `robots.txt` and `sitemap.xml` included
+- Blog index and live posts: canonical, Open Graph, and JSON-LD at https://www.localcascade.com
 - Semantic HTML with proper heading hierarchy
 - Mobile-responsive with fluid typography
 

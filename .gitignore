@@ -110,6 +110,9 @@ temp/
 
 # Manus version file (auto-generated, not part of source)
 client/public/__manus__/
+
+# Copied at build time for live posts only. Source images stay in content/blog.
+client/public/images/blog/
 .project-config.json
 .manus-logs/
 .vercel

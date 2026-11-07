@@ -11,7 +11,9 @@
     "check": "tsc --noEmit",
     "format": "prettier --write .",
     "fetch:unsplash": "node scripts/fetch-unsplash.mjs",
-    "sitemap": "node scripts/build-sitemap.mjs"
+    "sitemap": "node scripts/build-sitemap.mjs",
+    "blog:check": "node scripts/blog-check.mjs",
+    "test": "node --test scripts/blog.test.mjs"
   },
   "dependencies": {
     "@formspree/react": "^3.0.0",
