@@ -13,8 +13,6 @@ export type Service = {
   image: string;
   alt: string;
   points: string[];
-  /** Monthly price when the service is sold on its own. */
-  price?: number;
   /** Page-only content below. */
   metaTitle: string;
   metaDescription: string;
@@ -42,7 +40,7 @@ export const services: Service[] = [
     points: ["Custom design", "Service pages", "Online booking"],
     metaTitle: "Websites for Local Businesses | Local Cascade",
     metaDescription:
-      "A custom, fast, mobile-first website built to turn visitors into calls and bookings. Designed, written, hosted, and maintained for you. Part of the $297/mo Local Cascade system.",
+      "A custom, fast, mobile-first website built to turn visitors into calls and bookings. Designed, written, hosted, and maintained for you. Part of the $697/mo Local Cascade system.",
     intro:
       "Most small business websites look fine and do nothing. Yours is built around one job: getting the person who lands on it to call, book, or ask for a quote.",
     problem: {
@@ -118,10 +116,9 @@ export const services: Service[] = [
       "100+ platform listings",
       "Monthly content calendar",
     ],
-    price: 569,
     metaTitle: "Local SEO Pack: Google Business Profile Optimization | Local Cascade",
     metaDescription:
-      "Google Business Profile optimization for local businesses: competitor and keyword research, listings on 100+ platforms, a monthly content calendar, and monthly ranking scans. $569/mo, month to month.",
+      "Google Business Profile optimization for local businesses: competitor and keyword research, listings on 100+ platforms, a monthly content calendar, and monthly ranking scans. Part of the $697/mo Local Cascade system.",
     intro:
       "The businesses at the top of Google Maps get the calls. The Local SEO Pack is the ongoing work that moves you up there: your profile optimized around what customers actually search, and your business details kept accurate everywhere they look.",
     problem: {
@@ -218,7 +215,7 @@ export const services: Service[] = [
     ],
     metaTitle: "Google Review Funnel for Local Businesses | Local Cascade",
     metaDescription:
-      "Automatically ask every customer for a Google review by text and email, and send them straight to your profile. Part of the $297/mo Local Cascade system.",
+      "Automatically ask every customer for a Google review by text and email, and send them straight to your profile. Part of the $697/mo Local Cascade system.",
     intro:
       "Most happy customers would leave a review. They just never get asked at the right moment. The review funnel asks every one of them, automatically.",
     problem: {
@@ -296,7 +293,7 @@ export const services: Service[] = [
     ],
     metaTitle: "AI Missed-Call Text Back for Small Businesses | Local Cascade",
     metaDescription:
-      "Every missed call gets an instant text. An AI assistant answers questions, qualifies the lead, and books the appointment 24/7. Part of the $297/mo Local Cascade system.",
+      "Every missed call gets an instant text. An AI assistant answers questions, qualifies the lead, and books the appointment 24/7. Part of the $697/mo Local Cascade system.",
     intro:
       "You can't answer every call when you're working. The people calling don't wait. The text-back makes sure a missed call is never a lost customer.",
     problem: {

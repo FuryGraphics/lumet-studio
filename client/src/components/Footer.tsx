@@ -1,5 +1,5 @@
 import { CONTACT_EMAIL } from "@/data/contact";
-import { plans } from "@/data/plans";
+import { plan } from "@/data/plans";
 import { services } from "@/data/services";
 
 /**
@@ -12,12 +12,9 @@ const footerLinks = {
     ...services.map(s => ({ label: s.title, href: `/services/${s.slug}` })),
     { label: "All services", href: "/services" },
   ],
-  Plans: [
-    ...plans.map(p => ({
-      label: `${p.name} · $${p.price}/mo`,
-      href: `/plans/${p.slug}`,
-    })),
-    { label: "Compare plans", href: "/#pricing" },
+  Plan: [
+    { label: `${plan.name} · $${plan.price}/mo`, href: `/plans/${plan.slug}` },
+    { label: "Pricing", href: "/#pricing" },
   ],
   Studio: [
     { label: "Industries", href: "/industries" },
@@ -61,7 +58,7 @@ export default function Footer() {
             <p className="lc-body mt-4 md:mt-6 text-sm md:text-base text-[#A3A3A3] max-w-sm">
               The complete customer-getting system for local businesses.
               Website, local SEO, Google review funnel, and AI missed-call text
-              back, live in under 7 days for $297 a month.
+              widget, live in under 7 days for $697 a month.
             </p>
             <p className="font-mono-label text-[#525252] mt-4 md:mt-6">
               YOU RUN THE BUSINESS. WE BRING THE CUSTOMERS.

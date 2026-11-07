@@ -9,8 +9,8 @@ import { usePageMeta } from "@/hooks/usePageMeta";
  */
 export default function Services() {
   usePageMeta(
-    "Services: Websites, Local SEO, Reviews & AI Text Back | Local Cascade",
-    "Everything a local business needs to get found and get hired: a custom website, local SEO, an automated Google review funnel, and AI missed-call text back. $297/mo.",
+    "Services: Websites, Local SEO, Reviews & AI Chat | Local Cascade",
+    "Everything a local business needs to get found and get hired: a custom website, local SEO, an automated Google review funnel, and an AI chat widget. $697/mo.",
     "/services"
   );
 
@@ -55,11 +55,6 @@ export default function Services() {
                 <p className="lc-body mt-1.5 text-sm md:text-base text-[#004AAD]">
                   {s.tagline}
                 </p>
-                {s.price && (
-                  <p className="font-mono-label text-[#737373] mt-3">
-                    ${s.price}/MO STANDALONE
-                  </p>
-                )}
                 <p className="lc-body mt-4 text-sm md:text-base text-[#525252] max-w-2xl">
                   {s.summary}
                 </p>

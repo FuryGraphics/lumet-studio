@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { plans } from "@/data/plans";
+import { services } from "@/data/services";
 
 /**
  * Header - minimal fixed navigation for Local Cascade.
@@ -40,7 +40,7 @@ function NavLink({
 }
 
 /** ServicesMenu - the Services item on desktop: a link to /services that also
- *  opens a panel of the three plans, since a plan is what a visitor buys. Opens on hover and on
+ *  opens a panel of the four services in the plan. Opens on hover and on
  *  focus, closes on Escape, outside click, or a route change, so it never
  *  hangs open after navigating. */
 function ServicesMenu() {
@@ -120,23 +120,23 @@ function ServicesMenu() {
       {open && (
         <div className="absolute left-0 top-full pt-4 z-50">
           <div className="w-[22rem] bg-[#FAFAF9] border border-[#E5E5E5] shadow-[0_12px_40px_rgba(13,13,13,0.08)]">
-            {plans.map(plan => (
+            {services.map(service => (
               <Link
-                key={plan.slug}
-                href={`/plans/${plan.slug}`}
+                key={service.slug}
+                href={`/services/${service.slug}`}
                 onClick={() => setOpen(false)}
                 className="group block p-4 border-b border-[#E5E5E5] hover:bg-white transition-colors"
               >
                 <span className="flex items-baseline justify-between gap-3">
                   <span className="text-sm font-semibold text-[#0D0D0D] group-hover:text-[#004AAD] transition-colors">
-                    {plan.name}
+                    {service.title}
                   </span>
                   <span className="font-mono-label text-[#004AAD] shrink-0">
-                    ${plan.price}/MO
+                    {service.num}
                   </span>
                 </span>
                 <span className="lc-body block text-xs text-[#737373] mt-1">
-                  {plan.blurb}
+                  {service.tagline}
                 </span>
               </Link>
             ))}
@@ -283,17 +283,14 @@ export default function Header() {
                 </NavLink>
                 {link.menu && (
                   <ul className="mt-4 pl-4 border-l border-[#E5E5E5] space-y-3">
-                    {plans.map(plan => (
-                      <li key={plan.slug}>
+                    {services.map(service => (
+                      <li key={service.slug}>
                         <Link
-                          href={`/plans/${plan.slug}`}
+                          href={`/services/${service.slug}`}
                           onClick={() => setMenuOpen(false)}
                           className="block text-base font-medium text-[#404040]"
                         >
-                          {plan.name}
-                          <span className="font-mono-label text-[#004AAD] ml-2">
-                            ${plan.price}/MO
-                          </span>
+                          {service.title}
                         </Link>
                       </li>
                     ))}

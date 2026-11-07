@@ -24,8 +24,8 @@ import { usePageMeta } from "@/hooks/usePageMeta";
  */
 export default function Home() {
   usePageMeta(
-    "Websites, Local SEO, Reviews & AI Text Back for Local Businesses | Local Cascade",
-    "Local Cascade builds and runs your whole customer-getting system: a custom website, local SEO, an automated Google review funnel, and AI missed-call text back. Live in under 7 days for $297/mo. No contracts.",
+    "Websites, Local SEO, Reviews & AI Chat for Local Businesses | Local Cascade",
+    "Local Cascade builds and runs your whole customer-getting system: a custom website, local SEO, an automated Google review funnel, and an AI chat widget. Live in under 7 days for $697/mo. No contracts.",
     "/"
   );
 

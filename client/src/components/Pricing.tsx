@@ -1,64 +1,25 @@
 import { Link } from "wouter";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { COMPLETE_SAVING } from "@/data/pricing";
-import { plans as planData } from "@/data/plans";
+import { plan } from "@/data/plans";
 
 /**
- * Pricing - three plans on warm paper: the monthly system, the Local SEO Pack
- * on its own, and the everything bundle between them. The bundle is the
- * featured card: centred, badged, and lifted, since it is the one we steer to.
- * Responsive: cards stack under the heading on mobile, three across on large
- * screens with the featured card first on mobile.
+ * Pricing - the one plan, on warm paper. A single dark card against the
+ * heading and the three assurances.
+ * Responsive: the card sits under the heading on mobile, beside it on large
+ * screens.
  */
-/** Card copy per plan: the feature bullets are the card's own summary, and
- *  everything else (name, badge, price, blurb, link) comes from data/plans. */
-const cards = [
-  {
-    slug: "growth-system",
-    features: [
-      "Custom-built professional website",
-      "On-page local SEO and site structure",
-      "Google review automation funnel",
-      "AI missed-call text-back system",
-      "Mobile-responsive design",
-      "Ongoing updates & support",
-      "No contracts, cancel anytime",
-    ],
-  },
-  {
-    slug: "complete-pack",
-    features: [
-      "Everything in the Growth System",
-      "Everything in the Local SEO Pack",
-      "Custom website, built and maintained",
-      "Full Google Business Profile optimization",
-      "Listings on 100+ platforms, kept in sync",
-      "Review funnel and AI missed-call text back",
-      "Monthly ranking scans of your area",
-      "One invoice, one team, no contracts",
-    ],
-    order: "lg:order-2",
-  },
-  {
-    slug: "local-seo-pack",
-    order: "lg:order-3",
-    features: [
-      "Competitor and keyword research",
-      "Full Google Business Profile optimization",
-      "Listings pushed to 100+ platforms",
-      "Monthly content calendar",
-      "Profile posts and fresh content",
-      "Monthly ranking scans of your area",
-      "Review tool included",
-      "No contracts, cancel anytime",
-    ],
-  },
-].map(card => {
-  const plan = planData.find(p => p.slug === card.slug)!;
-  return { ...card, ...plan, features: card.features, order: card.order };
-});
-
-const plans = cards;
+/** The card's own summary of the plan; everything else (name, badge, price,
+ *  blurb, link) comes from data/plans. */
+const features = [
+  "SEO-optimized website that ranks locally",
+  "Automated Google Business Profile posts and updates",
+  "Review replies handled for you",
+  "Listings on 100+ platforms, kept in sync",
+  "AI chat widget answering and capturing leads 24/7",
+  "5-star Google review funnel",
+  "Monthly ranking scans of your area",
+  "One invoice, one team, no contracts",
+];
 
 const assurances = [
   { label: "NO SETUP FEES", text: "The monthly price is the whole price." },
@@ -113,16 +74,15 @@ export default function Pricing() {
               className="lc-display text-[#0D0D0D]"
               style={{ fontSize: "clamp(1.75rem, 5vw, 3.75rem)" }}
             >
-              Pick a plan.
+              One plan.
               <br />
               <span className="text-[#004AAD]">Everything</span>
               <br />
               included.
             </h2>
             <p className="lc-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
-              No hidden fees. No upsells. No long-term contracts. Take one
-              piece or the lot, and we keep running it for as long as you want
-              it.
+              No hidden fees. No upsells. No long-term contracts. One price
+              covers the build and every month we keep it running.
             </p>
           </div>
           <div className="col-span-12 md:col-span-10 lg:col-span-4 lg:col-start-8">
@@ -141,106 +101,83 @@ export default function Pricing() {
           </div>
         </div>
 
-        {/* Plan cards */}
+        {/* The plan */}
         <div className="grid grid-cols-12 gap-4">
           <div className="col-span-12 md:col-span-2" />
-          <div className="col-span-12 md:col-span-10">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 lg:items-start">
-              {plans.map(plan => (
-                <div
-                  key={plan.name}
-                  className={`relative bg-[#0D0D0D] text-white overflow-hidden flex flex-col ${plan.order ?? "lg:order-1"} ${
-                    plan.featured
-                      ? "ring-2 ring-[#004AAD] lg:-mt-6 lg:mb-[-1.5rem]"
-                      : ""
-                  }`}
-                >
-                  <div
-                    className="absolute inset-0 pointer-events-none"
-                    style={{
-                      background:
-                        "radial-gradient(ellipse 45% 50% at 50% 0%, rgba(255,255,255,0.07) 0%, transparent 70%)",
-                    }}
-                  />
-                  <div className="relative p-6 md:p-10 flex flex-col h-full">
-                    {/* Badge */}
-                    <div className="flex items-center gap-3 mb-6 md:mb-8">
-                      <span className="font-mono-label bg-[#004AAD] text-white px-2.5 py-1">
-                        {plan.badge}
-                      </span>
-                      <span className="h-px flex-1 bg-[#262626]" />
-                    </div>
-
-                    <h3 className="text-xl md:text-2xl font-semibold text-white">
-                      {plan.name}
-                    </h3>
-
-                    {/* Price */}
-                    <div className="flex items-baseline gap-2 mt-3">
-                      <span
-                        className="lc-display text-white"
-                        style={{ fontSize: "clamp(2.75rem, 7vw, 4.5rem)" }}
-                      >
-                        ${plan.price}
-                      </span>
-                      <span className="font-mono-label text-[#A3A3A3]">
-                        /MO
-                      </span>
-                    </div>
-                    <p className="lc-body mt-3 text-base text-[#A3A3A3]">
-                      {plan.blurb}
-                    </p>
-                    {plan.featured && (
-                      <p className="font-mono-label text-[#004AAD] mt-4">
-                        SAVE ${COMPLETE_SAVING}/MO VS BOTH SEPARATELY
-                      </p>
-                    )}
-
-                    {/* Features */}
-                    <ul className="mt-8 space-y-3 border-t border-[#262626] pt-8">
-                      {plan.features.map(feature => (
-                        <li key={feature} className="flex items-start gap-3">
-                          <Check />
-                          <span className="lc-body text-sm md:text-base text-[#E5E5E5]">
-                            {feature}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* CTA */}
-                    <div className="mt-auto pt-8 md:pt-10">
-                      <a
-                        href="#contact"
-                        className="lc-cta inline-flex items-center justify-center gap-2 w-full px-6 py-4 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm"
-                      >
-                        Get started
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                          fill="none"
-                        >
-                          <path
-                            d="M3 8H13M13 8L8 3M13 8L8 13"
-                            stroke="currentColor"
-                            strokeWidth="1.5"
-                            strokeLinecap="square"
-                          />
-                        </svg>
-                      </a>
-                      <Link
-                        href={`/plans/${plan.slug}`}
-                        className="lc-link block text-center text-sm font-medium text-[#A3A3A3] hover:text-white mt-4"
-                      >
-                        See what's included →
-                      </Link>
-                    </div>
-                  </div>
+          <div className="col-span-12 md:col-span-10 lg:col-span-7">
+            <div className="relative bg-[#0D0D0D] text-white overflow-hidden flex flex-col ring-2 ring-[#004AAD]">
+              <div
+                className="absolute inset-0 pointer-events-none"
+                style={{
+                  background:
+                    "radial-gradient(ellipse 45% 50% at 50% 0%, rgba(255,255,255,0.07) 0%, transparent 70%)",
+                }}
+              />
+              <div className="relative p-6 md:p-10 flex flex-col h-full">
+                {/* Badge */}
+                <div className="flex items-center gap-3 mb-6 md:mb-8">
+                  <span className="font-mono-label bg-[#004AAD] text-white px-2.5 py-1">
+                    {plan.badge}
+                  </span>
+                  <span className="h-px flex-1 bg-[#262626]" />
                 </div>
-              ))}
+
+                <h3 className="text-xl md:text-2xl font-semibold text-white">
+                  {plan.name}
+                </h3>
+
+                {/* Price */}
+                <div className="flex items-baseline gap-2 mt-3">
+                  <span
+                    className="lc-display text-white"
+                    style={{ fontSize: "clamp(2.75rem, 7vw, 4.5rem)" }}
+                  >
+                    ${plan.price}
+                  </span>
+                  <span className="font-mono-label text-[#A3A3A3]">/MO</span>
+                </div>
+                <p className="lc-body mt-3 text-base text-[#A3A3A3]">
+                  {plan.blurb}
+                </p>
+
+                {/* Features */}
+                <ul className="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-3 border-t border-[#262626] pt-8">
+                  {features.map(feature => (
+                    <li key={feature} className="flex items-start gap-3">
+                      <Check />
+                      <span className="lc-body text-sm md:text-base text-[#E5E5E5]">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA */}
+                <div className="mt-auto pt-8 md:pt-10">
+                  <Link
+                    href={`/plans/${plan.slug}`}
+                    className="lc-cta inline-flex items-center justify-center gap-2 w-full px-6 py-4 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm"
+                  >
+                    Book your call
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path
+                        d="M3 8H13M13 8L8 3M13 8L8 13"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="square"
+                      />
+                    </svg>
+                  </Link>
+                  <a
+                    href="#contact"
+                    className="lc-link block text-center text-sm font-medium text-[#A3A3A3] hover:text-white mt-4"
+                  >
+                    Questions first? Talk to us
+                  </a>
+                </div>
+              </div>
             </div>
-            <p className="font-mono-label text-[#A3A3A3] mt-6 text-center">
+            <p className="font-mono-label text-[#A3A3A3] mt-6">
               NO CREDIT CARD REQUIRED TO GET STARTED
             </p>
           </div>

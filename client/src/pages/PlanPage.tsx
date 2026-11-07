@@ -1,16 +1,15 @@
 import { Link, useParams } from "wouter";
 import PageShell, { Faq, Section } from "@/components/PageShell";
-import PayPalSubscribe from "@/components/PayPalSubscribe";
+import BookingWidget from "@/components/BookingWidget";
 import RoiCalculator from "@/components/RoiCalculator";
 import NotFound from "@/pages/NotFound";
-import { getPlan, plans } from "@/data/plans";
-import { paypalPlanId } from "@/data/paypal";
+import { getPlan } from "@/data/plans";
 import { getService } from "@/data/services";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
 /**
- * PlanPage - /plans/:slug. One page per payment plan: the price, who it suits,
- * everything it contains, what it does not contain, and how the three compare.
+ * PlanPage - /plans/:slug. The plan: the price, who it suits, everything it
+ * contains, and the form that starts it.
  *
  * The services it contains are linked rather than re-described, so the detail
  * lives on the service pages and this page stays about the offer.
@@ -56,28 +55,20 @@ function PlanContent({ slug }: { slug: string }) {
             </div>
 
             <div className="md:col-span-8">
-              {paypalPlanId(plan.slug) ? (
-                <PayPalSubscribe
-                  planSlug={plan.slug}
-                  planName={plan.name}
-                  price={plan.price}
-                />
-              ) : (
-                <a
-                  href="/#contact"
-                  className="lc-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm"
-                >
-                  Get started
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path
-                      d="M3 8H13M13 8L8 3M13 8L8 13"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="square"
-                    />
-                  </svg>
-                </a>
-              )}
+              <a
+                href="#book"
+                className="lc-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm"
+              >
+                Book your call
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path
+                    d="M3 8H13M13 8L8 3M13 8L8 13"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="square"
+                  />
+                </svg>
+              </a>
               <a
                 href="/#contact"
                 className="lc-link inline-block mt-4 text-sm font-medium text-[#404040] hover:text-[#0D0D0D]"
@@ -163,39 +154,7 @@ function PlanContent({ slug }: { slug: string }) {
           </div>
         </div>
 
-        {/* What it does not cover */}
-        {plan.notIncluded.length > 0 && (
-          <div className="mt-10 md:mt-14 border-t border-[#262626] pt-8">
-            <p className="font-mono-label text-[#525252] mb-4">NOT IN THIS PLAN</p>
-            <ul className="space-y-3">
-              {plan.notIncluded.map(item => (
-                <li key={item.text} className="flex items-start gap-3">
-                  <span
-                    className="text-[#525252] mt-0.5 shrink-0"
-                    aria-hidden="true"
-                  >
-                    ×
-                  </span>
-                  <span className="lc-body text-sm md:text-base text-[#A3A3A3]">
-                    {item.text}
-                    {item.upgradeTo && (
-                      <>
-                        {" · "}
-                        <Link
-                          href={`/plans/${item.upgradeTo}`}
-                          className="lc-link font-medium text-[#004AAD]"
-                        >
-                          See the {getPlan(item.upgradeTo)?.name}
-                        </Link>
-                      </>
-                    )}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </Section>
+        </Section>
 
       {/* Getting started */}
       <Section label="GETTING STARTED">
@@ -216,10 +175,6 @@ function PlanContent({ slug }: { slug: string }) {
         </div>
       </Section>
 
-      <Section label="COMPARE THE PLANS">
-        <PlanTable current={plan.slug} />
-      </Section>
-
       <Section label="WHAT IT IS WORTH">
         <h2
           className="lc-display text-[#0D0D0D] mb-6 md:mb-10"
@@ -228,6 +183,23 @@ function PlanContent({ slug }: { slug: string }) {
           Do the math on your own numbers.
         </h2>
         <RoiCalculator defaultCost={plan.price} />
+      </Section>
+
+      <Section label="BOOK YOUR CALL">
+        <div id="book" className="scroll-mt-24">
+          <h2
+            className="lc-display text-[#0D0D0D] mb-3"
+            style={{ fontSize: "clamp(1.5rem, 3.2vw, 2.5rem)" }}
+          >
+            Start with a call.
+          </h2>
+          <p className="lc-body mb-8 text-base md:text-lg text-[#525252] max-w-2xl">
+            Pick a time that suits you. We go through your services, your area,
+            and what you want the system to do. No charge, and nothing is set
+            up until you say so.
+          </p>
+          <BookingWidget />
+        </div>
       </Section>
 
       <Section label="QUESTIONS">
@@ -249,10 +221,10 @@ function PlanContent({ slug }: { slug: string }) {
         </p>
         <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <a
-            href="/#contact"
+            href="#book"
             className="lc-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm w-full sm:w-auto"
           >
-            Get started
+            Book your call
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path
                 d="M3 8H13M13 8L8 3M13 8L8 13"
@@ -263,101 +235,13 @@ function PlanContent({ slug }: { slug: string }) {
             </svg>
           </a>
           <a
-            href="/#pricing"
+            href="#book"
             className="lc-link text-base font-medium text-[#A3A3A3] hover:text-white"
           >
-            All plans
+            Book a call
           </a>
         </div>
       </Section>
     </PageShell>
-  );
-}
-
-/** The rows a buyer actually decides on, and which plans carry them. */
-const rows: { label: string; in: string[] }[] = [
-  { label: "Custom website, built and maintained", in: ["growth-system", "complete-pack"] },
-  { label: "On-page local SEO and site structure", in: ["growth-system", "complete-pack"] },
-  { label: "Google review funnel", in: ["growth-system", "complete-pack"] },
-  { label: "AI missed-call text back", in: ["growth-system", "complete-pack"] },
-  { label: "Google Business Profile optimization", in: ["local-seo-pack", "complete-pack"] },
-  { label: "Listings on 100+ platforms", in: ["local-seo-pack", "complete-pack"] },
-  { label: "Monthly content calendar", in: ["local-seo-pack", "complete-pack"] },
-  { label: "Monthly ranking scans", in: ["local-seo-pack", "complete-pack"] },
-  { label: "Review tool", in: ["growth-system", "local-seo-pack", "complete-pack"] },
-  {
-    label: "No setup fee, no contract",
-    in: ["growth-system", "local-seo-pack", "complete-pack"],
-  },
-];
-
-export function PlanTable({ current }: { current?: string }) {
-  const cols = ["growth-system", "complete-pack", "local-seo-pack"]
-    .map(s => plans.find(p => p.slug === s)!)
-    .filter(Boolean);
-
-  return (
-    <div className="overflow-x-auto">
-      <table className="w-full min-w-[34rem] border-collapse text-left">
-        <thead>
-          <tr className="border-b border-[#E5E5E5]">
-            <th className="py-4 pr-4 align-bottom">
-              <span className="font-mono-label text-[#A3A3A3]">PLAN</span>
-            </th>
-            {cols.map(p => (
-              <th
-                key={p.slug}
-                className={`py-4 px-3 align-bottom ${
-                  p.slug === current ? "bg-[#004AAD]/5" : ""
-                }`}
-              >
-                <Link href={`/plans/${p.slug}`} className="group block">
-                  <span
-                    className={`block text-sm md:text-base font-semibold ${
-                      p.slug === current ? "text-[#004AAD]" : "text-[#0D0D0D]"
-                    } group-hover:text-[#004AAD] transition-colors`}
-                  >
-                    {p.name}
-                  </span>
-                  <span className="font-mono-label text-[#737373]">
-                    ${p.price}/MO
-                  </span>
-                </Link>
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map(row => (
-            <tr key={row.label} className="border-b border-[#E5E5E5]">
-              <th
-                scope="row"
-                className="py-3.5 pr-4 lc-body text-sm font-normal text-[#404040]"
-              >
-                {row.label}
-              </th>
-              {cols.map(p => (
-                <td
-                  key={p.slug}
-                  className={`py-3.5 px-3 text-center ${
-                    p.slug === current ? "bg-[#004AAD]/5" : ""
-                  }`}
-                >
-                  {row.in.includes(p.slug) ? (
-                    <span className="text-[#004AAD]" aria-label="Included">
-                      ✓
-                    </span>
-                  ) : (
-                    <span className="text-[#D4D4D4]" aria-label="Not included">
-                      –
-                    </span>
-                  )}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
   );
 }

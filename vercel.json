@@ -2,6 +2,23 @@
   "buildCommand": "vite build",
   "outputDirectory": "dist/public",
   "framework": "vite",
+  "redirects": [
+    {
+      "source": "/plans/growth-system",
+      "destination": "/plans/complete-system",
+      "permanent": true
+    },
+    {
+      "source": "/plans/complete-pack",
+      "destination": "/plans/complete-system",
+      "permanent": true
+    },
+    {
+      "source": "/plans/local-seo-pack",
+      "destination": "/plans/complete-system",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

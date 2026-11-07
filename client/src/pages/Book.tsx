@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { CONTACT_EMAIL, FORMSPREE_ID } from "@/data/contact";
-import { plans } from "@/data/plans";
+import { plan } from "@/data/plans";
 import { usePageMeta } from "@/hooks/usePageMeta";
 
 /**
@@ -127,7 +127,7 @@ export default function Book() {
             {[
               ["WHAT WE'LL COVER", "Your Google visibility, reviews, and missed calls"],
               ["HOW LONG", "About 15 minutes, by phone"],
-              ["WHAT IT COSTS", "Nothing. Plans start at $297/mo if you go ahead"],
+              ["WHAT IT COSTS", "Nothing. The system is $697/mo if you go ahead"],
             ].map(([k, v]) => (
               <li key={k} className="py-4 border-b border-[#E5E5E5]">
                 <span className="font-mono-label text-[#004AAD] block mb-1">
@@ -236,11 +236,9 @@ export default function Book() {
                 </label>
                 <select id="b-plan" name="plan" className={`${input} cursor-pointer`} defaultValue="Not sure yet">
                   <option>Not sure yet</option>
-                  {plans.map(p => (
-                    <option key={p.slug}>
-                      {p.name} (${p.price}/mo)
-                    </option>
-                  ))}
+                  <option>
+                    {plan.name} (${plan.price}/mo)
+                  </option>
                 </select>
               </div>
             </div>

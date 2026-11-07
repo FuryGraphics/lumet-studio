@@ -38,24 +38,6 @@ function ServiceContent({ slug }: { slug: string }) {
       title={service.title}
       intro={service.intro}
     >
-      {/* Price, when the service is sold on its own */}
-      {service.price && (
-        <section className="pb-10 md:pb-14 bg-[#FAFAF9]">
-          <div className="container flex flex-wrap items-baseline gap-x-4 gap-y-2">
-            <span
-              className="lc-display text-[#0D0D0D]"
-              style={{ fontSize: "clamp(2rem, 4.5vw, 3rem)" }}
-            >
-              ${service.price}
-              <span className="font-mono-label text-[#A3A3A3] ml-2">/MO</span>
-            </span>
-            <span className="font-mono-label text-[#737373]">
-              MONTH TO MONTH · NO SETUP FEE · CANCEL ANY TIME
-            </span>
-          </div>
-        </section>
-      )}
-
       {/* Image + problem statement */}
       <section className="pb-16 md:pb-28 bg-[#FAFAF9]">
         <div className="container">
@@ -188,9 +170,8 @@ function ServiceContent({ slug }: { slug: string }) {
 
       <Section label="THE REST OF THE SYSTEM">
         <p className="lc-body mb-8 text-base md:text-lg text-[#525252] max-w-2xl">
-          {service.price
-            ? `${service.title} is sold on its own, and it works hardest next to the rest of the system.`
-            : `${service.title} is one part of the Growth System. Every plan includes all of it, built to work together.`}
+          {`${service.title} is one part of the system. The plan includes all
+          four, built to work together.`}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {others.map(o => (

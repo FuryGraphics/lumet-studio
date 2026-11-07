@@ -132,7 +132,7 @@ export function Terms() {
     <LegalPage
       kind="TERMS"
       title="Terms of Service | Local Cascade"
-      description="The terms for Local Cascade plans: what we provide, what we need from you, billing and cancellation, what we do not promise, and who owns what."
+      description="The terms for the Local Cascade plan: what we provide, what we need from you, billing and cancellation, what we do not promise, and who owns what."
       path="/terms"
       intro="What you get, what we need from you, how billing and cancellation work, and what we do and do not promise. Month to month, cancel any time."
       sections={terms}

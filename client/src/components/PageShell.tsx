@@ -129,7 +129,7 @@ export function CtaBand() {
       >
         The whole system.
         <br />
-        <span className="text-[#004AAD]">$297</span> a month.
+        <span className="text-[#004AAD]">$697</span> a month.
       </h2>
       <p className="lc-body mt-6 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
         Website, local SEO, review funnel, and AI text-back, built for your

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { LOCAL_SEO_PRICE } from "@/data/pricing";
+import { PRICE } from "@/data/pricing";
 
 /**
  * RoiCalculator - what a lift in customers is worth against the monthly fee.
@@ -59,7 +59,7 @@ const money = (n: number) =>
 
 export default function RoiCalculator({
   dark = false,
-  defaultCost = LOCAL_SEO_PRICE,
+  defaultCost = PRICE,
 }: {
   dark?: boolean;
   /** The plan the visitor is looking at, so the sum starts from its fee. */

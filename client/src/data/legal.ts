@@ -28,7 +28,8 @@ export const privacy: LegalSection[] = [
       "Information you send us. When you fill in the contact form, use the chat widget, book a call, or submit one of our lead forms on Facebook or Instagram, we receive what you type: your name, email address, phone number, business name, what your business does and where, your preferred time for a call, and which plan interests you.",
       "Lead forms on Facebook and Instagram. If you submit one of our forms there, Meta passes us the answers you gave and the contact details Meta filled in for you from your profile. Meta also handles that information under its own privacy policy, and you can review or delete your submissions in your Meta account settings.",
       "Link tags. If you reach our booking page through a link that carries campaign tags (utm_source and similar), those tags arrive with your enquiry so we know which link you came from.",
-      "Payment information. Subscriptions are taken through PayPal. PayPal handles the payment and we never see your card or bank details. We receive the subscription identifier, the plan, and whether it is active.",
+      "Booking a call. Our call booking form is an embedded scheduling tool. What you enter there, including the time you pick, reaches us through that provider.",
+      "Payment information. We take no card or bank details on this website. Billing is arranged with you directly once you decide to go ahead.",
       "Information for running your service. If you become a customer, we hold what we need to do the work: business details, access you grant us to your Google Business Profile or website, photos and content you give us, and the reviews and ranking reports the service produces.",
       "Technical information. Our hosting provider records standard server logs, including IP addresses and which pages were requested, to serve the site and keep it secure.",
     ],
@@ -47,7 +48,7 @@ export const privacy: LegalSection[] = [
       "We use a small number of providers to run the business. Each receives only what it needs:",
       [
         "Formspree, which delivers form and chat submissions to our inbox",
-        "PayPal, which processes subscription payments",
+        "The scheduling platform behind our call booking form",
         "Vercel, which hosts this website",
         "Google, which serves the fonts this site uses, and which operates Google Business Profile",
         "Meta, which hosts the lead forms we run on Facebook and Instagram and passes us their answers",
@@ -109,7 +110,7 @@ export const terms: LegalSection[] = [
   {
     heading: "What we provide",
     body: [
-      "We provide the plan you buy, as described on this site at the time you buy it: the Growth System, the Local SEO Pack, or the Complete Pack.",
+      "We provide the plan you buy, as described on this site at the time you buy it.",
       "Work begins once your first payment clears and you have given us what we need. We aim to have a new website live within seven days of having your information and approvals. Ongoing work, including profile optimization, content, and ranking scans, continues each month while your subscription is active.",
     ],
   },
@@ -124,8 +125,8 @@ export const terms: LegalSection[] = [
   {
     heading: "Price, billing, and cancellation",
     body: [
-      "Plans are billed monthly in advance through PayPal, at the price shown when you subscribe. There is no setup fee and no minimum term.",
-      "You can cancel at any time, from PayPal or by emailing hello@localcascade.com. Cancelling stops the next payment. The month you have already paid for is not refunded, and your service runs to the end of it.",
+      "The plan is billed monthly in advance, at the price shown when you start. There is no setup fee and no minimum term. We set your billing up with you directly and tell you the method before you pay anything.",
+      "You can cancel at any time by emailing hello@localcascade.com. Cancelling stops the next payment. The month you have already paid for is not refunded, and your service runs to the end of it.",
       "If a payment fails, we will tell you and may pause the service until it is settled.",
       "If we change the price of your plan, we will tell you at least 30 days beforehand, and you can cancel before it takes effect.",
     ],
@@ -154,7 +155,7 @@ export const terms: LegalSection[] = [
   {
     heading: "Third-party platforms",
     body: [
-      "Parts of the service depend on platforms we do not control, including Google, PayPal, and the listings platform behind the Local SEO Pack. Your use of them is subject to their own terms.",
+      "Parts of the service depend on platforms we do not control, including Google, the listings platform behind the Google Business Profile work, and the scheduling platform behind our booking form. Your use of them is subject to their own terms.",
       "We are not responsible for their decisions, such as a Google Business Profile being suspended or a listing being rejected, though we will help you sort it out.",
     ],
   },

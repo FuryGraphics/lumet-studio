@@ -10,7 +10,7 @@ const tags = [
   "CUSTOM WEBSITE",
   "LOCAL SEO",
   "GOOGLE REVIEW FUNNEL",
-  "AI MISSED-CALL TEXT BACK",
+  "AI CHAT WIDGET",
   "LIVE IN 7 DAYS",
 ];
 
@@ -50,7 +50,7 @@ export default function Hero() {
           Turn Missed Calls Into
           <br />
           Customers for{" "}
-          <span className="text-[#004AAD] whitespace-nowrap">$297/mo</span>
+          <span className="text-[#004AAD] whitespace-nowrap">$697/mo</span>
         </h1>
 
         {/* Secondary headline */}
@@ -66,8 +66,8 @@ export default function Hero() {
         <p className="lc-body mt-6 md:mt-10 text-base md:text-xl text-[#525252] max-w-2xl">
           Local Cascade builds and runs the entire customer-getting system for your
           business. A custom website, local SEO, an automated Google review
-          funnel, and an AI assistant that texts back every missed call. One
-          flat monthly fee. No contracts.
+          funnel, and an AI chat widget that answers and captures leads around
+          the clock. One flat monthly fee. No contracts.
         </p>
 
         {/* CTA */}
