@@ -6,7 +6,7 @@
  * ever added, the privacy page has to say so. LAST_UPDATED is shown to
  * visitors; move it whenever the wording changes.
  */
-export const LAST_UPDATED = "9 October 2026";
+export const LAST_UPDATED = "7 November 2026";
 
 export type LegalSection = {
   heading: string;
@@ -25,7 +25,8 @@ export const privacy: LegalSection[] = [
   {
     heading: "What we collect",
     body: [
-      "Information you send us. When you fill in the contact form, use the chat widget, or book a call, we receive what you type: your name, email address, phone number, business name, what your business does and where, your preferred time for a call, and which plan interests you.",
+      "Information you send us. When you fill in the contact form, use the chat widget, book a call, or submit one of our lead forms on Facebook or Instagram, we receive what you type: your name, email address, phone number, business name, what your business does and where, your preferred time for a call, and which plan interests you.",
+      "Lead forms on Facebook and Instagram. If you submit one of our forms there, Meta passes us the answers you gave and the contact details Meta filled in for you from your profile. Meta also handles that information under its own privacy policy, and you can review or delete your submissions in your Meta account settings.",
       "Link tags. If you reach our booking page through a link that carries campaign tags (utm_source and similar), those tags arrive with your enquiry so we know which link you came from.",
       "Payment information. Subscriptions are taken through PayPal. PayPal handles the payment and we never see your card or bank details. We receive the subscription identifier, the plan, and whether it is active.",
       "Information for running your service. If you become a customer, we hold what we need to do the work: business details, access you grant us to your Google Business Profile or website, photos and content you give us, and the reviews and ranking reports the service produces.",
@@ -49,6 +50,7 @@ export const privacy: LegalSection[] = [
         "PayPal, which processes subscription payments",
         "Vercel, which hosts this website",
         "Google, which serves the fonts this site uses, and which operates Google Business Profile",
+        "Meta, which hosts the lead forms we run on Facebook and Instagram and passes us their answers",
         "The listings and reviews platform we use to deliver the Local SEO Pack",
       ],
       "These providers operate in the United States and elsewhere, and we work from India, so your information may be processed outside your country.",
