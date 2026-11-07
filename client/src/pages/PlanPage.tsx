@@ -182,7 +182,7 @@ function PlanContent({ slug }: { slug: string }) {
         >
           Do the math on your own numbers.
         </h2>
-        <RoiCalculator defaultCost={plan.price} />
+        <RoiCalculator cost={plan.price} />
       </Section>
 
       <Section label="BOOK YOUR CALL">

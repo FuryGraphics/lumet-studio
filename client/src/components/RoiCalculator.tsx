@@ -41,15 +41,6 @@ const fields = [
     max: 100,
     step: 5,
   },
-  {
-    key: "cost",
-    label: "MONTHLY COST",
-    hint: "What you pay us",
-    prefix: "$",
-    min: 0,
-    max: 2000,
-    step: 1,
-  },
 ] as const;
 
 type Key = (typeof fields)[number]["key"];
@@ -59,17 +50,16 @@ const money = (n: number) =>
 
 export default function RoiCalculator({
   dark = false,
-  defaultCost = PRICE,
+  cost = PRICE,
 }: {
   dark?: boolean;
-  /** The plan the visitor is looking at, so the sum starts from its fee. */
-  defaultCost?: number;
+  /** The fee the sum runs against. Shown, not set: it is our price. */
+  cost?: number;
 }) {
   const [v, setV] = useState<Record<Key, number>>({
     customers: 20,
     value: 400,
     lift: 25,
-    cost: defaultCost,
   });
 
   const set = (key: Key, raw: string) => {
@@ -83,8 +73,8 @@ export default function RoiCalculator({
 
   const extraCustomers = (v.customers * v.lift) / 100;
   const extraRevenue = extraCustomers * v.value;
-  const net = extraRevenue - v.cost;
-  const roi = v.cost > 0 ? (net / v.cost) * 100 : 0;
+  const net = extraRevenue - cost;
+  const roi = cost > 0 ? (net / cost) * 100 : 0;
 
   const border = dark ? "border-[#262626]" : "border-[#E5E5E5]";
   const label = dark ? "text-[#737373]" : "text-[#737373]";
@@ -147,6 +137,22 @@ export default function RoiCalculator({
             </div>
           </div>
         ))}
+        <div className={`border-b ${border} p-4 md:p-6`}>
+          <span className={`font-mono-label block mb-2 ${label}`}>
+            MONTHLY COST
+          </span>
+          <div className="flex items-baseline gap-1">
+            <span className={`text-xl md:text-2xl ${muted}`}>$</span>
+            <span
+              className={`text-xl md:text-2xl font-semibold tabular-nums ${input}`}
+            >
+              {cost.toLocaleString("en-US")}
+            </span>
+          </div>
+          <p className={`lc-body text-xs mt-3 ${faint}`}>
+            What you pay us, every month
+          </p>
+        </div>
       </div>
 
       {/* Results */}
@@ -171,7 +177,7 @@ export default function RoiCalculator({
             </span>
           </div>
           <p className="lc-body mt-2 text-sm text-[#A3A3A3]">
-            after the {money(v.cost)} monthly fee
+            after the {money(cost)} monthly fee
           </p>
 
           <dl className="mt-8 border-t border-[#262626]">
@@ -186,7 +192,7 @@ export default function RoiCalculator({
               ["Extra revenue a year", money(extraRevenue * 12)],
               [
                 "Return on spend",
-                v.cost > 0
+                cost > 0
                   ? `${roi >= 0 ? "" : "-"}${Math.abs(Math.round(roi)).toLocaleString("en-US")}%`
                   : "-",
               ],
