@@ -54,7 +54,7 @@ function PlanContent({ slug }: { slug: string }) {
               </span>
             </div>
 
-            <div className="md:col-span-8">
+            <div className="md:col-span-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
               <a
                 href="#book"
                 className="lc-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm"
@@ -71,7 +71,7 @@ function PlanContent({ slug }: { slug: string }) {
               </a>
               <a
                 href="/#contact"
-                className="lc-link inline-block mt-4 text-sm font-medium text-[#404040] hover:text-[#0D0D0D]"
+                className="lc-link text-sm font-medium text-[#404040] hover:text-[#0D0D0D]"
               >
                 Questions first? Talk to us →
               </a>
