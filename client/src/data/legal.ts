@@ -1,3 +1,5 @@
+import { CONTACT_EMAIL } from "./contact";
+
 /**
  * Legal pages - privacy policy and terms, as plain data.
  *
@@ -6,7 +8,7 @@
  * ever added, the privacy page has to say so. LAST_UPDATED is shown to
  * visitors; move it whenever the wording changes.
  */
-export const LAST_UPDATED = "7 November 2026";
+export const LAST_UPDATED = "8 November 2026";
 
 export type LegalSection = {
   heading: string;
@@ -19,7 +21,7 @@ export const privacy: LegalSection[] = [
     heading: "Who we are",
     body: [
       "Local Cascade builds and runs marketing systems for local businesses: websites, Google Business Profile optimization, review funnels, and AI missed-call text back.",
-      "Local Cascade is a trading name. The business is operated from India and serves businesses primarily in the United States. For anything in this policy, write to hello@localcascade.com.",
+      `Local Cascade is a trading name. The business is operated from India and serves businesses primarily in the United States. For anything in this policy, write to ${CONTACT_EMAIL}.`,
     ],
   },
   {
@@ -74,7 +76,7 @@ export const privacy: LegalSection[] = [
   {
     heading: "Your choices",
     body: [
-      "You can ask us for a copy of what we hold about you, ask us to correct it, or ask us to delete it. Email hello@localcascade.com and we will respond within 30 days.",
+      `You can ask us for a copy of what we hold about you, ask us to correct it, or ask us to delete it. Email ${CONTACT_EMAIL} and we will respond within 30 days.`,
       "If you are in California, you have the right to know what we collect, to ask for deletion, and not to be discriminated against for asking. We do not sell personal information, so there is nothing to opt out of.",
       "You can tell us to stop emailing you at any time, and we will.",
     ],
@@ -126,7 +128,7 @@ export const terms: LegalSection[] = [
     heading: "Price, billing, and cancellation",
     body: [
       "The plan is billed monthly in advance, at the price shown when you start. There is no setup fee and no minimum term. We set your billing up with you directly and tell you the method before you pay anything.",
-      "You can cancel at any time by emailing hello@localcascade.com. Cancelling stops the next payment. The month you have already paid for is not refunded, and your service runs to the end of it.",
+      `You can cancel at any time by emailing ${CONTACT_EMAIL}. Cancelling stops the next payment. The month you have already paid for is not refunded, and your service runs to the end of it.`,
       "If a payment fails, we will tell you and may pause the service until it is settled.",
       "If we change the price of your plan, we will tell you at least 30 days beforehand, and you can cancel before it takes effect.",
     ],
@@ -188,7 +190,7 @@ export const terms: LegalSection[] = [
     heading: "Governing law",
     body: [
       "These terms are governed by the laws of India, and the courts of India have jurisdiction over any dispute.",
-      "Before anything formal, write to hello@localcascade.com. Most things are settled that way.",
+      `Before anything formal, write to ${CONTACT_EMAIL}. Most things are settled that way.`,
     ],
   },
 ];

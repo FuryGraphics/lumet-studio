@@ -10,6 +10,10 @@
  * Verified 2026-09-20: a submission to this id returns 200 and arrives by
  * email. If that ever changes, both surfaces fall back to CONTACT_EMAIL rather
  * than losing the enquiry.
+ *
+ * CONTACT_EMAIL is the public address. The Organization email in
+ * client/index.html is the same string: JSON-LD cannot import this constant,
+ * so change both together. The privacy policy and terms quote it too.
  */
 export const FORMSPREE_ID = "xjyvbngq";
 
@@ -17,7 +21,7 @@ export const FORMSPREE_ENDPOINT = `https://formspree.io/f/${FORMSPREE_ID}`;
 
 /** Where enquiries go if a submission fails, so a lead is never lost in a
  *  toast message. */
-export const CONTACT_EMAIL = "hello@localcascade.com";
+export const CONTACT_EMAIL = "akash@localcascade.com";
 
 /** The questions, asked identically by the form and the chat widget. The
  *  `name` values are the field names that arrive in the email. */
