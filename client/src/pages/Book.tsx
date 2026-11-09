@@ -113,9 +113,9 @@ export default function Book() {
 
           <ul className="mt-8 border-t border-[#E5E5E5]">
             {[
-              ["WHAT WE'LL COVER", "The website, the listings, review requests, and intake"],
+              ["WHAT WE'LL COVER", "The website, the listings, review requests, intake, and monthly blog posts"],
               ["HOW LONG", "About 15 minutes, by phone"],
-              ["WHAT HAPPENS NEXT", "We agree the work with you before anything is set up"],
+              ["WHAT IT COSTS", "Nothing. The plan is $697/mo if you go ahead"],
             ].map(([k, v]) => (
               <li key={k} className="py-4 border-b border-[#E5E5E5]">
                 <span className="font-mono-label text-[#004AAD] block mb-1">
@@ -224,7 +224,9 @@ export default function Book() {
                 </label>
                 <select id="b-plan" name="plan" className={`${input} cursor-pointer`} defaultValue="Not sure yet">
                   <option>Not sure yet</option>
-                  <option>{plan.name}</option>
+                  <option>
+                    {plan.name} (${plan.price}/mo)
+                  </option>
                 </select>
               </div>
             </div>

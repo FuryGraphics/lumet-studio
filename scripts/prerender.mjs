@@ -88,12 +88,29 @@ try {
     }
     if (!body.includes("<h1")) throw new Error(`No h1 in ${path}`);
     const visible = `${head}\n${body}`;
-    if (/\$\s*\d/.test(visible) || visible.includes("697")) {
-      throw new Error(`A price slipped into ${path}`);
+    const amounts = visible.match(/\$\s*(\d+)/g) ?? [];
+    for (const amount of amounts) {
+      if (!amount.includes("697")) {
+        throw new Error(`Unexpected price ${amount} on ${path}`);
+      }
     }
-    const outDir = path === "/" ? dist : join(dist, path.slice(1));
-    mkdirSync(outDir, { recursive: true });
-    writeFileSync(join(outDir, "index.html"), html);
+    if (/\$\s*297\b|297\s*\/\s*mo/i.test(visible)) {
+      throw new Error(`An old price slipped into ${path}`);
+    }
+    // Vercel serves /services from services.html when cleanUrls is on, and
+    // /services/index.html from the directory index. Write both so neither
+    // the extensionless path nor the index path falls through to the homepage.
+    const targets =
+      path === "/"
+        ? [join(dist, "index.html")]
+        : [
+            join(dist, `${path.slice(1)}.html`),
+            join(dist, path.slice(1), "index.html"),
+          ];
+    for (const target of targets) {
+      mkdirSync(dirname(target), { recursive: true });
+      writeFileSync(target, html);
+    }
     console.log(`prerender: ${path} (${title})`);
   }
 } finally {

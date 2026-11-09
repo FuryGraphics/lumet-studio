@@ -18,22 +18,14 @@ const features = [
   "A first reply when a call is missed or someone writes in",
   "The reply does not give legal advice",
   "You approve the public words before they go live",
+  "Monthly blog posts written for your firm to help your site show up in search",
   "Month to month, with edits included",
 ];
 
 const assurances = [
-  {
-    label: "NO SETUP FEE",
-    text: "The fee is agreed before any work starts. There is no separate setup fee.",
-  },
-  {
-    label: "ONE PLAN",
-    text: "The website, local search, review requests, and intake are in the same plan.",
-  },
-  {
-    label: "NO LONG CONTRACT",
-    text: "Month to month. Cancel by email.",
-  },
+  { label: "NO SETUP FEES", text: "The monthly price is the whole price." },
+  { label: "NO UPSELLS", text: "Every feature listed is in the plan already." },
+  { label: "NO LOCK-IN", text: "Month to month. Cancel whenever you want." },
 ];
 
 function Check() {
@@ -90,9 +82,9 @@ export default function Pricing() {
               <span className="text-[#004AAD]">whole firm site.</span>
             </h2>
             <p className="lc-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
-              The website, local search, review requests, and client intake
-              for a US law firm. We agree the fee with you before any work
-              starts.
+              The website, local search, review requests, client intake, and
+              monthly blog posts for a US law firm. ${plan.price} a month.
+              No setup fee.
             </p>
           </div>
           <div className="col-span-12 md:col-span-10 lg:col-span-4 lg:col-start-8">
@@ -136,6 +128,15 @@ export default function Pricing() {
                   {plan.name}
                 </h3>
 
+                <div className="flex items-baseline gap-2 mt-3">
+                  <span
+                    className="lc-display text-white"
+                    style={{ fontSize: "clamp(2.75rem, 7vw, 4.5rem)" }}
+                  >
+                    ${plan.price}
+                  </span>
+                  <span className="font-mono-label text-[#A3A3A3]">/MO</span>
+                </div>
                 <p className="lc-body mt-3 text-base text-[#A3A3A3]">
                   {plan.blurb}
                 </p>

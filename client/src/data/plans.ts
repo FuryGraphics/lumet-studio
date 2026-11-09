@@ -4,10 +4,13 @@
  *
  * Three older plan URLs are redirected in vercel.json. They are not pages here.
  */
+import { PRICE } from "@/data/pricing";
+
 export type Plan = {
   slug: string;
   name: string;
   badge: string;
+  price: number;
   blurb: string;
   intro: string;
   services: string[];
@@ -24,10 +27,11 @@ export const plans: Plan[] = [
     slug: "complete-system",
     name: "The complete system",
     badge: "ONE PLAN",
+    price: PRICE,
     blurb:
-      "The website, local search, review requests, and client intake for a US law firm, run as one plan.",
+      "The website, local search, review requests, client intake, and monthly blog posts for a US law firm. $697 a month.",
     intro:
-      "This is the Local Cascade plan for attorneys and law firms in the United States. It includes the firm website, local search, review requests, and client intake. The fee is agreed before any work starts. There is no separate setup fee and no long contract.",
+      "This is the Local Cascade plan for attorneys and law firms in the United States. It is $697 a month. It includes the firm website, local search, review requests, client intake, and monthly blog posts written for the firm. There is no setup fee and no long contract.",
     services: ["website", "local-seo-pack", "ai-text-back", "review-funnel"],
     forWho: [
       "You want the public website, the listings, the review requests, and the first reply handled together",
@@ -74,6 +78,14 @@ export const plans: Plan[] = [
           "No payment, discount, or gift for a review",
         ],
       },
+      {
+        title: "Monthly blog posts",
+        items: [
+          "Monthly blog posts written for your firm to help your site show up in search",
+          "Written for the practice and the cities you serve",
+          "You approve each post before it is published",
+        ],
+      },
     ],
     steps: [
       {
@@ -82,11 +94,11 @@ export const plans: Plan[] = [
       },
       {
         title: "We prepare the pieces",
-        body: "The site draft, the listing updates, the review message, and the intake replies. You approve the public words.",
+        body: "The site draft, the listing updates, the review message, the intake replies, and the first blog posts. You approve the public words.",
       },
       {
         title: "Then it runs monthly",
-        body: "We aim to have the first version of the site ready within seven days of your information and approval. Listing updates and review requests continue while the plan is active.",
+        body: "We aim to have the first version of the site ready within seven days of your information and approval. Listing updates, review requests, and monthly blog posts continue while the plan is active.",
       },
     ],
     faqs: [
@@ -100,7 +112,7 @@ export const plans: Plan[] = [
       },
       {
         q: "Is there a separate setup fee?",
-        a: "No. We agree the fee with you before any work starts. There is no separate setup fee.",
+        a: "No. $697 a month is the whole price, and the build is part of it.",
       },
       {
         q: "Is there a long contract?",
@@ -109,7 +121,7 @@ export const plans: Plan[] = [
     ],
     metaTitle: "The Complete System for Law Firms | Local Cascade",
     metaDescription:
-      "The Local Cascade plan for attorneys and law firms in the United States includes the website, local search, review requests, and client intake. The fee is agreed before work starts.",
+      "The Local Cascade plan for attorneys and law firms in the United States includes the website, local search, review requests, client intake, and monthly blog posts.",
   },
 ];
 

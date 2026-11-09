@@ -14,7 +14,7 @@ const footerLinks = {
     { label: "All services", href: "/services" },
   ],
   Plan: [
-    { label: plan.name, href: `/plans/${plan.slug}` },
+    { label: `${plan.name} · $${plan.price}/mo`, href: `/plans/${plan.slug}` },
     { label: "Pricing", href: "/#pricing" },
   ],
   Studio: [
@@ -57,7 +57,7 @@ export default function Footer() {
               Local Cascade
             </a>
             <p className="lc-body mt-4 md:mt-6 text-sm md:text-base text-[#A3A3A3] max-w-sm">
-              {SITE_DESCRIPTION}
+              {SITE_DESCRIPTION} ${plan.price} a month.
             </p>
             <p className="font-mono-label text-[#525252] mt-4 md:mt-6">
               FOR ATTORNEYS AND LAW FIRMS IN THE UNITED STATES

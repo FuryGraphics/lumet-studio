@@ -1,4 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { PRICE } from "@/data/pricing";
 import { SITE_DESCRIPTION } from "@/data/site";
 
 /**
@@ -51,6 +52,9 @@ export default function Hero() {
           Websites for
           <br />
           US law firms
+          <br />
+          for{" "}
+          <span className="text-[#004AAD] whitespace-nowrap">${PRICE}/mo</span>
         </h1>
 
         <p className="lc-body mt-6 md:mt-10 text-base md:text-xl text-[#525252] max-w-2xl">

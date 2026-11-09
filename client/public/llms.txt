@@ -1,20 +1,20 @@
 # Local Cascade
 
-> Local Cascade is a web agency that builds and looks after websites, local search, client intake, and review requests for attorneys and law firms in the United States.
+> Local Cascade is a web agency that builds and looks after websites, local search, client intake, review requests, and monthly blog posts for attorneys and law firms in the United States.
 
-Local Cascade works with attorneys and law firms in the United States, across practice areas. It is a web agency. It does not give legal advice, and it does not promise search placements or a number of clients.
+Local Cascade works with attorneys and law firms in the United States, across practice areas. The plan includes the firm website, local search, review requests, client intake, and monthly blog posts written for the firm to help the site show up in search. It is a web agency. It does not give legal advice, and it does not promise search placements or a number of clients.
 
 Contact: akash@localcascade.com
 
 ## Pages
 
-- [Home](https://www.localcascade.com/): Law firm websites, local search, client intake, and review requests.
-- [Services](https://www.localcascade.com/services): The four parts of the work.
+- [Home](https://www.localcascade.com/): Law firm websites, local search, client intake, review requests, and monthly blog posts.
+- [Services](https://www.localcascade.com/services): The four parts of the work, plus monthly blog posts in the plan.
 - [Law firm websites](https://www.localcascade.com/services/website): Websites for US attorneys and law firms.
 - [Local search for law firms](https://www.localcascade.com/services/local-seo-pack): Listings and local search for US law firms.
 - [Review requests](https://www.localcascade.com/services/review-funnel): Review requests for US law firms.
 - [Client intake](https://www.localcascade.com/services/ai-text-back): A first reply when a call is missed or someone writes through the site.
-- [The plan](https://www.localcascade.com/plans/complete-system): What the plan includes.
+- [The plan](https://www.localcascade.com/plans/complete-system): The website, local search, review requests, client intake, and monthly blog posts.
 - [Practice areas](https://www.localcascade.com/industries): Practice areas the pages can be written for.
 - [Privacy](https://www.localcascade.com/privacy): Privacy policy.
 - [Terms](https://www.localcascade.com/terms): Terms of service.

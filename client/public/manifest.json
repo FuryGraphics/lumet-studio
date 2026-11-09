@@ -1,7 +1,7 @@
 {
   "name": "Local Cascade",
   "short_name": "Local Cascade",
-  "description": "Local Cascade is a web agency that builds and looks after websites, local search, client intake, and review requests for attorneys and law firms in the United States.",
+  "description": "Local Cascade is a web agency that builds and looks after websites, local search, client intake, review requests, and monthly blog posts for attorneys and law firms in the United States.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FAFAF9",

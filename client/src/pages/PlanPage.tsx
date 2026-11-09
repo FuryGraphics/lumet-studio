@@ -40,10 +40,22 @@ function PlanContent({ slug }: { slug: string }) {
     >
       <section className="pb-14 md:pb-20 bg-[#FAFAF9]">
         <div className="container">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-            <p className="font-mono-label text-[#737373]">
-              NO SETUP FEE · MONTH TO MONTH
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-end">
+            <div className="md:col-span-4">
+              <div className="flex items-baseline gap-2">
+                <span
+                  className="lc-display text-[#0D0D0D]"
+                  style={{ fontSize: "clamp(3rem, 8vw, 5.5rem)" }}
+                >
+                  ${plan.price}
+                </span>
+                <span className="font-mono-label text-[#A3A3A3]">/MO</span>
+              </div>
+              <span className="font-mono-label text-[#737373] block mt-2">
+                NO SETUP FEE · CANCEL ANY TIME
+              </span>
+            </div>
+            <div className="md:col-span-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
               <a
                 href="#book"
                 className="lc-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm"
@@ -64,6 +76,7 @@ function PlanContent({ slug }: { slug: string }) {
               >
                 Questions first? Talk to us →
               </a>
+            </div>
           </div>
         </div>
       </section>
@@ -191,7 +204,7 @@ function PlanContent({ slug }: { slug: string }) {
         >
           {plan.name}.
           <br />
-          For US law firms.
+          <span className="text-[#004AAD]">${plan.price}</span> a month.
         </h2>
         <p className="lc-body mt-6 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
           {plan.blurb} No setup fee. Month to month. Cancel by email.
