@@ -1,10 +1,8 @@
 import { Link, useParams } from "wouter";
 import PageShell, { CtaBand, Faq, Section } from "@/components/PageShell";
-import ResultsSlider from "@/components/ResultsSlider";
-import RoiCalculator from "@/components/RoiCalculator";
+import PageMeta from "@/components/PageMeta";
 import NotFound from "@/pages/NotFound";
 import { getService, services } from "@/data/services";
-import { usePageMeta } from "@/hooks/usePageMeta";
 
 /**
  * ServicePage - /services/:slug. One template, content from data/services.
@@ -20,14 +18,15 @@ export default function ServicePage() {
 
 function ServiceContent({ slug }: { slug: string }) {
   const service = getService(slug)!;
-  usePageMeta(
-    service.metaTitle,
-    service.metaDescription,
-    `/services/${service.slug}`
-  );
   const others = services.filter(s => s.slug !== service.slug);
 
   return (
+    <>
+    <PageMeta
+      title={service.metaTitle}
+      description={service.metaDescription}
+      path={`/services/${service.slug}`}
+    />
     <PageShell
       label={`SERVICE ${service.num}`}
       crumbs={[
@@ -109,69 +108,13 @@ function ServiceContent({ slug }: { slug: string }) {
         </div>
       </Section>
 
-      {service.animation && (
-        <Section label="WHAT PROGRESS LOOKS LIKE" dark>
-          <div className="grid grid-cols-12 gap-8 items-center">
-            <div className="col-span-12 lg:col-span-6">
-              <div className="aspect-square overflow-hidden border border-[#262626] bg-[#111111]">
-                <img
-                  src={service.animation.src}
-                  alt={service.animation.alt}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <p className="font-mono-label text-[#525252] mt-3 text-[0.625rem] md:text-xs">
-                {service.animation.caption}
-              </p>
-            </div>
-            <div className="col-span-12 lg:col-span-6">
-              <h2
-                className="lc-display text-white"
-                style={{ fontSize: "clamp(1.5rem, 3.2vw, 2.5rem)" }}
-              >
-                Every square is a customer
-                <br />
-                standing somewhere in your city.
-              </h2>
-              <p className="lc-body mt-5 text-base md:text-lg text-[#A3A3A3]">
-                A ranking scan searches your keyword from points all over your
-                service area and records where you land. Red means a customer
-                on that street corner does not find you. The work moves those
-                squares green, scan after scan, and you get the map every
-                month.
-              </p>
-            </div>
-          </div>
-        </Section>
-      )}
-
-      {service.showResults && (
-        <Section label="BEFORE AND AFTER">
-          <ResultsSlider />
-        </Section>
-      )}
-
-      {service.showRoi && (
-        <Section label="WHAT IT IS WORTH">
-          <h2
-            className="lc-display text-[#0D0D0D] mb-6 md:mb-10"
-            style={{ fontSize: "clamp(1.5rem, 3.2vw, 2.5rem)" }}
-          >
-            Do the math on your own numbers.
-          </h2>
-          <RoiCalculator />
-        </Section>
-      )}
-
       <Section label="QUESTIONS">
         <Faq items={service.faqs} />
       </Section>
 
       <Section label="THE REST OF THE SYSTEM">
         <p className="lc-body mb-8 text-base md:text-lg text-[#525252] max-w-2xl">
-          {`${service.title} is one part of the system. The plan includes all
-          four, built to work together.`}
+          {`${service.title} is one part of the plan for US law firms. The plan includes all four, and the public details are meant to match.`}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {others.map(o => (
@@ -197,5 +140,6 @@ function ServiceContent({ slug }: { slug: string }) {
 
       <CtaBand />
     </PageShell>
+    </>
   );
 }

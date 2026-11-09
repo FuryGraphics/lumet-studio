@@ -41,8 +41,9 @@ export default function System() {
           </div>
           <div className="col-span-12 md:col-span-4 md:pt-2">
             <p className="lc-body text-sm md:text-base text-[#525252]">
-              Get found, get trusted, get hired. Every business we work with
-              gets all four, built together so they feed each other.
+              Four parts of the work for a US law firm: the website, local
+              search, review requests, and client intake. They are set up
+              together so the public details match.
             </p>
           </div>
         </div>

@@ -3,6 +3,8 @@ import { Link } from "wouter";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import JsonLd from "@/components/JsonLd";
+import { faqJsonLd } from "@/data/site";
 
 /**
  * PageShell - header, footer, and the shared page-top block for every route
@@ -127,27 +129,28 @@ export function CtaBand() {
         className="lc-display text-white"
         style={{ fontSize: "clamp(1.75rem, 5vw, 3.75rem)" }}
       >
-        The whole system.
+        Websites for
         <br />
-        <span className="text-[#004AAD]">$697</span> a month.
+        law firms.
       </h2>
       <p className="lc-body mt-6 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
-        Website, local SEO, review funnel, and AI text-back, built for your
-        business and live in under 7 days. No setup fees, no contracts.
+        Local Cascade builds and looks after the firm website, local search,
+        review requests, and client intake for attorneys and law firms in the
+        United States.
       </p>
       <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
         <a
           href="/#contact"
           className="lc-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm w-full sm:w-auto"
         >
-          Get started
+          Talk with us
           <Arrow />
         </a>
         <a
-          href="/#pricing"
+          href="/plans/complete-system"
           className="lc-link text-base font-medium text-[#A3A3A3] hover:text-white"
         >
-          See what's included
+          See the plan
         </a>
       </div>
     </Section>
@@ -171,6 +174,7 @@ export function Arrow({ size = 16 }: { size?: number }) {
 export function Faq({ items }: { items: { q: string; a: string }[] }) {
   return (
     <div className="border-t border-[#E5E5E5]">
+      <JsonLd data={faqJsonLd(items)} />
       {items.map(item => (
         <details key={item.q} className="group border-b border-[#E5E5E5]">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-5 md:py-6 text-base md:text-xl font-semibold text-[#0D0D0D] [&::-webkit-details-marker]:hidden">

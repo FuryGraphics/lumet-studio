@@ -1,11 +1,10 @@
 import { Link, useParams } from "wouter";
 import PageShell, { Faq, Section } from "@/components/PageShell";
+import PageMeta from "@/components/PageMeta";
 import BookingWidget from "@/components/BookingWidget";
-import RoiCalculator from "@/components/RoiCalculator";
 import NotFound from "@/pages/NotFound";
 import { getPlan } from "@/data/plans";
 import { getService } from "@/data/services";
-import { usePageMeta } from "@/hooks/usePageMeta";
 
 /**
  * PlanPage - /plans/:slug. The plan: the price, who it suits, everything it
@@ -22,39 +21,29 @@ export default function PlanPage() {
 
 function PlanContent({ slug }: { slug: string }) {
   const plan = getPlan(slug)!;
-  usePageMeta(plan.metaTitle, plan.metaDescription, `/plans/${plan.slug}`);
 
   return (
+    <>
+    <PageMeta
+      title={plan.metaTitle}
+      description={plan.metaDescription}
+      path={`/plans/${plan.slug}`}
+    />
     <PageShell
       label={plan.badge}
       crumbs={[
         { label: "Home", href: "/" },
-        { label: "Pricing", href: "/#pricing" },
         { label: plan.name },
       ]}
       title={plan.name}
       intro={plan.intro}
     >
-      {/* Price + CTA */}
       <section className="pb-14 md:pb-20 bg-[#FAFAF9]">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-end">
-            <div className="md:col-span-4">
-              <div className="flex items-baseline gap-2">
-                <span
-                  className="lc-display text-[#0D0D0D]"
-                  style={{ fontSize: "clamp(3rem, 8vw, 5.5rem)" }}
-                >
-                  ${plan.price}
-                </span>
-                <span className="font-mono-label text-[#A3A3A3]">/MO</span>
-              </div>
-              <span className="font-mono-label text-[#737373] block mt-2">
-                NO SETUP FEE · CANCEL ANY TIME
-              </span>
-            </div>
-
-            <div className="md:col-span-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+            <p className="font-mono-label text-[#737373]">
+              NO SETUP FEE · MONTH TO MONTH
+            </p>
               <a
                 href="#book"
                 className="lc-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm"
@@ -75,7 +64,6 @@ function PlanContent({ slug }: { slug: string }) {
               >
                 Questions first? Talk to us →
               </a>
-            </div>
           </div>
         </div>
       </section>
@@ -175,17 +163,7 @@ function PlanContent({ slug }: { slug: string }) {
         </div>
       </Section>
 
-      <Section label="WHAT IT IS WORTH">
-        <h2
-          className="lc-display text-[#0D0D0D] mb-6 md:mb-10"
-          style={{ fontSize: "clamp(1.5rem, 3.2vw, 2.5rem)" }}
-        >
-          Do the math on your own numbers.
-        </h2>
-        <RoiCalculator cost={plan.price} />
-      </Section>
-
-      <Section label="BOOK YOUR CALL">
+      <Section label="BOOK A CALL">
         <div id="book" className="scroll-mt-24">
           <h2
             className="lc-display text-[#0D0D0D] mb-3"
@@ -194,9 +172,8 @@ function PlanContent({ slug }: { slug: string }) {
             Start with a call.
           </h2>
           <p className="lc-body mb-8 text-base md:text-lg text-[#525252] max-w-2xl">
-            Pick a time that suits you. We go through your services, your area,
-            and what you want the system to do. No charge, and nothing is set
-            up until you say so.
+            Pick a time. We go through the practice, the cities you serve, and
+            what you want the site to say. Nothing is set up until you agree.
           </p>
           <BookingWidget />
         </div>
@@ -214,10 +191,10 @@ function PlanContent({ slug }: { slug: string }) {
         >
           {plan.name}.
           <br />
-          <span className="text-[#004AAD]">${plan.price}</span> a month.
+          For US law firms.
         </h2>
         <p className="lc-body mt-6 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
-          {plan.blurb} No setup fee, no contract, cancel any time.
+          {plan.blurb} No setup fee. Month to month. Cancel by email.
         </p>
         <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <a
@@ -243,5 +220,6 @@ function PlanContent({ slug }: { slug: string }) {
         </div>
       </Section>
     </PageShell>
+    </>
   );
 }

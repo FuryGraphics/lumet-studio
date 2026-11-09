@@ -1,4 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { SITE_DESCRIPTION } from "@/data/site";
 
 /**
  * Hero - bold, tight display headline with positioning statement.
@@ -7,11 +8,11 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
  * Responsive: fluid font sizing, mobile-optimized spacing.
  */
 const tags = [
-  "CUSTOM WEBSITE",
-  "LOCAL SEO",
-  "GOOGLE REVIEW FUNNEL",
-  "AI CHAT WIDGET",
-  "LIVE IN 7 DAYS",
+  "LAW FIRM WEBSITES",
+  "LOCAL SEARCH",
+  "REVIEW REQUESTS",
+  "CLIENT INTAKE",
+  "UNITED STATES",
 ];
 
 export default function Hero() {
@@ -47,36 +48,23 @@ export default function Hero() {
           className="lc-display text-[#0D0D0D] max-w-6xl"
           style={{ fontSize: "clamp(2rem, 6.2vw, 5.25rem)" }}
         >
-          Turn Missed Calls Into
+          Websites for
           <br />
-          Customers for{" "}
-          <span className="text-[#004AAD] whitespace-nowrap">$697/mo</span>
+          US law firms
         </h1>
 
-        {/* Secondary headline */}
-        <p
-          className="lc-display mt-3 md:mt-4 text-[#525252]"
-          style={{ fontSize: "clamp(1.5rem, 4vw, 2.5rem)" }}
-        >
-          Up and running in{" "}
-          <span className="text-[#004AAD]">under 7 days.</span>
-        </p>
-
-        {/* Subhead */}
         <p className="lc-body mt-6 md:mt-10 text-base md:text-xl text-[#525252] max-w-2xl">
-          Local Cascade builds and runs the entire customer-getting system for your
-          business. A custom website, local SEO, an automated Google review
-          funnel, and an AI chat widget that answers and captures leads around
-          the clock. One flat monthly fee. No contracts.
+          {SITE_DESCRIPTION} It is for firms across practice areas. It is not a
+          law firm, and it does not give legal advice.
         </p>
 
         {/* CTA */}
         <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <a
-            href="#pricing"
+            href="#contact"
             className="lc-cta inline-flex items-center gap-2 px-6 md:px-7 py-3 md:py-3.5 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm w-full sm:w-auto justify-center sm:justify-start"
           >
-            Get started
+            Talk with us
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path
                 d="M3 8H13M13 8L8 3M13 8L8 13"
@@ -108,12 +96,12 @@ export default function Hero() {
         <div className="mt-10 md:mt-16 relative aspect-[4/3] sm:aspect-[21/9] overflow-hidden border border-[#E5E5E5] bg-[#F5F5F5]">
           <img
             src="/images/hero.webp"
-            alt="A desk with a laptop showing a local business website, a phone showing map search results, and a phone showing five-star reviews"
+            alt="A desk with a laptop showing a law firm website and a phone showing a map listing"
             className="w-full h-full object-cover"
             fetchPriority="high"
           />
           <span className="absolute bottom-3 left-3 font-mono-label text-white/90 bg-black/40 px-2 py-1 text-[0.625rem] md:text-xs">
-            THE WEBSITE, THE MAP, THE REVIEWS - ONE SYSTEM
+            THE WEBSITE, THE LISTING, THE REVIEWS, THE INTAKE
           </span>
         </div>
       </div>

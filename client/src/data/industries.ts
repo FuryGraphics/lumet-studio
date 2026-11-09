@@ -1,47 +1,46 @@
 /**
- * Industries - who the system is built for. The same four parts work for any
- * business that lives on calls, bookings, and local reputation; what changes
- * per industry is the wording, the pages, and the questions the AI answers.
+ * Practice areas the pages can be written for. The work is the same for each.
+ * This is not a list of clients, and it is not limited to one area of law.
  */
 export const industries = [
   {
-    name: "Home Services",
-    examples: "Plumbing, HVAC, electrical, handyman",
-    body: "Emergencies don't wait for voicemail. Instant text-back catches the calls you miss on a job.",
+    name: "Family law",
+    examples: "Divorce, custody, support",
+    body: "Pages name the family-law work the firm handles and the cities it serves, with a clear way to request a call.",
   },
   {
-    name: "Roofing & Contractors",
-    examples: "Roofing, remodeling, painting, concrete",
-    body: "High-value jobs where homeowners compare reviews closely before they request a quote.",
+    name: "Criminal defense",
+    examples: "Misdemeanors, felonies, DUI",
+    body: "The site and the intake reply stick to what the firm handles. They do not predict an outcome.",
   },
   {
-    name: "Medical & Dental",
-    examples: "Dental, chiropractic, physical therapy, med spa",
-    body: "New patients search locally and read reviews first. Booking needs to be effortless.",
+    name: "Estate planning",
+    examples: "Wills, trusts, probate",
+    body: "Practice pages explain the documents and the process in plain language, and say how to book a conversation.",
   },
   {
-    name: "Legal & Professional",
-    examples: "Law firms, accountants, financial advisors",
-    body: "The first firm to respond helpfully often gets the client. Speed and trust win.",
+    name: "Immigration",
+    examples: "Family petitions, removal defense, naturalization",
+    body: "Listings and pages use the visa and court words the firm actually uses, and the intake reply does not give advice.",
   },
   {
-    name: "Beauty & Wellness",
-    examples: "Salons, barbers, spas, lash and nail studios",
-    body: "Bookings come from phones, often after hours. Reviews and photos decide where people go.",
+    name: "Injury claims",
+    examples: "Car crashes, premises, workplace",
+    body: "The public pages describe the kinds of matters the firm considers. They do not quote results or promise a recovery.",
   },
   {
-    name: "Auto Services",
-    examples: "Repair shops, detailing, tires, body shops",
-    body: "Drivers search nearby when something breaks and call whoever answers first.",
+    name: "Business and employment",
+    examples: "Contracts, disputes, workplace claims",
+    body: "Separate pages can cover the business side and the employee side when the firm handles both.",
   },
   {
-    name: "Cleaning & Landscaping",
-    examples: "House cleaning, lawn care, pest control, pools",
-    body: "Recurring customers start with one quote request. Make sure you're the one who replies.",
+    name: "Real estate",
+    examples: "Closings, title, landlord and tenant",
+    body: "The site states which transactions the firm handles and where, so a reader can tell if they are in the right place.",
   },
   {
-    name: "Fitness & Coaching",
-    examples: "Gyms, personal trainers, yoga and dance studios",
-    body: "Trial sign-ups and consultations booked automatically, day or night.",
+    name: "General practice",
+    examples: "Several areas in one firm",
+    body: "A general practice gets a page per area you want public, plus one page that says how to reach the office.",
   },
 ];

@@ -11,7 +11,7 @@ const navLinks = [
   { label: "Services", href: "/services", menu: true },
   { label: "Industries", href: "/industries" },
   { label: "How it works", href: "/#process" },
-  { label: "Pricing", href: "/#pricing" },
+  { label: "The plan", href: "/plans/complete-system" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -145,7 +145,7 @@ function ServicesMenu() {
               onClick={() => setOpen(false)}
               className="block p-4 bg-[#0D0D0D] text-white text-sm font-semibold hover:bg-[#004AAD] transition-colors"
             >
-              What's in each plan →
+              What the plan includes →
             </Link>
           </div>
         </div>
@@ -223,10 +223,10 @@ export default function Header() {
           {/* CTA - desktop */}
           <div className="hidden md:block">
             <a
-              href="/#pricing"
+              href="/#contact"
               className="lc-cta inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm"
             >
-              Get started
+              Talk with us
               <svg
                 width="14"
                 height="14"
@@ -299,11 +299,11 @@ export default function Header() {
               </div>
             ))}
             <a
-              href="/#pricing"
+              href="/#contact"
               className="mt-4 inline-flex items-center gap-2 px-6 py-3 text-base font-semibold text-white bg-[#004AAD] rounded-sm"
               onClick={() => setMenuOpen(false)}
             >
-              Get started
+              Talk with us
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path
                   d="M3 7H11M11 7L7 3M11 7L7 11"

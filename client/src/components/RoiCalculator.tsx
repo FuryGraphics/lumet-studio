@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { PRICE } from "@/data/pricing";
 
 /**
  * RoiCalculator - what a lift in customers is worth against the monthly fee.
@@ -50,10 +49,10 @@ const money = (n: number) =>
 
 export default function RoiCalculator({
   dark = false,
-  cost = PRICE,
+  cost = 0,
 }: {
   dark?: boolean;
-  /** The fee the sum runs against. Shown, not set: it is our price. */
+  /** Compared with the visitor's own figures. Not shown on the site. */
   cost?: number;
 }) {
   const [v, setV] = useState<Record<Key, number>>({

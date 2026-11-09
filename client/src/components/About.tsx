@@ -1,4 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { SITE_DESCRIPTION } from "@/data/site";
 
 /**
  * About - why the system exists, plus the three operating principles.
@@ -8,15 +9,15 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const principles = [
   {
     num: "PRINCIPLE 01",
-    text: "One system, one fee. No setup costs, no upsells, no surprise invoices.",
+    text: "One plan covers the website, local search, review requests, and intake.",
   },
   {
     num: "PRINCIPLE 02",
-    text: "You are never locked in. Month to month, cancel any time.",
+    text: "Month to month. The firm can cancel by email.",
   },
   {
     num: "PRINCIPLE 03",
-    text: "We build it and we run it. Updates, fixes, and support are included.",
+    text: "We build the site and we keep the public details updated.",
   },
 ];
 
@@ -32,7 +33,7 @@ export default function About() {
         {/* Section header - left rail */}
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2 flex items-center gap-3">
-            <span className="font-mono-label text-[#A3A3A3]">05 / ABOUT</span>
+            <span className="font-mono-label text-[#A3A3A3]">03 / ABOUT</span>
           </div>
           <div className="hidden md:block col-span-10">
             <span className="block h-px w-full bg-[#E5E5E5]" />
@@ -51,12 +52,12 @@ export default function About() {
               className="lc-display text-[#0D0D0D] leading-snug max-w-4xl"
               style={{ fontSize: "clamp(1.25rem, 3.5vw, 2.25rem)" }}
             >
-              Most small businesses get sold four separate things: a web
-              designer, an SEO agency, a reputation tool, and a chat widget.{" "}
+              {SITE_DESCRIPTION}{" "}
               <span className="text-[#A3A3A3] font-normal">
-                Four invoices, four logins, and nothing that talks to each
-                other. We built Local Cascade so a business gets one system, one fee,
-                and one team that keeps it running long after launch day.
+                Firms are often sold a website, a search retainer, a review
+                tool, and a chat tool as four separate projects. This is one
+                plan, looked after by one team, for attorneys and law firms in
+                the United States.
               </span>
             </p>
           </div>
@@ -69,7 +70,7 @@ export default function About() {
             <div className="aspect-[3/2] md:aspect-[21/9] overflow-hidden border border-[#E5E5E5] bg-[#F5F5F5]">
               <img
                 src="/images/about-team.webp"
-                alt="A small business team reviewing results together in a conference room"
+                alt="People sitting around a table in a meeting"
                 className="w-full h-full object-cover object-[center_35%]"
                 loading="lazy"
               />

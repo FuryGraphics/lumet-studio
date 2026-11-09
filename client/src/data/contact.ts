@@ -1,3 +1,7 @@
+import { CONTACT_EMAIL } from "@/data/site";
+
+export { CONTACT_EMAIL };
+
 /**
  * Contact wiring, shared by the contact section and the chat widget so both
  * always post to the same place.
@@ -15,10 +19,6 @@ export const FORMSPREE_ID = "xjyvbngq";
 
 export const FORMSPREE_ENDPOINT = `https://formspree.io/f/${FORMSPREE_ID}`;
 
-/** Where enquiries go if a submission fails, so a lead is never lost in a
- *  toast message. */
-export const CONTACT_EMAIL = "hello@localcascade.com";
-
 /** The questions, asked identically by the form and the chat widget. The
  *  `name` values are the field names that arrive in the email. */
 export const questions = [
@@ -33,7 +33,7 @@ export const questions = [
   {
     name: "email",
     label: "Email",
-    placeholder: "jane@yourbusiness.com",
+    placeholder: "jane@examplelaw.com",
     type: "email",
     required: true,
     ask: "Thanks{first}. What email should we reply to?",
@@ -49,18 +49,18 @@ export const questions = [
   {
     name: "business",
     label: "Business name",
-    placeholder: "Doe Plumbing Co.",
+    placeholder: "Example Law, LLC",
     type: "text",
     required: false,
-    ask: "What's the business called?",
+    ask: "What's the firm called?",
   },
   {
     name: "message",
-    label: "What you do and where",
-    placeholder: "Residential plumbing, Dallas. Most jobs come from referrals.",
+    label: "Practice and city",
+    placeholder: "Family law firm in Columbus, Ohio.",
     type: "textarea",
     required: true,
-    ask: "Last one: what do you do, and where? A line is plenty.",
+    ask: "Last one: what is the practice, and which cities do you serve? A line is plenty.",
   },
 ] as const;
 

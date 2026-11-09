@@ -1,3 +1,5 @@
+import { CONTACT_EMAIL, SITE_DESCRIPTION } from "@/data/site";
+
 /**
  * Legal pages - privacy policy and terms, as plain data.
  *
@@ -6,7 +8,7 @@
  * ever added, the privacy page has to say so. LAST_UPDATED is shown to
  * visitors; move it whenever the wording changes.
  */
-export const LAST_UPDATED = "7 November 2026";
+export const LAST_UPDATED = "9 November 2026";
 
 export type LegalSection = {
   heading: string;
@@ -18,8 +20,8 @@ export const privacy: LegalSection[] = [
   {
     heading: "Who we are",
     body: [
-      "Local Cascade builds and runs marketing systems for local businesses: websites, Google Business Profile optimization, review funnels, and AI missed-call text back.",
-      "Local Cascade is a trading name. The business is operated from India and serves businesses primarily in the United States. For anything in this policy, write to hello@localcascade.com.",
+      SITE_DESCRIPTION,
+      `Local Cascade is a trading name. The business is operated from India and serves attorneys and law firms in the United States. For anything in this policy, write to ${CONTACT_EMAIL}.`,
     ],
   },
   {
@@ -52,7 +54,7 @@ export const privacy: LegalSection[] = [
         "Vercel, which hosts this website",
         "Google, which serves the fonts this site uses, and which operates Google Business Profile",
         "Meta, which hosts the lead forms we run on Facebook and Instagram and passes us their answers",
-        "The listings and reviews platform we use to deliver the Local SEO Pack",
+        "The listings platform we use to update law firm listings",
       ],
       "These providers operate in the United States and elsewhere, and we work from India, so your information may be processed outside your country.",
     ],
@@ -74,7 +76,7 @@ export const privacy: LegalSection[] = [
   {
     heading: "Your choices",
     body: [
-      "You can ask us for a copy of what we hold about you, ask us to correct it, or ask us to delete it. Email hello@localcascade.com and we will respond within 30 days.",
+      `You can ask us for a copy of what we hold about you, ask us to correct it, or ask us to delete it. Email ${CONTACT_EMAIL} and we will respond within 30 days.`,
       "If you are in California, you have the right to know what we collect, to ask for deletion, and not to be discriminated against for asking. We do not sell personal information, so there is nothing to opt out of.",
       "You can tell us to stop emailing you at any time, and we will.",
     ],
@@ -88,7 +90,7 @@ export const privacy: LegalSection[] = [
   {
     heading: "Children",
     body: [
-      "This site and these services are for businesses. They are not directed at children, and we do not knowingly collect information from anyone under 18.",
+      "This site and these services are for law firms. They are not directed at children, and we do not knowingly collect information from anyone under 18.",
     ],
   },
   {
@@ -104,7 +106,7 @@ export const terms: LegalSection[] = [
     heading: "These terms",
     body: [
       "These terms apply when you buy a plan from Local Cascade or use this website. Buying a plan means you accept them.",
-      "Local Cascade is a trading name. The business is operated from India and serves businesses primarily in the United States.",
+      "Local Cascade is a trading name. The business is operated from India and serves attorneys and law firms in the United States.",
     ],
   },
   {
@@ -125,24 +127,24 @@ export const terms: LegalSection[] = [
   {
     heading: "Price, billing, and cancellation",
     body: [
-      "The plan is billed monthly in advance, at the price shown when you start. There is no setup fee and no minimum term. We set your billing up with you directly and tell you the method before you pay anything.",
-      "You can cancel at any time by emailing hello@localcascade.com. Cancelling stops the next payment. The month you have already paid for is not refunded, and your service runs to the end of it.",
+      "The plan is billed monthly in advance, at the fee agreed with you before you start. There is no setup fee and no minimum term. We set billing up with you directly and tell you the method before you pay anything.",
+      `You can cancel at any time by emailing ${CONTACT_EMAIL}. Cancelling stops the next payment. The month you have already paid for is not refunded, and your service runs to the end of it.`,
       "If a payment fails, we will tell you and may pause the service until it is settled.",
-      "If we change the price of your plan, we will tell you at least 30 days beforehand, and you can cancel before it takes effect.",
+      "If we change the fee for your plan, we will tell you at least 30 days beforehand, and you can cancel before it takes effect.",
     ],
   },
   {
     heading: "What we do not promise",
     body: [
-      "We do not guarantee any particular Google ranking, position on the map, number of calls, reviews, or customers. Nobody can: Google decides what it shows, and your market and competitors change.",
-      "What we do promise is the work itself, done properly and on schedule, with monthly ranking scans so you can see where you stand.",
-      "Any example results shown on this site come from businesses using the same platform we run this service on, not from our own client list, and are labelled as such. They are not a prediction of your results.",
+      "We do not promise any particular placement in search results, number of calls, reviews, or clients. Search engines decide what they show, and each market is different.",
+      "What we agree to do is the work itself: the website, the listings, the review requests, and the intake replies, carried out with reasonable care.",
+      "We do not publish client results or testimonials. Work for one firm is not a prediction for another.",
     ],
   },
   {
     heading: "Reviews",
     body: [
-      "The review funnel asks your customers for honest reviews. We will not buy reviews, write fake ones, or filter out genuine negative ones, and we cannot do so on request. That protects your Google profile: those practices breach Google's policies and can get a profile suspended.",
+      "Review requests ask clients for honest reviews. We will not buy reviews, write fake ones, or filter out genuine negative ones, and we cannot do so on request. Those practices breach Google's policies and can get a profile suspended.",
     ],
   },
   {
@@ -162,7 +164,7 @@ export const terms: LegalSection[] = [
   {
     heading: "Acceptable use",
     body: [
-      "The services are for lawful businesses. We will not work on anything illegal, deceptive, or designed to mislead customers, and we may stop work and cancel the service if we find that is what it is.",
+      "The services are for law firms and are offered for lawful use. We will not work on anything illegal, deceptive, or designed to mislead people, and we may stop work and cancel the service if we find that is what it is.",
     ],
   },
   {
@@ -188,7 +190,7 @@ export const terms: LegalSection[] = [
     heading: "Governing law",
     body: [
       "These terms are governed by the laws of India, and the courts of India have jurisdiction over any dispute.",
-      "Before anything formal, write to hello@localcascade.com. Most things are settled that way.",
+      `Before anything formal, write to ${CONTACT_EMAIL}. Most things are settled that way.`,
     ],
   },
 ];

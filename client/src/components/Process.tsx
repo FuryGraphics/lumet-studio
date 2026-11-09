@@ -9,18 +9,18 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const steps = [
   {
     num: "01",
-    title: "We build everything",
-    desc: "Tell us about your business and we build your entire system: website, local SEO, review funnel, and AI text-back, customized for what you do. Live in under 7 days.",
+    title: "Tell us about the firm",
+    desc: "Practice areas, cities, and how people contact you now. That is the part that needs your time.",
   },
   {
     num: "02",
-    title: "Customers start finding you",
-    desc: "Your SEO-optimized site starts ranking locally. Your Google reviews grow automatically. Missed calls get instant follow-up. The system works 24/7.",
+    title: "We prepare the pieces",
+    desc: "The website, the listings, the review requests, and the intake replies. We aim to have the first version of the site ready within seven days of your information and your approval.",
   },
   {
     num: "03",
-    title: "You win more jobs",
-    desc: "More calls answered. More appointments booked. More 5-star reviews. You focus on running your business, we handle the rest.",
+    title: "You review what comes in",
+    desc: "Messages are passed to the firm. The firm decides what to do next. We keep the site and the listings updated while the plan is active.",
   },
 ];
 
@@ -74,14 +74,13 @@ export default function Process() {
               className="lc-display text-white"
               style={{ fontSize: "clamp(1.75rem, 5vw, 3.75rem)" }}
             >
-              Up and running
+              How a firm
               <br />
-              in under 7 days.
+              gets started.
             </h2>
             <p className="lc-body mt-6 md:mt-8 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
-              No project meetings, no design committees, no six-week build
-              cycle. You answer a few questions about your business and we
-              handle every piece of it from there.
+              You tell us about the practice. We draft the public pages and
+              the messages, and you approve them before anything is published.
             </p>
           </div>
         </div>

@@ -3,19 +3,20 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import System from "@/components/System";
 import Process from "@/components/Process";
-import Stats from "@/components/Stats";
-import ResultsBand from "@/components/ResultsBand";
 import About from "@/components/About";
 import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
-import { usePageMeta } from "@/hooks/usePageMeta";
+import PageMeta from "@/components/PageMeta";
+import { Faq, Section } from "@/components/PageShell";
+import { homeFaqs } from "@/data/homeFaq";
+import { SITE_DESCRIPTION } from "@/data/site";
 
 /**
  * Home - Local Cascade marketing page.
  * Single-page layout with sections:
- * Hero → System → Process (dark) → Stats (dark) → ResultsBand → About → Pricing → Contact → Footer
+ * Hero, system, process, about, plan, questions, contact, footer.
  * The Work section is hidden for now; components/Work.tsx is still there.
  * The four services and the industries list also have their own pages.
  *
@@ -23,12 +24,6 @@ import { usePageMeta } from "@/hooks/usePageMeta";
  * generous whitespace, monospace labels, and deliberate dark/light rhythm.
  */
 export default function Home() {
-  usePageMeta(
-    "Websites, Local SEO, Reviews & AI Chat for Local Businesses | Local Cascade",
-    "Local Cascade builds and runs your whole customer-getting system: a custom website, local SEO, an automated Google review funnel, and an AI chat widget. Live in under 7 days for $697/mo. No contracts.",
-    "/"
-  );
-
   // Arriving from another page at /#section: the browser tried to jump before
   // React rendered the section, so scroll once it exists. Instant, because the
   // global smooth scroll gets cut short while the page is still laying out,
@@ -48,15 +43,27 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#FAFAF9]">
+      <PageMeta
+        title="Law Firm Websites for US Attorneys | Local Cascade"
+        description={SITE_DESCRIPTION}
+        path="/"
+      />
       <Header />
       <main>
         <Hero />
         <System />
         <Process />
-        <Stats />
-        <ResultsBand />
         <About />
         <Pricing />
+        <Section label="QUESTIONS">
+          <h2
+            className="lc-display text-[#0D0D0D] mb-8 md:mb-12"
+            style={{ fontSize: "clamp(1.75rem, 4.5vw, 3.25rem)" }}
+          >
+            Questions from firms
+          </h2>
+          <Faq items={homeFaqs} />
+        </Section>
         <Contact />
       </main>
       <Footer />

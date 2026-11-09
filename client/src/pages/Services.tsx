@@ -1,31 +1,30 @@
 import { Link } from "wouter";
 import PageShell, { CtaBand, Section } from "@/components/PageShell";
-import Stats from "@/components/Stats";
 import { services } from "@/data/services";
-import { usePageMeta } from "@/hooks/usePageMeta";
+import PageMeta from "@/components/PageMeta";
 
 /**
  * Services - /services. Overview of the four parts with a link to each page.
  */
 export default function Services() {
-  usePageMeta(
-    "Services: Websites, Local SEO, Reviews & AI Chat | Local Cascade",
-    "Everything a local business needs to get found and get hired: a custom website, local SEO, an automated Google review funnel, and an AI chat widget. $697/mo.",
-    "/services"
-  );
-
   return (
+    <>
+    <PageMeta
+      title="Law Firm Website, Search, Intake, and Review Services | Local Cascade"
+      description="What Local Cascade does for attorneys and law firms in the United States: a firm website, local search, review requests, and client intake."
+      path="/services"
+    />
     <PageShell
       label="SERVICES"
       crumbs={[{ label: "Home", href: "/" }, { label: "Services" }]}
       title={
         <>
-          Four parts.
+          Services for
           <br />
-          One system.
+          law firms.
         </>
       }
-      intro="Get found, get trusted, get hired. Every business we work with gets all four, built together so each one makes the others work harder."
+      intro="Local Cascade does four kinds of work for attorneys and law firms in the United States: the firm website, local search, review requests, and client intake. This page says what each one is."
     >
       <Section label="WHAT YOU GET">
         <div className="border-t border-[#E5E5E5]">
@@ -67,8 +66,8 @@ export default function Services() {
         </div>
       </Section>
 
-      <Stats index="02 / THE NUMBERS" />
       <CtaBand />
     </PageShell>
+    </>
   );
 }
