@@ -5,7 +5,7 @@ export const SITE_NAME = "Local Cascade";
 export const SITE_URL = "https://www.localcascade.com";
 export const CONTACT_EMAIL = "akash@localcascade.com";
 export const SITE_DESCRIPTION =
-  "Local Cascade is a web agency that builds and looks after websites, local search, Google Business Profile management, client intake, review requests, and monthly blog posts for attorneys and law firms in the United States.";
+  "Local Cascade is a web agency that builds and looks after websites, local search, automated Google Business Profile management, client intake, review requests, and monthly blog posts for attorneys and law firms in the United States.";
 
 export function pageUrl(path: string) {
   return path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`;

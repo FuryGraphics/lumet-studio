@@ -4,8 +4,8 @@
  */
 export const planOffers = [
   {
-    title: "Google Business Profile management",
-    body: "We look after the firm's Google listing: the name, hours, photos, posts, and the map pin people see. This is part of the same plan.",
+    title: "Automated Google Business Profile management",
+    body: "Automated Google Business Profile management: we keep the firm's Google listing up to date, including the name, hours, photos, posts, and the map pin people see.",
     image: "/images/offer-gbp-management.webp",
     alt: "A laptop on a desk showing a business profile with a map pin, five stars, and a small map",
   },

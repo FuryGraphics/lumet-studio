@@ -29,9 +29,9 @@ export const plans: Plan[] = [
     badge: "ONE PLAN",
     price: PRICE,
     blurb:
-      "The website, local search, Google Business Profile management, review requests, client intake, and monthly blog posts for a US law firm. $697 a month.",
+      "The website, local search, automated Google Business Profile management, review requests, client intake, and monthly blog posts for a US law firm. $697 a month.",
     intro:
-      "This is the Local Cascade plan for attorneys and law firms in the United States. It is $697 a month. It includes the firm website, local search, Google Business Profile management, review requests, client intake, and monthly blog posts written for search. There is no setup fee and no long contract.",
+      "This is the Local Cascade plan for attorneys and law firms in the United States. It is $697 a month. It includes the firm website, local search, automated Google Business Profile management, review requests, client intake, and monthly blog posts written for search. There is no setup fee and no long contract.",
     services: ["website", "local-seo-pack", "ai-text-back", "review-funnel"],
     forWho: [
       "You want the public website, the listings, the review requests, and the first reply handled together",
@@ -79,11 +79,11 @@ export const plans: Plan[] = [
         ],
       },
       {
-        title: "Google Business Profile management",
+        title: "Automated Google Business Profile management",
         items: [
-          "The firm's Google listing, looked after for you",
-          "Name, hours, photos, and posts kept current",
-          "The map pin and public details checked each month",
+          "Automated Google Business Profile management for the firm",
+          "We keep the name, hours, photos, posts, and map pin up to date",
+          "The same plan, with no separate price",
         ],
       },
       {
@@ -106,7 +106,7 @@ export const plans: Plan[] = [
       },
       {
         title: "Then it runs monthly",
-        body: "We aim to have the first version of the site ready within seven days of your information and approval. Listing updates, Google Business Profile management, review requests, and monthly blog posts continue while the plan is active.",
+        body: "We aim to have the first version of the site ready within seven days of your information and approval. Listing updates, automated Google Business Profile management, review requests, and monthly blog posts continue while the plan is active.",
       },
     ],
     faqs: [
@@ -129,7 +129,7 @@ export const plans: Plan[] = [
     ],
     metaTitle: "The Complete System for Law Firms | Local Cascade",
     metaDescription:
-      "The Local Cascade plan for attorneys and law firms in the United States includes the website, local search, Google Business Profile management, review requests, client intake, and monthly blog posts.",
+      "The Local Cascade plan for attorneys and law firms in the United States includes the website, local search, automated Google Business Profile management, review requests, client intake, and monthly blog posts.",
   },
 ];
 

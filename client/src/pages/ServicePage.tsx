@@ -114,7 +114,7 @@ function ServiceContent({ slug }: { slug: string }) {
 
       <Section label="THE REST OF THE SYSTEM">
         <p className="lc-body mb-8 text-base md:text-lg text-[#525252] max-w-2xl">
-          {`${service.title} is one part of the plan for US law firms. The plan also includes the other three parts, Google Business Profile management, and monthly blog posts written for search.`}
+          {`${service.title} is one part of the plan for US law firms. The plan also includes the other three parts, automated Google Business Profile management, and monthly blog posts written for search.`}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {others.map(o => (

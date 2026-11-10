@@ -44,7 +44,7 @@ export default function System() {
             <p className="lc-body text-sm md:text-base text-[#525252]">
               Four parts of the work for a US law firm: the website, local
               search, review requests, and client intake. The same plan also
-              includes Google Business Profile management and monthly blog
+              includes automated Google Business Profile management and monthly blog
               posts written for search. They are set up together so the public
               details match.
             </p>

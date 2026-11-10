@@ -13,7 +13,7 @@ import { plan } from "@/data/plans";
  *  blurb, link) comes from data/plans. */
 const features = [
   "Law firm website, with a page for each practice area",
-  "Google Business Profile management: name, hours, photos, and posts",
+  "Automated Google Business Profile management: name, hours, photos, posts, and the map pin",
   "Name, address, and phone checked on other listing sites",
   "Review requests after a matter, with nothing offered in return",
   "A first reply when a call is missed or someone writes in",
@@ -83,7 +83,7 @@ export default function Pricing() {
               <span className="text-[#004AAD]">whole firm site.</span>
             </h2>
             <p className="lc-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
-              The website, local search, Google Business Profile management,
+              The website, local search, automated Google Business Profile management,
               review requests, client intake, and monthly blog posts for a US
               law firm. ${plan.price} a month. No setup fee.
             </p>

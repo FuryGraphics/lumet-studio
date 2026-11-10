@@ -12,7 +12,7 @@ export default function Services() {
     <>
     <PageMeta
       title="Law Firm Website, Search, Intake, and Review Services | Local Cascade"
-      description="What Local Cascade does for attorneys and law firms in the United States: a firm website, local search, Google Business Profile management, review requests, client intake, and monthly blog posts."
+      description="What Local Cascade does for attorneys and law firms in the United States: a firm website, local search, automated Google Business Profile management, review requests, client intake, and monthly blog posts."
       path="/services"
     />
     <PageShell
@@ -25,7 +25,7 @@ export default function Services() {
           law firms.
         </>
       }
-      intro="Local Cascade does four kinds of work for attorneys and law firms in the United States: the firm website, local search, review requests, and client intake. The same plan also includes Google Business Profile management and monthly blog posts written for search. This page says what each part is."
+      intro="Local Cascade does four kinds of work for attorneys and law firms in the United States: the firm website, local search, review requests, and client intake. The same plan also includes automated Google Business Profile management and monthly blog posts written for search. This page says what each part is."
     >
       <Section label="WHAT YOU GET">
         <div className="border-t border-[#E5E5E5]">

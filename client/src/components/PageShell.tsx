@@ -137,7 +137,7 @@ export function CtaBand() {
         <span className="text-[#004AAD]">${PRICE}</span> a month.
       </h2>
       <p className="lc-body mt-6 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
-        The firm website, local search, Google Business Profile management,
+        The firm website, local search, automated Google Business Profile management,
         review requests, client intake, and monthly blog posts for attorneys
         and law firms in the United States.
         No setup fee. Month to month.

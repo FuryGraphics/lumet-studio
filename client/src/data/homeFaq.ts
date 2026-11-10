@@ -6,7 +6,7 @@ export const homeFaqs = [
   },
   {
     q: "What do you do for a firm?",
-    a: "We build the firm website and look after local search, the Google Business Profile, review requests, the first reply when someone calls or writes in, and monthly blog posts written for search. The firm still decides which matters to take.",
+    a: "We build the firm website and look after local search, automated Google Business Profile management, review requests, the first reply when someone calls or writes in, and monthly blog posts written for search. The firm still decides which matters to take.",
   },
   {
     q: "Do you work with only one practice area?",
