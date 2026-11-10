@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import OfferCards from "@/components/OfferCards";
 import { plan } from "@/data/plans";
 
 /**
@@ -11,14 +12,15 @@ import { plan } from "@/data/plans";
 /** The card's own summary of the plan; everything else (name, badge, price,
  *  blurb, link) comes from data/plans. */
 const features = [
-  "SEO-optimized website that ranks locally",
-  "Automated Google Business Profile posts and updates",
-  "Review replies handled for you",
-  "Listings on 100+ platforms, kept in sync",
-  "AI chat widget answering and capturing leads 24/7",
-  "5-star Google review funnel",
-  "Monthly ranking scans of your area",
-  "One invoice, one team, no contracts",
+  "Law firm website, with a page for each practice area",
+  "Automated Google Business Profile management: name, hours, photos, posts, and the map pin",
+  "Name, address, and phone checked on other listing sites",
+  "Review requests after a matter, with nothing offered in return",
+  "A first reply when a call is missed or someone writes in",
+  "The reply does not give legal advice",
+  "You approve the public words before they go live",
+  "Monthly blog posts written for search, approved before they go up",
+  "Month to month, with edits included",
 ];
 
 const assurances = [
@@ -59,7 +61,7 @@ export default function Pricing() {
         {/* Section header - left rail */}
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2 flex items-center gap-3">
-            <span className="font-mono-label text-[#A3A3A3]">06 / PRICING</span>
+            <span className="font-mono-label text-[#A3A3A3]">04 / THE PLAN</span>
           </div>
           <div className="hidden md:block col-span-10">
             <span className="block h-px w-full bg-[#E5E5E5]" />
@@ -74,15 +76,16 @@ export default function Pricing() {
               className="lc-display text-[#0D0D0D]"
               style={{ fontSize: "clamp(1.75rem, 5vw, 3.75rem)" }}
             >
-              One plan.
+              One plan
               <br />
-              <span className="text-[#004AAD]">Everything</span>
+              for the
               <br />
-              included.
+              <span className="text-[#004AAD]">whole firm site.</span>
             </h2>
             <p className="lc-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
-              No hidden fees. No upsells. No long-term contracts. One price
-              covers the build and every month we keep it running.
+              The website, local search, automated Google Business Profile management,
+              review requests, client intake, and monthly blog posts for a US
+              law firm. ${plan.price} a month. No setup fee.
             </p>
           </div>
           <div className="col-span-12 md:col-span-10 lg:col-span-4 lg:col-start-8">
@@ -98,6 +101,13 @@ export default function Pricing() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-12 gap-4 mb-10 md:mb-16">
+          <div className="col-span-12 md:col-span-2" />
+          <div className="col-span-12 md:col-span-10">
+            <OfferCards />
           </div>
         </div>
 
@@ -126,7 +136,6 @@ export default function Pricing() {
                   {plan.name}
                 </h3>
 
-                {/* Price */}
                 <div className="flex items-baseline gap-2 mt-3">
                   <span
                     className="lc-display text-white"
@@ -158,7 +167,7 @@ export default function Pricing() {
                     href={`/plans/${plan.slug}`}
                     className="lc-cta inline-flex items-center justify-center gap-2 w-full px-6 py-4 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm"
                   >
-                    Book your call
+                    See the plan
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                       <path
                         d="M3 8H13M13 8L8 3M13 8L8 13"

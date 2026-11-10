@@ -1,12 +1,8 @@
 /**
- * The plan - one offer, one price, with its own page at /plans/<slug>.
+ * The plan. One offer, with its own page at /plans/<slug>.
+ * Services describe the work. This page describes how they are sold together.
  *
- * Services (data/services.ts) describe the work; this describes the offer.
- * It lists the services it contains by slug, so the two never drift: the plan
- * page links through to the service page for the detail.
- *
- * There were three plans until November 2026. ALIASES keeps their URLs alive
- * in the app; vercel.json redirects them properly in production.
+ * Three older plan URLs are redirected in vercel.json. They are not pages here.
  */
 import { PRICE } from "@/data/pricing";
 
@@ -15,13 +11,10 @@ export type Plan = {
   name: string;
   badge: string;
   price: number;
-  /** Sits on the pricing card and at the top of the plan page. */
   blurb: string;
   intro: string;
-  /** Service slugs this plan contains, in order. */
   services: string[];
   forWho: string[];
-  /** Grouped so a buyer can see what each part of the fee covers. */
   includes: { title: string; items: string[] }[];
   steps: { title: string; body: string }[];
   faqs: { q: string; a: string }[];
@@ -32,112 +25,122 @@ export type Plan = {
 export const plans: Plan[] = [
   {
     slug: "complete-system",
-    name: "The Complete System",
-    badge: "EVERYTHING INCLUDED",
+    name: "The complete system",
+    badge: "ONE PLAN",
     price: PRICE,
     blurb:
-      "The whole customer-getting system for your business, built and run for one monthly fee.",
+      "The website, local search, automated Google Business Profile management, review requests, client intake, and monthly blog posts for a US law firm. $697 a month.",
     intro:
-      "One fee, everything in it. A website built to rank and convert, your Google Business Profile run for you, an AI chat widget that answers and captures leads around the clock, and a review funnel that keeps your rating climbing.",
+      "This is the Local Cascade plan for attorneys and law firms in the United States. It is $697 a month. It includes the firm website, local search, automated Google Business Profile management, review requests, client intake, and monthly blog posts written for search. There is no setup fee and no long contract.",
     services: ["website", "local-seo-pack", "ai-text-back", "review-funnel"],
     forWho: [
-      "You want to be found on the map and convert the traffic you get",
-      "Enquiries arrive at all hours and you cannot always answer",
-      "You would rather one team ran all of it than stitch suppliers together",
+      "You want the public website, the listings, the review requests, and the first reply handled together",
+      "People contact the firm at all hours and someone cannot always pick up",
+      "You would rather brief one team than coordinate separate vendors",
     ],
     includes: [
       {
-        title: "SEO-optimized website",
+        title: "Law firm website",
         items: [
-          "Custom design around your services and service area",
-          "A page for each service you offer",
-          "Built to rank locally, fast and mobile-first",
-          "Tap-to-call, booking, and quote forms throughout",
-          "Hosting, updates, fixes, and support included",
+          "Pages for the practice areas and the cities you serve",
+          "Written for a phone screen",
+          "Call, email, and message links on every page",
+          "You approve the words before they go live",
+          "Hosting, edits, and fixes included",
         ],
       },
       {
-        title: "Automated Google Business Profile",
+        title: "Local search",
         items: [
-          "Competitor and keyword research first",
-          "Categories, services, attributes, and description rebuilt around what customers search",
-          "Profile posts and updates published for you every month",
-          "Review replies handled automatically",
-          "Listings pushed to 100+ platforms and kept in sync",
-          "Monthly ranking scans across your service area",
+          "Google listing checked against the practice",
+          "Name, address, and phone kept consistent on other listing sites",
+          "A short post on the Google listing each month",
+          "A monthly note on what was updated",
+          "No promise of a position in search results",
         ],
       },
       {
-        title: "AI chat widget",
+        title: "Client intake",
         items: [
-          "Answers enquiries on your site 24/7, from information you approve",
-          "Captures the lead's name, number, and what they need",
-          "Qualifies the job and books appointments, day or night",
-          "Every conversation passed to you, and you can take over",
+          "A reply when a call is missed",
+          "The same questions on the website",
+          "Collects a name, a number, and a short description",
+          "Says that the message is automated and is not legal advice",
+          "The conversation is sent to the firm",
         ],
       },
       {
-        title: "5-star Google review funnel",
+        title: "Review requests",
         items: [
-          "Automatic review requests by text and email",
-          "One tap through to your Google review form",
-          "A private route for unhappy customers to reach you first",
-          "Dashboard for new reviews and your rating over time",
+          "A text and email after the firm closes a matter",
+          "One link to the firm's Google review page",
+          "A private way for an unhappy client to write to the firm",
+          "No payment, discount, or gift for a review",
+        ],
+      },
+      {
+        title: "Automated Google Business Profile management",
+        items: [
+          "Automated Google Business Profile management for the firm",
+          "We keep the name, hours, photos, posts, and map pin up to date",
+          "The same plan, with no separate price",
+        ],
+      },
+      {
+        title: "Monthly blog posts",
+        items: [
+          "Blog posts written for search each month",
+          "Written for the practice and the cities you serve",
+          "You approve each post before it is published",
         ],
       },
     ],
     steps: [
       {
-        title: "One onboarding call",
-        body: "Your services, your area, and the questions customers ask most. Ten minutes.",
+        title: "One call",
+        body: "Practice areas, cities, and how people reach the firm today.",
       },
       {
-        title: "We build and research in parallel",
-        body: "The site goes up while the profile and listings work begins, and the chat widget is trained and tested.",
+        title: "We prepare the pieces",
+        body: "The site draft, the listing updates, the review message, the intake replies, and the first blog posts. You approve the public words.",
       },
       {
-        title: "Live in 7 days, then monthly",
-        body: "The site launches, and the profile work, content, and scans continue every month.",
+        title: "Then it runs monthly",
+        body: "We aim to have the first version of the site ready within seven days of your information and approval. Listing updates, automated Google Business Profile management, review requests, and monthly blog posts continue while the plan is active.",
       },
     ],
     faqs: [
       {
-        q: "Do I own the website?",
-        a: "Your domain, your content, and your business information are yours. If you leave, we help you take them.",
+        q: "Does the firm own the website?",
+        a: "The domain, the words, and the firm's information stay yours. If you leave, we help you move them.",
       },
       {
-        q: "Do you guarantee I will rank number one?",
-        a: "No. Anyone guaranteeing a Google position is guessing. We do the work that improves local visibility and show you the ranking map each month so you can judge it.",
+        q: "Do you promise a position on Google?",
+        a: "No. We do the listing work and show you what changed. Search engines decide what they show.",
       },
       {
-        q: "How long before I see movement on the map?",
-        a: "It depends on your market and how competitive the keywords are. The scans on the Local SEO page show businesses moving over one to six months.",
+        q: "Is there a separate setup fee?",
+        a: "No. $697 a month is the whole price, and the build is part of it.",
       },
       {
-        q: "Is there a setup fee?",
-        a: "No. The monthly price is the whole price, and the build is part of it.",
-      },
-      {
-        q: "Am I tied into a contract?",
-        a: "No. It is month to month. Cancel any time and you are billed no further.",
+        q: "Is there a long contract?",
+        a: "No. The plan is month to month. Cancel by email and the next period is not billed.",
       },
     ],
-    metaTitle:
-      "The Complete System, $697/mo: Website, Local SEO, AI Chat & Reviews | Local Cascade",
+    metaTitle: "The Complete System for Law Firms | Local Cascade",
     metaDescription:
-      "$697/mo for everything Local Cascade does: an SEO-optimized website, your Google Business Profile run for you, an AI chat widget that captures leads 24/7, and a 5-star review funnel. No setup fee, no contract.",
+      "The Local Cascade plan for attorneys and law firms in the United States includes the website, local search, automated Google Business Profile management, review requests, client intake, and monthly blog posts.",
   },
 ];
 
-/** The three plan URLs we used until November 2026, all pointing here now. */
+/** Older plan URLs. vercel.json redirects them. This keeps the app from showing a 404 if a redirect is skipped. */
 const ALIASES = ["growth-system", "complete-pack", "local-seo-pack"];
 
-export function getPlan(slug: string) {
+export function getPlan(slug: string | undefined) {
   return (
-    plans.find(p => p.slug === slug) ??
-    (ALIASES.includes(slug) ? plans[0] : undefined)
+    plans.find(plan => plan.slug === slug) ??
+    (slug && ALIASES.includes(slug) ? plans[0] : undefined)
   );
 }
 
-/** The one plan, for the places that just need it without a slug. */
 export const plan = plans[0];

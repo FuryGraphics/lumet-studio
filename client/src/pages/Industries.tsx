@@ -1,29 +1,29 @@
 import PageShell, { CtaBand, Section } from "@/components/PageShell";
+import PageMeta from "@/components/PageMeta";
 import { industries } from "@/data/industries";
-import { usePageMeta } from "@/hooks/usePageMeta";
 
 /**
  * Industries - /industries. Who the system is built for.
  */
 export default function Industries() {
-  usePageMeta(
-    "Industries We Serve | Local Cascade",
-    "Websites, local SEO, review funnels, and AI text back for home services, contractors, medical and dental, legal, beauty, auto, cleaning, fitness, and more.",
-    "/industries"
-  );
-
   return (
+    <>
+    <PageMeta
+      title="Practice Areas for Law Firm Websites | Local Cascade"
+      description="Local Cascade works with attorneys and law firms in the United States across practice areas. The work is the same. The pages are written for the firm's practice."
+      path="/industries"
+    />
     <PageShell
-      label="INDUSTRIES"
-      crumbs={[{ label: "Home", href: "/" }, { label: "Industries" }]}
+      label="PRACTICE AREAS"
+      crumbs={[{ label: "Home", href: "/" }, { label: "Practice areas" }]}
       title={
         <>
-          Built for businesses
+          Law firms across
           <br />
-          that run on the phone.
+          practice areas.
         </>
       }
-      intro="If your customers find you on Google, call before they buy, and check your reviews first, the system fits. We tailor the pages, the wording, and the AI's answers to your industry."
+      intro="Local Cascade works with attorneys and law firms in the United States. The website, the listings, the review requests, and the intake replies are written for the firm's practice. The list below is not a client list, and it is not limited to one area of law."
     >
       <Section label="WHO WE WORK WITH">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-[#E5E5E5] border border-[#E5E5E5]">
@@ -45,15 +45,16 @@ export default function Industries() {
           ))}
         </div>
         <p className="lc-body mt-8 text-base text-[#525252]">
-          Don't see your industry?{" "}
+          Don't see the practice?{" "}
           <a href="/#contact" className="lc-link font-medium text-[#004AAD]">
-            Tell us what you do
+            Tell us what the firm handles
           </a>
-          . If you get customers from local search and phone calls, it works.
+          . If it is a US law firm, we can write the pages for that practice.
         </p>
       </Section>
 
       <CtaBand />
     </PageShell>
+    </>
   );
 }

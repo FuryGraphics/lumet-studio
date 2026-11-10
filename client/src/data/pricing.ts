@@ -1,6 +1,6 @@
 /**
  * The price, in one place. It appears in the hero, the pricing section, the
- * plan page, the ROI calculator, and the JSON-LD offer in index.html; keep
- * index.html in step by hand when it changes.
+ * plan page, the footer, and the booking page. Keep titles and meta
+ * descriptions free of it.
  */
 export const PRICE = 697;

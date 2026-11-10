@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import OfferCards from "@/components/OfferCards";
 import { services as pillars } from "@/data/services";
 
 /**
@@ -41,8 +42,11 @@ export default function System() {
           </div>
           <div className="col-span-12 md:col-span-4 md:pt-2">
             <p className="lc-body text-sm md:text-base text-[#525252]">
-              Get found, get trusted, get hired. Every business we work with
-              gets all four, built together so they feed each other.
+              Four parts of the work for a US law firm: the website, local
+              search, review requests, and client intake. The same plan also
+              includes automated Google Business Profile management and monthly blog
+              posts written for search. They are set up together so the public
+              details match.
             </p>
           </div>
         </div>
@@ -99,6 +103,12 @@ export default function System() {
                   </div>
                 </Link>
               ))}
+            </div>
+            <div className="mt-10 md:mt-14">
+              <p className="font-mono-label text-[#A3A3A3] mb-6">
+                ALSO IN THE PLAN
+              </p>
+              <OfferCards />
             </div>
           </div>
         </div>

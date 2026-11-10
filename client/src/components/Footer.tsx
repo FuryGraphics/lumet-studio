@@ -1,6 +1,7 @@
 import { CONTACT_EMAIL } from "@/data/contact";
 import { plan } from "@/data/plans";
 import { services } from "@/data/services";
+import { SITE_DESCRIPTION } from "@/data/site";
 
 /**
  * Footer - dark, editorial, with brand tagline and structured links.
@@ -18,6 +19,7 @@ const footerLinks = {
   ],
   Studio: [
     { label: "Industries", href: "/industries" },
+    { label: "Blog", href: "/blog" },
     { label: "Privacy", href: "/privacy" },
     { label: "Terms", href: "/terms" },
     { label: "How it works", href: "/#process" },
@@ -56,12 +58,10 @@ export default function Footer() {
               Local Cascade
             </a>
             <p className="lc-body mt-4 md:mt-6 text-sm md:text-base text-[#A3A3A3] max-w-sm">
-              The complete customer-getting system for local businesses.
-              Website, local SEO, Google review funnel, and AI missed-call text
-              widget, live in under 7 days for $697 a month.
+              {SITE_DESCRIPTION} ${plan.price} a month.
             </p>
             <p className="font-mono-label text-[#525252] mt-4 md:mt-6">
-              YOU RUN THE BUSINESS. WE BRING THE CUSTOMERS.
+              FOR ATTORNEYS AND LAW FIRMS IN THE UNITED STATES
             </p>
           </div>
 
@@ -114,7 +114,9 @@ export default function Footer() {
             >
               {CONTACT_EMAIL}
             </a>
-            <p className="font-mono-label text-[#525252]">REMOTE · GLOBAL</p>
+            <p className="font-mono-label text-[#525252]">
+              UNITED STATES
+            </p>
           </div>
         </div>
 

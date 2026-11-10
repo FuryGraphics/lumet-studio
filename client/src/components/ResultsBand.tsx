@@ -1,7 +1,6 @@
 import { Link } from "wouter";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import ResultsSlider from "@/components/ResultsSlider";
-import { PRICE } from "@/data/pricing";
 
 /**
  * ResultsBand - the map-ranking proof on the home page: the animation, the
@@ -59,9 +58,6 @@ export default function ResultsBand() {
                   />
                 </svg>
               </Link>
-              <span className="font-mono-label text-[#737373]">
-                ${PRICE}/MO · MONTH TO MONTH
-              </span>
             </div>
           </div>
           <div className="col-span-12 lg:col-span-5">

@@ -137,9 +137,9 @@ export default function Stats({ index = "03 / THE NUMBERS" }: { index?: string }
               className="lc-display text-white"
               style={{ fontSize: "clamp(1.75rem, 4.5vw, 3.25rem)" }}
             >
-              Speed and reviews
+              Published research
               <br />
-              <span className="text-[#737373]">decide who gets the job.</span>
+              <span className="text-[#737373]">on replies and reviews.</span>
             </h2>
           </div>
         </div>
@@ -154,8 +154,8 @@ export default function Stats({ index = "03 / THE NUMBERS" }: { index?: string }
               ))}
             </div>
             <p className="font-mono-label text-[#525252] mt-6 text-[0.625rem] md:text-xs">
-              INDUSTRY RESEARCH FROM THE SOURCES LINKED ABOVE. NOT LOCAL CASCADE CLIENT
-              RESULTS.
+              PUBLISHED RESEARCH ABOUT CONSUMERS AND BUSINESSES IN GENERAL. NOT
+              LOCAL CASCADE CLIENTS, AND NOT A PREDICTION FOR ANY LAW FIRM.
             </p>
           </div>
         </div>

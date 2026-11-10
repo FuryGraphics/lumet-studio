@@ -1,7 +1,7 @@
 import PageShell from "@/components/PageShell";
 import { CONTACT_EMAIL } from "@/data/contact";
 import { LAST_UPDATED, privacy, terms, type LegalSection } from "@/data/legal";
-import { usePageMeta } from "@/hooks/usePageMeta";
+import PageMeta from "@/components/PageMeta";
 
 /**
  * Legal - the privacy policy at /privacy and the terms at /terms, from the
@@ -23,9 +23,9 @@ function LegalPage({
   intro: string;
   sections: LegalSection[];
 }) {
-  usePageMeta(title, description, path);
-
   return (
+    <>
+    <PageMeta title={title} description={description} path={path} />
     <PageShell
       label={kind}
       crumbs={[{ label: "Home", href: "/" }, { label: kind }]}
@@ -107,6 +107,7 @@ function LegalPage({
         </div>
       </section>
     </PageShell>
+    </>
   );
 }
 
@@ -119,7 +120,7 @@ export function Privacy() {
     <LegalPage
       kind="PRIVACY"
       title="Privacy Policy | Local Cascade"
-      description="What Local Cascade collects, who handles it, how long we keep it, and how to ask for a copy or have it deleted. No analytics, no tracking cookies, no selling data."
+      description="How Local Cascade handles information from law firms and people who contact this site. No analytics and no tracking cookies."
       path="/privacy"
       intro="What we collect, who else handles it, and what you can ask us to do with it. We run no analytics and set no tracking cookies on this site."
       sections={privacy}
@@ -132,7 +133,7 @@ export function Terms() {
     <LegalPage
       kind="TERMS"
       title="Terms of Service | Local Cascade"
-      description="The terms for the Local Cascade plan: what we provide, what we need from you, billing and cancellation, what we do not promise, and who owns what."
+      description="The terms for working with Local Cascade on a law firm website, local search, review requests, and client intake, including cancellation and what we do not promise."
       path="/terms"
       intro="What you get, what we need from you, how billing and cancellation work, and what we do and do not promise. Month to month, cancel any time."
       sections={terms}

@@ -44,7 +44,7 @@ export default function Contact() {
         <div ref={ref} className={`container ${isVisible ? "is-visible" : ""}`}>
           <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
             <div className="col-span-12 md:col-span-2 flex items-center gap-3">
-              <span className="font-mono-label text-[#A3A3A3]">07 / START</span>
+              <span className="font-mono-label text-[#A3A3A3]">05 / START</span>
             </div>
             <div className="hidden md:block col-span-10">
               <span className="block h-px w-full bg-[#E5E5E5]" />
@@ -62,8 +62,8 @@ export default function Contact() {
                 received.
               </h2>
               <p className="lc-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
-                Thanks for reaching out. We'll review what you sent and get back
-                to you within 24 hours with your build plan.
+                Thanks for writing. We will read what you sent and reply within
+                one business day.
               </p>
               <button
                 onClick={() => {
@@ -91,7 +91,7 @@ export default function Contact() {
         {/* Section header - left rail */}
         <div className="grid grid-cols-12 gap-4 mb-8 md:mb-16">
           <div className="col-span-12 md:col-span-2 flex items-center gap-3">
-            <span className="font-mono-label text-[#A3A3A3]">07 / START</span>
+            <span className="font-mono-label text-[#A3A3A3]">05 / START</span>
           </div>
           <div className="hidden md:block col-span-10">
             <span className="block h-px w-full bg-[#E5E5E5]" />
@@ -109,12 +109,11 @@ export default function Contact() {
               <br />
               your
               <br />
-              <span className="text-[#004AAD]">business.</span>
+              <span className="text-[#004AAD]">firm.</span>
             </h2>
             <p className="lc-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
-              What you do, where you do it, and where your customers come from
-              today. We'll come back with your build plan, and the system
-              goes live in under 7 days.
+              Practice areas, the cities you serve, and how people reach you
+              now. We reply within one business day.
             </p>
 
             <div className="mt-8 md:mt-10 space-y-3">
@@ -125,7 +124,7 @@ export default function Contact() {
                 {CONTACT_EMAIL}
               </a>
               <p className="font-mono-label text-[#A3A3A3]">
-                RESPONSE WITHIN 24H · NO CREDIT CARD REQUIRED
+                REPLY WITHIN ONE BUSINESS DAY
               </p>
             </div>
           </div>
@@ -165,7 +164,7 @@ export default function Contact() {
                     value={form.email}
                     onChange={handleChange("email")}
                     className="w-full bg-transparent text-base md:text-lg text-[#0D0D0D] focus:outline-none placeholder:text-[#D4D4D4]"
-                    placeholder="jane@yourbusiness.com"
+                    placeholder="jane@examplelaw.com"
                   />
                   <ValidationError
                     field="email"
@@ -197,7 +196,7 @@ export default function Contact() {
                 </div>
                 <div className="border-b border-[#E5E5E5] p-4 md:p-6">
                   <label className="font-mono-label text-[#737373] block mb-2 md:mb-3">
-                    BUSINESS NAME
+                    FIRM NAME
                   </label>
                   <input
                     type="text"
@@ -205,7 +204,7 @@ export default function Contact() {
                     value={form.business}
                     onChange={handleChange("business")}
                     className="w-full bg-transparent text-base md:text-lg text-[#0D0D0D] focus:outline-none placeholder:text-[#D4D4D4]"
-                    placeholder="Doe Plumbing Co."
+                    placeholder="Example Law, LLC"
                   />
                   <ValidationError
                     field="business"
@@ -218,7 +217,7 @@ export default function Contact() {
               {/* Message */}
               <div className="border-b border-[#E5E5E5] p-4 md:p-6">
                 <label className="font-mono-label text-[#737373] block mb-2 md:mb-3">
-                  WHAT YOU DO AND WHERE
+                  PRACTICE AND CITY
                 </label>
                 <textarea
                   required
@@ -227,7 +226,7 @@ export default function Contact() {
                   value={form.message}
                   onChange={handleChange("message")}
                   className="w-full bg-transparent text-base md:text-lg text-[#0D0D0D] focus:outline-none placeholder:text-[#D4D4D4] resize-none"
-                  placeholder="Residential plumbing and water heaters, Dallas. Most jobs come from referrals right now..."
+                  placeholder="Family law firm in Columbus, Ohio."
                 />
                 <ValidationError
                   field="message"
@@ -243,7 +242,7 @@ export default function Contact() {
                   disabled={state.submitting}
                   className="lc-cta inline-flex items-center gap-2 px-6 md:px-8 py-3.5 md:py-4 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto justify-center sm:justify-start"
                 >
-                  {state.submitting ? "Sending..." : "Get started today"}
+                  {state.submitting ? "Sending..." : "Send the message"}
                   {!state.submitting && (
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                       <path

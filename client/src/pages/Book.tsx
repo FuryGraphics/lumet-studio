@@ -1,8 +1,9 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { CONTACT_EMAIL, FORMSPREE_ID } from "@/data/contact";
 import { plan } from "@/data/plans";
-import { usePageMeta } from "@/hooks/usePageMeta";
+import { SITE_DESCRIPTION } from "@/data/site";
+import PageMeta from "@/components/PageMeta";
 
 /**
  * Book - /book, a standalone page for booking a call.
@@ -28,50 +29,35 @@ const TIMES = [
 
 const UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
 
-/** Keep search engines off this page while it is on screen, then put back
- *  whatever the rest of the site uses. */
-function useNoIndex() {
-  useEffect(() => {
-    let tag = document.querySelector<HTMLMetaElement>('meta[name="robots"]');
-    const created = !tag;
-    const previous = tag?.getAttribute("content") ?? null;
-    if (!tag) {
-      tag = document.createElement("meta");
-      tag.name = "robots";
-      document.head.appendChild(tag);
-    }
-    tag.content = "noindex, nofollow";
-    return () => {
-      if (created) tag?.remove();
-      else if (previous !== null) tag?.setAttribute("content", previous);
-    };
-  }, []);
-}
-
 const input =
   "w-full bg-transparent text-base md:text-lg text-[#0D0D0D] focus:outline-none placeholder:text-[#D4D4D4]";
 const label = "font-mono-label text-[#737373] block mb-2 md:mb-3";
 const cell = "border-b border-[#E5E5E5] p-4 md:p-6";
 
 export default function Book() {
-  usePageMeta(
-    "Book a call | Local Cascade",
-    "Book a free call with Local Cascade about getting more customers from Google.",
-    "/book"
-  );
-  useNoIndex();
-
   const [state, handleSubmit] = useForm(FORMSPREE_ID);
   const [name, setName] = useState("");
 
-  // Captured once from the link the visitor arrived on
+  // Captured once from the link the visitor arrived on. Empty during prerender.
   const utm = useMemo(() => {
+    if (typeof window === "undefined") return [];
     const q = new URLSearchParams(window.location.search);
     return UTM_KEYS.map(k => [k, q.get(k)] as const).filter(([, v]) => v);
   }, []);
 
+  const meta = (
+    <PageMeta
+      title="Book a Call With Local Cascade"
+      description="Book a call with Local Cascade about a website, local search, review requests, or client intake for your law firm."
+      path="/book"
+      robots="noindex, nofollow"
+    />
+  );
+
   if (state.succeeded) {
     return (
+      <>
+      {meta}
       <Shell>
         <div className="max-w-2xl">
           <span className="font-mono-label text-[#004AAD] block mb-4">
@@ -100,34 +86,36 @@ export default function Book() {
           </p>
         </div>
       </Shell>
+      </>
     );
   }
 
   return (
+    <>
+    {meta}
     <Shell>
       <div className="grid grid-cols-12 gap-8 lg:gap-14">
         {/* Pitch */}
         <div className="col-span-12 lg:col-span-5">
           <span className="font-mono-label text-[#004AAD] block mb-4">
-            FREE 15-MINUTE CALL
+            BOOK A CALL
           </span>
           <h1
             className="lc-display text-[#0D0D0D]"
             style={{ fontSize: "clamp(2.25rem, 5.5vw, 4rem)" }}
           >
-            Let's get you more customers from Google.
+            Talk through the firm website.
           </h1>
           <p className="lc-body mt-6 text-base md:text-lg text-[#525252]">
-            Tell us about your business and pick a time. On the call we'll look
-            at where you show up today, what's costing you calls, and what we'd
-            change. No pressure and no obligation.
+            {SITE_DESCRIPTION} Tell us the practice and the cities you serve.
+            Nothing is set up until you agree.
           </p>
 
           <ul className="mt-8 border-t border-[#E5E5E5]">
             {[
-              ["WHAT WE'LL COVER", "Your Google visibility, reviews, and missed calls"],
+              ["WHAT WE'LL COVER", "The website, the Google listing, review requests, intake, and monthly blog posts"],
               ["HOW LONG", "About 15 minutes, by phone"],
-              ["WHAT IT COSTS", "Nothing. The system is $697/mo if you go ahead"],
+              ["WHAT IT COSTS", "Nothing. The plan is $697/mo if you go ahead"],
             ].map(([k, v]) => (
               <li key={k} className="py-4 border-b border-[#E5E5E5]">
                 <span className="font-mono-label text-[#004AAD] block mb-1">
@@ -201,20 +189,20 @@ export default function Book() {
                   required
                   autoComplete="email"
                   className={input}
-                  placeholder="jane@yourbusiness.com"
+                  placeholder="jane@examplelaw.com"
                 />
                 <ValidationError field="email" errors={state.errors} className="mt-2 text-sm text-red-600" />
               </div>
               <div className={cell}>
                 <label htmlFor="b-business" className={label}>
-                  BUSINESS NAME
+                  FIRM NAME
                 </label>
                 <input
                   id="b-business"
                   name="business"
                   autoComplete="organization"
                   className={input}
-                  placeholder="Doe Plumbing Co."
+                  placeholder="Example Law, LLC"
                 />
               </div>
             </div>
@@ -222,9 +210,9 @@ export default function Book() {
             <div className="grid grid-cols-1 sm:grid-cols-2">
               <div className={`${cell} sm:border-r`}>
                 <label htmlFor="b-time" className={label}>
-                  BEST TIME TO CALL
+                  TIME TO CALL
                 </label>
-                <select id="b-time" name="best_time" className={`${input} cursor-pointer`} defaultValue={TIMES[0]}>
+                <select id="b-time" name="call_time" className={`${input} cursor-pointer`} defaultValue={TIMES[0]}>
                   {TIMES.map(t => (
                     <option key={t}>{t}</option>
                   ))}
@@ -245,7 +233,7 @@ export default function Book() {
 
             <div className={cell}>
               <label htmlFor="b-message" className={label}>
-                WHAT YOU DO AND WHERE *
+                PRACTICE AND CITY *
               </label>
               <textarea
                 id="b-message"
@@ -253,7 +241,7 @@ export default function Book() {
                 required
                 rows={3}
                 className={`${input} resize-none`}
-                placeholder="Residential plumbing, Dallas. Most jobs come from referrals right now..."
+                placeholder="Family law firm in Columbus, Ohio."
               />
               <ValidationError field="message" errors={state.errors} className="mt-2 text-sm text-red-600" />
             </div>
@@ -264,7 +252,7 @@ export default function Book() {
                 disabled={state.submitting}
                 className="lc-cta inline-flex items-center justify-center gap-2 w-full sm:w-auto px-8 py-4 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {state.submitting ? "Booking..." : "Book my free call"}
+                {state.submitting ? "Booking..." : "Request the call"}
               </button>
               <ValidationError errors={state.errors} className="mt-4 block text-sm text-red-600" />
               {state.errors && (
@@ -284,6 +272,7 @@ export default function Book() {
         </div>
       </div>
     </Shell>
+    </>
   );
 }
 
