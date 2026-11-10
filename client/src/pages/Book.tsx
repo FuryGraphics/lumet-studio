@@ -113,7 +113,7 @@ export default function Book() {
 
           <ul className="mt-8 border-t border-[#E5E5E5]">
             {[
-              ["WHAT WE'LL COVER", "The website, the listings, review requests, intake, and monthly blog posts"],
+              ["WHAT WE'LL COVER", "The website, the Google listing, review requests, intake, and monthly blog posts"],
               ["HOW LONG", "About 15 minutes, by phone"],
               ["WHAT IT COSTS", "Nothing. The plan is $697/mo if you go ahead"],
             ].map(([k, v]) => (

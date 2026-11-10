@@ -1,5 +1,6 @@
 import { Link, useParams } from "wouter";
 import PageShell, { Faq, Section } from "@/components/PageShell";
+import OfferCards from "@/components/OfferCards";
 import PageMeta from "@/components/PageMeta";
 import BookingWidget from "@/components/BookingWidget";
 import NotFound from "@/pages/NotFound";
@@ -80,6 +81,10 @@ function PlanContent({ slug }: { slug: string }) {
           </div>
         </div>
       </section>
+
+      <Section label="ALSO IN THE PLAN">
+        <OfferCards />
+      </Section>
 
       {/* Who it's for */}
       <Section label="WHO IT'S FOR">

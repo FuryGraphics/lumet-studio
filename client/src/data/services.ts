@@ -29,7 +29,7 @@ export const services: Service[] = [
     summary:
       "A website for your firm, written around the practice areas and the cities you serve. It is meant to be read on a phone, and each page tells a person how to call, write, or send a message.",
     image: "/images/system-website.webp",
-    alt: "A laptop on a desk showing a simple law firm website",
+    alt: "A laptop on a wooden desk showing a website with a columned courthouse, beside a mug and a pen",
     points: ["Practice pages", "Phone-friendly", "Contact on every page"],
     metaTitle: "Law Firm Websites | Local Cascade",
     metaDescription:
@@ -107,7 +107,7 @@ export const services: Service[] = [
     summary:
       "We look after the firm's listing on Google and the same details on other listing sites: name, address, phone, hours, and practice areas. The work is ongoing, because listings go stale when nobody updates them.",
     image: "/images/service-local-seo.webp",
-    alt: "A person on a sidewalk looking at a map search on a phone",
+    alt: "A person in a suit holding a phone with a map pin, standing in front of a columned stone building",
     points: ["Google listing", "Other listing sites", "Monthly updates"],
     metaTitle: "Local Search for Law Firms | Local Cascade",
     metaDescription:
@@ -189,7 +189,7 @@ export const services: Service[] = [
     summary:
       "After a matter closes, the firm can send a short request by text or email. The message links straight to the firm's Google review page. We do not pay for reviews or offer anything in return.",
     image: "/images/system-reviews.webp",
-    alt: "A person holding a phone that shows a review page",
+    alt: "A hand holding a phone that shows five gold stars, with law books and a scale in the background",
     points: ["After the matter", "Link to Google", "No payment for reviews"],
     metaTitle: "Review Requests for Law Firms | Local Cascade",
     metaDescription:
@@ -267,7 +267,7 @@ export const services: Service[] = [
     summary:
       "When a call is missed, or someone writes through the website, an automated reply asks for a name, a number, and a short note about the matter. It does not give legal advice. The conversation is passed to the firm.",
     image: "/images/system-textback.webp",
-    alt: "A phone on a desk showing a text message",
+    alt: "A phone on a law office desk showing a text conversation, with a scale and law books behind it",
     points: ["Missed-call reply", "Website messages", "Passed to the firm"],
     metaTitle: "Client Intake for Law Firms | Local Cascade",
     metaDescription:

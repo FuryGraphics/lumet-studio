@@ -95,7 +95,7 @@ export default function Hero() {
         <div className="mt-10 md:mt-16 relative aspect-[4/3] sm:aspect-[21/9] overflow-hidden border border-[#E5E5E5] bg-[#F5F5F5]">
           <img
             src="/images/hero.webp"
-            alt="A desk with a laptop showing a law firm website and a phone showing a map listing"
+            alt="A desk with a laptop showing a courthouse website, a phone with a map, and a phone with five stars"
             className="w-full h-full object-cover"
             fetchPriority="high"
           />

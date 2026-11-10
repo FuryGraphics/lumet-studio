@@ -137,8 +137,9 @@ export function CtaBand() {
         <span className="text-[#004AAD]">${PRICE}</span> a month.
       </h2>
       <p className="lc-body mt-6 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
-        The firm website, local search, review requests, client intake, and
-        monthly blog posts for attorneys and law firms in the United States.
+        The firm website, local search, Google Business Profile management,
+        review requests, client intake, and monthly blog posts for attorneys
+        and law firms in the United States.
         No setup fee. Month to month.
       </p>
       <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">

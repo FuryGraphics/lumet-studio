@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import OfferCards from "@/components/OfferCards";
 import { plan } from "@/data/plans";
 
 /**
@@ -12,13 +13,13 @@ import { plan } from "@/data/plans";
  *  blurb, link) comes from data/plans. */
 const features = [
   "Law firm website, with a page for each practice area",
-  "Google listing kept in line with the practice",
+  "Google Business Profile management: name, hours, photos, and posts",
   "Name, address, and phone checked on other listing sites",
   "Review requests after a matter, with nothing offered in return",
   "A first reply when a call is missed or someone writes in",
   "The reply does not give legal advice",
   "You approve the public words before they go live",
-  "Monthly blog posts written for your firm to help your site show up in search",
+  "Monthly blog posts written for search, approved before they go up",
   "Month to month, with edits included",
 ];
 
@@ -82,9 +83,9 @@ export default function Pricing() {
               <span className="text-[#004AAD]">whole firm site.</span>
             </h2>
             <p className="lc-body mt-6 md:mt-8 text-base md:text-lg text-[#525252] max-w-md">
-              The website, local search, review requests, client intake, and
-              monthly blog posts for a US law firm. ${plan.price} a month.
-              No setup fee.
+              The website, local search, Google Business Profile management,
+              review requests, client intake, and monthly blog posts for a US
+              law firm. ${plan.price} a month. No setup fee.
             </p>
           </div>
           <div className="col-span-12 md:col-span-10 lg:col-span-4 lg:col-start-8">
@@ -100,6 +101,13 @@ export default function Pricing() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-12 gap-4 mb-10 md:mb-16">
+          <div className="col-span-12 md:col-span-2" />
+          <div className="col-span-12 md:col-span-10">
+            <OfferCards />
           </div>
         </div>
 

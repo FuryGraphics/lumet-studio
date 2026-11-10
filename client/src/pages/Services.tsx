@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import PageShell, { CtaBand, Section } from "@/components/PageShell";
+import OfferCards from "@/components/OfferCards";
 import { services } from "@/data/services";
 import PageMeta from "@/components/PageMeta";
 
@@ -11,7 +12,7 @@ export default function Services() {
     <>
     <PageMeta
       title="Law Firm Website, Search, Intake, and Review Services | Local Cascade"
-      description="What Local Cascade does for attorneys and law firms in the United States: a firm website, local search, review requests, client intake, and monthly blog posts."
+      description="What Local Cascade does for attorneys and law firms in the United States: a firm website, local search, Google Business Profile management, review requests, client intake, and monthly blog posts."
       path="/services"
     />
     <PageShell
@@ -24,7 +25,7 @@ export default function Services() {
           law firms.
         </>
       }
-      intro="Local Cascade does four kinds of work for attorneys and law firms in the United States: the firm website, local search, review requests, and client intake. The plan also includes monthly blog posts written for your firm to help your site show up in search. This page says what each part is."
+      intro="Local Cascade does four kinds of work for attorneys and law firms in the United States: the firm website, local search, review requests, and client intake. The same plan also includes Google Business Profile management and monthly blog posts written for search. This page says what each part is."
     >
       <Section label="WHAT YOU GET">
         <div className="border-t border-[#E5E5E5]">
@@ -64,6 +65,10 @@ export default function Services() {
             </Link>
           ))}
         </div>
+      </Section>
+
+      <Section label="ALSO IN THE PLAN">
+        <OfferCards />
       </Section>
 
       <CtaBand />

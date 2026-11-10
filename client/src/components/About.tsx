@@ -70,7 +70,7 @@ export default function About() {
             <div className="aspect-[3/2] md:aspect-[21/9] overflow-hidden border border-[#E5E5E5] bg-[#F5F5F5]">
               <img
                 src="/images/about-team.webp"
-                alt="People sitting around a table in a meeting"
+                alt="A law office conference table with law books, a tablet, papers, and a mug"
                 className="w-full h-full object-cover object-[center_35%]"
                 loading="lazy"
               />

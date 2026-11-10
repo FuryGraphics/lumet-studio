@@ -20,20 +20,22 @@ const projects = [
   {
     photoSlot: "work-contractors",
     image: "/images/work-contractors.webp",
-    category: "HOME SERVICES",
-    title: "Website & Marketing System For Contractors",
-    meta: "WEBSITE · REVIEW FUNNEL · MISSED CALL TEXT BACK · SMS CAMPAIGNS",
-    desc: "The same three-part system built for home service contractors: conversion-focused website, automated review funnel, missed call text back, and one-click SMS campaigns.",
-    link: "https://www.estimate-engine.com/",
+    alt: "A laptop in a law office showing a website with a columned building, next to a leather chair and law books",
+    category: "LAW FIRMS",
+    title: "A law firm website",
+    meta: "WEBSITE · GOOGLE LISTING · REVIEW REQUESTS",
+    desc: "The kind of site we build for a law firm: a clear page, a way to get in touch, and the public details kept together. This is not a client story.",
+    link: "/services/website",
   },
   {
     photoSlot: "work-roofing",
     image: "/images/work-roofing.webp",
-    category: "ROOFING",
-    title: "Forever Homes Roof Restoration",
-    meta: "WEBSITE · GOOGLE REVIEW FUNNEL · LOCAL SEO · INSPECTION BOOKING",
-    desc: "Complete digital setup for a Tampa Bay roofing restoration company. Website build, Google review funnel, free inspection booking automation, and a local SEO foundation.",
-    link: "https://www.foreverhomesroofrestoration.com/",
+    alt: "The stone entrance of a small office building with columns, a walkway, and trimmed hedges",
+    category: "LAW FIRMS",
+    title: "A firm office",
+    meta: "WEBSITE · LOCAL SEARCH · CLIENT INTAKE",
+    desc: "An office front of the kind a law firm might use on its site. We do not publish client names or case results here.",
+    link: "/services",
   },
 ];
 
@@ -95,8 +97,6 @@ export default function Work() {
                     {/* Image - cropped, editorial */}
                     <a
                       href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="block"
                       tabIndex={-1}
                       aria-hidden="true"
@@ -104,9 +104,7 @@ export default function Work() {
                       <div className="relative aspect-[4/3] overflow-hidden bg-[#F5F5F5] border border-[#E5E5E5]">
                         <img
                           src={photo ? photo.urls.regular : project.image}
-                          alt={
-                            photo ? photo.alt || project.title : project.title
-                          }
+                          alt={project.alt}
                           style={
                             photo ? { backgroundColor: photo.color } : undefined
                           }
@@ -120,7 +118,7 @@ export default function Work() {
                         {/* Visit link overlay on hover */}
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                           <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-mono-label text-white text-xs md:text-sm bg-[#004AAD] px-4 py-2">
-                            VIEW LIVE SITE →
+                            SEE THE SERVICES →
                           </span>
                         </div>
                       </div>
