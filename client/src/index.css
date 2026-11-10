@@ -399,3 +399,86 @@ html {
     transition: none;
   }
 }
+
+/* Blog notes. The title lives in the page header, so the body starts at h2. */
+.lc-prose {
+  max-width: 42rem;
+}
+
+.lc-prose > * + * {
+  margin-top: 1.25rem;
+}
+
+.lc-prose h2,
+.lc-prose h3 {
+  color: #0d0d0d;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.lc-prose h2 {
+  margin-top: 2.75rem;
+  font-size: clamp(1.5rem, 2vw, 1.875rem);
+}
+
+.lc-prose h3 {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+}
+
+.lc-prose p,
+.lc-prose li {
+  color: #525252;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.lc-prose a {
+  color: #004aad;
+  text-underline-offset: 3px;
+}
+
+.lc-prose ul,
+.lc-prose ol {
+  padding-left: 1.25rem;
+}
+
+.lc-prose ul {
+  list-style: disc;
+}
+
+.lc-prose ol {
+  list-style: decimal;
+}
+
+.lc-prose li + li {
+  margin-top: 0.5rem;
+}
+
+.lc-prose blockquote {
+  border-left: 1px solid #e5e5e5;
+  padding-left: 1.25rem;
+  color: #404040;
+}
+
+.lc-prose img {
+  width: 100%;
+  border: 1px solid #e5e5e5;
+}
+
+.lc-prose code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+.lc-prose pre {
+  overflow-x: auto;
+  background: #0d0d0d;
+  color: #fafaf9;
+  padding: 1rem 1.25rem;
+}
+
+.lc-prose pre code {
+  color: inherit;
+}

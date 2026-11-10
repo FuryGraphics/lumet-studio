@@ -16,5 +16,6 @@ Contact: akash@localcascade.com
 - [Client intake](https://www.localcascade.com/services/ai-text-back): A first reply when a call is missed or someone writes through the site.
 - [The plan](https://www.localcascade.com/plans/complete-system): The website, local search, automated Google Business Profile management, review requests, client intake, and monthly blog posts.
 - [Practice areas](https://www.localcascade.com/industries): Practice areas the pages can be written for.
+- [Notes](https://www.localcascade.com/blog): Notes for law firms about firm websites.
 - [Privacy](https://www.localcascade.com/privacy): Privacy policy.
 - [Terms](https://www.localcascade.com/terms): Terms of service.

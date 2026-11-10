@@ -10,6 +10,7 @@ import { services } from "@/data/services";
 const navLinks = [
   { label: "Services", href: "/services", menu: true },
   { label: "Industries", href: "/industries" },
+  { label: "Blog", href: "/blog" },
   { label: "How it works", href: "/#process" },
   { label: "The plan", href: "/plans/complete-system" },
   { label: "Contact", href: "/#contact" },
@@ -208,14 +209,14 @@ export default function Header() {
               link.menu ? (
                 <ServicesMenu key={link.href} />
               ) : (
-              <li key={link.href}>
-                <NavLink
-                  href={link.href}
-                  className="lc-link text-sm font-medium text-[#404040] hover:text-[#0D0D0D] transition-colors"
-                >
-                  {link.label}
-                </NavLink>
-              </li>
+                <li key={link.href}>
+                  <NavLink
+                    href={link.href}
+                    className="lc-link text-sm font-medium text-[#404040] hover:text-[#0D0D0D] transition-colors"
+                  >
+                    {link.label}
+                  </NavLink>
+                </li>
               )
             )}
           </ul>
