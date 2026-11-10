@@ -1,4 +1,5 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import HeroForm from "@/components/HeroForm";
 import { PRICE } from "@/data/pricing";
 import { SITE_DESCRIPTION } from "@/data/site";
 
@@ -44,50 +45,44 @@ export default function Hero() {
           <span className="h-px w-8 md:w-12 bg-[#E5E5E5]" />
         </div>
 
-        {/* Headline - fluid sizing with clamp for smooth scaling */}
-        <h1
-          className="lc-display text-[#0D0D0D] max-w-6xl"
-          style={{ fontSize: "clamp(2rem, 6.2vw, 5.25rem)" }}
-        >
-          Websites for
-          <br />
-          US law firms
-          <br />
-          for{" "}
-          <span className="text-[#004AAD] whitespace-nowrap">${PRICE}/mo</span>
-        </h1>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          <div className="lg:col-span-7">
+            <h1
+              className="lc-display text-[#0D0D0D]"
+              style={{ fontSize: "clamp(2rem, 4.6vw, 4.5rem)" }}
+            >
+              Websites for
+              <br />
+              US law firms
+              <br />
+              for{" "}
+              <span className="text-[#004AAD] whitespace-nowrap">
+                ${PRICE}/mo
+              </span>
+            </h1>
 
-        <p className="lc-body mt-6 md:mt-10 text-base md:text-xl text-[#525252] max-w-2xl">
-          {SITE_DESCRIPTION} It is for firms across practice areas. It is not a
-          law firm, and it does not give legal advice.
-        </p>
+            <p className="lc-body mt-6 md:mt-8 text-base md:text-xl text-[#525252] max-w-xl">
+              {SITE_DESCRIPTION} It is for firms across practice areas. It is
+              not a law firm, and it does not give legal advice.
+            </p>
 
-        {/* CTA */}
-        <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <a
-            href="#contact"
-            className="lc-cta inline-flex items-center gap-2 px-6 md:px-7 py-3 md:py-3.5 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm w-full sm:w-auto justify-center sm:justify-start"
-          >
-            Talk with us
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path
-                d="M3 8H13M13 8L8 3M13 8L8 13"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="square"
-              />
-            </svg>
-          </a>
-          <a
-            href="#system"
-            className="lc-link text-base font-medium text-[#404040] hover:text-[#0D0D0D] transition-colors"
-          >
-            See what's included
-          </a>
+            <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <a
+                href="#system"
+                className="lc-link text-base font-medium text-[#404040] hover:text-[#0D0D0D] transition-colors"
+              >
+                See what's included
+              </a>
+            </div>
+          </div>
+
+          <div className="lg:col-span-5">
+            <HeroForm />
+          </div>
         </div>
 
         {/* Mono tags - wrap nicely on mobile */}
-        <div className="mt-12 md:mt-20 flex flex-wrap items-center gap-x-4 gap-y-2 md:gap-x-6 md:gap-y-3">
+        <div className="mt-12 md:mt-16 flex flex-wrap items-center gap-x-4 gap-y-2 md:gap-x-6 md:gap-y-3">
           {tags.map((tag, i) => (
             <div key={tag} className="flex items-center gap-4 md:gap-6">
               {i > 0 && <span className="text-[#D4D4D4] text-xs">·</span>}
