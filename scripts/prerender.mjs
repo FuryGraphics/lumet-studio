@@ -63,9 +63,7 @@ try {
       throw new Error(`Missing or repeated title for ${path}: ${title}`);
     }
     titles.set(title, path);
-    const described = head.match(
-      /<meta\b[^>]*name="description"[^>]*>/i
-    )?.[0];
+    const described = head.match(/<meta\b[^>]*name="description"[^>]*>/i)?.[0];
     const descriptionText = described?.match(/content="([^"]*)"/)?.[1] ?? "";
     if (!descriptionText) throw new Error(`No description for ${path}`);
     if (descriptions.has(descriptionText)) {
@@ -78,7 +76,8 @@ try {
       path === "/"
         ? "https://www.localcascade.com/"
         : `https://www.localcascade.com${path}`;
-    const canonicalTag = head.match(/<link\b[^>]*rel="canonical"[^>]*>/i)?.[0] ?? "";
+    const canonicalTag =
+      head.match(/<link\b[^>]*rel="canonical"[^>]*>/i)?.[0] ?? "";
     if (!canonicalTag.includes(`href="${canonical}"`)) {
       throw new Error(`Canonical for ${path} is not ${canonical}`);
     }
@@ -88,6 +87,38 @@ try {
     }
     if (!body.includes("<h1")) throw new Error(`No h1 in ${path}`);
     const visible = `${head}\n${body}`;
+    if (path === "/services/local-seo-pack") {
+      if (title.length > 60) {
+        throw new Error(`Title for ${path} is ${title.length} characters`);
+      }
+      if (descriptionText.length > 155) {
+        throw new Error(
+          `Description for ${path} is ${descriptionText.length} characters`
+        );
+      }
+      if (/local SEO/i.test(visible)) {
+        throw new Error(`"local SEO" is on ${path}`);
+      }
+      if (/[—–]/.test(visible)) {
+        throw new Error(`A dash that is not a hyphen is on ${path}`);
+      }
+      if (/\$|\bUSD\b|\bdollars?\b/i.test(visible)) {
+        throw new Error(`A price is on ${path}`);
+      }
+      if (
+        !/law firm website/i.test(visible) ||
+        !/attorney website/i.test(visible)
+      ) {
+        throw new Error(
+          `${path} is missing "law firm website" or "attorney website"`
+        );
+      }
+      const banned =
+        /\b(best|experts?|specialists?|speciali[sz]ed?|speciali[sz]e|specialization|guarantees?|guaranteed|guaranteeing|testimonials?)\b|our clients/i;
+      if (banned.test(visible)) {
+        throw new Error(`Banned advertising language is on ${path}`);
+      }
+    }
     const amounts = visible.match(/\$\s*(\d+)/g) ?? [];
     for (const amount of amounts) {
       if (!amount.includes("697")) {

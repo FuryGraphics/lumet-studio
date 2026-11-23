@@ -11,7 +11,7 @@ Contact: akash@localcascade.com
 - [Home](https://www.localcascade.com/): Law firm websites, local search, automated Google Business Profile management, client intake, review requests, and monthly blog posts.
 - [Services](https://www.localcascade.com/services): The four parts of the work, plus automated Google Business Profile management and monthly blog posts.
 - [Law firm websites](https://www.localcascade.com/services/website): Websites for US attorneys and law firms.
-- [Local search for law firms](https://www.localcascade.com/services/local-seo-pack): Listings and local search for US law firms.
+- [A law firm website for US attorneys](https://www.localcascade.com/services/local-seo-pack): A law firm website and an attorney website for US law firms, with Google listing upkeep.
 - [Review requests](https://www.localcascade.com/services/review-funnel): Review requests for US law firms.
 - [Client intake](https://www.localcascade.com/services/ai-text-back): A first reply when a call is missed or someone writes through the site.
 - [The plan](https://www.localcascade.com/plans/complete-system): The website, local search, automated Google Business Profile management, review requests, client intake, and monthly blog posts.

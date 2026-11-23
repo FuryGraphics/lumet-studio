@@ -138,7 +138,7 @@ function ServiceContent({ slug }: { slug: string }) {
         </div>
       </Section>
 
-      <CtaBand />
+      <CtaBand omitPrice={service.slug === "local-seo-pack"} />
     </PageShell>
     </>
   );

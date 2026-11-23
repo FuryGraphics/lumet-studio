@@ -1,3 +1,4 @@
+import { useLocation } from "wouter";
 import { CONTACT_EMAIL } from "@/data/contact";
 import { plan } from "@/data/plans";
 import { services } from "@/data/services";
@@ -29,6 +30,9 @@ const footerLinks = {
 };
 
 export default function Footer() {
+  const [location] = useLocation();
+  const omitPrice = location === "/services/local-seo-pack";
+
   return (
     <footer className="relative bg-[#0D0D0D] text-white pt-12 md:pt-24 pb-8 overflow-hidden">
       {/* Spotlight gradient */}
@@ -58,7 +62,8 @@ export default function Footer() {
               Local Cascade
             </a>
             <p className="lc-body mt-4 md:mt-6 text-sm md:text-base text-[#A3A3A3] max-w-sm">
-              {SITE_DESCRIPTION} ${plan.price} a month.
+              {SITE_DESCRIPTION}
+              {omitPrice ? "" : ` $${plan.price} a month.`}
             </p>
             <p className="font-mono-label text-[#525252] mt-4 md:mt-6">
               FOR ATTORNEYS AND LAW FIRMS IN THE UNITED STATES
