@@ -4,8 +4,7 @@ import ResultsSlider from "@/components/ResultsSlider";
 
 /**
  * ResultsBand - the map-ranking proof on the home page: the animation, the
- * before/after slider, and a link through to the Local SEO Pack page where
- * the calculator and the detail live.
+ * before/after slider, and a link through to the law firm website page.
  */
 export default function ResultsBand() {
   const { ref, isVisible } = useScrollReveal<HTMLDivElement>();
@@ -40,15 +39,15 @@ export default function ResultsBand() {
             <p className="lc-body mt-6 text-base md:text-lg text-[#525252] max-w-xl">
               A ranking scan searches your keyword from points across your
               service area and records where your business lands. Green is the
-              top of the map, red is out of sight. The Local SEO Pack is the
-              ongoing work that turns those squares green.
+              top of the map, red is out of sight. A law firm website is what we
+              build for the firm. Google listing upkeep is part of that work.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <Link
                 href="/services/local-seo-pack"
                 className="lc-cta inline-flex items-center gap-2 px-6 py-3.5 text-base font-semibold text-white bg-[#004AAD] hover:bg-[#003A87] rounded-sm"
               >
-                See the Local SEO Pack
+                See the law firm website
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path
                     d="M3 8H13M13 8L8 3M13 8L8 13"

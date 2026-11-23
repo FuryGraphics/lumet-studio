@@ -102,82 +102,86 @@ export const services: Service[] = [
   {
     slug: "local-seo-pack",
     num: "02",
-    title: "Local search for law firms",
-    tagline: "The firm's Google listing and other listings, kept accurate",
+    title: "A law firm website for US attorneys",
+    tagline: "An attorney website, with the Google listing kept up to date",
     summary:
-      "We look after the firm's listing on Google and the same details on other listing sites: name, address, phone, hours, and practice areas. The work is ongoing, because listings go stale when nobody updates them.",
+      "Local Cascade builds a law firm website for attorneys and law firms in the United States. The attorney website explains the practice and how to get in touch, and the Google listing is kept up to date.",
     image: "/images/service-local-seo.webp",
     alt: "A person in a suit holding a phone with a map pin, standing in front of a columned stone building",
-    points: ["Google listing", "Other listing sites", "Monthly updates"],
-    metaTitle: "Local Search for Law Firms | Local Cascade",
+    points: ["Law firm website", "Attorney website", "Google listing"],
+    metaTitle: "Law Firm Website for US Attorneys | Local Cascade",
     metaDescription:
-      "Local Cascade looks after Google listings and other listings for attorneys and law firms in the United States, so the firm's name, address, and practice details stay accurate.",
+      "Local Cascade builds a law firm website and an attorney website for US law firms, and keeps the Google listing up to date.",
     intro:
-      "This is local search work from Local Cascade for attorneys and law firms in the United States. We keep the firm's name, address, and practice details accurate on Google and on other listing sites.",
+      "Local Cascade builds a law firm website for attorneys and law firms in the United States. The attorney website explains the practice and how to get in touch. Google listing upkeep is part of what the firm gets.",
     problem: {
-      heading: "A listing that was set up once slowly becomes wrong.",
-      body: "Hours change, a lawyer joins or leaves, and a practice area is added. If those details differ from site to site, people call the wrong number or arrive at an old address.",
+      heading: "People cannot call a firm they cannot find or read.",
+      body: "Many firm sites are hard to read on a phone, mix every practice onto one page, or leave out a way to call. A Google listing with an old number or old hours causes the same problem. The law firm website and the listing should say the same thing.",
     },
     features: [
       {
-        title: "The Google listing",
-        body: "Categories, services, description, hours, and photos, checked against what the firm actually offers.",
+        title: "A law firm website",
+        body: "Pages describe the work the firm does and the cities it serves. The firm reviews the words before they go live.",
       },
       {
-        title: "The same details elsewhere",
-        body: "Name, address, and phone are sent to other listing sites and refreshed so they do not drift apart.",
+        title: "An attorney website people can read",
+        body: "The attorney website is built for a phone. Call, write, or send a message from any page.",
       },
       {
-        title: "What people search for",
-        body: "We look at the words people use when they look for a lawyer in your city, and we use those words in the listing where they fit the practice.",
+        title: "A page for each practice area",
+        body: "Family law, criminal defense, estate planning, and the rest can each have a page, so a reader can find the one that fits.",
       },
       {
-        title: "Posts on the listing",
-        body: "A simple monthly note on the Google listing, written for the firm and approved in the same way as the website.",
+        title: "Google listing upkeep",
+        body: "Name, address, phone, hours, and practice details on the firm's Google listing are checked and updated when they change.",
       },
       {
-        title: "A monthly note on what changed",
-        body: "You get a short report of what was updated. It is a record of the work, not a promise about where the listing will appear.",
+        title: "The same details on other sites",
+        body: "Name, address, and phone are refreshed on other listing sites so they do not drift apart from the law firm website.",
       },
       {
-        title: "No position promised",
-        body: "Search engines decide what to show. We do not promise a place in the results, a number of calls, or a number of clients.",
+        title: "No place in search promised",
+        body: "We do not promise where the site or the listing will appear, or a number of calls, or a number of clients. You approve the public words.",
       },
     ],
     steps: [
       {
-        title: "A short set of questions",
-        body: "Practice areas, office address, phone, and hours. That is the part that needs you.",
+        title: "Tell us about the firm",
+        body: "Practice areas, cities, office address, phone, hours, and how you want people to get in touch.",
       },
       {
-        title: "We correct the listings",
-        body: "The Google listing is updated first, then the same details go out to the other sites.",
+        title: "We write a draft and update the listing",
+        body: "You get a draft of the law firm website. We change it from your notes. The Google listing is updated from the same details.",
       },
       {
-        title: "We keep them current",
-        body: "Each month we refresh the details and send you a note on what changed.",
+        title: "You approve it, then it goes live",
+        body: "We aim to have the first version of the attorney website ready within seven days of your information and your approval. It goes on your domain only after you say so. Listing updates continue while the plan is active.",
       },
     ],
     faqs: [
       {
-        q: "Why is this monthly if the listing can be filled in once?",
-        a: "Because the details change, and sites rewrite how they want a listing formatted. A listing that nobody touches tends to go out of date.",
+        q: "Who is the law firm website for?",
+        a: "Attorneys and law firms in the United States. Local Cascade builds the site. We do not give legal advice, and a message to us does not create an attorney-client relationship.",
       },
       {
-        q: "Can the firm do this itself?",
-        a: "Yes, if someone has the time each month. Some listing sites do not offer a way for the firm to edit the record directly. Inconsistent details are the problem we are there to prevent.",
+        q: "What is an attorney website here?",
+        a: "It is the firm's public site: practice pages, a way to call or write, and words the firm has approved. Google listing upkeep is part of what the firm gets with it.",
       },
       {
-        q: "We only care about Google. Do the other sites matter?",
-        a: "Google compares your details with other sites. When the name, address, and phone match, the listing is easier for Google to trust. We still do not promise where it will show.",
+        q: "Does the firm own the website?",
+        a: "The domain, the words, and the firm's information stay yours. If you leave, we help you move them. The Google listing stays on the firm's account.",
       },
       {
-        q: "Do you promise a place in Google's results?",
-        a: "No. We update the listings and tell you what we changed. We do not promise a position, a number of calls, or a number of clients.",
+        q: "Can we change the site after it is up?",
+        a: "Yes. Edits are part of the plan. Ask for the change and we make it.",
+      },
+      {
+        q: "Do you promise where the firm will show on Google?",
+        a: "No. We build the law firm website and update the listing. We do not promise a position, a number of calls, or a number of clients.",
       },
       {
         q: "What happens if we stop?",
-        a: "The plan is month to month. Updates stop when you cancel. The listing stays on the firm's Google account. Over time, details can go stale again if nobody else updates them.",
+        a: "Site edits and listing updates stop when you cancel. The plan is month to month. The domain and the Google listing stay with the firm.",
       },
     ],
   },

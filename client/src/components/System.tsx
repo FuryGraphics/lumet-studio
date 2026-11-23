@@ -42,11 +42,11 @@ export default function System() {
           </div>
           <div className="col-span-12 md:col-span-4 md:pt-2">
             <p className="lc-body text-sm md:text-base text-[#525252]">
-              Four parts of the work for a US law firm: the website, local
-              search, review requests, and client intake. The same plan also
-              includes automated Google Business Profile management and monthly blog
-              posts written for search. They are set up together so the public
-              details match.
+              Four parts of the work for a US law firm: a law firm website,
+              Google listing upkeep, review requests, and client intake. The
+              same plan also includes automated Google Business Profile
+              management and monthly blog posts. They are set up together so the
+              public details match.
             </p>
           </div>
         </div>

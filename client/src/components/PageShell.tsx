@@ -122,8 +122,9 @@ export function Section({
   );
 }
 
-/** CtaBand - closing call to action shared by every inner page. */
-export function CtaBand() {
+/** CtaBand - closing call to action shared by every inner page.
+ *  omitPrice is for the law firm website page, which states no fee. */
+export function CtaBand({ omitPrice = false }: { omitPrice?: boolean }) {
   return (
     <Section label="GET STARTED" dark>
       <h2
@@ -133,14 +134,17 @@ export function CtaBand() {
         Websites for
         <br />
         law firms.
-        <br />
-        <span className="text-[#004AAD]">${PRICE}</span> a month.
+        {omitPrice ? null : (
+          <>
+            <br />
+            <span className="text-[#004AAD]">${PRICE}</span> a month.
+          </>
+        )}
       </h2>
       <p className="lc-body mt-6 text-base md:text-xl text-[#A3A3A3] max-w-2xl">
-        The firm website, local search, automated Google Business Profile management,
-        review requests, client intake, and monthly blog posts for attorneys
-        and law firms in the United States.
-        No setup fee. Month to month.
+        {omitPrice
+          ? "A law firm website and an attorney website for firms in the United States, with Google listing upkeep, review requests, client intake, and monthly blog posts."
+          : "The firm website, local search, automated Google Business Profile management, review requests, client intake, and monthly blog posts for attorneys and law firms in the United States. No setup fee. Month to month."}
       </p>
       <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
         <a
